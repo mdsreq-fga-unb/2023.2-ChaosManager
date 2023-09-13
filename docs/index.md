@@ -17,7 +17,7 @@ A documentação do projeto está disponivel nesse [link](https://mdsreq-fga-unb
 | 211043736 | LARISSA GOMES SILVA             | larigs         |     [<img src="https://avatars.githubusercontent.com/u/56891617?v=4" width=50>](https://github.com/larigs)     |
 | 221007653 | LUCIANO RICARDO DA SILVA JUNIOR | l-ricardo      |   [<img src="https://avatars.githubusercontent.com/u/88405145?v=4" width=50>](https://github.com/l-ricardo)    |
 | 211031790 | OSCAR CORREIA DE BRITO NETO     | OscarDeBrito   |  [<img src="https://avatars.githubusercontent.com/u/60819460?v=4" width=50>](https://github.com/OscarDeBrito)  |
-| 211062375 | PEDRO EDUARDO SANTOS SOUSA      | PedroEduardoSS | [<img src="https://avatars.githubusercontent.com/u/60819460?v=4" width=50>](https://github.com/PedroEduardoSS) |
+| 211062375 | PEDRO EDUARDO SANTOS SOUSA      | PedroEduardoSS | [<img src="https://avatars.githubusercontent.com/u/64859196?v=4" width=50>](https://github.com/PedroEduardoSS) |
 
 ## ⚙️ Instruções para colaboradores
 **Para desenvolver a documentação:**
