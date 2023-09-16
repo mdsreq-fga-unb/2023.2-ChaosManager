@@ -45,6 +45,7 @@ theme:
 # Page tree
 nav: 
   - Início: index.md
+  - Insurgentes Estelares: historia.md
   - Visão Geral do Produto: visao_produto.md
   - Visão Geral do Projeto: visao_projeto.md
   - Processo de desenvolvimento de software: processo_software.md

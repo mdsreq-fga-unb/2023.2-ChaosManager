@@ -15,9 +15,9 @@ RPG de mesa é uma forma de entretenimento e diversão que envolve duas ou mais 
 | Chaos Manager |                                                         Sistema WEB                                                         |
 |      Que      |                                Gerencia os principais aspectos de uma campanha de rpg de mesa                               |
 |  Ao contrário |                                                   Roll20, taulukko e Kanka                                                  |
-| Nosso produto | Unifica as principais ferramentas do rpg de mesa online, de maneira acessível com um sistema de regras simples e adaptativo |
+| Nosso produto | Unifica as principais ferramentas do rpg de mesa online, de maneira acessível com um sistema de regras brasileiro e que pode ser usado para qualquer tipo de história |
 
-### 1.3 Objetivos do produtp
-Apresentar um único sistema de regras simples e adaptativo, com todas as ferramentas necessárias para gerenciar uma campanha de rpg de mesa, tanto para mestres quanto para jogadores.
+### 1.3 Objetivos do produto
+Apresenta um único sistema de regra brasileiro com ferramentas acessíveis e que pode ser usado para qualquer tipo de história, campanha e mundos, com todas as ferramentas necessárias para gerenciar uma campanha de rpg de mesa, tanto para mestres quanto para jogadores.
 
 ### 1.4 Tecnologias a serem utilizadas
