@@ -3,11 +3,11 @@
 
 ## 3. Processo de desenvolvimento de software
 
-### 3.1 Abordagem Sommerville
-
+### 3.1 Critérios Sommerville
 
 <p align="justify"> &emsp;&emsp;
-Ao escolhermos uma abordagem de desenvolvimento de software, nos orientamos através do Sommerville (2018) cujo método oferece uma série de perguntas que devem ser respondidas, envolvendo questões técnicas, humanas e organizacionais. Apresentamos abaixo a Figura 1 representando os fatores de Sommerville (2018) com suas respectivas respostas.</p>
+
+Ao escolhermos uma abordagem de desenvolvimento de software, nos orientamos através dos critérios propostos por Sommerville (2018) cujo método oferece uma série de perguntas a serem respondidas, envolvendo questões técnicas, humanas e organizacionais. Apresentamos abaixo a Figura 1 representando os fatores de Sommerville (2018) com suas respectivas respostas.</p>
 
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/sommerville.png">
@@ -17,13 +17,13 @@ Ao escolhermos uma abordagem de desenvolvimento de software, nos orientamos atra
 
 #### Questões Técnicas
 
-- **Qual é o tamanho do sistema que está sendo desenvolvido?** Alta complexidade.
+- **Qual é o tamanho do sistema que está sendo desenvolvido?** É um sistema grande, possuindo alta complexidade.
 
 - **Que tipo de sistema está sendo desenvolvido?** Uma aplicação Web.
 
 - **Qual é a vida útil prevista para o sistema?** A princípio, vida útil de curta a média duração.
 
-- **O sistema está sujeito a controle externo?** Não
+- **O sistema está sujeito a controle externo?** Não.
 
 #### Questões Humanas
 
@@ -35,7 +35,7 @@ Ao escolhermos uma abordagem de desenvolvimento de software, nos orientamos atra
 
 #### Questões Organizacionais
 
-- **É importante ter uma especificação e um projeto (design) bem detalhados antes de passar para a implementação — talvez por motivos contratuais?** Não, já que existem outros sistemas modelos para serem observados e estudados (Roll20, Taulukko, Kanka).
+- **É importante ter uma especificação e um projeto (design) bem detalhados antes de passar para a implementação — talvez por motivos contratuais?** Sim, por mais que existam outros sistemas modelos para serem observados e estudados (Roll20, Taulukko, Kanka), há uma grande quantidade de funcionalidades, o que torna essencial especificar adequadamente o que estará dentro do escopo do projeto em decorrência do tempo de desenvolvimento disponível.
 
 - **É realista uma estratégia de entrega incremental, na qual o software é entregue aos clientes ou outros stakeholders e um rápido feedback é obtido?** Sim. 
 
@@ -44,22 +44,30 @@ Ao escolhermos uma abordagem de desenvolvimento de software, nos orientamos atra
 - **Existem questões culturais que possam afetar o desenvolvimento do sistema?** Não.
 
 <p align="justify"> &emsp;&emsp;
-Analisando o modelo Sommerville e nas respostas fornecidas às perguntas anteriores, definimos que a abordagem Dirigido por Plano é a mais adequada dado a complexidade do projeto. </p>
+Analisando as respostas fornecidas no modelo Sommerville, concluimos os seguintes pontos:
+
+&emsp;&emsp;O sistema é grande e complexo, há uma grande quantidade de funcionalidades, o que torna essencial especificar adequadamente o que estará dentro do escopo do projeto em decorrência do tempo de desenvolvimento disponível, além de o grupo não possui completo conhecimento em todas as ferramentas a serem utilizadas, o que requer um alto grau de organização para um bom desempenho e desenvolver do projeto.  </p>
+
+### 3.2 Abordagem, Ciclo de Vida e Processo de Software
 
 <p align = "justify"> &emsp;&emsp;
-A abordagem dirigida por plano oferece uma estrutura sólida para o desenvolvimento do projeto, com um roteiro claro, gestão organizada, análise detalhada de requisitos e comunicação eficiente da equipe. No contexto do ChaosManager, que lida com sistemas complexos, essa abordagem se destaca como a escolha mais adequada para garantir o sucesso e a eficácia na entrega do produto final. </p>
-
-<p align="justify"> &emsp;&emsp;
-Com a abordagem Dirigido por Plano, foi selecionado o Processo Unificado devido ao projeto possuir uma alta complexidade com requisitos detalhados, sendo necessário um esforço maior no planejamento para definir o quanto antes quais as etapas e os artefatos serão envolvidos durante o processo. Na Figura 2 é representado o seu funcionamento:</p>
+Após a análise das respostas chegamos ao resultado final de uma abordagem dirigida a plano baseado no processo UP (Processo Unificado), tornando mais eficiente o pouco tempo que teríamos para o desenvolvimento, aproveitando melhor o tempo disponível para o planejamento. A Figura 2 demonstra o funcionamento do Processo Unificado:</p>
 
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/up.png">
-
 <p>Figura 2: Diagrama do Processo Unificado.</p>
 </div>
 
-<p align="justify"> &emsp;&emsp;
-Seguindo um ciclo de vida iterativo, no Processo Unificado os desenvolvedores implementam as funcionalidades de acordo com os requisitos definidos nas fases anteriores, realizando iterações curtas para construir partes incrementais do sistema e obter feedback. </p>
+&emsp;&emsp;O Processo Unificado foi selecionado por tornar claro a necessidade de atribuições de tarefas aos envolvidos diretamente no desenvolvimento do projeto. Nesse processo são definidas o quanto antes quais as etapas e os artefatos que serão envolvidos durante o processo. Essa característica do processo foi um ponto importante para lidar com a questão do tempo e conhecimento distinto dos integrantes da equipe.
+
+&emsp;&emsp;Por fim, o Processo Unificado segue um ciclo de vida iterativo, de forma que o uso de iterações pode evitar o impacto de mudanças no projeto, o que gera um gerenciamento de mudanças e abordagens dos pontos de maior risco o mais cedo possível, o que era um dos problemas identificados pela equipe.</p>
+
+<p align = "justify"> &emsp;&emsp;
+Em síntese, o processo de desenvolvimento definido oferece uma estrutura sólida para o desenvolvimento do projeto, com um roteiro claro, gestão organizada, análise detalhada de requisitos e comunicação eficiente da equipe. No contexto do ChaosManager, que lida com sistemas complexos, com muitas funcionalidades, que envolvem cálculos e regras, essa abordagem se destaca como a escolha mais adequada para garantir o sucesso e a eficácia na entrega do produto final. 
+
+&emsp;&emsp;Por fim, diante da abordagem estabelecida, a Tabela 1 define como cada uma das atividades desse processo será realizada, por meio de métodos e ferramentas. </p>
+
+//TABELA
 
 ### 3.2 Processo de Engenharia de Requisitos
 
