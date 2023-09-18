@@ -65,23 +65,20 @@ Após a análise das respostas chegamos ao resultado final de uma abordagem diri
 <p align = "justify"> &emsp;&emsp;
 Em síntese, o processo de desenvolvimento definido oferece uma estrutura sólida para o desenvolvimento do projeto, com um roteiro claro, gestão organizada, análise detalhada de requisitos e comunicação eficiente da equipe. No contexto do ChaosManager, que lida com sistemas complexos, com muitas funcionalidades, que envolvem cálculos e regras, essa abordagem se destaca como a escolha mais adequada para garantir o sucesso e a eficácia na entrega do produto final. 
 
-&emsp;&emsp;Por fim, diante da abordagem estabelecida, a Tabela 1 define como cada uma das atividades desse processo será realizada, por meio de métodos e ferramentas. </p>
-
-//TABELA
-
 ### 3.2 Processo de Engenharia de Requisitos
 
 <p align="justify"> &emsp;&emsp;
-Conforme George Marsicano (2023), é apresentado na Figura 3 as atividades da Engenharia de Requisitos (ER):</p>
+A Engenharia de requisitos é utilizada para capturar os requisitos necessários a construção de um software de qualidade. Atentando a isso, selecionamos o modelo proposto por George Marsicano (2023), apresentado na Figura 3, onde consta as atividades da Engenharia de Requisitos (ER):</p>
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/ativER.png">
+<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/ativER.jpeg">
 
 <p>Figura 3: Atividades da Engenharia de Requisitos. George Marsicano (2023)</p>
 </div>
 
 <p align="justify"> &emsp;&emsp;
-Com as atividades apresentadas, é necessário escolher uma abordagem que se adeque às especificidades do software, e para isso utilizaremos um método proposto pela IREB (2022) no qual é apresentado diferentes facetas do projeto. </p>
+
+Para desenvolver as atividades do projeto é necessário escolher uma abordagem que se adeque às especificidades do software, e para isso utilizaremos um método proposto pela IREB (2022) no qual é apresentado diferentes facetas e configurações 'típicas' para um processo de ER, representado na Figura 4. </p>
 
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/facetasireb.png">
@@ -90,7 +87,17 @@ Com as atividades apresentadas, é necessário escolher uma abordagem que se ade
 </div>
 
 <p align="justify"> &emsp;&emsp;
-É feita uma análise baseado nesse método conforme as características do produto que irá ser desenvolvido com o ciclo de vida e processo de software já determinados, definindo-se um processo para a execução das atividades da Engenharia de Requisitos. A escolha segue uma característica "Participativo", no qual é um modelo iterativo, exploratório e com um cliente específico, tornando-se uma abordagem ideal para o nosso produto. </p>
+Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja definida, identificamos que faceta do <b>Processo de ER Participativo</b>  compartilhava seus principais pontos. Os pontos para análise foram: 
+
+- Customer-specific: o produto foi encomendado por um cliente específico, onde o cliente é a principal fonte de requisitos.
+- Iterativo: devido ser um produto grande e complexo, dividí-lo em pequenas iterações se torna uma forma de gerenciar e minimizar os riscos.
+- Exploratório: a equipe possui conhecimento de diversas funcionalidades, mas não de todas devido sua extensão, além de não saber de quais serão de fato viáveis ao projeto ou não, de forma que é necessário explorar melhor os requisitos.</p>
+
+### 3.3 Atividades
+
+&emsp;&emsp;Por fim, diante do processo de desenvolvimento estabelecido, foi criado uma tabela para orientar a realização das atividades, orientado pelo ciclo de vida do processo UP. A Tabela 1 apresenta essas atividades.</p>
+
+//TABELA 
 
 ## 4. Referências
 > Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
@@ -104,3 +111,5 @@ Com as atividades apresentadas, é necessário escolher uma abordagem que se ade
 |:-----:|:------:|:--------------------:|:-------------:|
 | 16/09 |   1.0  | Processo de desenvolvimento de software | Gustavo França, Oscar de Brito |
 | 16/09 |   1.1  | Atualiza os tópicos 3.1 e 3.2 e adiciona o tópico de referências        | Gustavo França, Oscar de Brito
+| 17/09 |   1.2  | Corrige o tópico 3.1        | Larissa Gomes
+| 18/09 |   1.3  | Corrige o tópico 3.2        | Larissa Gomes
