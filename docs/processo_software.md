@@ -63,6 +63,21 @@ Após a análise das respostas chegamos ao resultado final de uma abordagem diri
 </p>
 
 <p align = "justify"> &emsp;&emsp;
+&emsp;&emsp;O Processo Unificado possui um Workflow contendo as atividades que serão realizadas em cada
+iteração onde há também a equipe se dividirá para para que cada um seja responsável por cada parte. As atividades desse workflow são as seguintes:
+<ul>
+  <li>Requisitos: As atividades primárias do fluxo de trabalho Requisitos visam construir o modelo de caso de uso, que captura os requisitos funcionais do sistema que está sendo definido. Este modelo ajuda as partes interessadas do projeto a chegarem a um acordo sobre as capacidades do sistema e as condições às quais ele deve estar em conformidade. O modelo de caso de uso também serve como base para todos os outros trabalhos de desenvolvimento.</li>
+  <li>Análise: O fluxo de trabalho de análise visa construir o modelo de análise, o que ajuda os desenvolvedores a refinar e estruturar os requisitos funcionais capturados no modelo de caso de uso. Este modelo contém realizações de casos de uso que se prestam melhor ao trabalho de design e implementação do que os casos de uso.</li>
+  <li>Design: visam construir o modelo de design, que descreve as realizações físicas dos casos de uso do modelo de caso de uso, e também o conteúdo do modelo de análise. O modelo de design serve como uma abstração do modelo de desenvolvimento. O fluxo de trabalho Design também se concentra no modelo de implantação, que define a organização física do sistema em termos de nós computacionais.</li>
+  <li>Desenvolvimento:  O fluxo de trabalho de desenvolvimento visa construir o modelo de implementação, que descreve como os elementos do modelo de design são empacotados em componentes de software, como arquivos de código-fonte.</li>
+  <li>Teste: Os fluxos de trabalho de teste visam construir o modelo de teste, que descreve como os testes de integração e de sistema exercitarão os componentes executáveis ​​do modelo de implementação. O modelo de teste também descreve como a equipe realizará esses testes, bem como os testes unitários. O modelo de teste contém casos de teste que geralmente são derivados diretamente de casos de uso. Os testadores realizam testes de caixa preta usando o texto do caso de uso original e testes de caixa branca das realizações desses casos de uso, conforme especificado no modelo de análise. O modelo de teste também contém os resultados de todos os níveis de teste.</li>
+</ul>
+
+&emsp;&emsp;Como visto no diagrama, o Processo unificado possui 4 fases, Início, Elaboração, Implementação e Transição. O fluxo de trabalho de requisitos e de análise serão prioridade na fase de Início. Na fase de Elaboração será focado o fluxo de trabalho do Design e um pouco do desenvolvimento e teste. Nas fases de Implementação e Transição, os fluxos de trabalho de Desenvolvimento e Teste estarão em suas plenas atividades
+até que o produto seja entregue.
+</p>
+
+<p align = "justify"> &emsp;&emsp;
 &emsp;&emsp;Por fim, o Processo Unificado segue um ciclo de vida iterativo, de forma que o uso de iterações pode evitar o impacto de mudanças no projeto, o que gera um gerenciamento de mudanças e abordagens dos pontos de maior risco o mais cedo possível, o que era um dos problemas identificados pela equipe.
 </p>
 
@@ -83,12 +98,14 @@ A Engenharia de requisitos é utilizada para capturar os requisitos necessários
 
 Uma breve síntese para rápido entendimento das atividades:
 
-- Elicitação e Descoberta: extrair uma resposta ou encontrar algo não conhecido
-- Análise e Consenso: analisar os requisitos "brutos" e conciliar suas divergências
-- Declaração: comunicação dos requisitos entre os envolvidos.
-- Representação: apresentação dos requisitos em modelos e/ou visualizações do produto, sendo informal, semiformal e formal.
-- Verificação e Validação: os requisitos definem a solução correta e foram realizados da maneira correta.
-- Organização e Atualização: como os requisitos serão estruturados, rastreados, refinados e priorizados, além de mantê-los sempre em seu estado mais atual
+<ul>
+  <li>Elicitação e Descoberta: Na fase de Início do UP será usada essa atividade para levantar e descobrir o máximo de requitos que o sistema irá ter, utilizando as atividades de requisitos do UP (ver seção anterior).</li>
+  <li>Análise e Consenso: Ainda na fase de Início do UP, será analisado cada requisito em sua forma bruta para ser refinado, priorizado e/ou descartado com base no consenso da equipe com o cliente, utilizando as atividades de Análise do UP (ver seção anterior)</li>
+  <li>Declaração: Depois do passo anterior será comunicado todos os requisitos levantados, se houver alguma irregularidade será necessário refazer os passos anteriores, utilizando as atividades de análise e Design do UP (ver seção anterior)</li>
+  <li>Representação: Após o passo anterior, através de casos de uso e user stories, serão representados os requisitos com base nas atividades de Design do UP (ver seção anterior)</li>
+  <li>Organização e Atualização: Todos os requisitos refinados (user story) e priorizados serão organizados e atualizados se surgir mais algum requisito durante as fases, utilizando as atividades de Design do UP (ver seção anterior)</li>
+  <li>Verificação e Validação: Essa atividade será executada após cada um dos passos anteriores para que seja reduzido ao máximo o número de riscos do projeto, fazendo parte das atividades do fluxo de trabalho Teste (ver seção anterior)</li>
+</ul>
 
 <p align="justify"> &emsp;&emsp;
 
@@ -103,9 +120,12 @@ Para desenvolver as atividades do projeto é necessário escolher uma abordagem 
 <p align="justify"> &emsp;&emsp;
 Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja definida, identificamos que faceta do <b>Processo de ER Participativo</b>  compartilhava seus principais pontos. Os pontos para análise foram:
 
-- Customer-specific: o produto foi encomendado por um cliente específico, onde o cliente é a principal fonte de requisitos.
-- Iterativo: devido ser um produto grande e complexo, dividí-lo em pequenas iterações se torna uma forma de gerenciar e minimizar os riscos.
-- Exploratório: a equipe possui conhecimento de diversas funcionalidades, mas não de todas devido sua extensão, além de não saber de quais serão de fato viáveis ao projeto ou não, de forma que é necessário explorar melhor os requisitos.</p>
+<ul>
+  <li>Customer-specific: o produto foi encomendado por um cliente específico, onde o cliente é a principal fonte de requisitos.</li>
+  <li>Iterativo: devido ser um produto grande e complexo, dividí-lo em pequenas iterações se torna uma forma de gerenciar e minimizar os riscos.</li>
+  <li>Exploratório: a equipe possui conhecimento de diversas funcionalidades, mas não de todas devido sua extensão, além de não saber de quais serão de fato viáveis ao projeto ou não, de forma que é necessário explorar melhor os requisitos.</li>
+</ul>
+</p>
 
 ### 3.3 Atividades
 
@@ -116,6 +136,8 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 ## 4. Referências
 
 > Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
+
+> SCOTT, Kendall. The Unified process explained. Nov 26, 2001. Disponível em: <https://www.informit.com/articles/article.aspx?p=24671&seqNum=8>
 
 > MARSICANO, George. Requisitos de Software: Introdução a Engenharia de Requisitos (ER). Brasília, 2023. Disponível em: <https://aprender3.unb.br/course/view.php?id=20236>. Acesso em: 16 set. 2023.
 
