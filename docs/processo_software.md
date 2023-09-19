@@ -35,7 +35,7 @@ Ao escolhermos uma abordagem de desenvolvimento de software, nos orientamos atra
 
 #### Questões Organizacionais
 
-- **É importante ter uma especificação e um projeto (design) bem detalhados antes de passar para a implementação — talvez por motivos contratuais?** Sim, por mais que existam outros sistemas modelos para serem observados e estudados (Roll20, Taulukko, Kanka), há uma grande quantidade de funcionalidades, o que torna essencial especificar adequadamente o que estará dentro do escopo do projeto em decorrência do tempo de desenvolvimento disponível.
+- **É importante ter uma especificação e um projeto (design) bem detalhados antes de passar para a implementação — talvez por motivos contratuais?** Sim, por mais que existam outros sistemas modelos para serem observados e estudados (Roll20, Taulukko, Kanka), há uma grande quantidade de funcionalidades, o que torna essencial especificar adequadamente o que estará dentro do escopo do projeto solicitado pelo cliente em decorrência do tempo de desenvolvimento disponível.
 
 - **É realista uma estratégia de entrega incremental, na qual o software é entregue aos clientes ou outros stakeholders e um rápido feedback é obtido?** Sim. 
 
@@ -111,5 +111,5 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 |:-----:|:------:|:--------------------:|:-------------:|
 | 16/09 |   1.0  | Processo de desenvolvimento de software | Gustavo França, Oscar de Brito |
 | 16/09 |   1.1  | Atualiza os tópicos 3.1 e 3.2 e adiciona o tópico de referências        | Gustavo França, Oscar de Brito
-| 17/09 |   1.2  | Corrige o tópico 3.1        | Larissa Gomes
-| 18/09 |   1.3  | Corrige o tópico 3.2        | Larissa Gomes
+| 17/09 |   1.2  | Corrige o tópico 3.1 para adequar ao sommerville    | Larissa Gomes
+| 18/09 |   1.3  | Corrige o tópico 3.2 para adequar ao sommerville       | Larissa Gomes
