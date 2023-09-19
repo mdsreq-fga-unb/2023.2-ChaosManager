@@ -76,6 +76,14 @@ A Engenharia de requisitos é utilizada para capturar os requisitos necessários
 <p>Figura 3: Atividades da Engenharia de Requisitos. George Marsicano (2023)</p>
 </div>
 
+Uma breve síntese para rápido entendimento das atividades:
+- Elicitação e Descoberta: extrair uma resposta ou encontrar algo não conhecido
+- Análise e Consenso: analisar os requisitos "brutos" e conciliar suas  divergências
+- Declaração: comunicação dos requisitos entre os envolvidos.
+- Representação: apresentação dos requisitos em modelos e/ou visualizações do produto, sendo informal, semiformal e formal.
+- Verificação e Validação: os requisitos definem a solução correta e foram realizados da maneira correta.
+- Organização e Atualização: como os requisitos serão estruturados, rastreados, refinados e priorizados, além de mantê-los sempre em seu estado mais atual
+
 <p align="justify"> &emsp;&emsp;
 
 Para desenvolver as atividades do projeto é necessário escolher uma abordagem que se adeque às especificidades do software, e para isso utilizaremos um método proposto pela IREB (2022) no qual é apresentado diferentes facetas e configurações 'típicas' para um processo de ER, representado na Figura 4. </p>
