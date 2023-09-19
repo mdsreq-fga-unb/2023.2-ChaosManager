@@ -60,11 +60,14 @@ Após a análise das respostas chegamos ao resultado final de uma abordagem diri
 
 <p align = "justify"> &emsp;&emsp;
 &emsp;&emsp;O Processo Unificado foi selecionado por tornar claro a necessidade de atribuições de tarefas aos envolvidos diretamente no desenvolvimento do projeto. Nesse processo são definidas o quanto antes quais as etapas e os artefatos que serão envolvidos durante o processo. Essa característica do processo foi um ponto importante para lidar com a questão do tempo e conhecimento distinto dos integrantes da equipe.
+</p>
 
+<p align = "justify"> &emsp;&emsp;
 &emsp;&emsp;Por fim, o Processo Unificado segue um ciclo de vida iterativo, de forma que o uso de iterações pode evitar o impacto de mudanças no projeto, o que gera um gerenciamento de mudanças e abordagens dos pontos de maior risco o mais cedo possível, o que era um dos problemas identificados pela equipe.
+</p>
 
+<p align = "justify"> &emsp;&emsp;
 Em síntese, o processo de desenvolvimento definido oferece uma estrutura sólida para o desenvolvimento do projeto, com um roteiro claro, gestão organizada, análise detalhada de requisitos e comunicação eficiente da equipe. No contexto do ChaosManager, que lida com sistemas complexos, com muitas funcionalidades, que envolvem cálculos e regras, essa abordagem se destaca como a escolha mais adequada para garantir o sucesso e a eficácia na entrega do produto final.
-
 </p>
 
 ### 3.2 Processo de Engenharia de Requisitos
