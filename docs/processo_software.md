@@ -1,6 +1,3 @@
-<h1 align="center"> Chaos Manager </h1>
-<h3 align="center"> 2023.2 </h3>
-
 ## 3. Processo de desenvolvimento de software
 
 ### 3.1 Critérios Sommerville
@@ -133,7 +130,7 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 
 //TABELA
 
-## 4. Referências
+### 3.4 Referências
 
 > Handbook IREB CPRE Foundation Level, Version 1.1.0, september 2022.
 
@@ -143,7 +140,7 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 
 > SOMMERVILLE, Ian. Engenharia de software. 10.ed. São Paulo: Pearson Education do Brasil, 2018.
 
-## 5. Histórico de versão
+### 3.5 Histórico de versão
 
 | Data  | Versão |                            Descrição                             |             Autor              |
 | :---: | :----: | :--------------------------------------------------------------: | :----------------------------: |
