@@ -1,17 +1,23 @@
-<h1 align="center"> Chaos Manager </h1>
-<h3 align="center"> 2023.2 </h3>
-
 ## 4 Lições aprendidas
-### Unidade 1
+
+### 4.1 Missão: Neutralização do Perigo Apache
 
 
 
-### Unidade 2
+### 4.2 Missão: Conquistar Celestia
 
 
 
-### Unidade 3
+### 4.3 Missão: Conhecimento e Inovação
 
 
 
-### Unidade 4
+### 4.4 Missão: Preservação da Galáxia
+
+
+
+### 4.5 Histórico de versão
+
+| Data  | Versão | Descrição | Autor |
+| :---: | :----: | :-------: | :---: |
+|       |  1.0   |           |       |
