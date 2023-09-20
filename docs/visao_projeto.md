@@ -1,7 +1,5 @@
-<h1 align="center"> Chaos Manager </h1>
-<h3 align="center"> 2023.2 </h3>
+## 2 Visão de produto
 
-## 2
 ### 2.1 Organização do projeto
 
 
@@ -20,3 +18,13 @@
 
 ### 2.5 Critérios de Replanejamento
 
+
+
+### 2.6 Referências
+
+
+### 2.7 Histórico de versão
+
+| Data  | Versão | Descrição | Autor |
+| :---: | :----: | :-------: | :---: |
+|       |  1.0   |           |       |
