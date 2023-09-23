@@ -61,3 +61,23 @@ Tabela 3 - Matriz de comunicação
   - Possivéis Soluções: <ul><li>Compartilhamento do conhecimento do produto e do código entre os membros</li> <li>Redistribuição de tarefas entre os membros da equipe</li></ul>
 
 ### 2.5 Critérios de Replanejamento
+
+- Insatisfação do Cliente com o Produto Entregue:
+
+&emsp;&emsp;&emsp;Quando o cliente expressa insatisfação com o produto entregue, é crucial considerar um replanejamento. Isso pode ocorrer devido a uma discrepância entre as expectativas do cliente e o resultado final. Nesse caso, é importante realizar uma análise para identificar as causas da insatisfação e, com base nessa análise, ajustar o plano do projeto para atender às expectativas do cliente. Isso pode envolver revisões de escopo, prazos ou recursos.
+
+- Dificuldade no Cumprimento da Definição de Pronto:
+
+&emsp;&emsp;&emsp;Se a equipe tem dificuldades consistentes em cumprir os critérios de pronto estabelecidos para as entregas do projeto, isso pode indicar a necessidade de replanejamento. Pode ser necessário rever a definição de pronto, considerar treinamento adicional para a equipe ou alocar mais recursos para cumprir os critérios estabelecidos.
+
+- Baixa Qualidade do Produto Desenvolvido:
+
+&emsp;&emsp;&emsp;A baixa qualidade do produto é um motivo claro para o replanejamento. Isso pode resultar em retrabalho, atrasos e insatisfação do cliente. Para resolver esse problema, é necessário identificar as causas da baixa qualidade, fazer melhorias nos processos de desenvolvimento e possivelmente estender os prazos para garantir que o produto seja entregue com a qualidade desejada.
+
+- Escopo/Complexidade do Projeto Maior que o Esperado:
+
+&emsp;&emsp;&emsp;Às vezes, durante a execução de um projeto, fica evidente que o escopo ou a complexidade do projeto é maior do que o inicialmente previsto. Nesse caso, é aconselhável realizar um replanejamento para ajustar o cronograma e os recursos de acordo com a nova compreensão do projeto. Isso pode envolver a redefinição de metas e a reavaliação dos recursos necessários para concluir o projeto com sucesso.
+
+- Mudanças na Composição da Equipe:
+
+&emsp;&emsp;&emsp;Quando ocorrem mudanças significativas na composição da equipe, como a saída de membros-chave, é importante avaliar o impacto dessas mudanças no projeto. O replanejamento pode ser necessário para redistribuir tarefas, e ajustar o cronograma, se necessário, para acomodar as mudanças.
