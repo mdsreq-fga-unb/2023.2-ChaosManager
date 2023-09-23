@@ -53,4 +53,11 @@ Tabela 3 - Matriz de comunicação
 
 ### 2.4 Gerenciamento de Riscos
 
+- Falta de comunicação entre a equipe
+  - Probabilidade: Baixa
+  - Possivéis Soluções: <ul><li>Reunião 1:1 com os integrantes</li> <li>Replanejar os canais de comunicação</li> <li>Favorecer a comunicação assíncrona</li> </ul>
+- Redução da equipe temporaria ou permantente
+  - Probabilidade: Média
+  - Possivéis Soluções: <ul><li>Compartilhamento do conhecimento do produto e do código entre os membros</li> <li>Redistribuição de tarefas entre os membros da equipe</li></ul>
+
 ### 2.5 Critérios de Replanejamento
