@@ -31,16 +31,25 @@ Tabela 1 - Organização de papeis
 |  Iteração 1   |                       Definição do produto                        |            Escopo do projeto e produto            |   05/09/2023    |  28/09/2023  |
 |  Iteração 2   |                      Planejamento do Projeto                      | Backlog , requisitos elicitados, definição do MVP |   29/09/2023    |  13/10/2023  |
 |  Iteração 3   | Projeto de arquitetura, definição de MVPs e estudo de tecnologias | Arquitetura do sistema, MVPs e equipe capacitada  |   15/10/2023    |  26/10/2023  |
-|  Iteração 4   |                           Prototipação                            |                     Protótipo                     |   27/10/2023    |  14/11/2023  |
-|  Iteração 5   |                          Desenvolvimento                          |                                                   |   14/11/2023    |  05/12/2023  |
-|  Iteração 6   |                              Testes                               |                                                   |   14/11/2023    |  05/12/2023  |
-|  Iteração 6   |                              Release                              |                                                   |   06/12/2023    |  14/12/2023  |
+|  Iteração 4   |                           Prototipação                            |       Protótipo de telas de alta fidelidade       |   27/10/2023    |  14/11/2023  |
+|  Iteração 5   |                          Desenvolvimento                          |                     Aplicação                     |   14/11/2023    |  05/12/2023  |
+|  Iteração 6   |                              Testes                               |                Testes da Aplicação                |   14/11/2023    |  05/12/2023  |
+|  Iteração 6   |                              Release                              |   Publicação da aplicação nos serviços digitais   |   06/12/2023    |  14/12/2023  |
 
 Tabela 2 - Iterações do projeto
 
 </center>
 
 ### 2.3 Matriz de comunicação
+
+|         **Descrição**         |       **Envolvidos**        | **Periodicidade (Entrega)** |                **Produtos Gerados**                |
+| :---------------------------: | :-------------------------: | :-------------------------: | :------------------------------------------------: |
+|           Planning            |      Equipe do Projeto      |          Quinzenal          |     - Planejamento da iteração, ata da reunião     |
+|        Acompanhamento         |      Equipe do Projeto      |           Diario            | - Relato das atividades realizadas por cada membro |
+|      Meeting com Cliente      | Equipe do Projeto & Cliente |          Quinzenal          |         - Feedbacks, Validação do produto          |
+| Comunicar situação do projeto |      Equipe do Projeto      |     Pontos de controle      |         - Feedback da situação do projeto          |
+
+Tabela 3 - Matriz de comunicação
 
 ### 2.4 Gerenciamento de Riscos
 
