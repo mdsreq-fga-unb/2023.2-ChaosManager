@@ -1,9 +1,6 @@
-<h1 align="center"> Chaos Manager </h1>
-<h3 align="center"> 2023.2 </h3>
+## A História
 
-## História dos Insurgentes Estelares
-
-![brasao!](/assets/brasao.jpeg "brasao")
+![brasao!](assets/brasao.jpeg "Brasão Insurgentes Estelares")
 
 No ano de 3254, na vastidão da galáxia de Calamum Caeruleum, emergiu a facção de mercenários conhecida como “Os Insurgentes Estelares” com o objetivo principal de espionar e coletar informações valiosas para seus empregadores e ajudando-os a tomar decisões estratégicas. Anos depois, no meio do caos e da ganância que dominavam a exploração espacial, tornaram-se uma força formidável e misteriosa.
 
@@ -22,6 +19,8 @@ Com o crescimento excessivo dos conglomerados, os Insurgentes Estelares sentiram
 À medida que a batalha pelo equilíbrio galáctico continua, uma coisa é certa: os Insurgentes Estelares são uma força a ser reconhecida e respeitada, sendo uma facção de mercenários preparados para enfrentar desafios.
 
 Com o passar dos anos, tornaram-se uma facção diversificada, composta por indivíduos de origens diversas e habilidades únicas. Reuniram guerreiros, mercenários, cientistas e até exilados de outros mundos. A líder enigmática da facção trabalhou intensamente para que prosperassem, e a diversidade de talentos dentro dos Insurgentes Estelares é uma de suas maiores forças. Cada membro contribui com suas habilidades únicas para alcançar os objetivos da facção. Embora suas motivações possam variar, todos compartilham a determinação de restaurar o equilíbrio galático.
+
+## Um pouco mais sobre os Insurgentes
 
 ### Sylarian
 Dra. Elara Voss era uma cientista brilhante que trabalhava para uma das maiores conglomerações tecnológicas de Calamum Caereleum. Ela dedicou sua vida ao avanço da ciência e à criação de tecnologias que pudessem melhorar a qualidade de vida em seu planeta natal, Sylaris. Ela acreditava que a ciência tinha o poder de trazer prosperidade e harmonia para seu povo.
@@ -51,9 +50,9 @@ Alunaris nasceu em uma família que fazia parte das elites em um planeta dominad
 À medida que amadurecia, Alunaris demonstrava cada vez mais preocupação com as práticas das corporações. Essa preocupação o levava a questionar não apenas o próprio futuro que lhe era oferecido, mas também o preço terrível que as corporações estavam cobrando em troca de seus luxos. Ele sabia que não era esse o caminho correto.
 Movido pela necessidade de justiça, Alunaris adotou duas facetas. Por um lado, aproveitava os benefícios de estar no meio das corporações para obter informações valiosas. Por outro lado, ele participava de uma facção cujos motivos eram semelhantes aos seus, uma facção que mais tarde se tornaria conhecida como os Insurgentes Estelares.
 
-### Importância
+## A Importância
 Devido seu forte interesse de destruir os conglomerados, os Insurgentes Estelares buscarão sempre a destruição dessas organizações. Graças a sua tripulação diversa, são sempre capazes de inventar uma maneira inesperada de desestabilizar um grupo inimigo. Esse propósito e capacidade será de grande ajuda ao Comando Estelar afinal, na busca pela paz está a aniquilação dos maiores inimigos dessa facção. Além disso, muitas foram as vezes que a força disruptiva dos Insurgentes foi capaz de fazer facções inteiras se autodestruírem, reduzindo os gastos que o Comando Estelar teria se tivesse que contratar mais grupos para lidarem com a missão.
 
-### Compromisso
+## O compromisso
 A facção Insurgentes Estelares declara o seguinte compromisso com o Comando Estelar:
 Sempre focarmos no objetivo principal de acabar com os conglomerados e restaurar o equilíbrio da galáxia e seguiremos todas as ordens do comandante estelar que estejam de acordo com esse objetivo, e manter o comando estelar informado sobre nossas operações, desde que seja mantido o sigilo em relação as outras facções.

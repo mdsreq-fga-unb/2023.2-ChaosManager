@@ -48,9 +48,8 @@ nav:
   - Insurgentes Estelares: historia.md
   - Visão Geral do Produto: visao_produto.md
   - Visão Geral do Projeto: visao_projeto.md
-  - Processo de desenvolvimento de software: processo_software.md
+  - Processo de Desenvolvimento: processo_software.md
   - Lições aprendidas: licoes.md
-  - Referências: referencias.md
 
 # Extensions
 markdown_extensions:

@@ -1,7 +1,5 @@
-<h1 align="center"> Chaos Manager </h1>
-<h3 align="center"> 2023.2 </h3>
+## 2 Visão de produto
 
-## 2
 
 ### 2.1 Organização do projeto
 
@@ -16,7 +14,7 @@ A tabela 1 possui os principais papeis e quem serão os responsáveis por garant
 | Designer de Interface e usabilidade do Usuário |                 Criar interfaces de usuário cativantes, intuitivas e funcionais, mantendo a consistência de design em todo o produto e adaptando-o às necessidades dos usuários.                  |  Emerson Teles  |    Emerson Teles & Gustavo    |
 |                 Desenvolvedor                  |                  Desenvolver o software conforme os requisitos do projeto, focando na modularidade e escalabilidade para permitir futuras adaptações e manutenção simplificada.                   |  Oscar Correia  |   Oscar, Emerson e Luciano    |
 |             Analista de Qualidade              | Assegurar a qualidade do software, identificando e corrigindo defeitos, além de verificar se ele atende aos requisitos do projeto, por meio da criação de casos de teste e cenários de validação. | Gustavo França  |   Gustavo França e Luciano    |
-|                    Cliente                     |                                    Validar os requisitos do projeto e do produto, fornecendo insights e contexto sobre o problema que precisa ser solucionado.                                    |  Pedro Eduardo  |   Artur & George Mascicano    |
+|                    Cliente                     |                                    Validar os requisitos do projeto e do produto, fornecendo insights e contexto sobre o problema que precisa ser solucionado.                                    |  Pedro Eduardo  |   Artur    |
 
 Tabela 1 - Organização de papeis
 
@@ -62,6 +60,7 @@ Tabela 3 - Matriz de comunicação
 
 ### 2.5 Critérios de Replanejamento
 
+
 - Insatisfação do Cliente com o Produto Entregue:
 
 &emsp;&emsp;&emsp;Quando o cliente expressa insatisfação com o produto entregue, é crucial considerar um replanejamento. Isso pode ocorrer devido a uma discrepância entre as expectativas do cliente e o resultado final. Nesse caso, é importante realizar uma análise para identificar as causas da insatisfação e, com base nessa análise, ajustar o plano do projeto para atender às expectativas do cliente. Isso pode envolver revisões de escopo, prazos ou recursos.
@@ -81,3 +80,4 @@ Tabela 3 - Matriz de comunicação
 - Mudanças na Composição da Equipe:
 
 &emsp;&emsp;&emsp;Quando ocorrem mudanças significativas na composição da equipe, como a saída de membros-chave, é importante avaliar o impacto dessas mudanças no projeto. O replanejamento pode ser necessário para redistribuir tarefas, e ajustar o cronograma, se necessário, para acomodar as mudanças.
+
