@@ -3,7 +3,7 @@
 ### 1.1 Problema
 RPG de mesa é uma forma de entretenimento e diversão que envolve duas ou mais pessoas em que a principal função é a interpretação de personagens, onde há sempre um mestre e um ou mais jogadores, sendo utilizado diversos sistemas diferentes. Com a popularização da internet, tornou-se possível jogar por meio de ferramentas online que permitem interagir, criar personagens e gerenciar campanhas. O problema é que essas ferramentas não são unificadas, dificultando o gerenciamento e uso dessas ferramentas. Com isso o produto Chaos Manager busca unificar o máximo de ferramentas para jogadores de rpg, tanto mestres quanto jogadores, utilizando um único sistema brasileiro e gratuito chamado Order & Chaos.
 
-![Diagrama!](assets/diagrama.png "Diagrama")
+![Diagrama!](assets/diagrama peixe.jpg "Diagrama")
 
 ### 1.2 Declaração de posição de produto
 
@@ -19,7 +19,16 @@ RPG de mesa é uma forma de entretenimento e diversão que envolve duas ou mais 
 Apresenta um único sistema de regra brasileiro com ferramentas acessíveis e que pode ser usado para qualquer tipo de história, campanha e mundos, com todas as ferramentas necessárias para gerenciar uma campanha de rpg de mesa, tanto para mestres quanto para jogadores.
 
 ### 1.4 Tecnologias a serem utilizadas
-
+A seguir estará presente uma lista de ferramentas e tecnologias que serão utilizadas e que podem estar sujeitas a alterações futuramente.
+- Git
+- Github (actions, pages)
+- Teams
+- Lucidchart
+- Miro
+- Figma
+- IDEs (VS Code preferencialmente)
+- JavaScript e TypeScript
+- Node.js
 
 ### 1.5 Referências
 
