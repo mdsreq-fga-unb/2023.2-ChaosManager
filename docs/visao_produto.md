@@ -23,6 +23,10 @@ A seguir estará presente uma lista de ferramentas e tecnologias que serão util
 - Git
 - Github (actions, pages)
 - Teams
+- Word
+- Google
+- ChatGPT
+- Phind
 - Lucidchart
 - Miro
 - Figma
@@ -37,4 +41,5 @@ A seguir estará presente uma lista de ferramentas e tecnologias que serão util
 
 | Data  | Versão | Descrição | Autor |
 | :---: | :----: | :-------: | :---: |
-|       |  1.0   |           |       |
+| 6/9   |  1.0   | Criação da visão do produto  |   Pedro Eduardo    |
+| 27/9   |  1.1   | tecnologias da visão do produto |   Pedro Eduardo    |
