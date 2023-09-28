@@ -50,6 +50,7 @@ nav:
   - Visão Geral do Projeto: visao_projeto.md
   - Processo de Desenvolvimento: processo_software.md
   - Lições aprendidas: licoes.md
+  - Entregas das Missões: entregas.md
 
 # Extensions
 markdown_extensions:
