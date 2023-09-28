@@ -72,6 +72,7 @@ A Engenharia de requisitos é utilizada para capturar os requisitos necessários
 <p>Figura 3: Atividades da Engenharia de Requisitos. George Marsicano (2023)</p>
 </div>
 
+<p align="justify"> &emsp;&emsp;
 Uma breve síntese para rápido entendimento das atividades:
 
 - Elicitação e Descoberta: extrair uma resposta ou encontrar algo não conhecido
@@ -80,6 +81,7 @@ Uma breve síntese para rápido entendimento das atividades:
 - Representação: apresentação dos requisitos em modelos e/ou visualizações do produto, sendo informal, semiformal e formal.
 - Verificação e Validação: os requisitos definem a solução correta e foram realizados da maneira correta.
 - Organização e Atualização: como os requisitos serão estruturados, rastreados, refinados e priorizados, além de mantê-los sempre em seu estado mais atual.
+</p>
 
 <p align="justify"> &emsp;&emsp;
 
@@ -103,7 +105,8 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 
 ### 3.3 Atividades
 
-&emsp;&emsp;Por fim, diante do processo de desenvolvimento estabelecido, foi criado tabelas para orientar a realização das atividades, orientado pelo ciclo de vida do processo UP.</p>
+<p align="justify"> &emsp;&emsp;
+Por fim, diante do processo de desenvolvimento estabelecido, foi criado tabelas para orientar a realização das atividades, orientado pelo ciclo de vida do processo UP.</p>
 
 #### Engenharia de requisitos do processo unificado
 
