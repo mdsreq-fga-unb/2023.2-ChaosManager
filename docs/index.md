@@ -2,15 +2,20 @@
 <h3 align="center"> 2023.2 </h3>
 
 ## 💡 Sobre
-Projeto criado por estudantes da disciplina Requisitos de Software, Engenharia de Software, UnB.
 
+<p style="text-align:justify;">
+Projeto criado por estudantes da disciplina Requisitos de Software, Engenharia de Software, UnB.
+</p>
 
 ## 📒 Documentação
+
+<p style="text-align:justify;">
 A documentação do projeto está disponivel nesse [link](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/).
+</p>
 
 ## 👥 Colaboradores
 
-| Matrícula | Nome                            | Nick no GitHub |                                                       📸                                                        |
+| Matrícula | Nome                            | Nick no GitHub |                                                       📸                                                       |
 | :-------: | ------------------------------- | -------------- | :------------------------------------------------------------------------------------------------------------: |
 | 200017322 | EMERSON LUIS TELES DOS SANTOS   | EmersonTeles   |  [<img src="https://avatars.githubusercontent.com/u/54421630?v=4" width=50>](https://github.com/EmersonTeles)  |
 | 211030774 | GUSTAVO FRANCA BOA SORTE        | gustavofbs     |   [<img src="https://avatars.githubusercontent.com/u/61592832?v=4" width=50>](https://github.com/gustavofbs)   |
@@ -24,7 +29,7 @@ A documentação do projeto está disponivel nesse [link](https://mdsreq-fga-unb
 **Para desenvolver a documentação:**
 
 1. Instale o python e o pip
-2. Instale o mkdocs-material com ```pip install mkdocs-material```
-3. Execute a documentação localmente com ```python -m mkdocs serve```
-4. **Obs:** As suas alterações só ficaram disponíveis na versão online após o PR para o branch *main* ser aceito
-5. **Importante:** Nunca mexa no branch *gh-pages*
+2. Instale o mkdocs-material com `pip install mkdocs-material`
+3. Execute a documentação localmente com `python -m mkdocs serve`
+4. **Obs:** As suas alterações só ficaram disponíveis na versão online após o PR para o branch _main_ ser aceito
+5. **Importante:** Nunca mexa no branch _gh-pages_
