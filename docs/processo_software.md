@@ -61,6 +61,28 @@ Após a análise das respostas chegamos ao resultado final de uma abordagem diri
 
 <p align="justify"> &emsp;&emsp;
 
+### 3.3 Processo de Engenharia de Requisitos
+
+<p align="justify"> &emsp;&emsp;
+A Engenharia de requisitos é utilizada para capturar os requisitos necessários a construção de um software de qualidade. Atentando a isso, selecionamos o modelo proposto por George Marsicano (2023), apresentado na Figura 3, onde consta as atividades da Engenharia de Requisitos (ER):</p>
+
+<div align="center" style="text-align: center">
+<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/ativER.jpeg">
+
+<p>Figura 3: Atividades da Engenharia de Requisitos. George Marsicano (2023)</p>
+</div>
+
+Uma breve síntese para rápido entendimento das atividades:
+
+- Elicitação e Descoberta: extrair uma resposta ou encontrar algo não conhecido
+- Análise e Consenso: analisar os requisitos "brutos" e conciliar suas divergências
+- Declaração: comunicação dos requisitos entre os envolvidos.
+- Representação: apresentação dos requisitos em modelos e/ou visualizações do produto, sendo informal, semiformal e formal.
+- Verificação e Validação: os requisitos definem a solução correta e foram realizados da maneira correta.
+- Organização e Atualização: como os requisitos serão estruturados, rastreados, refinados e priorizados, além de mantê-los sempre em seu estado mais atual.
+
+<p align="justify"> &emsp;&emsp;
+
 Para desenvolver as atividades do projeto é necessário escolher uma abordagem que se adeque às especificidades do software, e para isso utilizaremos um método proposto pela IREB (2022) no qual é apresentado diferentes facetas e configurações 'típicas' para um processo de ER, representado na Figura 4. </p>
 
 <div align="center" style="text-align: center">
@@ -75,7 +97,7 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 <ul>
   <li>Customer-specific: o produto foi encomendado por um cliente específico, onde o cliente é a principal fonte de requisitos.</li>
   <li>Linear para Iterativo: devido ser um produto grande e complexo, dividí-lo em pequenas iterações se torna uma forma de gerenciar e minimizar os riscos.</li>
-  <li>Prescritivo: a equipe possui conhecimento de diversas funcionalidades, e há um cliente e outros produtos similares para ajudar a levantar e priorizar os requisitos.</li>
+  <li>Prescritivo: a equipe possui conhecimento de diversas funcionalidades, e há um cliente e outros produtos similares para ajudar a elicitar e priorizar os requisitos.</li>
 </ul>
 </p>
 
@@ -83,13 +105,11 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 
 &emsp;&emsp;Por fim, diante do processo de desenvolvimento estabelecido, foi criado tabelas para orientar a realização das atividades, orientado pelo ciclo de vida do processo UP.</p>
 
-#### TABELAS
-
 #### Engenharia de requisitos do processo unificado
 
-Conversão da Engenharia de Requisitos do Processo Unificado para novo modelo
+Conversão da Engenharia de Requisitos do Processo Unificado para novo modelo.
 
-O Processo Unificado já possui uma ER, com determinadas tarefas a serem seguidas. Entretanto, para esse projeto optamos por adaptar a ER original ao modelo proposto pelo George Marscicano. A Tabela X apresenta as atividades de Engenharia de Software a serem realizadas no PU e seu objetivo, a Tabela Y apresenta a nova representação do conjunto de tarefas a serem realizadas após correlacionar os objetivos em comum.
+O Processo Unificado já possui uma ER, com determinadas tarefas a serem seguidas. Entretanto, para esse projeto optamos por adaptar a ER original ao modelo proposto pelo George Marscicano. A Tabela 1 apresenta as atividades de Engenharia de Software a serem realizadas no PU e seu objetivo, a Tabela 2 apresenta a nova representação do conjunto de tarefas a serem realizadas após correlacionar os objetivos em comum.
 
 |Atividades|Objetivo|
 | :-: | :-: |
@@ -106,6 +126,9 @@ O Processo Unificado já possui uma ER, com determinadas tarefas a serem seguida
 |[Priorizar Casos de Uso](https://www.cin.ufpe.br/~gta/rup-vc/value_creation/tasks/prioritize_use_cases_vc_5D6764AD.html)|Essa tarefa é onde os agentes e casos de uso são identificados para suportar os requisitos que estão sendo implementados. Identificar os agentes e os casos de uso explicitamente define o escopo do sistema.|
 |[Revisar Requisitos](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/review_requirements_5DF661FE.html)|A finalidade dessa tarefa é garantir formalmente que os resultados das tarefas dos requisitos estejam em conformidade com a visão que o cliente tem do sistema.|
 
+<div align="center" style="text-align: center">
+<p>Tabela 1: ER do Processo Unificado.</p>
+</div>
 
 
 |Atividades novo modelo|Atividades adaptadas do PU|
@@ -117,13 +140,15 @@ O Processo Unificado já possui uma ER, com determinadas tarefas a serem seguida
 |Verificação e Validação|[Revisar Requisitos](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/review_requirements_5DF661FE.html) |
 |Organização e Atualização|[Detalhar os Requisitos de Software](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/detail_software_requirements_A7F0A215.html)[Desenvolver Plano de Gerenciamento de Requisitos](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/develop_rm_plan_89FFEB9A.html)[Gerenciar Dependências](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/manage_dependencies_4F6CEFAA.html)[Priorizar Casos de Uso](https://www.cin.ufpe.br/~gta/rup-vc/value_creation/tasks/prioritize_use_cases_vc_5D6764AD.html)|
 
-Tabela de tarefas 
+<div align="center" style="text-align: center">
+<p>Tabela 2: Adaptação para o modelo de ER de George Marsciano.</p>
+</div>
+
+#### Tabela de tarefas 
 
 Para auxiliar a execução das atividades a serem realizadas durante o desenvolvimento do projeto, foi definido quais tarefas devem ser executadas nos 5 fluxos de trabalho principais, quais métodos e quais ferramentas serão utilizados para executá-las e qual o artefato gerado ao fim da atividade. Em algumas atividades determinados artefatos são atualizados após sua execução, entretanto foram adicionados apenas os artefatos gerados específicos por aquela tarefa. Além disso, muitos documentos citados são uma parte produzida para um artefato maior, que não necessariamente terão um artefato específico para documentá-los todos. Por fim, devido o prazo curto da disciplina, algumas atividades ou artefatos que seriam destinados a projetos de grande porte foram desconsiderados inicialmente.
 
-Requisitos
-
-
+##### Requisitos
 
 |Atividades|Método|Ferramenta|Artefatos|
 | :- | :- | :- | :- |
@@ -134,7 +159,7 @@ Requisitos
 |Verificação e Validação|Checklist de Verificação, Revisão, Feedback|Gitpages, Word, site UFPE|[Registro de Revisão](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_review_record_CA816ECE.html)|
 |Organização e Atualização|Product backlog, Casos de Uso, Feedback|` `Github, Lucidchart|<p>[Requisito de Software](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_software_requirement_32CECE14.html)</p><p>[Plano de Gerenciamento de Requisitos](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_requirements_management_plan_1CA2ED11.html) </p>|
 
-Análise e Design
+##### Análise e Design
 
 |Atividades|Método|Ferramenta|Artefatos|
 | :- | :- | :- | :- |
@@ -142,14 +167,14 @@ Análise e Design
 |[Projetar a Interface com o Usuário](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/design_user_interface_DAABE09F.html)|Prototipagem de baixa fidelidade|Miro|[Mapa de Navegação](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_navmap_73AF74E2.html)|
 |[Criar um Protótipo da Interface do Usuário](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/prototype_user_interface_C495CB55.html)|Prototipagem de Alta fidelidade|Figma|[Protótipo da Interface do Usuário](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_user_interface_prototype_7237E5AA.html?nodeId=ee708887)|
 
-Implantação
+##### Implantação
 
 |Atividades|Método|Ferramenta|Artefatos|
 | :- | :- | :- | :- |
 |[Desenvolver Manual de Guia de Estilo](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/develop_manual_styleguide_EF16A491.html)|Entrevista, avaliação heurística.|Teams|[Manual de Guia de Estilo](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_manual_styleguide_2E6E0412.html)|
 |[Desenvolver Material de Suporte](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/develop_end_user_support_materials_E46AC109.html)|Análise documental, teste de usabilidade|Google, artefatos gerados|[Material de Suporte do Usuário](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_support_material_F6EEF661.html)|
 
-Implementação
+##### Implementação
 
 |Atividades|Método|Ferramenta|Artefatos|
 | :- | :- | :- | :- |
@@ -157,7 +182,7 @@ Implementação
 |[Estruturar o Modelo de Implementação](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html)|Análise documental, Representação do modelo (UML)|Lucidchart, gitpages|[Modelo de Implementação](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_implementation_model_5858DB65.html)|
 |[Implementar Teste do Desenvolvedor](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/tasks/implement_developer_test_66FE6BEE.html)|Teste unitário|IDE, github actions|[Teste do Desenvolvedor](https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/workproducts/rup_developer_test_44109C5.html)|
 
-Teste
+##### Teste
 
 |Atividades|Método|Ferramenta|Artefatos|
 | :- | :- | :- | :- |
