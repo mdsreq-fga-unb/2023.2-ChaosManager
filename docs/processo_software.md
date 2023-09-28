@@ -107,10 +107,10 @@ Com base no que foi avaliado no sommerville e na abordagem de desenvolvimento ja
 Por fim, diante do processo de desenvolvimento estabelecido, foi criado tabelas para orientar a realização das atividades, orientado pelo ciclo de vida do processo UP.</p>
 
 #### Engenharia de requisitos do processo unificado
-
+<p align="justify"> &emsp;&emsp;
 Conversão da Engenharia de Requisitos do Processo Unificado para novo modelo.
 
-O Processo Unificado já possui uma ER, com determinadas tarefas a serem seguidas. Entretanto, para esse projeto optamos por adaptar a ER original ao modelo proposto pelo George Marscicano. A Tabela 1 apresenta as atividades de Engenharia de Software a serem realizadas no PU e seu objetivo, a Tabela 2 apresenta a nova representação do conjunto de tarefas a serem realizadas após correlacionar os objetivos em comum.
+O Processo Unificado já possui uma ER, com determinadas tarefas a serem seguidas. Entretanto, para esse projeto optamos por adaptar a ER original ao modelo proposto pelo George Marscicano. A Tabela 1 apresenta as atividades de Engenharia de Software a serem realizadas no PU e seu objetivo, a Tabela 2 apresenta a nova representação do conjunto de tarefas a serem realizadas após correlacionar os objetivos em comum.</p>
 
 |Atividades|Objetivo|
 | :-: | :-: |
