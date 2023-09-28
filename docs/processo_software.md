@@ -59,8 +59,6 @@ Após a análise das respostas chegamos ao resultado final de uma abordagem diri
 &emsp;&emsp;O Processo Unificado foi selecionado por tornar claro a necessidade de atribuições de tarefas aos envolvidos diretamente no desenvolvimento do projeto. Nesse processo são definidas o quanto antes quais as etapas e os artefatos que serão envolvidos durante o processo. Essa característica do processo foi um ponto importante para lidar com a questão do tempo e conhecimento distinto dos integrantes da equipe.
 </p>
 
-<p align="justify"> &emsp;&emsp;
-
 ### 3.3 Processo de Engenharia de Requisitos
 
 <p align="justify"> &emsp;&emsp;
