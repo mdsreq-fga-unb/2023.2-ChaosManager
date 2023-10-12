@@ -1,9 +1,11 @@
-<h1 align="center"> Chaos Manager </h1>
-<h3 align="center"> 2023.2 </h3>
+---
+hide:
+  - toc
+---
 
-## 4 Lições aprendidas
+## 4. Lições aprendidas
 
-### Unidade 1
+### Missão 1: Neutralização do Perigo Apache
 
 <ul>
 <li>O desenvolvimento de um produto de software pode seguir diferentes abordagens, como as metodologias ágeis ou as metodologias baseadas em planos.</li>
@@ -13,9 +15,3 @@
 <li>Também utilizamos uma metodologia gamificada para entender e comparar as diferenças entre as abordagens dirigidas a plano e as abordagens ágeis.</li>
 <li>Os conhecimentos adquiridos pela equipe nos ajudaram a ter uma visão mais clara e eficaz do produto de software.</li>
 </ul>
-
-### Unidade 2
-
-### Unidade 3
-
-### Unidade 4
