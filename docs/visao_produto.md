@@ -20,15 +20,17 @@ hide:
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Quem          | Novatos ou experientes que se perdem em meio aos muitos sistemas e ferramentas online                                                                                 |
 | Chaos Manager | Sistema WEB                                                                                                                                                           |
-| Que           | Gerencia os principais aspectos de uma campanha de rpg de mesa                                                                                                        |
+| Que           | Gerencia os principais aspectos de uma campanha de rpg de mesa (ex: Combate, fichas de personagem, ação/teste de habilidade e interpretação)                                                                                                      |
 | Ao contrário  | Roll20, taulukko e Kanka                                                                                                                                              |
-| Nosso produto | Unifica as principais ferramentas do rpg de mesa online, de maneira acessível com um sistema de regras brasileiro e que pode ser usado para qualquer tipo de história |
+| Nosso produto | Unifica as principais ferramentas do rpg de mesa online (gestor de combate e de ações/teste, fichas de personagens editáveis e regras do sistema de rpg), de maneira acessível com um sistema de regras brasileiro e que pode ser usado para qualquer tipo de história |
 
 
-### 1.3 Objetivos do produto
+### 1.3 Objetivo do produto
 
 <p style="text-align:justify;"> 
 &emsp;&emsp;Apresenta um único sistema de regra brasileiro com ferramentas acessíveis e que pode ser usado para qualquer tipo de história, campanha e mundos, com todas as ferramentas necessárias para gerenciar uma campanha de rpg de mesa, tanto para mestres quanto para jogadores.</p>
+
+- Objetivo: Unificar ferramentas de um rpg de mesa citados na declaração do produto, por meio de um único sistema de regras.
 
 ### 1.4 Tecnologias a serem utilizadas
 
@@ -59,3 +61,4 @@ hide:
 | :---: | :----: | :-----------------------------: | :-----------: |
 |  6/9  |  1.0   |   Criação da visão do produto   | Pedro Eduardo |
 | 27/9  |  1.1   | tecnologias da visão do produto | Pedro Eduardo |
+| 18/10  |  1.2   | atualização da visão do produto | Pedro Eduardo |
