@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 ## A História
 
 ![brasao!](assets/brasao.jpeg "Brasão Insurgentes Estelares")
@@ -29,6 +34,8 @@ Com o crescimento excessivo dos conglomerados, os Insurgentes Estelares sentiram
 <p style="text-align:justify;">
 Com o passar dos anos, tornaram-se uma facção diversificada, composta por indivíduos de origens diversas e habilidades únicas. Reuniram guerreiros, mercenários, cientistas e até exilados de outros mundos. A líder enigmática da facção trabalhou intensamente para que prosperassem, e a diversidade de talentos dentro dos Insurgentes Estelares é uma de suas maiores forças. Cada membro contribui com suas habilidades únicas para alcançar os objetivos da facção. Embora suas motivações possam variar, todos compartilham a determinação de restaurar o equilíbrio galático.
 </p>
+
+
 ## Um pouco mais sobre os Insurgentes
 
 ### Sylarian

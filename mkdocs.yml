@@ -14,6 +14,7 @@ repo_name: Chaos Manager
 # Configuration
 docs_dir: docs
 theme: 
+  hide_toc: true 
   name: material
   language: pt-BR
   icon: 
@@ -46,11 +47,12 @@ theme:
 nav: 
   - Início: index.md
   - Insurgentes Estelares: historia.md
-  - Visão Geral do Produto: visao_produto.md
-  - Visão Geral do Projeto: visao_projeto.md
-  - Processo de Desenvolvimento: processo_software.md
-  - Lições aprendidas: licoes.md
-  - Entregas das Missões: entregas.md
+  - Visão:
+    - Visão geral do produto: visao_produto.md
+    - Visão geral do projeto: visao_projeto.md
+    - Processo de desenvolvimento: processo_software.md
+    - Lições aprendidas: licoes.md
+  - Entregas das missões: entregas.md
 
 # Extensions
 markdown_extensions:
