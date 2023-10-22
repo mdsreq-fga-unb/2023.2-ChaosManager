@@ -3,16 +3,14 @@ hide:
   - toc
 ---
 
-## Apresentações
-
-### Introdução
+## Introdução
 
 <p style="text-align:justify; text-indent:20px;">
 Este artefato contém todas as apresentações gravadas sobre cada entrega de Missões.
 </p>
 
 
-### Missão 1: Neutralização do Perigo Apache
+## Missão 1: Neutralização do Perigo Apache
 
 A apresentação da entrega da Missão 1, pode ser vista no [Vídeo 1](https://youtu.be/2ano0HX0DoY?si=UKh9sb49pYMbxEof).
 
@@ -23,7 +21,7 @@ A apresentação da entrega da Missão 1, pode ser vista no [Vídeo 1](https://y
 
 
 
-### Bibliografia
+## Bibliografia
 
 > YouTube. Disponível em: [YouTube](https://www.youtube.com).
 
@@ -31,7 +29,7 @@ A apresentação da entrega da Missão 1, pode ser vista no [Vídeo 1](https://y
 
 
 
-### Histórico de versão
+## Histórico de versão
 
 | Data  | Versão | Descrição        | Autor  |
 | :---: | :----: | ---------------- | ------ |
