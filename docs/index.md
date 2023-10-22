@@ -8,13 +8,9 @@ hide:
 
 ## 💡 Sobre
 
-<p style="text-align:justify;">
+<p style="text-align:justify; text-indent:20px;">
 Projeto criado por estudantes da disciplina Requisitos de Software, Engenharia de Software, UnB.
 </p>
-
-## 📒 Documentação
-
-A documentação do projeto está disponivel nesse [link](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/).
 
 ## 👥 Colaboradores
 
