@@ -6,7 +6,7 @@ hide:
 ## 1.1 Problema
 
 <p style="text-align:justify; text-indent:20px;">
-RPG de mesa é uma forma de entretenimento e diversão que envolve duas ou mais pessoas em que a principal função é a interpretação de personagens, onde há sempre um mestre e um ou mais jogadores, sendo utilizado diversos sistemas diferentes. Com a popularização da internet, tornou-se possível jogar por meio de ferramentas online que permitem interagir, criar personagens e gerenciar campanhas. O problema é que essas ferramentas não são unificadas, dificultando o gerenciamento e uso dessas ferramentas. Com isso o produto Chaos Manager busca unificar o máximo de ferramentas para jogadores de rpg, tanto mestres quanto jogadores, utilizando um único sistema brasileiro e gratuito chamado <a href="../assets/OrderChaos.pdf" target="_blank">Order & Chaos</a>.
+RPG de mesa é uma forma de entretenimento e diversão que envolve duas ou mais pessoas em que a principal função é a interpretação de personagens, onde há sempre um mestre e um ou mais jogadores, sendo utilizado diversos sistemas diferentes. Com a popularização da internet, tornou-se possível jogar por meio de ferramentas online que permitem interagir, criar personagens e gerenciar campanhas. Contudo, essas ferramentas não são unificadas, dificultando o gerenciameto delas e a adaptação de novos jogadores, ou seja, gera um problema de desempenho da campanha. Com isso o produto Chaos Manager busca unificar o máximo de ferramentas para jogadores de rpg, tanto mestres quanto jogadores, utilizando um único sistema brasileiro e gratuito chamado <a href="../assets/OrderChaos.pdf" target="_blank">Order & Chaos</a>.
 </p>
 
 ![Diagrama!](assets/diagrama_peixe.jpg "Diagrama")
