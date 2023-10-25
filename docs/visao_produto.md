@@ -32,7 +32,7 @@ Apresenta um único sistema de regra brasileiro com ferramentas acessíveis e qu
 
 **Objetivo principal:** Unificar ferramentas de um rpg de mesa citados na declaração do produto, por meio de um único sistema de regras.
 **Objetivo secundário 1:** Permitir que jogadores se reunam em um único ambiente.
-**Objetivo secundário 2:** Os usuários devem total autonomia de suas fichas de personagem.
+**Objetivo secundário 2:** Os usuários devem conseguir ter acesso a todas as suas informações por meio da ficha de personagem
 **Objetivo secundário 3:** Os usuários devem poder usufruir das dinâmicas disponíveis (Testes e combate).
 
 

@@ -42,12 +42,12 @@ Tabela 2 - Iterações do projeto
 
 ## 2.3 Matriz de comunicação
 
-|         **Descrição**         |       **Envolvidos**        | **Periodicidade (Entrega)** |               **Produtos Gerados**               |
-| :---------------------------: | :-------------------------: | :-------------------------: | :----------------------------------------------: |
-|           Planning            |      Equipe do Projeto      |          Quinzenal          |             Planejamento da iteração             |
-|        Acompanhamento         |      Equipe do Projeto      |           Diario            | Relato das atividades realizadas por cada membro |
-|      Meeting com Cliente      | Equipe do Projeto & Cliente |          Quinzenal          |         Feedbacks e validação do produto         |
-| Comunicar situação do projeto |      Equipe do Projeto      |     Pontos de controle      |         Feedback da situação do projeto          |
+|         **Descrição**         |       **Envolvidos**        |                **Produtos Gerados**               |
+| :---------------------------: | :-------------------------: | :----------------------------------------------: |
+|           Planning            |      Equipe do Projeto      |             Planejamento da iteração             |
+|        Acompanhamento         |      Equipe do Projeto      | Relato das atividades realizadas por cada membro |
+|      Meeting com Cliente      | Equipe do Projeto & Cliente |         Feedbacks e validação do produto         |
+| Comunicar situação do projeto |      Equipe do Projeto      |         Feedback da situação do projeto          |
 
 <p style="text-align:center;"> 
 Tabela 3 - Matriz de comunicação
