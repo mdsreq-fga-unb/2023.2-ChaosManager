@@ -50,6 +50,16 @@ A falta de valor de negócio nas US dificultou a verificação e validação, em
 
 Falta contexto, muitas US incompletas, elaboradas incorretamente, não haverá cadastro dos jogadores? Não haverá turmas? Não haverá interface de controle do professor? Feedback? Notas? Avaliações? Em que US as perguntas serão inseridas? O conteúdo da disciplina será estático?
 
+## Bibliografia 
+
+Insurgentes Estelares. Verificação e Validação - Crystaleum. Google Docs. Disponível em: https://docs.google.com/document/d/1LQgYhpjF86tWoar6K5Ryrx_JWKtUVAh7q3pIY0Bezts/edit#heading=h.esgg0ahqatg9. Acesso em: 25 de outubro de 2023.
+
+## Histórico de versão
+
+| Data  | Versão | Descrição                                                        | Autor                                          |
+| :---: | :----: | ---------------------------------------------------------------- | ---------------------------------------------- |
+| 25/10 |  1.0   | Adição do documento de verificação e validação da equipe Moonwalkers                          | Gustavo França                |
+
 
 
 
