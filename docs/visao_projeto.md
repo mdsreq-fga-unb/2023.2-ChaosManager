@@ -22,8 +22,6 @@ A tabela 1 possui os principais papeis e quem serão os responsáveis por garant
 Tabela 1 - Organização de papeis
 </p>
 
-
-
 ## 2.2 Planejamento de fases e iterações do projeto
 
 | **Iterações** | **Etapas**                                                        | **Produto (Entrega)**                             | **Data Início** | **Data Fim** |
@@ -40,8 +38,6 @@ Tabela 1 - Organização de papeis
 Tabela 2 - Iterações do projeto
 </p>
 
-
-
 ## 2.3 Matriz de comunicação
 
 |         **Descrição**         |       **Envolvidos**        | **Periodicidade (Entrega)** |               **Produtos Gerados**               |
@@ -55,8 +51,6 @@ Tabela 2 - Iterações do projeto
 Tabela 3 - Matriz de comunicação
 </p>
 
-
-
 ## 2.4 Gerenciamento de Riscos
 
 ##### Falta de comunicação entre a equipe
@@ -69,7 +63,32 @@ Tabela 3 - Matriz de comunicação
 - Probabilidade: Média
 - Possivéis Soluções: <ul><li>Compartilhamento do conhecimento do produto e do código entre os membros</li> <li>Redistribuição de tarefas entre os membros da equipe</li></ul>
 
+##### Escopo de projeto mínimo maior do que a capacidade produtiva
 
+- Possíveis soluções:
+  <ul>
+    <li>
+    <b>Refinar o Escopo do MVP</b>: Realizar uma revisão minuciosa do escopo atual do MVP para identificar funcionalidades ou características não essenciais, eliminando ou adiando-as para versões futuras, a fim de reduzir o escopo a um nível gerenciável.
+    </li><li>
+    <b>Manter Comunicação Transparente</b>: Manter uma comunicação transparente com os stakeholders, alinhando as expectativas sobre o produto e os informando sobre o risco e as ações que estão sendo tomadas para mitigá-lo.
+    </li><li>
+    <b>Priorização de Recursos</b>: Trabalhar em estreita colaboração entre a equipe de desenvolvimento e os stakeholders para priorizar as funcionalidades do MVP. Identificando os recursos críticos que precisam ser entregues no prazo e concentrando os esforços neles, deixando funcionalidades menos críticas para etapas subsequentes.
+    </li>
+  </ul>
+
+##### Sobrecarga entre os membros
+
+- Possíveis soluções:
+  <ul>
+      <li>
+      <b>Revisão das Tarefas e Responsabilidades</b>: Realizar uma revisão detalhada das tarefas e responsabilidades atribuídas a cada membro da equipe. Certifique-se de que as cargas de trabalho sejam equilibradas e que ninguém esteja sobrecarregado.
+      </li>
+      <li>
+      <b>Redistribuição de atividades</b>: Se necessário, redistribuir tarefas entre os membros da equipe, alocando recursos de acordo com suas habilidades e disponibilidade. Isso pode ajudar a aliviar a sobrecarga de membros específicos.
+      </li><li>
+      <b>Definir Limites de Horário</b>: Se necessário, redistribuir tarefas entre os membros da equipe, alocando recursos de acordo com suas habilidades e disponibilidade. Isso pode ajudar a aliviar a sobrecarga de membros específicos.
+      </li>
+    </ul>
 
 ## 2.5 Critérios de Replanejamento
 
@@ -102,8 +121,6 @@ A baixa qualidade do produto é um motivo claro para o replanejamento. Isso pode
 <p style="text-align:justify; text-indent:20px;">
 Quando ocorrem mudanças significativas na composição da equipe, como a saída de membros-chave, é importante avaliar o impacto dessas mudanças no projeto. O replanejamento pode ser necessário para redistribuir tarefas, e ajustar o cronograma, se necessário, para acomodar as mudanças.
 </p>
-
-
 
 ## 2.6 Histórico de versão
 
