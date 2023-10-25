@@ -16,13 +16,11 @@ A tabela 1 possui os principais papeis e quem serão os responsáveis por garant
 | Designer de Interface e usabilidade do Usuário | Criar interfaces de usuário cativantes, intuitivas e funcionais, mantendo a consistência de design em todo o produto e adaptando-o às necessidades dos usuários.                                  | Emerson Teles   | Emerson Teles e Gustavo       |
 | Desenvolvedor                                  | Desenvolver o software conforme os requisitos do projeto, focando na modularidade e escalabilidade para permitir futuras adaptações e manutenção simplificada.                                    | Oscar Correia   | Equipe                        |
 | Analista de Qualidade                          | Assegurar a qualidade do software, identificando e corrigindo defeitos, além de verificar se ele atende aos requisitos do projeto, por meio da criação de casos de teste e cenários de validação. | Gustavo França  | Gustavo França e Luciano      |
-| Cliente                                        | Validar os requisitos do projeto e do produto, fornecendo insights e contexto sobre o problema que precisa ser solucionado.                                                                       | Pedro Eduardo   | Artur                         |
+| Cliente                                        | Validar os requisitos do projeto e do produto, fornecendo insights e contexto sobre o problema que precisa ser solucionado.                                                                       | Pedro Eduardo   | Artur, George Marsicano       |
 
 <p style="text-align:center;">
 Tabela 1 - Organização de papeis
 </p>
-
-
 
 ## 2.2 Planejamento de fases e iterações do projeto
 
@@ -40,8 +38,6 @@ Tabela 1 - Organização de papeis
 Tabela 2 - Iterações do projeto
 </p>
 
-
-
 ## 2.3 Matriz de comunicação
 
 |         **Descrição**         |       **Envolvidos**        | **Periodicidade (Entrega)** |               **Produtos Gerados**               |
@@ -55,8 +51,6 @@ Tabela 2 - Iterações do projeto
 Tabela 3 - Matriz de comunicação
 </p>
 
-
-
 ## 2.4 Gerenciamento de Riscos
 
 ##### Falta de comunicação entre a equipe
@@ -68,8 +62,6 @@ Tabela 3 - Matriz de comunicação
 
 - Probabilidade: Média
 - Possivéis Soluções: <ul><li>Compartilhamento do conhecimento do produto e do código entre os membros</li> <li>Redistribuição de tarefas entre os membros da equipe</li></ul>
-
-
 
 ## 2.5 Critérios de Replanejamento
 
@@ -102,8 +94,6 @@ A baixa qualidade do produto é um motivo claro para o replanejamento. Isso pode
 <p style="text-align:justify; text-indent:20px;">
 Quando ocorrem mudanças significativas na composição da equipe, como a saída de membros-chave, é importante avaliar o impacto dessas mudanças no projeto. O replanejamento pode ser necessário para redistribuir tarefas, e ajustar o cronograma, se necessário, para acomodar as mudanças.
 </p>
-
-
 
 ## 2.6 Histórico de versão
 
