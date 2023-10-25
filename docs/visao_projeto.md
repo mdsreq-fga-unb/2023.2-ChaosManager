@@ -16,7 +16,7 @@ A tabela 1 possui os principais papeis e quem serão os responsáveis por garant
 | Designer de Interface e usabilidade do Usuário | Criar interfaces de usuário cativantes, intuitivas e funcionais, mantendo a consistência de design em todo o produto e adaptando-o às necessidades dos usuários.                                  | Emerson Teles   | Emerson Teles e Gustavo       |
 | Desenvolvedor                                  | Desenvolver o software conforme os requisitos do projeto, focando na modularidade e escalabilidade para permitir futuras adaptações e manutenção simplificada.                                    | Oscar Correia   | Equipe                        |
 | Analista de Qualidade                          | Assegurar a qualidade do software, identificando e corrigindo defeitos, além de verificar se ele atende aos requisitos do projeto, por meio da criação de casos de teste e cenários de validação. | Gustavo França  | Gustavo França e Luciano      |
-| Cliente                                        | Validar os requisitos do projeto e do produto, fornecendo insights e contexto sobre o problema que precisa ser solucionado.                                                                       | Pedro Eduardo   | Artur                         |
+| Cliente                                        | Validar os requisitos do projeto e do produto, fornecendo insights e contexto sobre o problema que precisa ser solucionado.                                                                       | Pedro Eduardo   | Artur, George Marsicano       |
 
 <p style="text-align:center;">
 Tabela 1 - Organização de papeis
@@ -26,13 +26,15 @@ Tabela 1 - Organização de papeis
 
 | **Iterações** | **Etapas**                                                        | **Produto (Entrega)**                             | **Data Início** | **Data Fim** |
 | :-----------: | :---------------------------------------------------------------- | :------------------------------------------------ | :-------------: | :----------: |
-|  Iteração 1   | Definição do produto                                              | Escopo do projeto e produto                       |   05/09/2023    |  28/09/2023  |
-|  Iteração 2   | Planejamento do Projeto                                           | Backlog , requisitos elicitados, definição do MVP |   29/09/2023    |  13/10/2023  |
-|  Iteração 3   | Projeto de arquitetura, definição de MVPs e estudo de tecnologias | Arquitetura do sistema, MVPs e equipe capacitada  |   15/10/2023    |  26/10/2023  |
-|  Iteração 4   | Prototipação                                                      | Protótipo de telas de alta fidelidade             |   27/10/2023    |  14/11/2023  |
-|  Iteração 5   | Desenvolvimento                                                   | Aplicação                                         |   14/11/2023    |  05/12/2023  |
-|  Iteração 6   | Testes                                                            | Testes da Aplicação                               |   14/11/2023    |  05/12/2023  |
-|  Iteração 6   | Release                                                           | Publicação da aplicação nos serviços digitais     |   06/12/2023    |  14/12/2023  |
+|  Iteração 1   | Definição do produto                                              | Escopo do projeto e produto                       |   04/09/2023    |  29/09/2023  |
+|  Iteração 2   | Planejamento do Projeto                                           | Backlog , requisitos elicitados, definição do MVP |   02/10/2023    |  13/10/2023  |
+|  Iteração 3   | Projeto de arquitetura, definição de MVPs e estudo de tecnologias | Arquitetura do sistema, MVPs e equipe capacitada  |   16/10/2023    |  27/10/2023  |
+|  Iteração 4   | Prototipação                                                      | Protótipo de telas de alta fidelidade             |   30/10/2023    |  10/11/2023  |
+|  Iteração 5   | Desenvolvimento 1                                                 | Aplicação                                         |   13/11/2023    |  24/12/2023  |
+|  Iteração 6   | Testes 1                                                          | Testes da Aplicação                               |   13/11/2023    |  24/12/2023  |
+|  Iteração 7   | Desenvolvimento 2                                                 | Aplicação                                         |   27/11/2023    |  08/12/2023  |
+|  Iteração 8   | Testes 2                                                          | Testes da Aplicação                               |   27/11/2023    |  08/12/2023  |
+|  Iteração 9   | Release                                                           | Publicação da aplicação nos serviços digitais     |   11/12/2023    |  15/12/2023  |
 
 <p style="text-align:center;"> 
 Tabela 2 - Iterações do projeto
@@ -62,6 +64,7 @@ Tabela 3 - Matriz de comunicação
 
 - Probabilidade: Média
 - Possivéis Soluções: <ul><li>Compartilhamento do conhecimento do produto e do código entre os membros</li> <li>Redistribuição de tarefas entre os membros da equipe</li></ul>
+
 
 ##### Escopo de projeto mínimo maior do que a capacidade produtiva
 
