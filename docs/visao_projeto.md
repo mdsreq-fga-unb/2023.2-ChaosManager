@@ -26,13 +26,15 @@ Tabela 1 - Organização de papeis
 
 | **Iterações** | **Etapas**                                                        | **Produto (Entrega)**                             | **Data Início** | **Data Fim** |
 | :-----------: | :---------------------------------------------------------------- | :------------------------------------------------ | :-------------: | :----------: |
-|  Iteração 1   | Definição do produto                                              | Escopo do projeto e produto                       |   05/09/2023    |  28/09/2023  |
-|  Iteração 2   | Planejamento do Projeto                                           | Backlog , requisitos elicitados, definição do MVP |   29/09/2023    |  13/10/2023  |
-|  Iteração 3   | Projeto de arquitetura, definição de MVPs e estudo de tecnologias | Arquitetura do sistema, MVPs e equipe capacitada  |   15/10/2023    |  26/10/2023  |
-|  Iteração 4   | Prototipação                                                      | Protótipo de telas de alta fidelidade             |   27/10/2023    |  14/11/2023  |
-|  Iteração 5   | Desenvolvimento                                                   | Aplicação                                         |   14/11/2023    |  05/12/2023  |
-|  Iteração 6   | Testes                                                            | Testes da Aplicação                               |   14/11/2023    |  05/12/2023  |
-|  Iteração 6   | Release                                                           | Publicação da aplicação nos serviços digitais     |   06/12/2023    |  14/12/2023  |
+|  Iteração 1   | Definição do produto                                              | Escopo do projeto e produto                       |   04/09/2023    |  29/09/2023  |
+|  Iteração 2   | Planejamento do Projeto                                           | Backlog , requisitos elicitados, definição do MVP |   02/10/2023    |  13/10/2023  |
+|  Iteração 3   | Projeto de arquitetura, definição de MVPs e estudo de tecnologias | Arquitetura do sistema, MVPs e equipe capacitada  |   16/10/2023    |  27/10/2023  |
+|  Iteração 4   | Prototipação                                                      | Protótipo de telas de alta fidelidade             |   30/10/2023    |  10/11/2023  |
+|  Iteração 5   | Desenvolvimento 1                                                 | Aplicação                                         |   13/11/2023    |  24/12/2023  |
+|  Iteração 6   | Testes 1                                                          | Testes da Aplicação                               |   13/11/2023    |  24/12/2023  |
+|  Iteração 7   | Desenvolvimento 2                                                 | Aplicação                                         |   27/11/2023    |  08/12/2023  |
+|  Iteração 8   | Testes 2                                                          | Testes da Aplicação                               |   27/11/2023    |  08/12/2023  |
+|  Iteração 9   | Release                                                           | Publicação da aplicação nos serviços digitais     |   11/12/2023    |  15/12/2023  |
 
 <p style="text-align:center;"> 
 Tabela 2 - Iterações do projeto
