@@ -1,18 +1,28 @@
 # Backlog SAFe
 
+
+
 ## Personas
 
+<p style="text-align:justify; text-indent:20px;">
 Uma persona é o personagem fictício da user story que representa o usuário ideal do produto. Todas as histórias são escritas a partir da perspectiva de um tipo de usuário.
+</p>
 
-- **Mestre:** refere-se ao jogador de campanha de RPG que dejesa mestrar uma campanha no ChaosManager.
-- **Jogador:** refere-se jogador de uma campanha de RPG que deseja participar de um campanha mestrada pela persona metre.
+<ul style="text-align:justify;">
+<li> <b>Mestre:</b> refere-se ao jogador de campanha de RPG que dejesa mestrar uma campanha no ChaosManager.</li>
+<li> <b>Jogador:</b> refere-se jogador de uma campanha de RPG que deseja participar de um campanha mestrada pela persona metre.</li>
+</ul>
 
 
 ## Requisitos funcionais
 
+<p style="text-align:justify; text-indent:20px;">
 Um requisito funcional é uma especificação de uma funcionalidade ou comportamento que um sistema ou software deve ser capaz de realizar. No caso do ChaosManager esses requisitos serão modelados usando o modelo de backlog SAFe, dividido em Histórias de Usuário (US), Funcionalidade (FN), Capacidade (CP) e Épicos (EP).
+</p>
 
+<p style="text-align:justify; text-indent:20px;">
 Para a criação do backlog foi utilizado o mural abaixo, a versão dos requisitos aqui apresentada esta demarcada como "Segunda versão do Backlog após verificação e validação":
+</p>
 
 <iframe src='https://app.mural.co/embed/37616178-ef92-45f6-98c0-bea833159e45'
   width='100%'
@@ -20,7 +30,9 @@ Para a criação do backlog foi utilizado o mural abaixo, a versão dos requisit
   style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef'
   sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
 
+<p style="text-align:justify; text-indent:20px;">
 Para fins de registro abaixo está a tabela com os requisitos.
+</p>
 
 <table>
     <thead>
@@ -164,6 +176,7 @@ Para fins de registro abaixo está a tabela com os requisitos.
 </table>
 
 
+
 ### Declaração das histórias de usuário
 
 | Número | Nome                              | Declaração                                                                                                                                           |
@@ -210,22 +223,24 @@ Para fins de registro abaixo está a tabela com os requisitos.
 
 ## Requisitos não-funcionais
 
+<p style="text-align:justify; text-indent:20px;">
 Um requisito não funcional é uma especificação de uma característica ou propriedade do sistema ou software que não esta diretamente relacionada à sua funcionalidade, como desempenho, segurança, usabilidade, entre outras.
+</p>
 
 | Número | Declaração                                                                                                     |
 | :----: | -------------------------------------------------------------------------------------------------------------- |
-|  RNF1  | A aplicação deve seguir o livro base de regras Order & Chaos                                                   |
-|  RNF2  | A aplicação deve ser responsiva a diferentes tamanhos de tela                                                  |
-|  RNF3  | A aplicação deve ser desenvolvida utilizando NextJS e Node                                                     |
-|  RNF4  | A aplicação deverá rodar nos browsers mais comumente utilizados (Chrome, Edge, Opera) em suas versões recentes |
-|  RNF5  | O sistema deve ser desenvolvido orientado a objetos                                                            |
-|  RNF6  | O sistema deve ser desenvolvido em paradigma funcional                                                         |
-|  RNF7  | O sistema deve utilizar Jest como biblioteca de testes                                                         |
-|  RNF8  | O sistema deve utilizar Github Actions para automação de processos e testes                                    |
+| RNF01  | A aplicação deve seguir o livro base de regras Order & Chaos                                                   |
+| RNF02  | A aplicação deve ser responsiva a diferentes tamanhos de tela                                                  |
+| RNF03  | A aplicação deve ser desenvolvida utilizando NextJS e Node                                                     |
+| RNF04  | A aplicação deverá rodar nos browsers mais comumente utilizados (Chrome, Edge, Opera) em suas versões recentes |
+| RNF05  | O sistema deve ser desenvolvido orientado a objetos                                                            |
+| RNF06  | O sistema deve ser desenvolvido em paradigma funcional                                                         |
+| RNF07  | O sistema deve utilizar Jest como biblioteca de testes                                                         |
+| RNF08  | O sistema deve utilizar Github Actions para automação de processos e testes                                    |
+
 
 
 ## Histórico de versão
-
 
 | Data  | Versão | Descrição          | Autor           |
 | :---: | :----: | ------------------ | --------------- |
