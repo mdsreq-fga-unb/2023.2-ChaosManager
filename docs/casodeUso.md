@@ -9,7 +9,7 @@ hide:
 <p align="justify">&emsp;&emsp; O Processo Unificado utiliza casos de uso como forma de declaração e especificação de requisitos. Tendo isso em vista, antes de especificar os casos de uso, foi necessário elicitar os requisitos a serem declarados. Para isso, foram realizadas previamente as atividades de Elicitação e Descoberta, Análise e Consenso, Verificação e Validação da Engenharia de Requisitos. Esse processo pode ser observado na Figura 1 e os requisitos finais elicitados e passados pela verificação e validação na Tabela 1.</p> 
 
 <div align="center" style="text-align: center">
-<img src="assets/casosUso/requisitos.png">
+<img src="../assets/casosUso/requisitos.png">
 <p><b>Figura 1:</b> Elicitação dos Requisitos. </p>
 </div>
 
@@ -176,105 +176,105 @@ hide:
 #### CdU-01
 
 <div align="center" style="text-align: center">
-<img src="assets/casosUso/1.png">
+<img src="../assets/casosUso/1.png">
 <p><b>Figura 2:</b> Especificação Caso de Uso 01. </p>
 </div>
 
 #### CdU-02
 
 <div align="center" style="text-align: center">
-<img src="assets/casosUso/2.png">
+<img src="../assets/casosUso/2.png">
 <p><b>Figura 3:</b> Especificação Caso de Uso 02. </p>
 </div>
 
 #### CdU-03
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/3.png">
+<img src="../assets/casosUso/3.png">
 <p><b>Figura 4:</b> Especificação Caso de Uso 03. </p>
 </div>
 
 #### CdU-04
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/4.png">
+<img src="../assets/casosUso/4.png">
 <p><b>Figura 5:</b> Especificação Caso de Uso 04. </p>
 </div>
 
 #### CdU-05
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/5.png">
+<img src="../assets/casosUso/5.png">
 <p><b>Figura 6:</b> Especificação Caso de Uso 05. </p>
 </div>
 
 #### CdU-06
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/6.png">
+<img src="../assets/casosUso/6.png">
 <p><b>Figura 7:</b> Especificação Caso de Uso 06. </p>
 </div>
 
 #### CdU-07
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/7.png">
+<img src="../assets/casosUso/7.png">
 <p><b>Figura 8:</b> Especificação Caso de Uso 07. </p>
 </div>
 
 #### CdU-08
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/8.png">
+<img src="../assets/casosUso/8.png">
 <p><b>Figura 9:</b> Especificação Caso de Uso 08. </p>
 </div>
 
 #### CdU-09
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/9.png">
+<img src="../assets/casosUso/9.png">
 <p><b>Figura 10:</b> Especificação Caso de Uso 09. </p>
 </div>
 
 #### CdU-10
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/10.png">
+<img src="../assets/casosUso/10.png">
 <p><b>Figura 11:</b> Especificação Caso de Uso 10. </p>
 </div>
 
 #### CdU-11
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/11.png">
+<img src="../assets/casosUso/11.png">
 <p><b>Figura 12:</b> Especificação Caso de Uso 11. </p>
 </div>
 
 #### CdU-12
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/12.png">
+<img src="../assets/casosUso/12.png">
 <p><b>Figura 13:</b> Especificação Caso de Uso 12. </p>
 </div>
 
 #### CdU-13
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/13.png">
+<img src="../assets/casosUso/13.png">
 <p><b>Figura 14:</b> Especificação Caso de Uso 13. </p>
 </div>
 
 #### CdU-14
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/14.png">
+<img src="../assets/casosUso/14.png">
 <p><b>Figura 15:</b> Especificação Caso de Uso 14. </p>
 </div>
 
 #### CdU-15
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/15.png">
+<img src="../assets/casosUso/15.png">
 <p><b>Figura 16:</b> Especificação Caso de Uso 15. </p>
 </div>
 
@@ -283,7 +283,9 @@ hide:
 <p align="justify">&emsp;&emsp; Para Organizar e Atualizar o Backlog, realizamos a priorização dos Casos de Uso utilizando a técnica MoSCoW para determinar a prioridade dos requisitos. A execução da técnica pode ser vista na Figura 17.</p>
 
 <div align="center" style="text-align: center">
-<img src="assets/casosUso/priorizacaoCdU.png">
+
+<img src="../assets/casosUso/priorizacaoCdU.png">
+
 <p><b>Figura 17:</b> Priorização MoSCoW. </p>
 </div>
 
