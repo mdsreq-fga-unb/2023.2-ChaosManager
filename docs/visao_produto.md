@@ -30,9 +30,13 @@ RPG de mesa é uma forma de entretenimento e diversão que envolve duas ou mais 
 Apresenta um único sistema de regra brasileiro com ferramentas acessíveis e que pode ser usado para qualquer tipo de história, campanha e mundos, com todas as ferramentas necessárias para gerenciar uma campanha de rpg de mesa, tanto para mestres quanto para jogadores.
 </p>
 
+
 **Objetivo principal:** Unificar ferramentas de um rpg de mesa citados na declaração do produto, por meio de um único sistema de regras.
+
 **Objetivo secundário 1:** Permitir que jogadores se reunam em um único ambiente.
+
 **Objetivo secundário 2:** Os usuários devem conseguir ter acesso a todas as suas informações por meio da ficha de personagem
+
 **Objetivo secundário 3:** Os usuários devem poder usufruir das dinâmicas disponíveis (Testes e combate).
 
 
