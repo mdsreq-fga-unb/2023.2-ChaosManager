@@ -1,7 +1,12 @@
+---
+hide:
+  - toc
+---
+
 # Priorização e definição do MVP
 
 ## Introdução
-<p align="justify">&emsp;&emsp; O principal propósito das estratégias de priorização de requisitos é fornecer orientação na seleção das funções ou funcionalidades mais cruciais em um sistema em desenvolvimento. Isso envolve a elaboração de estratégias e parâmetros específicos para otimizar a resposta a diferentes tipos de desafios. A fim de realizar essa tarefa com eficácia, é necessário estabelecer critérios claros e cuidadosamente considerados. Para definir as prioridades de cada requisito foram utilizadas duas técnicas: MoSCoW, First Things First(FTF). A priorização foi realizada com base na declaração dos requisitos feita no Backlog SAFe[link arquivo luciano].</p>
+<p align="justify">&emsp;&emsp; O principal propósito das estratégias de priorização de requisitos é fornecer orientação na seleção das funções ou funcionalidades mais cruciais em um sistema em desenvolvimento. Isso envolve a elaboração de estratégias e parâmetros específicos para otimizar a resposta a diferentes tipos de desafios. A fim de realizar essa tarefa com eficácia, é necessário estabelecer critérios claros e cuidadosamente considerados. Para definir as prioridades de cada requisito foram utilizadas duas técnicas: MoSCoW, First Things First(FTF). A priorização foi realizada com base na declaração dos requisitos feita no <a href="https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/backlog/">Backlog safe</a>: </p>  
 
 <p align="justify">&emsp;&emsp; O MVP - Minimum Viable Product, é um conceito amplamente utilizado no desenvolvimento de produtos . Um MVP é uma versão simplificada de um produto ou serviço que contém apenas os recursos essenciais necessários para atender às necessidades básicas dos clientes e validar a viabilidade do conceito. </p>
 
