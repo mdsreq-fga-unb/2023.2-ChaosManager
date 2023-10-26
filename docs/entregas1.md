@@ -6,7 +6,7 @@ hide:
 ## Introdução
 
 <p style="text-align:justify; text-indent:20px;">
-Este artefato contém todas as apresentações gravadas sobre cada entrega de Missões.
+Este artefato contém a apresentação gravada sobre a missão 1
 </p>
 
 
@@ -33,4 +33,4 @@ A apresentação da entrega da Missão 1, pode ser vista no [Vídeo 1](https://y
 
 | Data  | Versão | Descrição        | Autor  |
 | :---: | :----: | ---------------- | ------ |
-| 27/09 |  1.0   | Entrega Missão 1 | Equipe |
+| 27/09 |  1.0   | Entrega Missão 1 | Oscar |
