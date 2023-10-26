@@ -18,38 +18,42 @@ Para atingir uma máxima no compreendimento na matéria com a união de diferent
 
 - INVEST com checklist para **verificar** se foram escritas boas US
 - Checklist para **verificar** a estrutura da US (Ator, Ação, Valor de negócio)
-- Checklist para **verificar** a qualidade do backlog (Segue a estrutura do SAFe)
+- Checklist para **verificar** a qualidade do backlog (Épicos, Capacidades, Funcionalidades e Histórias de Usuário)
 - Checklist para **validar** as US (Declaração do produto, Objetivo, Problema) 
+
+<center>
 
 
 ## Verificação - Invest
 
-![Invest US1 - 7](assets/verEval/verInvest1.png)
-![Invest US8 - 13](assets/verEval/verInvest2.png)
-![Invest US14 - 19](assets/verEval/verInvest3.png)
+<img src="../assets/verEval/verInvest1.png" alt="Invest US1 - 7" width="700" height="500">
+<img src="../assets/verEval/verInvest2.png" alt="Invest US8 - 13" width="700" height="500">
+<img src="../assets/verEval/verInvest3.png" alt="Invest US14 - 19" width="700" height="500">
 
 
 
 ## Verificação - Checklist
 
-![Checklist US1 - 10](assets/verEval/verCheck1.png)
-![Checklist US11 - 19](assets/verEval/verCheck2.png)
+<img src="../assets/verEval/verCheck1.png" alt="Checklist US1 - 10" width="700" height="400">
+<img src="../assets/verEval/verCheck2.png" alt="Checklist US11 - 19" width="700" height="400">
 
 
 
 ## Verificação - SAFe
 
-![SAFe EP1 - F7](assets/verEval/verSAFE1.png)
-![SAFe F8 - US7](assets/verEval/verSAFE2.png)
-![SAFe US8 - US17](assets/verEval/verSAFE3.png)
-![SAFe US18 - US19](assets/verEval/verSAFE4.png)
+<img src="../assets/verEval/verSAFE1.png" alt="SAFe EP1 - F7" width="700" height="400">
+<img src="../assets/verEval/verSAFE2.png" alt="SAFe F8 - US7" width="700" height="400">
+<img src="../assets/verEval/verSAFE3.png" alt="SAFe US8 - US17" width="700" height="400">
+<img src="../assets/verEval/verSAFE4.png" alt="SAFe US18 - US19" width="700" height="400">
 
 
 
 ## Validação - Checklist
 
-![Check US1 - US10](assets/verEval/valCheck1.png)
-![Check US11 - US19](assets/verEval/valCheck2.png)
+<img src="../assets/verEval/valCheck1.png" alt="Check US1 - US10" width="700" height="400">
+<img src="../assets/verEval/valCheck2.png" alt "Check US11 - US19" width="700" height="400">
+
+</center>
 
 
 
