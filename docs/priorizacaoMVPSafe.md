@@ -108,4 +108,4 @@ Os elementos **Would/Want/Won't-Have** referem-se a requisitos com pouca ou nenh
 
 | Data  | Versão | Descrição          | Autor           |
 | :---: | :----: | ------------------ | --------------- |
-| 25/10 |  1.0   | Criação da priorização de requisitos | Oscar de Brito e Larissa Gomes |
+| 25/10 |  1.0   | Criação da priorização de requisitos | Oscar de Brito e Larissa Gomes|
