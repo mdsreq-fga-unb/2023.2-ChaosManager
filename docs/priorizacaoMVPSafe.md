@@ -89,6 +89,7 @@ Os elementos **Would/Want/Won't-Have** referem-se a requisitos com pouca ou nenh
 ## Mínimo Produto Viável
 
 <p align="justify">&emsp;&emsp; Foi utilizado o Canvas MVP do Lean Inception para definir o MVP como apresentado na Figura 3. Em resultados esperados, é indicado também quais objetivos secundários esperamos atingir naquele resultado e quais os requisitos responsáveis por tornar isso possível. Esses resultados juntos visam atingir o resultado principal do projeto.</p>
+
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/priorizacaoMVP/mvp.png">
 <p><b>Figura 3:</b> MVP.</p>
@@ -98,24 +99,13 @@ Os elementos **Would/Want/Won't-Have** referem-se a requisitos com pouca ou nenh
   width='100%'
   height='480px'
   style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef'
-  sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'>
+  sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
 
+## Bibliografia 
 [1] WIEGERS Karl E. First Things First: Prioritizing Requirements. Setembro de 1999. Disponível no [link](https://www.processimpact.com/articles/prioritizing.pdf).
 
-| Versão | Data       | Descrição                                                 | Autor(es)        |
-| ------ | ---------- | --------------------------------------------------------- | ---------------- |
-| `1.0`  | 29/11/2022 | Criação do documento de priorização de requisitos         | Oscar de Brito e Larissa Gomes |
+## Histórico de versão
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Data  | Versão | Descrição          | Autor           |
+| :---: | :----: | ------------------ | --------------- |
+| 25/10 |  1.0   | Criação da priorização de requisitos | Oscar de Brito e Larissa Gomes |
