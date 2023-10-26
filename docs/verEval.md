@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Verificação e Validação - Crystaleum
 
 

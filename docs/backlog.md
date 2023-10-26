@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Backlog SAFe
 
 
