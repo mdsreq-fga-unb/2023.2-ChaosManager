@@ -9,7 +9,7 @@ hide:
 <p align="justify">&emsp;&emsp; O Processo Unificado utiliza casos de uso como forma de declaração e especificação de requisitos. Tendo isso em vista, antes de especificar os casos de uso, foi necessário elicitar os requisitos a serem declarados. Para isso, foram realizadas previamente as atividades de Elicitação e Descoberta, Análise e Consenso, Verificação e Validação da Engenharia de Requisitos. Esse processo pode ser observado na Figura 1 e os requisitos finais elicitados e passados pela verificação e validação na Tabela 1.</p> 
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/requisitos.png">
+<img src="assets/casosUso/requisitos.png">
 <p><b>Figura 1:</b> Elicitação dos Requisitos. </p>
 </div>
 
@@ -176,14 +176,14 @@ hide:
 #### CdU-01
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/1.png">
+<img src="assets/casosUso/1.png">
 <p><b>Figura 2:</b> Especificação Caso de Uso 01. </p>
 </div>
 
 #### CdU-02
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/2.png">
+<img src="assets/casosUso/2.png">
 <p><b>Figura 3:</b> Especificação Caso de Uso 02. </p>
 </div>
 
@@ -283,7 +283,7 @@ hide:
 <p align="justify">&emsp;&emsp; Para Organizar e Atualizar o Backlog, realizamos a priorização dos Casos de Uso utilizando a técnica MoSCoW para determinar a prioridade dos requisitos. A execução da técnica pode ser vista na Figura 17.</p>
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/casosUso/priorizacaoCdU.png">
+<img src="assets/casosUso/priorizacaoCdU.png">
 <p><b>Figura 17:</b> Priorização MoSCoW. </p>
 </div>
 
