@@ -13,7 +13,7 @@ repo_name: Chaos Manager
 
 # Configuration
 docs_dir: docs
-theme: 
+theme:
   hide_toc: true 
   name: material
   language: pt-BR
@@ -47,14 +47,19 @@ theme:
 nav: 
   - Início: index.md
   - Insurgentes Estelares: historia.md
-  - Visão:
+  - Missão 1:
     - Visão geral do produto: visao_produto.md
     - Visão geral do projeto: visao_projeto.md
     - Processo de desenvolvimento: processo_software.md
     - Lições aprendidas: licoes.md
-  - Verificação e validação - Crystaleum: verEval.md
-  - Backlog SAFe: backlog.md
-  - Entregas das missões: entregas.md
+
+    - Vídeo de Apresentação: entregas1.md
+  - Missão 2:
+    - Verificação e validação - Crystaleum: verEval.md
+    - Backlog SAFe: backlog.md
+    - Priorização : priorizacaoMVPSafe.md
+    - Entregas das missões: entregas.md
+
 
 # Extensions
 markdown_extensions:
