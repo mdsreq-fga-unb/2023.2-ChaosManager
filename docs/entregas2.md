@@ -12,10 +12,12 @@ Este artefato contém a apresentação gravada sobre a missão 2
 
 ## Missão 2: Conquistar Celestia
 
-A apresentação da entrega da Missão 2, pode ser vista no [Vídeo 1]().
+A apresentação da entrega da Missão 2, pode ser vista no [Vídeo 1](https://www.youtube.com/watch?v=jcDxTtPKzqA&ab_channel=oscarbrito).
 
-
-Vídeo 1: Entrega Missão 2 (Fonte: Insurgentes Estelares. 2023). 
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jcDxTtPKzqA?si=isc9ZH5ze38hhy4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p> <b>Vídeo 1:</b> Entrega Missão 2 (Fonte: Insurgentes Estelares. 2023). </p>
+</div>
 
 
 
