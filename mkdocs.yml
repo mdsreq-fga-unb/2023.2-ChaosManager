@@ -51,14 +51,14 @@ nav:
     - Visão geral do produto: visao_produto.md
     - Visão geral do projeto: visao_projeto.md
     - Processo de desenvolvimento: processo_software.md
-    - Lições aprendidas: licoes.md
-    - Vídeo de Apresentação: entregas1.md
-
+    - Lições aprendidas: licoes1.md
+    - Vídeo de apresentação: entregas1.md
   - Missão 2:
     - Verificação e validação - Crystaleum: verEval.md
     - Backlog SAFe: backlog.md
     - Priorização e MVP: priorizacaoMVPSafe.md
-    - Vídeo de Apresentação: entregas2.md
+    - Lições aprendidas: licoes2.md
+    - Vídeo de apresentação: entregas2.md
 
 
 

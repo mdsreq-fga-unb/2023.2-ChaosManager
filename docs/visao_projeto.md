@@ -42,7 +42,7 @@ Tabela 2 - Iterações do projeto
 
 ## 2.3 Matriz de comunicação
 
-|         **Descrição**         |       **Envolvidos**        |                **Produtos Gerados**               |
+|         **Descrição**         |       **Envolvidos**        |               **Produtos Gerados**               |
 | :---------------------------: | :-------------------------: | :----------------------------------------------: |
 |           Planning            |      Equipe do Projeto      |             Planejamento da iteração             |
 |        Acompanhamento         |      Equipe do Projeto      | Relato das atividades realizadas por cada membro |

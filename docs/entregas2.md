@@ -30,6 +30,6 @@ Vídeo 1: Entrega Missão 2 (Fonte: Insurgentes Estelares. 2023).
 
 ## Histórico de versão
 
-| Data  | Versão | Descrição        | Autor  |
-| :---: | :----: | ---------------- | ------ |
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
 | 25/10 |  1.0   | Entrega Missão 1 | Oscar |

@@ -31,6 +31,6 @@ A apresentação da entrega da Missão 1, pode ser vista no [Vídeo 1](https://y
 
 ## Histórico de versão
 
-| Data  | Versão | Descrição        | Autor  |
-| :---: | :----: | ---------------- | ------ |
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
 | 27/09 |  1.0   | Entrega Missão 1 | Oscar |
