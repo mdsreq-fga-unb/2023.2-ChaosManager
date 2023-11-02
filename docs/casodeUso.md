@@ -149,8 +149,6 @@
 
 <p align="justify">&emsp;&emsp; Com base nos requisitos elicitados, foram identificados 15 casos de uso, como apresentado na Tabela 2. </p>
 
-<div align="center" style="text-align: center">
-
 | ID | Nome do Caso de Uso | Descrição | Requisitos Envolvidos |
 | :--- | :----: | :--- | :----: |
 | CdU-01  | Criar Campanha de RPG | Este caso de uso permite o mestre criar uma sala de campanha onde possa administrar todas as suas sessões. Ele deve poder informar o nome, história e senha para a campanha ser criada. | Criar campanha de RPG Visualizar campanha de RPG </br> Editar campanha de RPG </br> Excluir campanha de RPG |
@@ -170,7 +168,7 @@
 | CdU-15  | Gerenciar profissão | Este caso de uso é utilizado pelos jogadores e mestre para gerenciar as profissões que utilizarão durante a campanha de RPG, bem como adicioná-las, editá-las e removê-las do sistema.  | Criar profissão </br> Editar profissão </br> Excluir profissão |
 | CdU-16  | Visualizar profissão | Este caso de uso é utilizado pelos jogadores e mestre para visualizar as profissões que existem durante a campanha de RPG, assim como as informações de cada uma delas. | Visualizar profissão |
 
-
+<div align="center" style="text-align: center">
 <p><b>Tabela 2:</b> Casos de Uso. </p>
 </div>
 
