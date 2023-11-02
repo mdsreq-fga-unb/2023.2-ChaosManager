@@ -518,6 +518,25 @@
 | Os usuários devem conseguir ter acesso a todas as suas informações por meio da ficha de personagem | CdU-04 - Gerenciar ficha de personagem </br> CdU-08 - Gerenciar estados </br> CdU-09 - Gerenciar magia </br> CdU-10 - Gerenciar arma </br> CdU-11 - Gerenciar equipamento </br> CdU-12 - Gerenciar item |
 | Os usuários devem poder usufruir das dinâmicas disponíveis (Testes e combate) | CdU-06 - Gerenciar teste </br> CdU-07 - Gerenciar combate |
 
+### Definição de Preparado (DOR)
+
+<p align="justify">&emsp;&emsp; É o acordo entre o time e o cliente indicando quando um requisito estará preparado para ser puxado para uma iteração. </p>
+
+ - O requisito está representado dentro de um caso de uso;
+ - O caso de uso está especificado da forma necessária para ser trabalhado;
+ - Houve um consenso da equipe de desenvolvimento de que esse caso de uso deve entrar na iteração de desenvolvimento;
+ - O caso de uso está mapeado para uma interface (protótipo).
+ - Caso existam, as dependências dos requisitos foram identificadas.
+
+### Definição de Pronto (DOD)
+
+<p align="justify">&emsp;&emsp; É o acordo que demonstra a qualidade do requisito produzido,na qual “Done”comprova a satisfação de todos como trabalho realizado. Se um requisito não atende ao “Done”, ele não deve ser liberado ou mesmo apresentado para a iteração. </p>
+
+- O requisito entrega um incremento do produto;
+- Todos os fluxos de eventos e condições do caso de uso foram seguidos;
+- O código das funcionalidades relacionadas ao caso de uso foi revisado e aprovado por outro(s) membro(s) da equipe;
+- As funcionalidades do caso de uso implementado está em conformidade com os padrões de design, usabilidade e desempenho estabelecidos.
+
 ## Histórico de versão
 
 | Data  | Versão | Descrição                            | Autor                          |
