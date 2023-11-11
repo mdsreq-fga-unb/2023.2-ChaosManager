@@ -28,10 +28,10 @@ Tabela 1 - Organização de papeis
 | :-----------: | :---------------------------------------------------------------- | :------------------------------------------------ | :-------------: | :----------: |
 |  Iteração 1   | Definição do produto e do projeto                                 | Escopo do projeto e produto                       |   04/09/2023    |  29/09/2023  |
 |  Iteração 2   | Planejamento do Projeto                                           | Backlog , requisitos elicitados, definição do MVP |   02/10/2023    |  13/10/2023  |
-|  Iteração 3   | Projeto de arquitetura, definição de MVPs, estudo de tecnologias, especificção dos casos de uso | Arquitetura do sistema, MVPs e equipe capacitada  |   16/10/2023    |  27/10/2023  |
-|  Iteração 4   | Atividade PBB, Prototipação, Desenvolvimento                      | PBB pelo Mural, Protótipo de telas de alta fidelidade |   30/10/2023    |  10/11/2023  |
-|  Iteração 5   | Desenvolvimento, Testes                                           | Aplicação e testes                                |   13/11/2023    |  11/12/2023  |
-|  Iteração 6   | Release                                                           | Publicação da aplicação nos serviços digitais     |   12/12/2023    |  14/12/2023  |
+|  Iteração 3   | definição de MVPs, estudo de tecnologias, especificação dos casos de uso | Arquitetura do sistema, MVPs e equipe capacitada  |   16/10/2023    |  27/10/2023  |
+|  Iteração 4   | definição de preparado, definição de pronto e Projeto de arquitetura do projeto  | Protótipo de telas de alta fidelidade |   30/10/2023    |  10/11/2023  |
+|  Iteração 5   | Prototipagem, especificação de casos de uso, Desenvolvimento, Testes | Protótipos, aplicação e testes                                |   13/11/2023    |  11/12/2023  |
+|  Iteração 6   | Testes, Release                                                           | testes finais, Publicação da aplicação nos serviços digitais     |   12/12/2023    |  14/12/2023  |
 
 <p style="text-align:center;"> 
 Tabela 2 - Iterações do projeto
