@@ -29,8 +29,8 @@ Tabela 1 - Organização de papeis
 |  Iteração 1   | Definição do produto e do projeto                                 | Escopo do projeto e produto                       |   04/09/2023    |  29/09/2023  |
 |  Iteração 2   | Planejamento do Projeto                                           | Backlog , requisitos elicitados, definição do MVP |   02/10/2023    |  13/10/2023  |
 |  Iteração 3   | definição de MVPs, estudo de tecnologias, começo das especificação dos casos de uso | Arquitetura do sistema, MVPs e equipe capacitada  |   16/10/2023    |  27/10/2023  |
-|  Iteração 4   | definição de preparado, refinamento especificação de casos de uso, definição de pronto e Projeto de arquitetura do projeto  | Dor, DoD escpecificação de casos de uso |   30/10/2023    |  10/11/2023  |
-|  Iteração 5   | Prototipagem, Desenvolvimento, diagramas de casos de uso, Testes | Protótipos, diagramas de casos de uso, aplicação e testes                                |   13/11/2023    |  11/12/2023  |
+|  Iteração 4   | definição de preparado,  definição de pronto, diagramas e especificação de casos de uso | Dor, DoD e diagramas e especificação de casos de uso |   30/10/2023    |  10/11/2023  |
+|  Iteração 5   | Prototipagem, Desenvolvimento, Testes | Protótipos,  Projeto de arquitetura do projeto, aplicação e testes     |   13/11/2023    |  11/12/2023  |
 |  Iteração 6   | Testes, Release                                                           | testes finais, Publicação da aplicação nos serviços digitais     |   12/12/2023    |  14/12/2023  |
 
 <p style="text-align:center;"> 
@@ -127,3 +127,4 @@ Quando ocorrem mudanças significativas na composição da equipe, como a saída
 | Data  | Versão | Descrição           | Autor         |
 | :---: | :----: | ------------------- | ------------- |
 | 06/09 |  1.0   | Criação do artefato | Pedro Eduardo |
+| 15/11 |  1.1   | atualização do planejamento | Pedro Eduardo |
