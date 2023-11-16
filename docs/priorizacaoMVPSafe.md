@@ -17,7 +17,7 @@ hide:
 - <a href="#1">First Things First (FTF)<sup></sup></a>
 - <a href="#2">MosCoW<sup></sup></a>
 
-###  <p id="1" align="justify"> Técnica de Priorização "First Things First" (FTF)
+### <p id="1" align="justify"> Técnica de Priorização "First Things First" (FTF) </p>
 
 <p align="justify">&emsp;&emsp;A técnica "First Things First"[1] é um método de priorização que envolve a análise ponderada de valor(valor de negócio), custo(complexidade) e riscos(viabilidade) associados a cada requisito, atribuindo pesos a cada um deles de forma a ter mais peso no cálculo o mais importante para o projeto. Essa técnica é empregada para estabelecer uma hierarquia de prioridades para os requisitos a serem implementados.</p>
 

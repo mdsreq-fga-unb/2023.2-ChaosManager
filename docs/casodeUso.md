@@ -172,6 +172,12 @@
 <p><b>Tabela 2:</b> Casos de Uso. </p>
 </div>
 
+<p align="justify">&emsp;&emsp; Com os atores e casos de usos identificados, foi criado o diagrama de casos de uso para visualizar como e por quem as ações são realizadas dentro do sistema, assim como a ligação entre casos quando existiam. O diagrama está disponível na Figura 3. </p>
+
+<img src="../assets/casosUso/Diagrama-CasosUso.png">
+
+<p><b>Figura 3:</b> Diagrama de caso de uso. </p>
+
 ### Especificação dos Casos de Uso
 
 #### CdU-01 - Criar Campanha de RPG
@@ -221,7 +227,7 @@
 |**Autor**|Larissa Gomes |
 |**1. Atores**|Mestre.|
 |**2. Breve Descrição**|Esse caso de uso permite o mestre gerenciar sua sala de campanha como necessário, editando as informações que deseja ou até mesmo excluindo a campanha.|
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Configurações”.</p><p>3\.2. O sistema apresenta as informações da campanha, o nome, história e senhas de acesso.</p><p>3\.3. O sistema apresenta as seguintes opções:</p><p>- Editar</p><p>- Excluir campanha (FA01)</p><p>3\.4. O mestre seleciona a opção “Editar”.</p><p>3\.5. O mestre altera as informações que deseja.</p><p>3\.6. O mestre seleciona a opção de “Confirmar”. </p><p>3\.7. O sistema faz a validação das informações. (FE01) (FE02)</p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Configurações”.</p><p>3\.2. O sistema apresenta as informações da campanha:<p>&emsp;&emsp;- Nome</p><p>&emsp;&emsp;- História</p><p>&emsp;&emsp;- Senhas de acesso.</p><p>3\.3. O sistema apresenta as seguintes opções:</p><p>&emsp;&emsp;- Editar</p><p>&emsp;&emsp;- Excluir campanha (FA01)</p><p>3\.4. O mestre seleciona a opção “Editar”.</p><p>3\.5. O mestre altera as informações que deseja.</p><p>3\.6. O mestre seleciona a opção de “Confirmar”. </p><p>3\.7. O sistema faz a validação das informações. (FE01) (FE02)</p><p>3\.8. O sistema atualiza as informações da campanha.</p>|
 |**4. Fluxo Alternativos**|<p>4\.1. FA01 – Excluir Campanha</p><p> &emsp;&emsp; 4.1.1. O mestre seleciona a opção “Configurações”.</p><p> &emsp;&emsp; 4.1.2. O mestre seleciona a opção “Excluir campanha”</p><p> &emsp;&emsp; 4.1.3. O sistema confirma se o mestre deseja realizar essa ação. </p><p> &emsp;&emsp; 4.1.4. O mestre seleciona a opção de “Confirmar”.</p><p> &emsp;&emsp; 4.1.5. O sistema exclui a campanha.</p>|
 |**5. Fluxos de exceção**|<p>FE01 – Senha inválida </p><p>No passo 3.7 do FB, caso a senha digitada seja menor que 5 dígitos, o sistema deve emitir a mensagem: “Senha inválida, defina uma senha com pelo menos 5 dígitos”. E, o caso de uso retorna ao 3.5 do FB.</p><p>FE02 –Campanha já existe</p><p>No passo 3.7 do FB, caso o nome da campanha informado já exista, o sistema deve emitir a mensagem: “Nome de campanha já existe, informe um novo”. E, o caso de uso retorna ao 3.5 do FB.</p>|
 |**6. Pré-condições**|6\.1. Sala de campanha criada.|
@@ -234,21 +240,57 @@
 <p><b>Tabela 5:</b> Especificação Caso de Uso 03. </p>
 </div>
 
-#### CdU-04 - Gerenciar ficha de personagem
+#### <p id="1"> CdU-04 - Gerenciar ficha de personagem </p>
 
 |**Nome do caso de uso** |Gerenciar ficha de personagem|
 | :----------- | :- |
 |**Autores**|Gustavo França, Larissa Gomes e Pedro Eduardo|
 |**1. Atores**|Mestre e jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário.|
 |**2. Breve Descrição**|Este caso de uso permite o mestre e os jogadores gerenciarem a ficha de personagem para que consigam administrar todas as informações do seu personagem durante a campanha, bem como criar a ficha e posteriormente editá-la. As fichas do mestre apenas ele poderá acessar, enquanto todos podem ver as dos outros jogadores.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona a opção “Ficha de personagem”.</p><p>3\.2. O usuário fornece informações sobre o personagem, incluindo nome do usuário, nome do personagem, raça, profissão, idade, gênero, dinheiro, história, notas e descrição física.</p><p>3\.3. O usuário seleciona os traços do personagem.</p><p>3\.4. O usuário atribui os valores dos atributos do personagem. </p><p>3\.5. O usuário seleciona a opção “Criar ficha”. </p><p>3\.6. O sistema valida as informações da ficha. </p><p>3\.7. O sistema adiciona a ficha criada a lista de fichas de personagens.</p><p>3\.8. O usuário pode acessar a ficha do personagem para editá-la ao selecioná-la na lista de fichas de personagens. (FA01)</p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona a opção “Ficha de personagem”.</p><p>3\.2. O usuário fornece informações sobre o personagem: </br> <p> &emsp;&emsp;&emsp;&emsp; - Nome do usuário e do personagem</p><p> &emsp;&emsp;&emsp;&emsp; - Raça e profissão</p><p> &emsp;&emsp;&emsp;&emsp; - Idade e gênero</p><p> &emsp;&emsp;&emsp;&emsp; - Dinheiro</p><p> &emsp;&emsp;&emsp;&emsp; - Traços</p><p> &emsp;&emsp;&emsp;&emsp; - Pontos de vida, armadura, energia e experiência</p><p> &emsp;&emsp;&emsp;&emsp; - História, notas e descrição física.</p><p>3\.3. O usuário seleciona os traços do personagem.</p><p>3\.4. O usuário atribui os valores dos atributos do personagem. </p><p>3\.5. O usuário seleciona a opção “Criar ficha”. </p><p>3\.6. O sistema valida as informações da ficha. </p><p>3\.7. O sistema adiciona a ficha criada a lista de fichas de personagens.</p><p>3\.8. O usuário pode acessar a ficha do personagem para editá-la ao selecioná-la na lista de fichas de personagens. (FA01)</p>|
 |**4. Fluxo Alternativos**|<p>FA01 – Editar ficha</p><p> &emsp;&emsp; 4.1.1. O sistema exibe as informações que podem ser editadas:</p><p> &emsp;&emsp;&emsp;&emsp; - Nome do usuário e do personagem</p><p> &emsp;&emsp;&emsp;&emsp; - Raça e profissão</p><p> &emsp;&emsp;&emsp;&emsp; - Idade e gênero</p><p> &emsp;&emsp;&emsp;&emsp; - Dinheiro</p><p> &emsp;&emsp;&emsp;&emsp; - Traços</p><p> &emsp;&emsp;&emsp;&emsp; - Pontos de vida, armadura, energia e experiência</p><p> &emsp;&emsp;&emsp;&emsp; - História, notas e descrição física.</p><p> &emsp;&emsp; 4.1.2. O usuário seleciona o campo da informação que deseja alterar. </p><p> &emsp;&emsp; 4.1.3. O usuário fornece os novos dados.</p><p> &emsp;&emsp; 4.1.4. O usuário seleciona a opção de “Confirmar”. (FE01)</p><p> &emsp;&emsp; 4.1.5. O sistema atualiza os dados da ficha.</p>|
-|**5. Fluxos de exceção**|<p>FE01 – Personagem Morto</p><p>No passo 4.1.4 do FA01, caso os pontos de vida informados sejam ≤0, o sistema deve emitir a mensagem: “Personagem morto”. </p>|
+|**5. Fluxos de exceção**|<p>FE01 – Personagem Morto</p><p>No passo 4.1.4 do FA01, caso os pontos de vida informados sejam ≤0, o sistema deve emitir a mensagem: “Personagem morto”. A ficha do personagem não pode mais ser editada. E, o caso de uso retorna ao 4.1.5 do FA01.</p>|
 |**6. Pré-condições**|6\.1. Sala de campanha criada.|
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**|Não há.|
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O jogador deve escolher um traço positivo e um traço negativo disponíveis no livro de regras 
+
+O sistema deve automatizar os valores dos testes do personagem 
+
+O valor da força é igual o atributo vigor + habilidade 
+
+O valor da resistência física é igual o atributo vigor + percepção 
+
+O valor da resistência mental é igual o atributo vigor + inteligência 
+
+O valor da sobrevivência é igual o atributo vigor + domínio 
+
+O valor da agilidade é igual o atributo habilidade + percepção 
+
+O valor da destreza é igual o atributo habilidade e domínio 
+
+O valor da competência é igual o atributo inteligência + habilidade 
+
+O valor da criatividade é igual o atributo vigor + habilidade 
+
+O valor da manipulação é igual o atributo inteligência + domínio 
+
+O valor da sorte é igual o atributo domínio + percepção 
+
+O sistema de automatizar peso carregado pelo personagem 
+
+O valor do peso é igual à soma dos pesos dos itens, armas e equipamentos 
+
+O sistema de automatizar capacidade do personagem 
+
+A capacidade é igual ao valor da Força do personagem 
+
+O sistema de automatizar a capacidade em combate do personagem 
+
+O valor da capacidade em combate é igual ao atributo Vigor do personagem |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 6:</b> Especificação Caso de Uso 04. </p>
@@ -266,9 +308,11 @@
 |**5. Fluxos de exceção**|Não há|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Ficha de personagem criada.</p>|
 |**7. Pós-condições**|Não há.|
-|**8. Pontos de extensão**|Não há|
+|**8. Pontos de extensão**| Excluir ficha de personagem o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+Quando um personagem morrer, ou seja, ter a sua vida zerada, deve aparecer para o mestre um popup para a exclusão da ficha. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 7:</b> Especificação Caso de Uso 05. </p>
@@ -281,40 +325,77 @@
 |**Autores**|Gustavo França, Pedro Eduardo e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. Serão referenciados como usuário.|
 |**2. Breve Descrição**|Este caso de uso protagoniza momentos em que os Jogadores e os personagens do Mestre precisam realizar ações que demandem alguma dificuldade, onde é possível realizar 10 testes diferentes.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário abre o campo de teste.</p><p>3\.2. O usuário seleciona o teste que irá realizar. (FA01)</p><p>3\.3. O usuário seleciona “rolar dados”.</p><p>3\.4. O sistema mostra o resultado do teste no registro de ações. (FE01)(FE02) (RN01)</p>|
-|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Teste de Competência</p><p> &emsp;&emsp; 4.1.1. O usuário seleciona o teste de competência.</p><p> &emsp;&emsp; 4.1.2. O usuário informa quanto pontos de energia deseja utilizar.</p><p> &emsp;&emsp; 4.1.3. O usuário seleciona “rolar dados”.</p><p> &emsp;&emsp; 4.1.4. O sistema deduz os pontos de energia utilizados da ficha do personagem.</p><p> &emsp;&emsp; 4.1.5. O resultado do teste é mostrado no registro de ações. (FE01)(FE02) (RN01)</p>|
-|**5. Fluxos de exceção**|<p>5\.1. FE01 - Falha crítica</p><p>No passo 3.4 do FB e 4.1.5 do FA01, se valor do dado for 1, o sistema deve emitir a mensagem: “Falha crítica” no Registro de Ações.</p><p>5\.2. FE02 - Acerto crítico</p><p>No passo 3.4 do FB e 4.1.5 do FA01, se o valor do dado for 20, o sistema deve emitir a mensagem: “Acerto crítico” no Registro de Ações.</p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário abre o campo de teste.</p><p>3\.2. O usuário seleciona o teste que irá realizar. (FA01)</p><p>3\.3. O usuário seleciona “rolar dados”.</p><p>3\.4. O sistema mostra o resultado do teste no registro de ações. (FE01)(FE02)(RN01)</p>|
+|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Teste de Competência</p><p> &emsp;&emsp; 4.1.1. O usuário seleciona o teste de competência.</p><p> &emsp;&emsp; 4.1.2. O usuário informa quanto pontos de energia deseja utilizar.</p><p> &emsp;&emsp; 4.1.3. O usuário seleciona “rolar dados”.</p><p> &emsp;&emsp; 4.1.4. O sistema deduz os pontos de energia utilizados da ficha do personagem.</p><p> &emsp;&emsp; O caso de uso retorna ao 3.4 do FB.</p>|
+|**5. Fluxos de exceção**|<p>5\.1. FE01 - Falha crítica</p><p>No passo 3.4 do FB e 4.1.5 do FA01, se valor do dado for 1, o sistema deve emitir a mensagem: “Falha crítica” no Registro de Ações. E, o caso de uso retorna ao 3.4 do FB.</p><p>5\.2. FE02 - Acerto crítico</p><p>No passo 3.4 do FB e 4.1.5 do FA01, se o valor do dado for 20, o sistema deve emitir a mensagem: “Acerto crítico” no Registro de Ações. E, o caso de uso retorna ao 3.4 do FB.</p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Ficha de personagem criada.</p>|
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Regra de negócio (RN01): cálculo do teste = um inteiro randomizado de 1 a 20 (valor do dado) + o valor do teste + o valor dos pontos de energia (se for teste de competência)|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O resultado do teste deve obedecer ao cálculo do teste sendo um inteiro randomizado de 1 a 20 somado ao valor do teste e somado ao valor dos pontos de energia (se for teste de competência) 
+
+Deve ser possível realizar os 10 testes possíveis (Força, res. Física, res. Mental, Sobrevivência, Agilidade, Destreza, Competência, Criatividade, Manipulação e Sorte. 
+
+O teste deve superar ou ser igual ao valor da dificuldade estipulada pelo mestre 
+
+Se o teste não superar ou não ser igual ao valor estipulado pelo mestre e a consequência exigir um dano, então o jogador deverá realizar um teste de res. Física 
+
+O dano recebido pela regra anterior é igual ao dano estipulado pelo mestre – o valor do teste de res. Física 
+
+|
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 8:</b> Especificação Caso de Uso 06. </p>
 </div>
 
-#### CdU-07 - Gerenciar combate
+#### <p id="2"> CdU-07 - Gerenciar combate </p>
 
 |**Nome do caso de uso** |Gerenciar combate|
 | :----------- | :- |
 |**Autor**|Pedro Eduardo e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. Em caso que ambos são elegíveis para o passo, serão referenciados como usuário.|
 |**2. Breve Descrição**|Este caso de uso será utilizado pelo mestre para gerenciar o combate e pelo jogador para reagir as ações do mestre no combate. Para tanto, o mestre pode indicar quem participa do combate e em que ordem, indicar quem participa do turno atacando e sendo atacado e por fim executando o efeito desse combate.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre abre o “Gerenciador de combate”.</p><p>3\.2. O mestre seleciona a opção “Adicionar ordem do combate”.</p><p>3\.3. O mestre adiciona as fichas dos personagens que participarão do combate na ordem que será realizado.</p><p>3\.4. O mestre seleciona as fichas de personagem de quem vai realizar e sofrer a ação.</p><p>3\.5. O usuário realizando a ação realiza o teste indicado pelo mestre de acordo com a ação desejada. </p><p>3\.6. O usuário sofrendo a ação realiza o teste indicado pelo mestre de acordo com a ação de reação desejada. (FA01)</p><p>3\.7. O mestre adiciona o valor da ação.</p><p>3\.8. O mestre adiciona o valor do dano/Pontos de energia.</p><p>3\.9. O mestre adiciona o valor da reação (defesa)</p><p>3\.10. O mestre executa o efeito do combate. </p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre abre o “Gerenciador de combate”.</p><p>3\.2. O mestre seleciona a opção “Adicionar ordem do combate”.</p><p>3\.3. O mestre adiciona as fichas dos personagens que participarão do combate na ordem que será realizado.</p><p>3\.4. O mestre seleciona as fichas de personagem de quem vai realizar e sofrer a ação.</p><p>3\.5. O usuário realizando a ação executa o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>3\.6. O usuário sofrendo a ação realiza o teste indicado pelo mestre de acordo com a ação de reação desejada. (FA01)</p><p>3\.7. O mestre adiciona o valor da ação.</p><p>3\.8. O mestre adiciona o valor do dano/Pontos de energia.</p><p>3\.9. O mestre adiciona o valor da reação (defesa)</p><p>3\.10. O mestre executa o efeito do combate. </p>|
 |**4. Fluxo Alternativos**|<p>4\.1. FA01 – Escolheu receber o golpe</p><p> &emsp;&emsp; 4.1.1. O usuário realizando a retaliação realiza o teste indicado pelo mestre de acordo com a ação desejada.</p><p> &emsp;&emsp; 4.1.2. O usuário sofrendo a ação realiza o teste indicado pelo mestre (Resistência Física ou Mental).</p><p> &emsp;&emsp; 4.1.3. O mestre adiciona o valor da retaliação.</p><p> &emsp;&emsp; 4.1.4. O mestre adiciona o valor da dano/Pontos de energia.</p><p> &emsp;&emsp; 4.1.5. O mestre executa o efeito do combate.</p>|
 |**5. Fluxos de exceção**|Não há|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Ficha de personagem criada.</p><p>6\.3. Testes criados.</p>|
 |**7. Pós-condições**|As fichas que sofreram danos devem ter os pontos de vida e de armadura atualizados|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Pontos de Inclusão: (PI01) <a href="#2"> CdU-06 - Gerenciar teste<sup></sup></a>
+Regras de Negócio: 
+
+Se os Pontos de Vida chegarem a zero é mostrado a mensagem "Personagem morto". 
+
+Os Pontos de Armadura serão decrementados quando houver dano. 
+
+O valor da iniciativa é igual ao realizar o teste de agilidade 
+
+O valor da reação de esquiva é igual ao teste de agilidade 
+
+O valor da reação de defesa é igual ao teste de res. Física 
+
+Se o jogador passar no teste da reação de esquivar, então não sofrerá dano 
+
+O cálculo de dano sem uso de armas é igual ao valor obtido na Ação 
+
+O cálculo de dano com o uso de armas é igual ao valor da ação + Modificador de dano 
+
+O cálculo de dano causado por magia é igual ao valor da ação + Pontos de Energia usados 
+
+O cálculo da absorção de dano da reação de defender OU situação sem chance de esquiva ou defesa é igual ao cálculo de dano – teste de res. Física 
+
+O cálculo da absorção de dano da reação de esquivar (caso de falha) é igual ao cálculo de dano – o valor da res. Física do personagem 
+
+O cálculo da absorção de dano da reação de não esquivar/defender é igual ao cálculo de dano – o valor da res. Física do personagem  |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 9:</b> Especificação Caso de Uso 07. </p>
 </div>
 
-#### CdU-08 - Gerenciar estados
+#### CdU-08 - Gerenciar estados 
 
 |**Nome do caso de uso** |Gerenciar estados|
 | :----------- | :- |
@@ -326,7 +407,7 @@
 |**5. Fluxos de exceção**|<p>FE01 – Estado já aplicado</p><p>No passo 3.5 do FB, caso o usuário selecione um estado que já esteja aplicado, o sistema deve emitir a mensagem: “Estado já aplicado”. E, o caso de uso retorna ao 3.3 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada. </p><p>6\.2. Ficha de Personagem criada. </p><p></p>|
 |**7. Pós-condições**|Não há|
-|**8. Pontos de extensão**|Não há|
+|**8. Pontos de extensão**|Gerenciar estado é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há|
 |**10. Informações adicionais**|Não há|
 
@@ -346,9 +427,11 @@
 |**5. Fluxos de exceção**|Não há.|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2 Ficha de personagem criada.</p>|
 |**7. Pós-condições**|Não há|
-|**8. Pontos de extensão**|Não há|
+|**8. Pontos de extensão**|Gerenciar magia é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O sistema deve disponibilizar as seguintes classes de magia: Habilidade especial, Encantamentos & Maldições, Abjuração, Alquimia, Transmutação, Translocação, Conjuração e Mentalização |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 11:</b> Especificação Caso de Uso 09. </p>
@@ -366,9 +449,11 @@
 |**5. Fluxos de exceção**|<p>FE01 – Arma já existe</p><p>No passo 3.7 do fluxo básico, caso o usuário informe o nome de uma arma existente, porém com dados diferentes da já cadastrada, o sistema deve emitir a mensagem: “Arma já cadastrada no sistema”. E, o caso de uso retorna ao 3.3 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Ficha de Personagem criada.</p>|
 |**7. Pós-condições**|Não há.|
-|**8. Pontos de extensão**|Não há.|
+|**8. Pontos de extensão**|Gerenciar arma é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regra de Negócio: 
+
+O sistema remove o peso da arma ao peso carregado do personagem. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 12:</b> Especificação Caso de Uso 10. </p>
@@ -386,15 +471,17 @@
 |**5. Fluxos de exceção**|<p>FE01 – Equipamento já existe</p><p>No passo 3.6 do FB, caso o usuário informe o nome de um equipamento existente, porém com dados diferentes do já cadastrado, o sistema deve emitir a mensagem: “Equipamento já cadastrado no sistema”. E, o caso de uso retorna ao 3.3 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Ficha de Personagem criada.</p>|
 |**7. Pós-condições**|Não há.|
-|**8. Pontos de extensão**|Não há.|
+|**8. Pontos de extensão**|Gerenciar equipamentos é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O sistema remove o peso da arma ao peso carregado do personagem. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 13:</b> Especificação Caso de Uso 11. </p>
 </div>
 
-#### CdU-12 - Gerenciar item
+#### <p id="6"> CdU-12 - Gerenciar item </p>
 
 |**Nome do caso de uso** |Gerenciar item|
 | :----------- | :- |
@@ -408,7 +495,9 @@
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**|Não há.|
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O sistema remove o peso da arma ao peso carregado do personagem. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 14:</b> Especificação Caso de Uso 12. </p>
@@ -428,7 +517,11 @@
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+A raça deve apresentar as características do rpg 
+
+A raça deve apresentar os atributos que serão modificados |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 15:</b> Especificação Caso de Uso 13. </p>
@@ -468,7 +561,9 @@
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+Se o jogador escolher uma profissão com objeto, esse objeto deve ser adicionado a sua ficha. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 17:</b> Especificação Caso de Uso 15. </p>
@@ -496,13 +591,13 @@
 
 ### Backlog priorizado
 
-<p align="justify">&emsp;&emsp; Para Organizar e Atualizar o Backlog, realizamos a priorização dos Casos de Uso utilizando a técnica MoSCoW para determinar a prioridade dos requisitos, os critérios utilizados para definir o que seria Must, Should, Could ou Would foram o <b>valor de negócio</b>, a <b>complexidad</b>e e a <b>viabilidade</b>, tendo um maior peso os que possuiam valor de negócio que ajudava a cumprir os objetivos e necessidades mais urgentes do cliente. A execução da técnica pode ser vista na Figura 2.</p>
+<p align="justify">&emsp;&emsp; Para Organizar e Atualizar o Backlog, realizamos a priorização dos Casos de Uso utilizando a técnica MoSCoW para determinar a prioridade dos requisitos, os critérios utilizados para definir o que seria Must, Should, Could ou Would foram o <b>valor de negócio</b>, a <b>complexidad</b>e e a <b>viabilidade</b>, tendo um maior peso os que possuiam valor de negócio que ajudava a cumprir os objetivos e necessidades mais urgentes do cliente. A execução da técnica pode ser vista na Figura 4.</p>
 
 <div align="center" style="text-align: center">
 
 <img src="../assets/casosUso/priorizacaoCdU.png">
 
-<p><b>Figura 3:</b> Priorização MoSCoW. </p>
+<p><b>Figura 4:</b> Priorização MoSCoW. </p>
 </div>
 
 ### MVP
@@ -520,10 +615,11 @@
 
 <p align="justify">&emsp;&emsp; É o acordo entre o time e o cliente indicando quando um requisito estará preparado para ser puxado para uma iteração. </p>
 
- - O requisito está representado dentro de um caso de uso;
- - O caso de uso está especificado da forma necessária para ser trabalhado;
+ - O caso de uso possui fluxos de eventos com um ou mais requisitos identificados;
+ - O caso de uso possui uma especificação;
+ - A especificação do caso de uso possui as informações necessárias para ser trabalhado;
  - Houve um consenso da equipe de desenvolvimento de que esse caso de uso deve entrar na iteração de desenvolvimento;
- - O caso de uso está mapeado para uma interface (protótipo).
+ - O caso de uso está mapeado para uma interface (protótipo);
  - Caso existam, as dependências dos requisitos foram identificadas.
 
 ### Definição de Pronto (DOD)
@@ -533,7 +629,7 @@
 - O requisito entrega um incremento do produto;
 - Todos os fluxos de eventos e condições do caso de uso foram seguidos;
 - O código das funcionalidades relacionadas ao caso de uso foi revisado e aprovado por outro(s) membro(s) da equipe;
-- As funcionalidades do caso de uso implementado está em conformidade com os padrões de design, usabilidade e desempenho estabelecidos.
+- O código das funcionalidades relacionadas ao caso de uso segue os padrões de codificação da estabelecidos pela equipe.
 
 ## Histórico de versão
 
@@ -543,3 +639,4 @@
 | 25/10 |  1.1   | Adição das especificações | Emerson Teles, Gustavo França, Larissa Gomes, Oscar de Brito e Pedro Eduardo|
 | 01/10 |  2.0   | Atualização descrições de caso de uso e correção de especificações | Larissa Gomes |
 | 01/10 |  2.1   | Adicionando DOR e DOD | Larissa Gomes, Emerson Teles e Luciano |
+| 15/10 |  3.0   | Correção das especificações | Larissa Gomes, Emerson Teles e Luciano |
