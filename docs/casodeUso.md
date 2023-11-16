@@ -254,7 +254,43 @@
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**|Não há.|
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O jogador deve escolher um traço positivo e um traço negativo disponíveis no livro de regras 
+
+O sistema deve automatizar os valores dos testes do personagem 
+
+O valor da força é igual o atributo vigor + habilidade 
+
+O valor da resistência física é igual o atributo vigor + percepção 
+
+O valor da resistência mental é igual o atributo vigor + inteligência 
+
+O valor da sobrevivência é igual o atributo vigor + domínio 
+
+O valor da agilidade é igual o atributo habilidade + percepção 
+
+O valor da destreza é igual o atributo habilidade e domínio 
+
+O valor da competência é igual o atributo inteligência + habilidade 
+
+O valor da criatividade é igual o atributo vigor + habilidade 
+
+O valor da manipulação é igual o atributo inteligência + domínio 
+
+O valor da sorte é igual o atributo domínio + percepção 
+
+O sistema de automatizar peso carregado pelo personagem 
+
+O valor do peso é igual à soma dos pesos dos itens, armas e equipamentos 
+
+O sistema de automatizar capacidade do personagem 
+
+A capacidade é igual ao valor da Força do personagem 
+
+O sistema de automatizar a capacidade em combate do personagem 
+
+O valor da capacidade em combate é igual ao atributo Vigor do personagem |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 6:</b> Especificação Caso de Uso 04. </p>
@@ -274,7 +310,9 @@
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**| Excluir ficha de personagem o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+Quando um personagem morrer, ou seja, ter a sua vida zerada, deve aparecer para o mestre um popup para a exclusão da ficha. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 7:</b> Especificação Caso de Uso 05. </p>
@@ -294,7 +332,19 @@
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Regra de negócio (RN01): cálculo do teste = um inteiro randomizado de 1 a 20 (valor do dado) + o valor do teste + o valor dos pontos de energia (se for teste de competência)|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O resultado do teste deve obedecer ao cálculo do teste sendo um inteiro randomizado de 1 a 20 somado ao valor do teste e somado ao valor dos pontos de energia (se for teste de competência) 
+
+Deve ser possível realizar os 10 testes possíveis (Força, res. Física, res. Mental, Sobrevivência, Agilidade, Destreza, Competência, Criatividade, Manipulação e Sorte. 
+
+O teste deve superar ou ser igual ao valor da dificuldade estipulada pelo mestre 
+
+Se o teste não superar ou não ser igual ao valor estipulado pelo mestre e a consequência exigir um dano, então o jogador deverá realizar um teste de res. Física 
+
+O dano recebido pela regra anterior é igual ao dano estipulado pelo mestre – o valor do teste de res. Física 
+
+|
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 8:</b> Especificação Caso de Uso 06. </p>
@@ -314,7 +364,32 @@
 |**7. Pós-condições**|As fichas que sofreram danos devem ter os pontos de vida e de armadura atualizados|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Pontos de Inclusão: (PI01) <a href="#2"> CdU-06 - Gerenciar teste<sup></sup></a> |
+|**10. Informações adicionais**|Pontos de Inclusão: (PI01) <a href="#2"> CdU-06 - Gerenciar teste<sup></sup></a>
+Regras de Negócio: 
+
+Se os Pontos de Vida chegarem a zero é mostrado a mensagem "Personagem morto". 
+
+Os Pontos de Armadura serão decrementados quando houver dano. 
+
+O valor da iniciativa é igual ao realizar o teste de agilidade 
+
+O valor da reação de esquiva é igual ao teste de agilidade 
+
+O valor da reação de defesa é igual ao teste de res. Física 
+
+Se o jogador passar no teste da reação de esquivar, então não sofrerá dano 
+
+O cálculo de dano sem uso de armas é igual ao valor obtido na Ação 
+
+O cálculo de dano com o uso de armas é igual ao valor da ação + Modificador de dano 
+
+O cálculo de dano causado por magia é igual ao valor da ação + Pontos de Energia usados 
+
+O cálculo da absorção de dano da reação de defender OU situação sem chance de esquiva ou defesa é igual ao cálculo de dano – teste de res. Física 
+
+O cálculo da absorção de dano da reação de esquivar (caso de falha) é igual ao cálculo de dano – o valor da res. Física do personagem 
+
+O cálculo da absorção de dano da reação de não esquivar/defender é igual ao cálculo de dano – o valor da res. Física do personagem  |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 9:</b> Especificação Caso de Uso 07. </p>
@@ -354,7 +429,9 @@
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Gerenciar magia é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O sistema deve disponibilizar as seguintes classes de magia: Habilidade especial, Encantamentos & Maldições, Abjuração, Alquimia, Transmutação, Translocação, Conjuração e Mentalização |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 11:</b> Especificação Caso de Uso 09. </p>
@@ -374,7 +451,9 @@
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**|Gerenciar arma é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regra de Negócio: 
+
+O sistema remove o peso da arma ao peso carregado do personagem. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 12:</b> Especificação Caso de Uso 10. </p>
@@ -394,7 +473,9 @@
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**|Gerenciar equipamentos é o ponto de extensão do caso de uso <a href="#1"> CdU-04 - Gerenciar ficha de personagem<sup></sup></a> |
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O sistema remove o peso da arma ao peso carregado do personagem. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 13:</b> Especificação Caso de Uso 11. </p>
@@ -414,7 +495,9 @@
 |**7. Pós-condições**|Não há.|
 |**8. Pontos de extensão**|Não há.|
 |**9. Requisitos especiais**|Não há.|
-|**10. Informações adicionais**|Não há.|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+O sistema remove o peso da arma ao peso carregado do personagem. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 14:</b> Especificação Caso de Uso 12. </p>
@@ -434,7 +517,11 @@
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+A raça deve apresentar as características do rpg 
+
+A raça deve apresentar os atributos que serão modificados |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 15:</b> Especificação Caso de Uso 13. </p>
@@ -474,7 +561,9 @@
 |**7. Pós-condições**|Não há|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Informações adicionais**|Não há|
+|**10. Informações adicionais**|Regras de Negócio: 
+
+Se o jogador escolher uma profissão com objeto, esse objeto deve ser adicionado a sua ficha. |
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 17:</b> Especificação Caso de Uso 15. </p>
