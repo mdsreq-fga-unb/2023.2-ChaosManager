@@ -6,24 +6,34 @@ hide:
 # Priorização e definição do MVP
 
 ## Introdução
-<p align="justify">&emsp;&emsp; O principal propósito das estratégias de priorização de requisitos é fornecer orientação na seleção das funções ou funcionalidades mais cruciais em um sistema em desenvolvimento. Isso envolve a elaboração de estratégias e parâmetros específicos para otimizar a resposta a diferentes tipos de desafios. A fim de realizar essa tarefa com eficácia, é necessário estabelecer critérios claros e cuidadosamente considerados. Para definir as prioridades de cada requisito foram utilizadas duas técnicas: MoSCoW, First Things First(FTF). A priorização foi realizada com base na declaração dos requisitos feita no <a href="https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/backlog/">Backlog safe</a>: </p> 
+<p style="text-align:justify; text-indent:20px;"> 
+O principal propósito das estratégias de priorização de requisitos é fornecer orientação na seleção das funções ou funcionalidades mais cruciais em um sistema em desenvolvimento. Isso envolve a elaboração de estratégias e parâmetros específicos para otimizar a resposta a diferentes tipos de desafios. A fim de realizar essa tarefa com eficácia, é necessário estabelecer critérios claros e cuidadosamente considerados. Para definir as prioridades de cada requisito foram utilizadas duas técnicas: MoSCoW, First Things First(FTF). A priorização foi realizada com base na declaração dos requisitos feita no <a href="https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/backlog/">Backlog safe</a>: 
+</p> 
 
-<p align="justify">&emsp;&emsp; O MVP - Minimum Viable Product, é um conceito amplamente utilizado no desenvolvimento de produtos . Um MVP é uma versão simplificada de um produto ou serviço que contém apenas os recursos essenciais necessários para atender às necessidades básicas dos clientes e validar a viabilidade do conceito. </p>
+<p style="text-align:justify; text-indent:20px;"> 
+O MVP - Minimum Viable Product, é um conceito amplamente utilizado no desenvolvimento de produtos . Um MVP é uma versão simplificada de um produto ou serviço que contém apenas os recursos essenciais necessários para atender às necessidades básicas dos clientes e validar a viabilidade do conceito. 
+</p>
 
 ## Técnicas Utilizadas
 
-<p align="justify">&emsp;&emsp;A priorização dos requisitos foi feita por meio das seguintes técnicas:</p>
+<p style="text-align:justify; text-indent:20px;"> 
+A priorização dos requisitos foi feita por meio das seguintes técnicas:
+</p>
 
 - <a href="#1">First Things First (FTF)<sup></sup></a>
 - <a href="#2">MosCoW<sup></sup></a>
 
 ### <p id="1" align="justify"> Técnica de Priorização "First Things First" (FTF) </p>
 
-<p align="justify">&emsp;&emsp;A técnica "First Things First"[1] é um método de priorização que envolve a análise ponderada de valor(valor de negócio), custo(complexidade) e riscos(viabilidade) associados a cada requisito, atribuindo pesos a cada um deles de forma a ter mais peso no cálculo o mais importante para o projeto. Essa técnica é empregada para estabelecer uma hierarquia de prioridades para os requisitos a serem implementados.</p>
+<p style="text-align:justify; text-indent:20px;"> 
+A técnica "First Things First"[1] é um método de priorização que envolve a análise ponderada de valor(valor de negócio), custo(complexidade) e riscos(viabilidade) associados a cada requisito, atribuindo pesos a cada um deles de forma a ter mais peso no cálculo o mais importante para o projeto. Essa técnica é empregada para estabelecer uma hierarquia de prioridades para os requisitos a serem implementados.
+</p>
 
 ### Metodologia - FTF
 
-<p align="justify">&emsp;&emsp;Nessa técnica de priorização específica, é criada uma tabela que engloba os riscos, custos, benefícios e a penalidade relativa de cada requisito identificado para o projeto. Além disso, busca-se equilibrar as perspectivas do cliente e do desenvolvedor.</p>
+<p style="text-align:justify; text-indent:20px;"> 
+Nessa técnica de priorização específica, é criada uma tabela que engloba os riscos, custos, benefícios e a penalidade relativa de cada requisito identificado para o projeto. Além disso, busca-se equilibrar as perspectivas do cliente e do desenvolvedor.
+</p>
 
 Aqui está o procedimento:
 
@@ -43,14 +53,18 @@ Aqui está o procedimento:
 
 8. **Ordenação da Lista:** Ordene a lista em ordem decrescente com base nas prioridades calculadas.
 
-<p align="justify">&emsp;&emsp;Para o nosso  contexto, foi escolhida a escala de 1 a 5. A escolha de uma escala de 1 a 5 visa simplificar o processo de avaliação e torná-lo mais prático, especialmente se o contexto do projeto não exige uma granularidade tão alta quanto uma escala de 1 a 9. A Figura 1 mostra a priorização realizada das features do projeto. Essa técnica foi escolhida para avaliar as features por considerarmos que seria mais precisa em quais conjuntos de funcionalidades deveriamos focar devido seus critérios de avaliação.</p>
+<p style="text-align:justify; text-indent:20px;"> 
+Para o nosso  contexto, foi escolhida a escala de 1 a 5. A escolha de uma escala de 1 a 5 visa simplificar o processo de avaliação e torná-lo mais prático, especialmente se o contexto do projeto não exige uma granularidade tão alta quanto uma escala de 1 a 9. A Figura 1 mostra a priorização realizada das features do projeto. Essa técnica foi escolhida para avaliar as features por considerarmos que seria mais precisa em quais conjuntos de funcionalidades deveriamos focar devido seus critérios de avaliação.
+</p>
 
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/priorizacaoMVP/ftf.png">
 <p><b>Figura 1:</b> Priorização das features pelo FTF. </p>
 </div>
 
-<p align="justify">&emsp;&emsp;Apenas as features com prioridade maior que 0,25 foram consideradas viáveis para o MVP, então passamos para priorizar as User Stories.</p>
+<p style="text-align:justify; text-indent:20px;"> 
+Apenas as features com prioridade maior que 0,25 foram consideradas viáveis para o MVP, então passamos para priorizar as User Stories.
+</p>
 
 ## <p id="2" align="justify"> Priorização MoSCoW
 
@@ -84,7 +98,9 @@ Os requisitos classificados como **Could-Have** apresentam menor criticidade em 
 
 Os elementos **Would/Want/Won't-Have** referem-se a requisitos com pouca ou nenhuma relevância para o projeto. A presença ou ausência desses requisitos não afeta a conclusão satisfatória do projeto.
 
-<p align="justify">&emsp;&emsp; A Figura 2 mostra a priorização realizada das US do projeto. Essa técnica foi escolhida para avaliar as US por considerarmos que seria mais adequada ao que deveria ou não ter no produto dentro das features principais.</p>
+<p style="text-align:justify; text-indent:20px;"> 
+A Figura 2 mostra a priorização realizada das US do projeto. Essa técnica foi escolhida para avaliar as US por considerarmos que seria mais adequada ao que deveria ou não ter no produto dentro das features principais.
+</p>
 
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/priorizacaoMVP/moscow.png">
@@ -93,7 +109,9 @@ Os elementos **Would/Want/Won't-Have** referem-se a requisitos com pouca ou nenh
 
 ## Mínimo Produto Viável
 
-<p align="justify">&emsp;&emsp; Foi utilizado o Canvas MVP do Lean Inception para definir o MVP como apresentado na Figura 3. Em resultados esperados, é indicado também quais objetivos secundários esperamos atingir naquele resultado e quais os requisitos responsáveis por tornar isso possível. Esses resultados juntos visam atingir o resultado principal do projeto.</p>
+<p style="text-align:justify; text-indent:20px;"> 
+Foi utilizado o Canvas MVP do Lean Inception para definir o MVP como apresentado na Figura 3. Em resultados esperados, é indicado também quais objetivos secundários esperamos atingir naquele resultado e quais os requisitos responsáveis por tornar isso possível. Esses resultados juntos visam atingir o resultado principal do projeto.
+</p>
 
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/priorizacaoMVP/mvp.png">
@@ -107,6 +125,7 @@ Os elementos **Would/Want/Won't-Have** referem-se a requisitos com pouca ou nenh
   sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
 
 ## Bibliografia 
+
 [1] WIEGERS Karl E. First Things First: Prioritizing Requirements. Setembro de 1999. Disponível no [link](https://www.processimpact.com/articles/prioritizing.pdf).
 
 ## Histórico de versão
