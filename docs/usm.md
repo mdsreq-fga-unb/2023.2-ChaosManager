@@ -8,16 +8,6 @@ hide:
 ## Introdução
 <p align="justify">&emsp;&emsp; É proposto pelo professor George Marsicano a criação do User Story Mapping (USM) relacionado ao estudo de caso "ComunEventos" pela facção Insurgentes Estelares. </p>
 
-## USM
-
-<p align="justify">&emsp;&emsp; É realizado na Figura 1 o USM para a tarefa proposta: </p>
-
-<font size="2"><p style="text-align: center">Figura 1: Mural do USM </p></font>
-
-![USM](../assets/usm/)
-
-<font size="2"><p style="text-align: center">Fonte: Emerson Luis, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito e Pedro Eduardo (2023)</p></font>
-
 ## Personas
 
 Foram definidas as seguintes personas, considerando o *Organizador* como a mais importante para o processo de negócios da ComunEventos
