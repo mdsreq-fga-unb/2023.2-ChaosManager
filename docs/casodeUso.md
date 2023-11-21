@@ -174,7 +174,7 @@
 
 <p align="justify">&emsp;&emsp; Com os atores e casos de usos identificados, foi criado o diagrama de casos de uso para visualizar como e por quem as ações são realizadas dentro do sistema, assim como a ligação entre casos quando existiam. O diagrama está disponível na Figura 3. </p>
 
-<img src="../assets/casosUso/Diagrama-CasosUso.png">
+<img src="../assets/casosUso/Diagrama-CasosUso.jpg">
 
 <p><b>Figura 3:</b> Diagrama de caso de uso. </p>
 
