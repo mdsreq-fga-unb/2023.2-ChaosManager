@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Backlog Casos de Uso
 
 ## Introdução
