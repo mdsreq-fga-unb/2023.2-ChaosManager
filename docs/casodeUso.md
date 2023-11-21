@@ -551,4 +551,5 @@
 | 25/10 |  1.1   | Adição das especificações | Emerson Teles, Gustavo França, Larissa Gomes, Oscar de Brito e Pedro Eduardo|
 | 01/10 |  2.0   | Atualização descrições de caso de uso e correção de especificações | Larissa Gomes |
 | 01/10 |  2.1   | Adicionando DOR e DOD | Larissa Gomes, Emerson Teles e Luciano |
-| 15/10 |  3.0   | Correção das especificações | Larissa Gomes, Emerson Teles e Luciano |
+| 15/10 |  3.0   | Correção das especificações | Larissa Gomes |
+| 20/10 |  4.0   | Correção das especificações e Regras de Negócio | Larissa Gomes, Gustavo França, Oscar Brito e Pedro Eduardo |
