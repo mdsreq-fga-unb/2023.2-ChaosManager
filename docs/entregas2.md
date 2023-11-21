@@ -34,4 +34,4 @@ A apresentação da entrega da Missão 2, pode ser vista no [Vídeo 1](https://w
 
 | Data  | Versão | Descrição        | Autor |
 | :---: | :----: | ---------------- | ----- |
-| 25/10 |  1.0   | Entrega Missão 1 | Oscar |
+| 25/10 |  1.0   | Entrega Missão 2 | Oscar |

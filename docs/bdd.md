@@ -1,9 +1,18 @@
+---
+hide:
+  - toc
+---
+
 # Behavior Driven Development - HealthNet
 
 ## Introdução
-<p align="justify">&emsp;&emsp; É proposto pelo professor George Marsicano a criação do Behavior Driven Development (BDD) relacionado ao estudo de caso "HealthNet" através de uma análise do artefato criado pela facção Moonwalkers. </p> 
+<p style="text-align:justify; text-indent:20px;">  
+É proposto pelo professor George Marsicano a criação do Behavior Driven Development (BDD) relacionado ao estudo de caso "HealthNet" através de uma análise do artefato criado pela facção Moonwalkers. 
+</p> 
 
-<p align="justify">&emsp;&emsp; Apresentam-se as Histórias de Usuário (USs), Critérios de Aceitação (CAs) e o Behaviour Driven Development (BDD) desenvolvidos por Persona: </p> 
+<p style="text-align:justify; text-indent:20px;">  
+Apresentam-se as Histórias de Usuário (USs), Critérios de Aceitação (CAs) e o Behaviour Driven Development (BDD) desenvolvidos por Persona: 
+</p> 
 
 
 
@@ -57,7 +66,9 @@
 
 ## Verificação e Validação - USs
 
-<p align="justify">&emsp;&emsp; É realizado uma "check-list" para verificar e validar as Histórias de Usuário produzidos pelos Moonwalkers: </p>
+<p style="text-align:justify; text-indent:20px;">  
+É realizado uma "check-list" para verificar e validar as Histórias de Usuário produzidos pelos Moonwalkers: 
+</p>
 
 <font size="2"><p style="text-align: center">Figura 7: Check-list das USs </p></font>
 
@@ -67,7 +78,9 @@
 
 ## Verificação e Validação - CAs
 
-<p align="justify">&emsp;&emsp; É realizado uma "check-list" para verificar e validar os Critérios de Aceitação produzidos pelos Moonwalkers: </p>
+<p style="text-align:justify; text-indent:20px;">  
+É realizado uma "check-list" para verificar e validar os Critérios de Aceitação produzidos pelos Moonwalkers: 
+</p>
 
 <font size="2"><p style="text-align: center">Figura 7: Check-list das CAs </p></font>
 
@@ -89,9 +102,9 @@ Segue abaixo o Mural que possui todas as figuras apresentadas:
 
 ## Histórico de versão
 
-| Data  | Versão | Descrição                            | Autor                          |
-| :---: | :----: | ------------------------------------ | ------------------------------ |
-| 19/11 |  1.0   | Criação do artefato BDD | Gustavo França |
+| Data  | Versão | Descrição               | Autor          |
+| :---: | :----: | ----------------------- | -------------- |
+| 19/11 |  1.0   | Criação do artefato BDD | Gustavo França |
 
 
 
