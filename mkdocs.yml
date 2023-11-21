@@ -62,10 +62,10 @@ nav:
   - Missão 3:
     - PBB: pbb.md
     - BDD: bdd.md
+    - USM: usm.md
     - Lições aprendidas: licoes3.md
     - Vídeo de apresentação: entregas3.md
   - Casos de uso: casodeUso.md
-
 
 
 # Extensions
