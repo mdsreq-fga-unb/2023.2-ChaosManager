@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # User Story Mapping - ComunEventos
 
 ## Introdução
