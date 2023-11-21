@@ -24,14 +24,14 @@ Tabela 1 - Organização de papeis
 
 ## 2.2 Planejamento de fases e iterações do projeto
 
-| **Iterações** | **Etapas**                                                        | **Produto (Entrega)**                             | **Data Início** | **Data Fim** |
-| :-----------: | :---------------------------------------------------------------- | :------------------------------------------------ | :-------------: | :----------: |
-|  Iteração 1   | Definição do produto e do projeto                                 | Escopo do projeto e produto                       |   04/09/2023    |  29/09/2023  |
-|  Iteração 2   | Planejamento do Projeto                                           | Backlog, requisitos elicitados, definição do MVP |   02/10/2023    |  13/10/2023  |
-|  Iteração 3   | Estudo de tecnologias e começo da especificação de caso de uso | Equipe capacitada  |   16/10/2023    |  27/10/2023  |
-|  Iteração 4   | Definição de MVPs, definição de preparado,  definição de pronto, diagramas e especificação de casos de uso | Arquitetura do sistema, DoR, DoD, diagrama e especificação de casos de uso |   30/10/2023    |  10/11/2023  |
-|  Iteração 5   | Prototipagem, Desenvolvimento, Testes | Protótipos,  Projeto de arquitetura do projeto, aplicação e testes     |   13/11/2023    |  11/12/2023  |
-|  Iteração 6   | Testes, Release                                                           | testes finais, Publicação da aplicação nos serviços digitais     |   12/12/2023    |  14/12/2023  |
+| **Iterações** | **Etapas**                                                                                                | **Produto (Entrega)**                                                      | **Data Início** | **Data Fim** |
+| :-----------: | :-------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- | :-------------: | :----------: |
+|  Iteração 1   | Definição do produto e do projeto                                                                         | Escopo do projeto e produto                                                |   04/09/2023    |  29/09/2023  |
+|  Iteração 2   | Planejamento do Projeto                                                                                   | Backlog, requisitos elicitados, definição do MVP                           |   02/10/2023    |  13/10/2023  |
+|  Iteração 3   | Estudo de tecnologias e começo da especificação de caso de uso                                            | Equipe capacitada                                                          |   16/10/2023    |  27/10/2023  |
+|  Iteração 4   | Definição de MVPs, definição de preparado, definição de pronto, diagramas e especificação de casos de uso | Arquitetura do sistema, DoR, DoD, diagrama e especificação de casos de uso |   30/10/2023    |  10/11/2023  |
+|  Iteração 5   | Prototipagem, Desenvolvimento, Testes                                                                     | Protótipos, Projeto de arquitetura do projeto, aplicação e testes          |   13/11/2023    |  11/12/2023  |
+|  Iteração 6   | Testes, Release                                                                                           | testes finais, Publicação da aplicação nos serviços digitais               |   12/12/2023    |  14/12/2023  |
 
 <p style="text-align:center;"> 
 Tabela 2 - Iterações do projeto
@@ -52,18 +52,15 @@ Tabela 3 - Matriz de comunicação
 
 ## 2.4 Gerenciamento de Riscos
 
-##### Falta de comunicação entre a equipe
+#### Falta de comunicação entre a equipe
 
-- Probabilidade: Baixa
 - Possivéis Soluções: <ul><li>Reunião 1:1 com os integrantes</li> <li>Replanejar os canais de comunicação</li> <li>Favorecer a comunicação assíncrona</li> </ul>
 
-##### Redução da equipe temporaria ou permantente
+#### Redução da equipe temporaria ou permantente
 
-- Probabilidade: Média
 - Possivéis Soluções: <ul><li>Compartilhamento do conhecimento do produto e do código entre os membros</li> <li>Redistribuição de tarefas entre os membros da equipe</li></ul>
 
-
-##### Escopo de projeto mínimo maior do que a capacidade produtiva
+#### Escopo de projeto mínimo maior do que a capacidade produtiva
 
 - Possíveis soluções:
   <ul>
@@ -76,7 +73,7 @@ Tabela 3 - Matriz de comunicação
     </li>
   </ul>
 
-##### Sobrecarga entre os membros
+#### Sobrecarga entre os membros
 
 - Possíveis soluções:
   <ul>
@@ -89,6 +86,24 @@ Tabela 3 - Matriz de comunicação
       <b>Definir Limites de Horário</b>: Se necessário, redistribuir tarefas entre os membros da equipe, alocando recursos de acordo com suas habilidades e disponibilidade. Isso pode ajudar a aliviar a sobrecarga de membros específicos.
       </li>
     </ul>
+
+#### Fadiga dos membros
+
+- Possíveis soluções:
+  <ul>
+    <li>
+      <b>Suporte: </b>
+      Encorajar a comunicação aberta sobre preocupações relacionadas à fadiga e oferecer suporte quando necessário.
+    </li>
+    <li>
+      <b>Pausas: </b>
+      Promover a cultura de pausas regulares e descanso para manter a produtividade e a saúde mental.
+    </li> 
+    <li>
+      <b>Gerenciamento de carga de trabalho: </b>
+      Implementar uma política de gerenciamento de carga de trabalho, estabelecendo limites razoáveis para horas trabalhas.
+    </li>
+  </ul>
 
 ## 2.5 Critérios de Replanejamento
 
@@ -124,7 +139,7 @@ Quando ocorrem mudanças significativas na composição da equipe, como a saída
 
 ## 2.6 Histórico de versão
 
-| Data  | Versão | Descrição           | Autor         |
-| :---: | :----: | ------------------- | ------------- |
-| 06/09 |  1.0   | Criação do artefato | Pedro Eduardo |
+| Data  | Versão | Descrição                   | Autor         |
+| :---: | :----: | --------------------------- | ------------- |
+| 06/09 |  1.0   | Criação do artefato         | Pedro Eduardo |
 | 15/11 |  1.1   | atualização do planejamento | Pedro Eduardo |
