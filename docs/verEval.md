@@ -51,7 +51,7 @@ Para atingir uma máxima no compreendimento na matéria com a união de diferent
 ## Validação - Checklist
 
 <img src="../assets/verEval/valCheck1.png" alt="Check US1 - US10" width="700" height="400">
-<img src="../assets/verEval/valCheck2.png" alt "Check US11 - US19" width="700" height="400">
+<img src="../assets/verEval/valCheck2.png" alt="Check US11 - US19" width="700" height="400">
 
 </center>
 
