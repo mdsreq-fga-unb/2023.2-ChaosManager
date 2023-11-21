@@ -60,13 +60,13 @@ nav:
     - Lições aprendidas: licoes2.md
     - Vídeo de apresentação: entregas2.md
   - Missão 3:
+    - Verificação e validação - MoonWalkers: verEvalMoonWalkers.md
     - PBB: pbb.md
     - BDD: bdd.md
-    - Verificação e validação - MoonWalkers: verEvalMoonWalkers.md
+    - USM: usm.md
     - Lições aprendidas: licoes3.md
     - Vídeo de apresentação: entregas3.md
   - Casos de uso: casodeUso.md
-
 
 
 # Extensions
