@@ -137,9 +137,25 @@ A baixa qualidade do produto é um motivo claro para o replanejamento. Isso pode
 Quando ocorrem mudanças significativas na composição da equipe, como a saída de membros-chave, é importante avaliar o impacto dessas mudanças no projeto. O replanejamento pode ser necessário para redistribuir tarefas, e ajustar o cronograma, se necessário, para acomodar as mudanças.
 </p>
 
-## 2.6 Histórico de versão
+## 2.6 Aspectos humanos
+
+<p style="text-align:justify; text-indent:20px;">
+Para que haja sucesso no projeto, é de extrema importância lidarmos com os aspectos humanos de cada membro da equipe, então decidimos nos avaliar por meio de um formulário
+anônimo para ver como cada um se avalia e avalia os outros de acordo com as características do material sobre aspectos humanos disponíveis no aprender. Nessa seção será retradado o resultado do formulário de maneira geral da equipe para não expor ninguém.
+</p>
+
+<p style="text-align:justify; text-indent:20px;">
+Foi percebido que a equipe é bastante democrática, estimulando a participação de outros membros. Porém ocorreu momentos autocráticos entre membros que gerou alguns desentendimentos durante esse processo, além de revelar insegurança de alguns membros. Contudo, algumas qualidades ajudaram a amenizar e minguar esses atritos pelo fato de todos estarem comprometidos a escutar o outro e serem positivos quando se trata de expor ideias e apaziguar o ambiente.
+</p>
+
+<p style="text-align:justify; text-indent:20px;">
+Podemos concluir como a forma de cada membro se comportar diante das situações pode impactar o projeto, além de perceber que sempre buscamos a melhor forma de nos relacionarmos a fim de que todos alcancemos nossos objetivos em comum e obter sucesso como o projeto.
+</p>
+
+## 2.7 Histórico de versão
 
 | Data  | Versão | Descrição                   | Autor         |
 | :---: | :----: | --------------------------- | ------------- |
 | 06/09 |  1.0   | Criação do artefato         | Pedro Eduardo |
 | 15/11 |  1.1   | atualização do planejamento | Pedro Eduardo |
+| 22/11 |  1.2   | Aspectos humanos | Pedro Eduardo |
