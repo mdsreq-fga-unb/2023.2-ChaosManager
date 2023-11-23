@@ -536,7 +536,7 @@
 
  - O caso de uso possui fluxos de eventos com um ou mais requisitos identificados;
  - O caso de uso possui uma especificação;
- - A especificação do caso de uso todos os campos de **Atores, Fluxo básico de eventos, Fluxo Alternativos, Fluxos de exceção, Pré-condições, Pós-condições, Pontos de extensão, Requisitos especiais, Informações adicionais e Regras de Negócios** preenchidos;;;
+ - A especificação do caso de uso possui todos os campos de **Atores, Fluxo básico de eventos, Fluxo Alternativos, Fluxos de exceção, Pré-condições, Pós-condições, Pontos de extensão, Requisitos especiais, Informações adicionais e Regras de Negócios** preenchidos;
  - Houve um consenso da equipe de desenvolvimento de que esse caso de uso deve entrar na iteração de desenvolvimento;
  - O caso de uso está mapeado para uma interface (protótipo);
  - Caso existam, as dependências dos requisitos foram identificadas.
