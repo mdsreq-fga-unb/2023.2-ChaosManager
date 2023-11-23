@@ -5,28 +5,26 @@ site_description: >-
   Documentação para do projeto Chaos Manager realizado na disciplina de
   Requisitos de Software na Universidade de Brasília
 
-
 # Repository
 repo_url: https://github.com/mdsreq-fga-unb/2023.2-ChaosManager
 repo_name: Chaos Manager
 
-
 # Configuration
 docs_dir: docs
 theme:
-  hide_toc: true 
+  hide_toc: true
   name: material
   language: pt-BR
-  icon: 
-   repo: fontawesome/brands/github
-  font: 
+  icon:
+    repo: fontawesome/brands/github
+  font:
     text: Roboto
   features:
-  - navigation.instant
-  - navigation.section
-  - navigation.path
-  - navigation.top
-  - tabs
+    - navigation.instant
+    - navigation.section
+    - navigation.path
+    - navigation.top
+    - tabs
 
   palette:
     - scheme: default
@@ -34,40 +32,44 @@ theme:
         icon: material/brightness-7
         name: Mudar para o modo escuro
       primary: deep purple
-      accent: purple 
-    - scheme: slate 
+      accent: purple
+    - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Mudar para o modo claro
       primary: deep purple
       accent: purple
 
-
 # Page tree
-nav: 
+nav:
   - Início: index.md
   - Insurgentes Estelares: historia.md
   - Missão 1:
-    - Visão geral do produto: visao_produto.md
-    - Visão geral do projeto: visao_projeto.md
-    - Processo de desenvolvimento: processo_software.md
-    - Lições aprendidas: licoes1.md
-    - Vídeo de apresentação: entregas1.md
+      - Visão geral do produto: visao_produto.md
+      - Visão geral do projeto: visao_projeto.md
+      - Processo de desenvolvimento: processo_software.md
+      - Lições aprendidas: licoes1.md
+      - Vídeo de apresentação: entregas1.md
   - Missão 2:
-    - Verificação e validação - Crystaleum: verEval.md
-    - Backlog SAFe: backlog.md
-    - Priorização e MVP: priorizacaoMVPSafe.md
-    - Lições aprendidas: licoes2.md
-    - Vídeo de apresentação: entregas2.md
+      - Verificação e validação - Crystaleum: verEval.md
+      - Backlog SAFe: backlog.md
+      - Priorização e MVP: priorizacaoMVPSafe.md
+      - Lições aprendidas: licoes2.md
+      - Vídeo de apresentação: entregas2.md
   - Missão 3:
-    - Verificação e validação - MoonWalkers: verEvalMoonWalkers.md
-    - PBB: pbb.md
-    - BDD: bdd.md
-    - USM: usm.md
-    - Lições aprendidas: licoes3.md
-    - Vídeo de apresentação: entregas3.md
+      - Verificação e validação - MoonWalkers: verEvalMoonWalkers.md
+      - PBB: pbb.md
+      - BDD: bdd.md
+      - USM: usm.md
+      - Lições aprendidas: licoes3.md
+      - Vídeo de apresentação: entregas3.md
   - Casos de uso: casodeUso.md
-
+  - Iterações:
+      - Iteração 1: iterações1.md
+      - Iteração 2: iterações2.md
+      - Iteração 3: iterações3.md
+      - Iteração 4: iterações4.md
+      - Iteração 5: iterações5.md
 
 # Extensions
 markdown_extensions:

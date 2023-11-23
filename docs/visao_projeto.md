@@ -30,8 +30,9 @@ Tabela 1 - Organização de papeis
 |  Iteração 2   | Planejamento do Projeto                                                                                   | Backlog, requisitos elicitados, definição do MVP                           |   02/10/2023    |  13/10/2023  |
 |  Iteração 3   | Estudo de tecnologias e começo da especificação de caso de uso                                            | Equipe capacitada                                                          |   16/10/2023    |  27/10/2023  |
 |  Iteração 4   | Definição de MVPs, definição de preparado, definição de pronto, diagramas e especificação de casos de uso | Arquitetura do sistema, DoR, DoD, diagrama e especificação de casos de uso |   30/10/2023    |  10/11/2023  |
-|  Iteração 5   | Prototipagem, Desenvolvimento, Testes                                                                     | Protótipos, Projeto de arquitetura do projeto, aplicação e testes          |   13/11/2023    |  11/12/2023  |
-|  Iteração 6   | Testes, Release                                                                                           | testes finais, Publicação da aplicação nos serviços digitais               |   12/12/2023    |  14/12/2023  |
+|  Iteração 5   | Prototipagem 1, Desenvolvimento 1, Testes 1                                                               | Protótipos, Projeto de arquitetura do projeto, aplicação e testes          |   13/11/2023    |  24/11/2023  |
+|  Iteração 6   | Prototipagem 2, Desenvolvimento 2, Testes 2                                                               | Protótipos, Projeto de arquitetura do projeto, aplicação e testes          |   27/11/2023    |  08/12/2023  |
+|  Iteração 7   | Testes, Release                                                                                           | testes finais, Publicação da aplicação nos serviços digitais               |   11/12/2023    |  14/12/2023  |
 
 <p style="text-align:center;"> 
 Tabela 2 - Iterações do projeto
