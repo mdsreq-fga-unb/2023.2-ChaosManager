@@ -41,4 +41,4 @@ A apresentação da validação com o cliente pode ser vista no [Vídeo 2](https
 
 | Data  | Versão | Descrição        | Autor |
 | :---: | :----: | ---------------- | ----- |
-| 22/11 |  1.0   | Entrega Missão 3| Oscar |
+| 22/11 |  1.0   | Entrega Missão 3| Oscar  |
