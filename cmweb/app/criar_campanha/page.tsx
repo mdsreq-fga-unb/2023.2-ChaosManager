@@ -8,7 +8,7 @@ export default function CriarCampanha({ params }: { params: { id: bigint } }) {
                 <label htmlFor="">Nome</label>
                 <input type="text" />
                 <label htmlFor="">História</label>
-                <div className="container mx-auto px-4"><div className="bg-slate-50" contentEditable="true"></div></div>
+                <div className="container mx-auto px-4 text-black"><div className="bg-slate-50" contentEditable="true"></div></div>
                 
                 <Button classe="bg-green-600" valor="Criar"/>
             </form>
