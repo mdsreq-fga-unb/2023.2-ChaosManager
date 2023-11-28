@@ -3,14 +3,13 @@ import { Campanha } from "@/models/campanha";
 
 export default function AcessarCampanha({ params }: { params: { id: bigint } }) {
   let listaDeCampanhas: Campanha[] = [];
-  listaDeCampanhas.push({
-    nome: "Campanha 1",
-    historia: "Historia da ordem e do caos",
-    senha_mestre: "",
-    senha_jogador: "",
-    fichas: undefined,
-    fichas_NPC: undefined,
-  });
+  listaDeCampanhas.push(
+    new Campanha({
+      nome: "Campanha 1",
+      historia: "Historia da ordem e do caos",
+      senha_mestre: "",
+    })
+  );
 
   listaDeCampanhas.push(
     new Campanha({

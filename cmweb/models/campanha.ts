@@ -5,8 +5,8 @@ export class Campanha {
   historia: string;
   senha_mestre: string;
   senha_jogador: string;
-  fichas: Ficha[] | null | undefined;
-  fichas_NPC: Ficha[] | null | undefined;
+  fichas: Ficha[];
+  fichas_NPC: Ficha[];
   constructor({
     nome,
     historia,
@@ -22,5 +22,14 @@ export class Campanha {
     this.senha_jogador = "";
     this.fichas = [];
     this.fichas_NPC = [];
+  }
+  addFicha(ficha: Ficha) {
+    this.fichas.push(ficha);
+  }
+  testeForca() {
+    const dados = 20;
+    const modificador = 5;
+    const resultado = dados + modificador;
+    return resultado;
   }
 }
