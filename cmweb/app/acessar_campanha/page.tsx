@@ -1,16 +1,22 @@
-import Button from "@/app/Components/Button"
+import css from "@/app/acessar_campanha/acessar.module.css";
 
 export default function AcessarCampanha({ params }: { params: { id: bigint } }) {
-    return (
+  return (
+    <div className={css.acessar_campanha}>
+      <form className={css.acessar_campanha_form} action="">
+        <h1>Acessar Sala de campanha</h1>
         <div>
-            <h1>Acessar Sala de campanha</h1>
-            <form action="">
-                <label htmlFor="">Nome</label>
-                <input type="text" />
-                <label htmlFor="">Senha</label>
-                <input type="text" />
-                <Button classe="bg-sky-600" valor="Acessar"/>
-            </form>
+          <div>
+            <label htmlFor="nome">Nome</label>
+            <input type="text" name="nome" id="nome" />
+          </div>
+          <div>
+            <label htmlFor="senha">Código de acesso</label>
+            <input type="text" name="senha" id="senha" />
+          </div>
         </div>
-    )
+        <button type="submit">Acessar</button>
+      </form>
+    </div>
+  );
 }
