@@ -174,7 +174,7 @@
 
 <p align="justify">&emsp;&emsp; Com os atores e casos de usos identificados, foi criado o diagrama de casos de uso para visualizar como e por quem as ações são realizadas dentro do sistema, assim como a ligação entre casos quando existiam. O diagrama está disponível na Figura 3. </p>
 
-<img src="../assets/casosUso/Diagrama-CasosUso.jpg">
+<img src="../assets/casosUso/Diagrama-CasosUso.png">
 
 <p><b>Figura 3:</b> Diagrama de caso de uso. </p>
 
@@ -227,7 +227,7 @@
 |**Autor**|Larissa Gomes|
 |**1. Atores**|Mestre|
 |**2. Breve Descrição**|Esse caso de uso permite o mestre gerenciar sua sala de campanha como necessário, editando as informações que deseja ou até mesmo excluindo a campanha.|
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Configurações”.</p><p>3\.2. O sistema apresenta as informações da campanha:</p><p>`  `- Nome</p><p>`  `- História</p><p>`  `- Senhas de acesso.</p><p>3\.3. O sistema apresenta as seguintes opções:</p><p>`  `- Editar</p><p>`  `- Excluir campanha (FA01)</p><p>3\.4. O mestre seleciona a opção “Editar”.</p><p>3\.5. O mestre altera as informações que deseja das apresentadas:<br>`  `- Nome</p><p>`  `- História</p><p>`  `- Senhas de acesso.</p><p>3\.6. O mestre seleciona a opção de “Confirmar”.</p><p>3\.7. O sistema faz a validação das informações. (FE01) (FE02)</p><p>3\.8. O sistema atualiza as informações da campanha.</p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Configurações”.</p><p>3\.2. O sistema apresenta as informações da campanha:</p><p>`     `- Nome</p><p>`     `- História</p><p>`     `- Senhas de acesso.</p><p>3\.3. O sistema apresenta as seguintes opções:</p><p>`     `- Editar</p><p>`     `- Excluir campanha (FA01)</p><p>3\.4. O mestre seleciona a opção “Editar”.</p><p>3\.5. O mestre altera as informações que deseja das apresentadas:<br>`     `- Nome</p><p>`     `- História</p><p>`     `- Senhas de acesso.</p><p>3\.6. O mestre seleciona a opção de “Confirmar”.</p><p>3\.7. O sistema faz a validação das informações. (FE01) (FE02)</p><p>3\.8. O sistema atualiza as informações da campanha.</p>|
 |**4. Fluxo Alternativos**|<p>4\.1. FA01 – Excluir Campanha</p><p>`   `4.1.1. O mestre seleciona a opção “Configurações”.</p><p>`   `4.1.2. O mestre seleciona a opção “Excluir campanha”</p><p>`   `4.1.3. O sistema confirma se o mestre deseja realizar essa ação.</p><p>`   `4.1.4. O mestre seleciona a opção de “Confirmar”.</p><p>`   `4.1.5. O sistema exclui a campanha.</p>|
 |**5. Fluxos de exceção**|<p>FE01 – Senha inválida </p><p>No passo 3.7 do FB, caso a senha digitada seja menor que 5 dígitos, o sistema deve emitir a mensagem: “Senha inválida, defina uma senha com pelo menos 5 dígitos”. E, o caso de uso retorna ao 3.5 do FB.</p><p>FE02 –Campanha já existe</p><p>No passo 3.7 do FB, caso o nome da campanha informado já exista, o sistema deve emitir a mensagem: “Nome de campanha já existe, informe um novo”. E, o caso de uso retorna ao 3.5 do FB.</p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p>|
@@ -247,14 +247,15 @@
 |**Autores**|Gustavo França, Larissa Gomes e Pedro Eduardo|
 |**1. Atores**|Mestre e jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário|
 |**2. Breve Descrição**|Este caso de uso permite o mestre e os jogadores gerenciarem a ficha de personagem para que consigam administrar todas as informações do seu personagem durante a campanha, bem como criar a ficha e posteriormente editá-la. As fichas do mestre apenas ele poderá acessar, enquanto todos podem ver as dos outros jogadores.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona a opção “Ficha de personagem”.</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>`    `-  Criar ficha</p><p>`    `-  Lista de Fichas de Personagens (FA01)</p><p>3\.3. O usuário seleciona a opção “Criar ficha”</p><p>3\.4. O usuário fornece informações sobre o personagem:</p><p>`     `- Nome do usuário e do personagem</p><p>`     `- Raça e profissão (RN016)</p><p>`     `- Idade e gênero</p><p>`     `- Dinheiro</p><p>`     `- Traços (RN01) (RN02)</p><p>`     `- Pontos de vida, armadura, energia e experiência</p><p>`     `- História, notas e descrição física.</p><p>3\.5. O usuário seleciona os traços do personagem.</p><p>3\.6. O usuário atribui os valores dos atributos do personagem.</p><p>3\.7. O usuário seleciona a opção “Criar ficha”.</p><p>3\.8. O sistema cria uma ficha de personagem com os dados informados. (RN03) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015)</p><p>3\.9. O sistema adiciona a ficha criada a lista de fichas de personagens.</p>|
-|**4. Fluxo Alternativos**|<p>FA01 – Editar ficha</p><p>`   `4.1.1. O usuário seleciona a opção “Lista de Fichas de Personagens”</p><p>`   `4.1.2. O sistema apresenta todas as Fichas de Personagens</p><p>`   `4.1.3. O usuário seleciona uma Ficha de Personagem </p><p>`   `4.1.4. O sistema apresenta as seguintes opções:</p><p>`     `- Editar</p><p>`     `- Excluir (PE01)</p><p>`   `4.1.5. O usuário seleciona a opção “Editar”</p><p>`   `4.1.6. O sistema exibe as informações que podem ser editadas:</p><p>`     `- Nome do usuário e do personagem</p><p>`     `- Raça e profissão (RN016)</p><p>`     `- Idade e gênero</p><p>`     `- Dinheiro</p><p>`     `- Traços (RN01) (RN02)</p><p>`     `- Pontos de vida, armadura, energia e experiência</p><p>`     `- História, notas e descrição física.</p><p>`   `4.1.7. O usuário seleciona o campo da informação que deseja alterar.</p><p>`   `4.1.8. O usuário fornece os novos dados nos campos exibidos.</p><p>`   `4.1.9. O usuário seleciona a opção de “Confirmar”.</p><p>`   `4.1.10. O sistema valida as informações. (FE01)</p><p>`   `4.1.11. O sistema atualiza os dados da ficha. (RN03) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015)</p>|
-|**5. Fluxos de exceção**|<p>FE01 – Personagem Morto</p><p>No passo 4.1.10 do FA01, caso os pontos de vida informados sejam ≤0, o sistema deve emitir a mensagem: “Personagem morto”. A ficha do personagem não pode mais ser editada. E, o caso de uso retorna ao 4.1.8 do FA01.</p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona a opção “Ficha de personagem”.</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>`     `-  Criar ficha</p><p>`     `-  Lista de Fichas de Personagens (FA01)</p><p>3\.3. O usuário seleciona a opção “Criar ficha”</p><p>3\.4. O usuário fornece informações sobre o personagem:</p><p>`     `- Nome do usuário e do personagem</p><p>`     `- Raça e profissão (RN016)</p><p>`     `- Idade e gênero</p><p>`     `- Dinheiro</p><p>`     `- Traços (RN01) (RN02)</p><p>`     `- Pontos de vida, armadura, energia e experiência</p><p>`     `- História, notas e descrição física.</p><p>3\.5. O usuário seleciona os traços do personagem.</p><p>3\.6. O usuário atribui os valores dos atributos do personagem.</p><p>3\.7. O usuário seleciona a opção “Criar ficha”.</p><p>3\.8. O sistema cria uma ficha de personagem com os dados informados. (RN03) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015)</p><p>3\.9. O sistema adiciona a ficha criada a lista de fichas de personagens.</p>|
+|**4. Fluxo Alternativos**|<p>FA01 – Editar ficha</p><p>`   `4.1.1. O usuário seleciona a opção “Lista de Fichas de Personagens”</p><p>`   `4.1.2. O sistema apresenta todas as Fichas de Personagens</p><p>`   `4.1.3. O usuário seleciona uma Ficha de Personagem </p><p>`   `4.1.4. O sistema apresenta as seguintes opções:</p><p>`     `- Editar</p><p>`     `- Excluir (IA01)</p><p>`   `4.1.5. O usuário seleciona a opção “Editar”</p><p>`   `4.1.6. O sistema exibe as informações que podem ser editadas:</p><p>`     `- Nome do usuário e do personagem</p><p>`     `- Raça e profissão (RN016)</p><p>`     `- Idade e gênero</p><p>`     `- Dinheiro</p><p>`     `- Traços (RN01) (RN02)</p><p>`     `- Pontos de vida, armadura, energia e experiência</p><p>`     `- História, notas e descrição física.</p><p>`   `4.1.7. O usuário seleciona o campo da informação que deseja alterar.</p><p>`   `4.1.8. O usuário fornece os novos dados nos campos exibidos.</p><p>`   `4.1.9. O usuário seleciona a opção de “Confirmar”.</p><p>`   `4.1.10. O sistema valida as informações. (FE01)</p><p>`   `4.1.11. O sistema atualiza os dados da ficha. (RN03) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015)</p>|
+|**5. Fluxos de exceção**|<p>FE01 – Personagem Morto</p><p>No passo 4.1.10 do FA01, caso os pontos de vida informados sejam ≤0, o sistema deve emitir a mensagem: “Personagem morto, deseja excluir a ficha?”. Em caso positivo, o sistema exclui a ficha da “Lista de Fichas de Personagens". Em caso positivo ou negativo, o caso de uso retorna ao 4.1.11 do FA01. </p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p>|
 |**7. Pós-condições**|<p>7\.1. Ficha de personagem criada</p><p>7\.2. Informações atualizadas da ficha de personagem (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|<p>PE01 – Excluir</p><p>Excluir se refere ao caso de uso [CdU-05 - Excluir ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#3), sendo um ponto de extensão do caso de uso “Gerenciar ficha de personagem”</p>|
+|**8. Pontos de extensão**|Não há.|
 |**9. Requisitos especiais**|<p>9\.1. O sistema deve automatizar os valores dos testes do personagem</p><p>9\.2. O sistema deve automatizar o peso carregado pelo personagem</p><p>9\.3. O sistema deve automatizar a capacidade do personagem</p><p>9\.4. O sistema deve automatizar a capacidade em combate do personagem</p>|
-|**10. Regras de negócio**|<p>Regras de Negócio:</p><p>(RN01) Se um jogador escolher um traço positivo, deverá escolher também um traço negativo </p><p>(RN02) Se um jogador escolher um traço, não poderá escolher um traço antagônico</p><p>(RN03) O valor da força é igual o atributo vigor + habilidade</p><p>(RN04) O valor da resistência física é igual o atributo vigor + percepção</p><p>(RN05) O valor da resistência mental é igual o atributo vigor + inteligência</p><p>(RN06) O valor da sobrevivência é igual o atributo vigor + domínio</p><p>(RN07) O valor da agilidade é igual o atributo habilidade + percepção</p><p>(RN08) O valor da destreza é igual o atributo habilidade e domínio</p><p>(RN09) O valor da competência é igual o atributo inteligência + habilidade</p><p>(RN010) O valor da criatividade é igual o atributo vigor + habilidade</p><p>(RN011) O valor da manipulação é igual o atributo inteligência + domínio</p><p>(RN012) O valor da sorte é igual o atributo domínio + percepção</p><p>(RN013) O valor do peso é igual à soma dos pesos dos itens, armas e equipamentos</p><p>(RN014) A capacidade é igual ao valor da Força do personagem</p><p>(RN015) O valor da capacidade em combate é igual ao atributo Vigor do personagem</p><p>(RN016) Se o jogador escolher uma profissão com objeto, esse objeto deve ser adicionado a sua ficha.</p>|
+|**10. Regras de negócio**|<p>RN:</p><p>(RN01) Se um jogador escolher um traço positivo, deverá escolher também um traço negativo </p><p>(RN02) Se um jogador escolher um traço, não poderá escolher um traço antagônico</p><p>(RN03) O valor da força é igual o atributo vigor + habilidade</p><p>(RN04) O valor da resistência física é igual o atributo vigor + percepção</p><p>(RN05) O valor da resistência mental é igual o atributo vigor + inteligência</p><p>(RN06) O valor da sobrevivência é igual o atributo vigor + domínio</p><p>(RN07) O valor da agilidade é igual o atributo habilidade + percepção</p><p>(RN08) O valor da destreza é igual o atributo habilidade e domínio</p><p>(RN09) O valor da competência é igual o atributo inteligência + habilidade</p><p>(RN010) O valor da criatividade é igual o atributo vigor + habilidade</p><p>(RN011) O valor da manipulação é igual o atributo inteligência + domínio</p><p>(RN012) O valor da sorte é igual o atributo domínio + percepção</p><p>(RN013) O valor do peso é igual à soma dos pesos dos itens, armas e equipamentos</p><p>(RN014) A capacidade é igual ao valor da Força do personagem</p><p>(RN015) O valor da capacidade em combate é igual ao atributo Vigor do personagem</p><p>(RN016) Se o jogador escolher uma profissão com objeto, esse objeto deve ser adicionado a sua ficha.</p>|
+|**11. Informações Adicionais**| (IA01) - Serve como um caso de uso principal para base de navegabilidade dos os casos de uso:</br> <a href="#43">CdU-05 - Excluir ficha de personagem<sup></sup></a></br><a href="#4"> CdU-08 - Gerenciar estados <sup></sup></a></br><a href="#5"> CdU-09 - Gerenciar magia<sup></sup></a></br><a href="#6"> CdU-10 - Gerenciar arma<sup></sup></a></br><a href="#7"> CdU-11 - Gerenciar equipamento<sup></sup></a></br><a href="#8">  CdU-12 - Gerenciar item<sup></sup></a>|
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 6:</b> Especificação Caso de Uso 04. </p>
@@ -267,14 +268,15 @@
 |**Autores**|Gustavo França, Larissa Gomes e Pedro Eduardo|
 |**1. Atores**|Mestre|
 |**2. Breve Descrição**|Este caso de uso é utilizado pelo mestre para excluir uma ficha de personagem quando não mais necessária.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona a opção “Ficha de personagem”.</p><p>3\.2. O usuário seleciona a opção “Lista de Fichas de Personagens"</p><p>3\.3. O sistema apresenta todas as Fichas de Personagens</p><p>3\.4. O usuário seleciona uma Ficha de Personagem </p><p>3\.5. O sistema apresenta as seguintes opções:</p><p>`     `- Editar (PE01)</p><p>`     `- Excluir <br>3\.6. O usuário seleciona a opção “Excluir”</p><p>3\.7. O mestre seleciona a opção “Confirmar”</p><p>3\.8. O sistema exclui a ficha da “Lista de Fichas de Personagens"</p>|
-|**4. Fluxo Alternativos**|<p>FA01 – morte do personagem</p><p>4\.1. A vida do personagem é zerada (RN01)</p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona a opção “Ficha de personagem”.</p><p>3\.2. O usuário seleciona a opção “Lista de Fichas de Personagens"</p><p>3\.3. O sistema apresenta todas as Fichas de Personagens</p><p>3\.4. O usuário seleciona uma Ficha de Personagem </p><p>3\.5. O sistema apresenta as seguintes opções:</p><p>`     `- Editar (IA01)</p><p>`     `- Excluir <br>3\.6. O usuário seleciona a opção “Excluir”</p><p>3\.7. O mestre seleciona a opção “Confirmar”</p><p>3\.8. O sistema exclui a ficha da “Lista de Fichas de Personagens"</p>|
+|**4. Fluxo Alternativos**|Não há|
 |**5. Fluxos de exceção**|Não há|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada.</p>|
-|**7. Pós-condições**|7\.1. A ficha é excluída (RN01)|
-|**8. Pontos de extensão**|PE01 - Excluir ficha de personagem é um ponto de extensão do caso de uso [CdU-04 - Gerenciar ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#1)|
+|**7. Pós-condições**|7\.1. A ficha é excluída|
+|**8. Pontos de extensão**|Não há.|
 |**9. Requisitos especiais**|Não há|
-|**10. Regras de negócio** |<p>Regras de Negócio:</p><p>(RN01) Quando um personagem morrer, ou seja, ter a sua vida zerada, deve aparecer para o mestre um pop-up para a exclusão da ficha.</p>|
+|**10. Regras de negócio** |<p>RN:</p><p>(RN01) Quando um personagem morrer, ou seja, ter a sua vida zerada, deve aparecer para o mestre um pop-up para a exclusão da ficha.</p>|
+|**11. Informações Adicionais**| (IA01) - O caso de uso <a href="#43">CdU-04 - Gerenciar ficha de personagem <sup></sup></a> serve como um caso de uso principal para base de navegabilidade desse caso de uso|
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 7:</b> Especificação Caso de Uso 05. </p>
@@ -294,8 +296,7 @@
 |**7. Pós-condições**|7\.1. É retornado o resultado do teste|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Regras de negócio**|<p>Regras de Negócio:</p><p>(RN01) O resultado do teste deve obedecer ao cálculo do teste sendo um inteiro randomizado de 1 a 20 somado ao valor do teste e somado ao valor dos pontos de energia em caso de teste de competência</p><p>(RN02) Um registro de ações deve ser apresentado somente ao Mestre e a quem realizou a ação </p><p></p>|
-
+|**10. Regras de negócio**|<p>RN:</p><p>(RN01) O resultado do teste deve obedecer ao cálculo do teste sendo um inteiro randomizado de 1 a 20 somado ao valor do teste e somado ao valor dos pontos de energia em caso de teste de competência</p><p>(RN02) Um registro de ações deve ser apresentado somente ao Mestre e a quem realizou a ação </p><p></p>|
 <div align="center" style="text-align: center">
 <p><b>Tabela 8:</b> Especificação Caso de Uso 06. </p>
 </div>
@@ -307,14 +308,14 @@
 |**Autor**|Pedro Eduardo e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. Em caso que ambos são elegíveis para o passo, serão referenciados como usuário.|
 |**2. Breve Descrição**|Este caso de uso será utilizado pelo mestre para gerenciar o combate e pelo jogador para reagir as ações do mestre no combate. Para tanto, o mestre pode indicar quem participa do combate e em que ordem, indicar quem participa do turno atacando e sendo atacado e por fim executando o efeito desse combate.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre abre o “Gerenciador de combate”.</p><p>3\.2. O mestre seleciona a opção “Adicionar ordem do combate”.</p><p>3\.3. O mestre adiciona as fichas dos personagens que participarão do combate na ordem que será realizado.</p><p>3\.4. O mestre seleciona as fichas de personagem de quem vai realizar e sofrer a ação.</p><p>3\.5. O mestre determina um teste para ser realizado (PI01)</p><p>3\.6. O mestre determina o valor mínimo para passar no teste </p><p>3\.7. O usuário realizando a ação executa o teste indicado pelo mestre de acordo com a ação desejada. (PI01)(RN01)</p><p>3\.8. O usuário sofrendo a ação realiza o teste indicado pelo mestre de acordo com a ação de reação desejada. (PI01) (FA01) </p><p>3\.9. O mestre adiciona o valor da ação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>3\.10. O mestre adiciona o valor da reação (RN05) (RN06) (RN07) </p><p>3\.11. O mestre adiciona pontos de energia (RN010) </p><p>3\.12. O mestre executa o efeito do combate. (RN02) (RN03) (RN04) (RN011) (RN012) (RN013)</p><p></p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre abre o “Gerenciador de combate”.</p><p>3\.2. O mestre seleciona a opção “Adicionar ordem do combate”.</p><p>3\.3. O mestre adiciona as fichas dos personagens que participarão do combate na ordem que será realizado.</p><p>3\.4. O mestre seleciona as fichas de personagem de quem vai realizar e sofrer a ação.</p><p>3\.5. O mestre determina um teste para ser realizado (PI01)</p><p>3\.6. O mestre determina o valor mínimo para passar no teste </p><p>3\.7. O usuário realizando a ação executa o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>3\.8. O usuário sofrendo a ação realiza o teste indicado pelo mestre de acordo com a ação de reação desejada. (PI01) (FA01) </p><p>3\.9. O mestre adiciona o valor da ação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>3\.10. O mestre adiciona o valor da reação (RN05) (RN06) (RN07) </p><p>3\.11. O mestre adiciona pontos de energia (RN010) </p><p>3\.12. O mestre executa o efeito do combate. (RN01) (RN02) (RN03) (RN04) (RN011) (RN012) (RN013)</p><p></p>|
 |**4. Fluxo Alternativos**|<p>4\.1. FA01 – Escolheu receber o golpe</p><p>`   `4.1.1. O usuário realizando a retaliação realiza o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>`   `4.1.2. O usuário sofrendo a ação realiza o teste indicado pelo mestre de Resistência Física ou Mental (PI01)</p><p>`   `4.1.3. O mestre adiciona o valor da retaliação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>`   `O caso de uso retorna ao 3.11 do FB.</p><p></p>|
 |**5. Fluxos de exceção**|Não há|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Ficha de personagem criada.</p><p>6\.3. Testes criados.</p>|
 |**7. Pós-condições**|7\.1. As fichas que sofreram danos devem ter os pontos de vida e de armadura atualizados|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Regras de negócio**|<p>Regras de Negócio:</p><p>(RN01) O teste deve superar ou ser igual ao valor da dificuldade estipulada pelo mestre</p><p>(RN02) Se o teste não for maior ou igual ao valor estipulado pelo mestre e a consequência exigir um dano, então o jogador deverá realizar um teste de Resistência Física</p><p>(RN03) O dano recebido pela RN02 é igual ao dano estipulado pelo mestre – o valor do teste de Resistência Física</p><p>(RN04) Os Pontos de Armadura serão decrementados quando houver dano.</p><p>(RN05) O valor da reação de esquiva é o resultado de um teste de agilidade</p><p>(RN06) O valor da reação de defesa é o resultado de um teste de Resistência Física</p><p>(RN07) Se o jogador passar no teste da reação de esquivar, então não sofrerá dano</p><p>(RN08) O cálculo de dano sem uso de armas é igual ao valor obtido na Ação</p><p>(RN09) O cálculo de dano com o uso de armas é igual ao valor da ação + Modificador de dano</p><p>(RN010) O cálculo de dano causado por magia é igual ao valor da ação + Pontos de Energia usados</p><p>(RN011) O cálculo da absorção de dano da reação de defender OU situação sem chance de esquiva ou defesa é igual ao cálculo de dano – teste de Resistência Física</p><p>(RN012) O cálculo da absorção de dano da reação de esquivar (caso de falha) é igual ao cálculo de dano – o valor da Resistência Física do personagem</p><p>(RN013) O cálculo da absorção de dano da reação de não esquivar/defender é igual ao cálculo de dano – o valor da Resistência Física do personagem</p>|
+|**10. Regras de negócio**|<p>RN:</p><p>(RN01) O teste deve superar ou ser igual ao valor da dificuldade estipulada pelo mestre</p><p>(RN02) Se o teste não for maior ou igual ao valor estipulado pelo mestre e a consequência exigir um dano, então o jogador deverá realizar um teste de Resistência Física</p><p>(RN03) O dano recebido pela RN02 é igual ao dano estipulado pelo mestre – o valor do teste de Resistência Física</p><p>(RN04) Os Pontos de Armadura serão decrementados quando houver dano.</p><p>(RN05) O valor da reação de esquiva é o resultado de um teste de agilidade</p><p>(RN06) O valor da reação de defesa é o resultado de um teste de Resistência Física</p><p>(RN07) Se o jogador passar no teste da reação de esquivar, então não sofrerá dano</p><p>(RN08) O cálculo de dano sem uso de armas é igual ao valor obtido na Ação</p><p>(RN09) O cálculo de dano com o uso de armas é igual ao valor da ação + Modificador de dano</p><p>(RN010) O cálculo de dano causado por magia é igual ao valor da ação + Pontos de Energia usados</p><p>(RN011) O cálculo da absorção de dano da reação de defender OU situação sem chance de esquiva ou defesa é igual ao cálculo de dano – teste de Resistência Física</p><p>(RN012) O cálculo da absorção de dano da reação de esquivar (caso de falha) é igual ao cálculo de dano – o valor da Resistência Física do personagem</p><p>(RN013) O cálculo da absorção de dano da reação de não esquivar/defender é igual ao cálculo de dano – o valor da Resistência Física do personagem</p>|
 |**11. Informações adicionais**|Pontos de Inclusão: (PI01) [CdU-06 - Gerenciar teste](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#2)|
 
 
@@ -322,19 +323,19 @@
 <p><b>Tabela 9:</b> Especificação Caso de Uso 07. </p>
 </div>
 
-#### CdU-08 - Gerenciar estados 
+#### <p id="4"> CdU-08 - Gerenciar estados </p>
 
 |**Nome do caso de uso** |Gerenciar estados|
 | - | - |
 |**Autor**|Larissa Gomes|
 |**1. Atores**|Mestre e Jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário.|
 |**2. Breve Descrição**|Este caso de uso é utilizado pelos jogadores e mestre para gerenciar os estados que utilizarão durante a campanha de RPG, bem como adicioná-las e retirá-las de suas fichas de personagem.|
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a ficha (FA01)</p><p>3\.2. O usuário seleciona um campo vazio na seção de estados da ficha.</p><p>3\.3. O sistema apresenta as seguintes opções de estados:</p><p>`      `- Medo</p><p>`      `- Desespero</p><p>`      `- Estresse</p><p>`      `- Descontrole</p><p>`      `- Inconsciente/coma</p><p>`      `- Tontura</p><p>`      `- Embriaguez</p><p>`      `- Náusea</p><p>`      `- Hemorragia</p><p>`      `- Fratura óssea</p><p>`      `- Envenenamento</p><p>`      `- Fome</p><p>`      `- Frio</p><p>`      `- Calor</p><p>`      `- Humilhação</p><p>`      `- Trauma físico</p><p>`      `- Trauma psicológico</p><p>`      `- Mente controlada</p><p>`      `- Estado crítico de saúde</p><p>3\.4. O usuário seleciona o estado desejado das opções</p><p>3\.5. O usuário seleciona a opção de “confirmar”.</p><p>3\.6. O sistema valida o estado. (FE01)</p><p>3\.7. O sistema adiciona o estado na ficha.</p><p>3\.8. O sistema aplica as penalidades do estado na ficha do personagem.</p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a ficha (FA01)</p><p>3\.2. O usuário seleciona um campo vazio na seção de estados da ficha.</p><p>3\.3. O sistema apresenta as seguintes opções de estados:</p><p>`     `- Medo</p><p>`     `- Desespero</p><p>`     `- Estresse</p><p>`     `- Descontrole</p><p>`     `- Inconsciente/coma</p><p>`     `- Tontura</p><p>`     `- Embriaguez</p><p>`     `- Náusea</p><p>`     `- Hemorragia</p><p>`     `- Fratura óssea</p><p>`     `- Envenenamento</p><p>`     `- Fome</p><p>`     `- Frio</p><p>`     `- Calor</p><p>`     `- Humilhação</p><p>`     `- Trauma físico</p><p>`     `- Trauma psicológico</p><p>`     `- Mente controlada</p><p>`     `- Estado crítico de saúde</p><p>3\.4. O usuário seleciona o estado desejado das opções</p><p>3\.5. O usuário seleciona a opção de “confirmar”.</p><p>3\.6. O sistema valida o estado. (FE01)</p><p>3\.7. O sistema adiciona o estado na ficha.</p><p>3\.8. O sistema aplica as penalidades do estado na ficha do personagem.</p>|
 |**4. Fluxo Alternativos**|<p>4\.2. FA02 – Retirar Estado</p><p>`   `4.2.1. O usuário seleciona o campo do estado que deseja retirar na seção de Traços&Estados da ficha.</p><p>`   `4.2.2. O usuário seleciona a opção “retirar estado”.</p><p>`   `4.2.3. O sistema retira o estado da ficha do personagem.</p><p>`   `4.2.4. O sistema remove as penalidades do estado aplicadas na ficha do personagem.</p><p></p>|
 |**5. Fluxos de exceção**|<p>FE01 – Estado já aplicado</p><p>No passo 3.6 do FB, caso o usuário selecione um estado que já esteja aplicado, o sistema deve emitir a mensagem: “Estado já aplicado”. E, o caso de uso retorna ao 3.4 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada. </p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
 |**7. Pós-condições**|<p>7\.1. É adicionado um estado na ficha </p><p>7\.2. Penalidades são aplicadas ao personagem de acordo com o estado</p><p>7\.3. É retirado uma arma na ficha removendo penalidades (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|8\.1. Gerenciar arma é o ponto de extensão do caso de uso [CdU-04 - Gerenciar ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#1)|
+|**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
 |**10. Regras de negócio**|Não há|
 
@@ -342,7 +343,7 @@
 <p><b>Tabela 10:</b> Especificação Caso de Uso 08. </p>
 </div>
 
-#### CdU-09 - Gerenciar magia
+#### <p id="5"> CdU-09 - Gerenciar magia </p>
 
 |**Nome do caso de uso** |Gerenciar magia|
 | - | - |
@@ -354,7 +355,7 @@
 |**5. Fluxos de exceção**|Não há.|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
 |**7. Pós-condições**|<p>7\.1. É adicionado uma magia na ficha</p><p>7\.2. É retirado uma magia na ficha (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|8\.1. Gerenciar magia é o ponto de extensão do caso de uso [CdU-04 - Gerenciar ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#1)|
+|**8. Pontos de extensão**| Não há|
 |**9. Requisitos especiais**|Não há|
 |**10. Regras de negócio**|Não há|
 
@@ -362,7 +363,7 @@
 <p><b>Tabela 11:</b> Especificação Caso de Uso 09. </p>
 </div>
 
-#### CdU-10 - Gerenciar arma
+#### <p id="6"> CdU-10 - Gerenciar arma </p>
 
 |**Nome do caso de uso** |Gerenciar arma|
 | - | - |
@@ -374,7 +375,7 @@
 |**5. Fluxos de exceção**|<p>FE01 – Arma já existe</p><p>No passo 3.7 do fluxo básico, caso o usuário informe o nome de uma arma existente, porém com dados diferentes da já cadastrada, o sistema deve emitir a mensagem: “Arma já cadastrada no sistema”. E, o caso de uso retorna ao 3.3 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
 |**7. Pós-condições**|<p>7\.1. É adicionado uma arma na ficha</p><p>7\.2. É retirado uma arma na ficha (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|8\.1. Gerenciar arma é o ponto de extensão do caso de uso [CdU-04 - Gerenciar ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#1)|
+|**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
 |**10. Regras de negócio**|Não há|
 
@@ -382,7 +383,7 @@
 <p><b>Tabela 12:</b> Especificação Caso de Uso 10. </p>
 </div>
 
-#### CdU-11 - Gerenciar equipamento
+#### <p id="7"> CdU-11 - Gerenciar equipamento </p> 
 
 |**Nome do caso de uso** |Gerenciar equipamento|
 | - | - |
@@ -394,15 +395,15 @@
 |**5. Fluxos de exceção**|<p>FE01 – Equipamento já existe</p><p>No passo 3.6 do FB, caso o usuário informe o nome de um equipamento existente, porém com dados diferentes do já cadastrado, o sistema deve emitir a mensagem: “Equipamento já cadastrado no sistema”. E, o caso de uso retorna ao 3.3 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
 |**7. Pós-condições**|<p>7\.1. É adicionado um equipamento na ficha</p><p>7\.2. É retirado um equipamento na ficha (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|8\.1. Gerenciar arma é o ponto de extensão do caso de uso [CdU-04 - Gerenciar ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#1)|
-|**9. Requisitos especiais**|Não há.|
-|**10. Regras de negócio**|Não há.|
+|**8. Pontos de extensão**|Não há|
+|**9. Requisitos especiais**|Não há|
+|**10. Regras de negócio**|Não há|
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 13:</b> Especificação Caso de Uso 11. </p>
 </div>
 
-#### <p id="6"> CdU-12 - Gerenciar item </p>
+#### <p id="8"> CdU-12 - Gerenciar item </p>
 
 |**Nome do caso de uso** |Gerenciar item|
 | - | - |
@@ -414,8 +415,8 @@
 |**5. Fluxos de exceção**|<p>FE01 – Nova quantidade negativa</p><p>No passo 4.1.5 do FA01, caso o usuário informe a quantidade do item como 0, o sistema deve emitir a mensagem: “Quantidade inválida”. E, o caso de uso retorna ao 4.1.3 do FA01.</p><p>FE01 – Nova quantidade 0</p><p>No passo 4.1.5 do FA01, caso o usuário a quantidade do item como 0, o sistema deve emitir a mensagem: “Quantidade inválida, deseja retirar o item?”. Em caso negativo, o caso de uso retorna ao 4.1.3 do FA01, em caso positivo o caso de uso passa para o passo 4.2.3 do FA02.</p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
 |**7. Pós-condições**|<p>7\.1. É adicionado um item na ficha</p><p>7\.2. É alterado a quantidade de um item da ficha (fluxo alternativo)</p><p>7\.3. É retirado um item na ficha (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|8\.1. Gerenciar arma é o ponto de extensão do caso de uso [CdU-04 - Gerenciar ficha de personagem](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#1)|
-|**9. Requisitos especiais**|Não há.|
+|**8. Pontos de extensão**|Não há|
+|**9. Requisitos especiais**|Não há|
 |**10. Regras de negócio**|<p>Regras de Negócio:</p><p>(RN01) Peso do item a ser acrescentado ao peso carregado = (peso do item) x (Nova quantidade -quantidade Anterior)</p>|
 
 <div align="center" style="text-align: center">
@@ -429,7 +430,7 @@
 |**Autor**|Oscar|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. |
 |**2. Breve Descrição**|Este caso de uso é utilizado pelos jogadores e mestre para gerenciar as raças que utilizarão durante a campanha de RPG, bem como adicioná-las e retirá-las do sistema e da ficha de personagem. |
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Gerenciar Raça”.</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>`     `- Criar Raça</p><p>`     `- Editar Raça (FA01)</p><p>`     `- Excluir Raças (FA02)</p><p>3\.3. O mestre seleciona a opção de “Criar raça”</p><p>3\.4. O mestre preenche os campos de:</p><p>`     `- Nome</p><p>`     `- Detalhamento</p><p>`     `- Atributos</p><p>`     `- Tabela de idades com seus testes afetados.  </p><p>3\.5. O mestre seleciona a opção de “confirmar”. </p><p>3\.6. O sistema faz a validação da raça. (FE01) </p><p>3\.7. O sistema adiciona a raça na lista de raças existentes. </p><p> </p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Gerenciar Raça”.</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>`     `- Criar Raça</p><p>`     `- Editar Raça (FA01)</p><p>`     `- Excluir Raças (FA02)</p><p>3\.3. O mestre seleciona a opção de “Criar raça”</p><p>3\.4. O mestre preenche os campos de:</p><p>`     `- Nome</p><p>`     `- Detalhamento</p><p>`     `- Atributos</p><p>`     `- Tabela de idades com seus testes afetados.  </p><p>3\.5. O mestre seleciona a opção de “confirmar”. </p><p>3\.6. O sistema faz a validação da raça. (FE01) </p><p>3\.7. O sistema adiciona a raça na lista de raças existentes. </p><p> </p>|
 |**4. Fluxo Alternativos**|<p>4\.1. FA01 – Editar Raça  </p><p>`   `4.1.1. O mestre seleciona a opção de editar raça.</p><p>`   `4.1.2. O mestre seleciona a raça desejada da lista de raças existentes.</p><p>`   `4.1.3. O mestre edita as informações desejadas da raça.</p><p>`   `4.1.4. O mestre seleciona a opção de “confirmar”. </p><p>`   `4.1.5. O sistema faz a validação da raça. (FE01) </p><p>`   `4.1.6. O sistema atualiza as informações da raça. </p><p>`   `4.1.7. O sistema atualiza as informações nas fichas que tem a raça.</p><p>4\.2. FA02 – Remover Raça </p><p>`   `4.2.1. O mestre seleciona a opção de “remover raça”. </p><p>`   `4.2.2. O mestre seleciona a raça desejada da lista de raças existentes.</p><p>`   `4.2.3. O sistema remove a raça da lista de raça existentes.</p><p>`   `4.2.4. O sistema remove as raças das fichas dos personagens</p><p>`   `4.2.5. O sistema remove os atributos alterados pela raça.</p><p>`   `4.2.6. O sistema remove os testes afetados pela idade alterados pela raça.</p>|
 |**5. Fluxos de exceção**|<p>FE01 – Raça já existe </p><p>No passo 3.6 do fluxo básico, caso o usuário informe o nome de uma raça existente, porém com dados diferentes da já cadastrada, o sistema deve emitir a mensagem: “Raça já cadastrada no sistema”. E, o caso de uso retorna ao 3.4 do FB.</p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado a sala de campanha de RPG</p>|
@@ -449,7 +450,7 @@
 |**Autor**|Oscar Brito e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário.|
 |**2. Breve Descrição**|Este caso de uso é utilizado pelos jogadores e mestre para visualizar as raças que existem durante a campanha de RPG, assim como as informações de cada uma delas.|
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a área da lista de raças.</p><p>3\.2. O usuário seleciona a raça que deseja visualizar.</p><p>3\.3. O sistema mostra as informações de:</p><p>`     `- Nome</p><p>`     `- Detalhamento</p><p>`     `- Atributos</p><p>`     `- Tabela de idades com seus testes afetados.  </p><p></p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a área da lista de raças.</p><p>3\.2. O usuário seleciona a raça que deseja visualizar.</p><p>3\.3. O sistema mostra as informações de:</p><p>`     `- Nome</p><p>`     `- Detalhamento</p><p>`     `- Atributos</p><p>`     `- Tabela de idades com seus testes afetados.  </p><p></p>|
 |**4. Fluxo Alternativos**|Não há.|
 |**5. Fluxos de exceção**|Não há.|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada. </p><p>6\.2. Estar acessado a sala de campanha de RPG</p>|
@@ -469,7 +470,7 @@
 |**Autor**|Gustavo França e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. |
 |**2. Breve Descrição**|Este caso de uso é utilizado pelos jogadores e mestre para gerenciar as profissões que utilizarão durante a campanha de RPG, bem como adicioná-las, editá-las e removê-las do sistema.  |
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Gerenciar Profissão”.</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>`     `- Criar Profissão</p><p>`     `- Editar Profissão (FA01)</p><p>`     `- Excluir Profissão (FA02)</p><p>3\.3. O mestre seleciona a opção de “Criar profissão"</p><p>3\.4. O mestre preenche os campos de:</p><p>`      `- Nome</p><p>`      `- Descrição</p><p>`      `- Bônus e/ou penalidades</p><p>`      `- Um objeto associado a essa profissão</p><p>3\.5. O mestre seleciona a opção de “confirmar”. </p><p>3\.6. O sistema faz a validação da profissão. (FE01) </p><p>3\.7. O sistema adiciona a profissão na lista de profissões existentes.</p><p></p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O mestre seleciona a opção “Gerenciar Profissão”.</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>`     `- Criar Profissão</p><p>`     `- Editar Profissão (FA01)</p><p>`     `- Excluir Profissão (FA02)</p><p>3\.3. O mestre seleciona a opção de “Criar profissão"</p><p>3\.4. O mestre preenche os campos de:</p><p>`     `- Nome</p><p>`     `- Descrição</p><p>`     `- Bônus e/ou penalidades</p><p>`     `- Um objeto associado a essa profissão</p><p>3\.5. O mestre seleciona a opção de “confirmar”. </p><p>3\.6. O sistema faz a validação da profissão. (FE01) </p><p>3\.7. O sistema adiciona a profissão na lista de profissões existentes.</p><p></p>|
 |**4. Fluxo Alternativos**|<p>4\.1. FA01 – Editar Profissão  </p><p>`   `4.1.1. O mestre seleciona a opção de editar profissão.</p><p>`   `4.1.2. O mestre seleciona a profissão desejada da lista de profissões existentes.</p><p>`   `4.1.3. O mestre edita as informações desejadas da profissão </p><p>`   `4.1.4. O mestre seleciona a opção de “confirmar”. </p><p>`   `4.1.5. O sistema faz a validação da profissão (FE01) </p><p>`   `4.1.6. O sistema atualiza as informações da profissão.</p><p>`   `4.1.7. O sistema atualiza as informações nas fichas que tem a profissão.</p><p></p><p>4\.2. FA02 – Remover profissão</p><p>`   `4.2.1. O mestre seleciona a opção de “remover profissão”. </p><p>`   `4.2.2. O mestre seleciona a profissão desejada da lista de profissões existentes.</p><p>`   `4.2.3. O sistema remove a profissão da lista de profissões existentes.</p><p>`   `4.2.4. O sistema remove as profissões das fichas dos personagens.</p><p>`   `4.2.5. O sistema remove os atributos alterados pela profissão.</p><p>`   `4.2.6. O sistema remove o objeto associado a essa profissão se ainda estiver na ficha.</p><p></p>|
 |**5. Fluxos de exceção**|<p>FE01 – Profissão já existe </p><p>No passo 3.6 do FB, caso o usuário informe o nome de uma profissão existente, porém com dados diferentes da já cadastrada, o sistema deve emitir a mensagem: “Profissão já cadastrada no sistema”. E, o caso de uso retorna ao 3.4 do FB.</p><p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada. </p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
@@ -489,7 +490,7 @@
 |**Autor**|Gustavo França e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário.|
 |**2. Breve Descrição**|Este caso de uso é utilizado pelos jogadores e mestre para visualizar as profissões que existem durante a campanha de RPG, assim como as informações de cada uma delas.|
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a área da lista de profissões.</p><p>3\.2. O usuário seleciona a profissão que deseja visualizar.</p><p>3\.3. O sistema mostra as informações de:</p><p>`     `- Nome</p><p>`      `- Descrição</p><p>`      `- Bônus e/ou penalidades</p><p>`      `- Um objeto associado a essa profissão</p><p></p>|
+|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a área da lista de profissões.</p><p>3\.2. O usuário seleciona a profissão que deseja visualizar.</p><p>3\.3. O sistema mostra as informações de:</p><p>`     `- Nome</p><p>`     `- Descrição</p><p>`     `- Bônus e/ou penalidades</p><p>`     `- Um objeto associado a essa profissão</p><p></p>|
 |**4. Fluxo Alternativos**|Não há.|
 |**5. Fluxos de exceção**|Não há.|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada. </p><p>6\.2. Estar acessado a sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada</p>|
@@ -515,8 +516,8 @@
 
 ### MVP
 
-<p align="justify">&emsp;&emsp; Com base nos objetivos a serem atingidos no projeto, os Casos de Uso a fazerem parte do MVP foram selecionados com isso em vista. A Tabela 3 apresenta a relação dos Casos de Uso e qual objetivo secundário estariam contribuindo para ser atingido. Cumprindo todos os objetivos secundários, o objetivo principal de <b>“Unificar ferramentas de Combate, fichas de personagem, ação/teste de habilidade e interpretação de um rpg de mesa por meio da implementação do sistema de regras Order&Caos.
-”</b> será alcançado.</p>
+<p align="justify">&emsp;&emsp; Com base nos objetivos a serem atingidos no projeto, os Casos de Uso a fazerem parte do MVP foram selecionados com isso em vista. A Tabela 3 apresenta a relação dos Casos de Uso e qual objetivo secundário estariam contribuindo para ser atingido. Cumprindo todos os objetivos secundários, o objetivo principal de <b>“Unificar ferramentas de Combate, fichas de personagem, ação/teste de habilidade e interpretação de um rpg de mesa por meio da implementação do sistema de regras Order&Caos.</b> A Figura 5 apresenta o diagrama de casos de uso atualizado com o MVP proposto.
+” será alcançado.</p>
 
 | Objetivos secundários  | Casos de Uso do MVP |
 | :---: | :----: |
@@ -524,13 +525,18 @@
 | Os usuários devem conseguir ter acesso a todas as suas informações por meio da ficha de personagem | CdU-04 - Gerenciar ficha de personagem </br> CdU-08 - Gerenciar estados </br> CdU-09 - Gerenciar magia </br> CdU-10 - Gerenciar arma </br> CdU-11 - Gerenciar equipamento </br> CdU-12 - Gerenciar item |
 | Os usuários devem poder usufruir das dinâmicas disponíveis (Testes e combate) | CdU-06 - Gerenciar teste </br> CdU-07 - Gerenciar combate |
 
+<img src="../assets/casosUso/Diagrama-CasosUso-MVP.png">
+
+<p><b>Figura 5:</b> Diagrama de caso de uso do MVP. </p>
+
+
 ### Definição de Preparado (DOR)
 
 <p align="justify">&emsp;&emsp; É o acordo entre o time e o cliente indicando quando um requisito estará preparado para ser puxado para uma iteração. </p>
 
  - O caso de uso possui fluxos de eventos com um ou mais requisitos identificados;
  - O caso de uso possui uma especificação;
- - A especificação do caso de uso todos os campos de **Atores, Fluxo básico de eventos, Fluxo Alternativos, Fluxos de exceção, Pré-condições, Pós-condições, Pontos de extensão, Requisitos especiais, Informações adicionais e Regras de Negócios** preenchidos;;;
+ - A especificação do caso de uso possui todos os campos de **Atores, Fluxo básico de eventos, Fluxo Alternativos, Fluxos de exceção, Pré-condições, Pós-condições, Pontos de extensão, Requisitos especiais, Informações adicionais e Regras de Negócios** preenchidos;
  - Houve um consenso da equipe de desenvolvimento de que esse caso de uso deve entrar na iteração de desenvolvimento;
  - O caso de uso está mapeado para uma interface (protótipo);
  - Caso existam, as dependências dos requisitos foram identificadas.
@@ -554,3 +560,4 @@
 | 01/10 |  2.1   | Adicionando DOR e DOD | Larissa Gomes, Emerson Teles e Luciano |
 | 15/10 |  3.0   | Correção das especificações | Larissa Gomes |
 | 20/10 |  4.0   | Correção das especificações e Regras de Negócio | Larissa Gomes, Gustavo França, Oscar Brito e Pedro Eduardo |
+| 22/10 |  4.1   | Correção diagrama e adição diagrama do MVP | Larissa Gomes |
