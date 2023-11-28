@@ -1,8 +1,8 @@
 import css from "@/app/acessar_campanha/acessar.module.css";
-import { Campanha, CampanhaType } from "@/models/campanha";
+import { Campanha } from "@/models/campanha";
 
 export default function AcessarCampanha({ params }: { params: { id: bigint } }) {
-  let listaDeCampanhas: CampanhaType[] = [];
+  let listaDeCampanhas: Campanha[] = [];
   listaDeCampanhas.push({
     nome: "Campanha 1",
     historia: "Historia da ordem e do caos",

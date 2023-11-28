@@ -1,11 +1,3 @@
-export type CampanhaType = {
-  nome: string;
-  historia: string;
-  senha_mestre: string;
-  senha_jogador: string;
-  fichas: Ficha[] | null | undefined;
-  fichas_NPC: Ficha[] | null | undefined;
-};
 type Ficha = {};
 
 export class Campanha {
@@ -13,8 +5,8 @@ export class Campanha {
   historia: string;
   senha_mestre: string;
   senha_jogador: string;
-  fichas: Ficha[] | null;
-  fichas_NPC: Ficha[] | null;
+  fichas: Ficha[] | null | undefined;
+  fichas_NPC: Ficha[] | null | undefined;
   constructor({
     nome,
     historia,
