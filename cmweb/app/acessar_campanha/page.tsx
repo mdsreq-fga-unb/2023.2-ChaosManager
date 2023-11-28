@@ -9,7 +9,7 @@ export default function AcessarCampanha({ params }: { params: { id: bigint } }) 
                 <input type="text" />
                 <label htmlFor="">Senha</label>
                 <input type="text" />
-                <Button valor="Acessar"/>
+                <Button classe="bg-sky-600" valor="Acessar"/>
             </form>
         </div>
     )
