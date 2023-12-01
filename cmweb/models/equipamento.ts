@@ -1,3 +1,4 @@
+
 export class Equipamento {
   nome: string;
   PdA: number;
@@ -46,140 +47,140 @@ peso: number;
 
 export var equipamentos: { [id: string] : Equipamentos; } = {};
 
-equipamentos["Traje de peles"] = {
-nome: "Traje de peles",
+equipamentos[EquipamentosExistentes.TrajePeles] = {
+nome: EquipamentosExistentes.TrajePeles,
 PdA: 4,
 peso: 2,
 };
 
-equipamentos["Traje de couro"] = {
-nome: "Traje de couro",
+equipamentos[EquipamentosExistentes.TrajeCouro] = {
+nome: EquipamentosExistentes.TrajeCouro,
 PdA: 6,
 peso: 2.5,
 };
 
-equipamentos["Cota de malha"] = {
-nome: "Cota de malha",
+equipamentos[EquipamentosExistentes.CotaMalha] = {
+nome: EquipamentosExistentes.CotaMalha,
 PdA: 13,
 peso: 5,
 };
 
-equipamentos["Armadura de couro de crocodilo"] = {
-nome: "Armadura de couro de crocodilo",
+equipamentos[EquipamentosExistentes.ArmCouro] = {
+nome: EquipamentosExistentes.ArmCouro,
 PdA: 12,
 peso: 6,
 };
 
-equipamentos["Peitoral de ferro"] = {
-nome: "Peitoral de ferro",
+equipamentos[EquipamentosExistentes.Peitoral] = {
+nome: EquipamentosExistentes.Peitoral,
 PdA: 20,
 peso: 10,
 };
 
-equipamentos["Colete à prova de balas (leve)"] = {
-nome: "Colete à prova de balas (leve)",
+equipamentos[EquipamentosExistentes.ColeteLeve] = {
+nome: EquipamentosExistentes.ColeteLeve,
 PdA: 30,
 peso: 5,
 };
 
-equipamentos["Colete à prova de balas (médio)"] = {
-nome: "Colete à prova de balas (médio)",
+equipamentos[EquipamentosExistentes.ColeteMedio] = {
+nome: EquipamentosExistentes.ColeteMedio,
 PdA: 40,
 peso: 6,
 };
 
-equipamentos["Ō-yoroi/armadura samurai"] = {
-nome: "Ō-yoroi/armadura samurai",
+equipamentos[EquipamentosExistentes.ArmSamurai] = {
+nome: EquipamentosExistentes.ArmSamurai,
 PdA: 30,
 peso: 15,
 };
 
-equipamentos["Armadura de centurião"] = {
-nome: "Armadura de centurião",
+equipamentos[EquipamentosExistentes.ArmCenturiao] = {
+nome: EquipamentosExistentes.ArmCenturiao,
 PdA: 32,
 peso: 15,
 };
 
-equipamentos["Couraça de aço"] = {
-nome: "Couraça de aço",
+equipamentos[EquipamentosExistentes.Couraca] = {
+nome: EquipamentosExistentes.Couraca,
 PdA: 35,
 peso: 20,
 };
 
-equipamentos["Colete à prova de balas (pesado)"] = {
-nome: "Colete à prova de balas (pesado)",
+equipamentos[EquipamentosExistentes.ColetePesado] = {
+nome: EquipamentosExistentes.ColetePesado,
 PdA: 50,
 peso: 10,
 };
 
-equipamentos["Armadura de cavaleiro"] = {
-nome: "Armadura de cavaleiro",
+equipamentos[EquipamentosExistentes.ArmCavaleiro] = {
+nome: EquipamentosExistentes.ArmCavaleiro,
 PdA: 60,
 peso: 30,
 };
 
-equipamentos["Escudo de madeira"] = {
-nome: "Escudo de madeira",
+equipamentos[EquipamentosExistentes.EscudoMadeira] = {
+nome: EquipamentosExistentes.EscudoMadeira,
 PdA: 15,
 peso: 5,
 };
 
-equipamentos["Scutum (escudo romano)"] = {
-nome: "Scutum (escudo romano)",
+equipamentos[EquipamentosExistentes.Scutum] = {
+nome: EquipamentosExistentes.Scutum,
 PdA: 18,
 peso: 6,
 };
 
-equipamentos["Broquel (escudo pequeno)"] = {
-nome: "Broquel (escudo pequeno)",
+equipamentos[EquipamentosExistentes.Broquel] = {
+nome: EquipamentosExistentes.Broquel,
 PdA: 12,
 peso: 2,
 };
 
-equipamentos["Escudo de ferro"] = {
-nome: "Escudo de ferro",
+equipamentos[EquipamentosExistentes.EscudoFerro] = {
+nome: EquipamentosExistentes.EscudoFerro,
 PdA: 22,
 peso: 5,
 };
 
-equipamentos["Escudo de aço"] = {
-nome: "Escudo de aço",
+equipamentos[EquipamentosExistentes.EscudoAco] = {
+nome: EquipamentosExistentes.EscudoAco,
 PdA: 28,
 peso: 4,
 };
 
-equipamentos["Escudo eletrônico"] = {
-nome: "Escudo eletrônico",
+equipamentos[EquipamentosExistentes.EscudoEletro] = {
+nome: EquipamentosExistentes.EscudoEletro,
 PdA: 50,
 peso: 2,
 };
 
-equipamentos["Capacete de couro"] = {
-nome: "Capacete de couro",
+equipamentos[EquipamentosExistentes.CapCouro] = {
+nome: EquipamentosExistentes.CapCouro,
 PdA: 4,
 peso: 1,
 };
 
-equipamentos["Capacete de obras"] = {
-nome: "Capacete de obras",
+equipamentos[EquipamentosExistentes.CapObras] = {
+nome: EquipamentosExistentes.CapObras,
 PdA: 6,
 peso: 0.5,
 };
 
-equipamentos["Capacete militar moderno"] = {
-nome: "Capacete militar moderno",
+equipamentos[EquipamentosExistentes.CapMilitar] = {
+nome: EquipamentosExistentes.CapMilitar,
 PdA: 12,
 peso: 1.5,
 };
 
-equipamentos["Elmo viking"] = {
-nome: "Elmo viking",
+equipamentos[EquipamentosExistentes.ElmoViking] = {
+nome: EquipamentosExistentes.ElmoViking,
 PdA: 5,
 peso: 1.5,
 };
 
-equipamentos["Elmo de cavaleiro"] = {
-nome: "Elmo de cavaleiro",
+equipamentos[EquipamentosExistentes.ElmoCavaleiro] = {
+nome: EquipamentosExistentes.ElmoCavaleiro,
 PdA: 10,
 peso: 2,
 };
