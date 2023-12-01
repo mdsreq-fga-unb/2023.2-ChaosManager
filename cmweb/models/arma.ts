@@ -1,4 +1,4 @@
-import { Testes } from "@/models/estado";
+import { Testes } from "@/models/teste";
 
 export class Arma {
   nome: string;
@@ -14,19 +14,6 @@ export class Arma {
   }
   
 }
-
-/*export enum Testes {
-Forca = 'Força',
-ResFisica = 'Resistência Física',
-ResMental = 'Resistência Mental',
-Sobrevivencia = 'Sobrevivência',
-Agilidade = 'Agilidade',
-Destreza = 'Destreza',
-Competencia = 'Competência',
-Criatividade = 'Criatividade',
-Manipulacao = 'Manipulação',
-Sorte = 'Sorte',
-}*/
 
 export enum ArmasExistentes {
 Faca = 'Faca/adaga',
@@ -63,163 +50,163 @@ peso: number;
 
 export var armas: { [id: string] : Armas; } = {};
 
-armas["Faca/adaga"] = {
-nome: "Faca/adaga",
+armas[ArmasExistentes.Faca] = {
+nome: ArmasExistentes.Faca,
 mod_dano: 15,
 teste: Testes.Forca,
 peso: 0.5,
 };
 
-armas["Foice"] = {
-nome: "Foice",
+armas[ArmasExistentes.Foice] = {
+nome: ArmasExistentes.Foice,
 mod_dano: 20,
 teste: Testes.Forca,
 peso: 3,
 };
 
 
-armas["Espada"] = {
-nome: "Espada",
+armas[ArmasExistentes.Espada] = {
+nome: ArmasExistentes.Espada,
 mod_dano: 30,
 teste: Testes.Forca,
 peso: 2.5,
 };
 
-armas["Espada longa (2-mãos)"] = {
-nome: "Espada longa (2-mãos)",
+armas[ArmasExistentes.EspadaLonga] = {
+nome: ArmasExistentes.EspadaLonga,
 mod_dano: 40,
 teste: Testes.Forca,
 peso: 5,
 };
 
-armas["Katana (2-mãos)"] = {
-nome: "Katana (2-mãos)",
+armas[ArmasExistentes.Katana] = {
+nome: ArmasExistentes.Katana,
 mod_dano: 42,
 teste: Testes.Forca,
 peso: 2.5,
 };
 
-armas["Machadinho"] = {
-nome: "Machadinho",
+armas[ArmasExistentes.Machadinho] = {
+nome: ArmasExistentes.Machadinho,
 mod_dano: 18,
 teste: Testes.Forca,
 peso: 2,
 };
 
-armas["Alabarda (2-mãos)"] = {
-nome: "Alabarda (2-mãos)",
+armas[ArmasExistentes.Alabarda] = {
+nome: ArmasExistentes.Alabarda,
 mod_dano: 35,
 teste: Testes.Forca,
 peso: 5,
 };
 
-armas["Marreta (2-mãos)"] = {
-nome: "Marreta (2-mãos)",
+armas[ArmasExistentes.Marreta] = {
+nome: ArmasExistentes.Marreta,
 mod_dano: 45,
 teste: Testes.Forca,
 peso: 10,
 };
 
-armas["Porrete"] = {
-nome: "Porrete",
+armas[ArmasExistentes.Porrete] = {
+nome: ArmasExistentes.Porrete,
 mod_dano: 18,
 teste: Testes.Forca,
 peso: 3,
 };
 
-armas["Maça dentada"] = {
-nome: "Maça dentada",
+armas[ArmasExistentes.Maca] = {
+nome: ArmasExistentes.Maca,
 mod_dano: 23,
 teste: Testes.Forca,
 peso: 7,
 };
 
-armas["Chicote"] = {
-nome: "Chicote",
+armas[ArmasExistentes.Chicote] = {
+nome: ArmasExistentes.Chicote,
 mod_dano: 8,
 teste: Testes.Forca,
 peso: 2,
 };
 
-armas["Tridente (2-mãos)"] = {
-nome: "Tridente (2-mãos)",
+armas[ArmasExistentes.Tridente] = {
+nome: ArmasExistentes.Tridente,
 mod_dano: 33,
 teste: Testes.Forca,
 peso: 4,
 };
 
-armas["Bastão (2-mãos)"] = {
-nome: "Bastão (2-mãos)",
+armas[ArmasExistentes.Bastao] = {
+nome: ArmasExistentes.Bastao,
 mod_dano: 9,
 teste: Testes.Forca,
 peso: 1.5,
 };
 
-armas["Arco curto (2-mãos)"] = {
-nome: "Arco curto (2-mãos)",
+armas[ArmasExistentes.ArcoCurto] = {
+nome: ArmasExistentes.ArcoCurto,
 mod_dano: 16,
 teste: Testes.Destreza,
 peso: 2,
 };
 
-armas["Arco longo (2-mãos)"] = {
-nome: "Arco longo (2-mãos)",
+armas[ArmasExistentes.ArcoLongo] = {
+nome: ArmasExistentes.ArcoLongo,
 mod_dano: 20,
 teste: Testes.Destreza,
 peso: 4,
 };
 
-armas["Shuriken"] = {
-nome: "Shuriken",
+armas[ArmasExistentes.Shuriken] = {
+nome: ArmasExistentes.Shuriken,
 mod_dano: 15,
 teste: Testes.Destreza,
 peso: 0.1,
 };
 
-armas["Rifle de precisão"] = {
-nome: "Rifle de precisão",
+armas[ArmasExistentes.RiflePrecisao] = {
+nome: ArmasExistentes.RiflePrecisao,
 mod_dano: 80,
 teste: Testes.Destreza,
 peso: 5,
 };
 
-armas["Besta"] = {
-nome: "Besta",
+armas[ArmasExistentes.Besta] = {
+nome: ArmasExistentes.Besta,
 mod_dano: 18,
 teste: Testes.Agilidade,
 peso: 5,
 };
 
-armas["Revolver"] = {
-nome: "Revolver",
+armas[ArmasExistentes.Revolver] = {
+nome: ArmasExistentes.Revolver,
 mod_dano: 28,
 teste: Testes.Agilidade,
 peso: 1,
 };
 
-armas["Pistola semi-auto"] = {
-nome: "Pistola semi-auto",
+armas[ArmasExistentes.Pistola] = {
+nome: ArmasExistentes.Pistola,
 mod_dano: 30,
 teste: Testes.Agilidade,
 peso: 1,
 };
 
-armas["Espingarda (2-mãos)"] = {
-nome: "Espingarda (2-mãos)",
+armas[ArmasExistentes.Espingarda] = {
+nome: ArmasExistentes.Espingarda,
 mod_dano: 40,
 teste: Testes.Agilidade,
 peso: 1.5,
 };
 
-armas["Submetralhadora"] = {
-nome: "Submetralhadora",
+armas[ArmasExistentes.Submetralhadora] = {
+nome: ArmasExistentes.Submetralhadora,
 mod_dano: 33,
 teste: Testes.Agilidade,
 peso: 1.5,
 };
 
-armas["Rifle de assalto"] = {
-nome: "Rifle de assalto",
+armas[ArmasExistentes.RifleAssalto] = {
+nome: ArmasExistentes.RifleAssalto,
 mod_dano: 45,
 teste: Testes.Agilidade,
 peso: 2,
