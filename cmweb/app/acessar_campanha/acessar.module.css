@@ -20,6 +20,7 @@
   justify-content: space-evenly;
 }
 .acessar_campanha_form h1 {
+  color: black;
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
@@ -40,6 +41,7 @@
   opacity: 0.8;
 }
 .acessar_campanha_form label {
+  color: black;
 }
 .acessar_campanha_form input {
   width: 100%;

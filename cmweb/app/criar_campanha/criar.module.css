@@ -1,0 +1,54 @@
+.criar_campanha {
+    width: 100%;
+    height: 100vh;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .criar_campanha_form {
+    width: 18rem;
+    height: 20rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
+    justify-content: space-evenly;
+  }
+  .criar_campanha_form h1 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .criar_campanha_form button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .criar_campanha_form button:hover {
+    background-color: #1e90ff;
+    opacity: 0.8;
+  }
+  .criar_campanha_form label {
+    color: black;
+  }
+  .criar_campanha_form input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  
