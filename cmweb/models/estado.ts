@@ -1,3 +1,5 @@
+import { Testes } from "@/models/teste";
+
 export class Estado {
     nome: string;
     testes_afetados: Testes[] = [];
@@ -13,19 +15,6 @@ export class Estado {
       return this.testes_afetados.includes(teste);
     }
     
-}
-
-export enum Testes {
-  Forca = 'Força',
-  ResFisica = 'Resistência Física',
-  ResMental = 'Resistência Mental',
-  Sobrevivencia = 'Sobrevivência',
-  Agilidade = 'Agilidade',
-  Destreza = 'Destreza',
-  Competencia = 'Competência',
-  Criatividade = 'Criatividade',
-  Manipulacao = 'Manipulação',
-  Sorte = 'Sorte',
 }
 
 enum Estados {
@@ -55,103 +44,100 @@ interface estado {
     testes_afetados: Testes[];
 }
 
-console.log(Testes.ResMental);
+var estados: { [id: string] : estado; } = {};
 
-
-let estados: { [id: string] : estado; } = {};
-
-estados["Medo"] = { 
-    nome: "Medo", 
+estados[Estados.Medo] = { 
+    nome: Estados.Medo, 
     testes_afetados: [Testes.ResMental, Testes.Competencia] 
 };
 
-estados["Desespero"] = { 
-    nome: "Desespero", 
+estados[Estados.Desespero] = { 
+    nome: Estados.Desespero, 
     testes_afetados: [Testes.ResMental, Testes.Competencia, Testes.Destreza] 
 };
 
-estados["Estresse"] = { 
-    nome: "Estresse", 
+estados[Estados.Estresse] = { 
+    nome: Estados.Estresse, 
     testes_afetados: [Testes.ResMental, Testes.Criatividade, Testes.Manipulacao] 
 };
 
-estados["Descontrole"] = { 
-    nome: "Descontrole", 
+estados[Estados.Descontrole] = { 
+    nome: Estados.Descontrole, 
     testes_afetados: [Testes.ResMental, Testes.Criatividade, Testes.Manipulacao] 
 };
 
-estados["Inconsciente"] = { 
-    nome: "Inconsciente", 
+estados[Estados.Inconsciente] = { 
+    nome: Estados.Inconsciente, 
     testes_afetados: [Testes.ResFisica, Testes.Sobrevivencia] 
 };
 
-estados["Tontura"] = { 
-    nome: "Tontura", 
+estados[Estados.Tontura] = { 
+    nome: Estados.Tontura, 
     testes_afetados: [Testes.Forca, Testes.Criatividade, Testes.Manipulacao] 
 };
 
-estados["Embriaguez"] = { 
-    nome: "Embriaguez", 
+estados[Estados.Embriaguez] = { 
+    nome: Estados.Embriaguez, 
     testes_afetados: [Testes.ResMental, Testes.Competencia, Testes.Destreza] 
 };
 
-estados["Náusea"] = { 
-    nome: "Náusea", 
+estados[Estados.Nausea] = { 
+    nome: Estados.Nausea, 
     testes_afetados: [Testes.Forca, Testes.Criatividade, Testes.Competencia] 
 };
 
-estados["Hemorragia"] = { 
-    nome: "Hemorragia", 
+estados[Estados.Hemorragia] = { 
+    nome: Estados.Hemorragia, 
     testes_afetados: [Testes.Forca, Testes.ResFisica, Testes.Destreza] 
 };
 
-estados["Fratura óssea"] = { 
-    nome: "Fratura óssea", 
+estados[Estados.Fratura] = { 
+    nome: Estados.Fratura, 
     testes_afetados: [Testes.Forca, Testes.ResFisica, Testes.Destreza] 
 };
 
-estados["Envenenamento"] = { 
-    nome: "Envenenamento", 
+estados[Estados.Envenenamento] = { 
+    nome: Estados.Envenenamento, 
     testes_afetados: [Testes.Forca, Testes.Sobrevivencia] 
 };
 
-estados["Fome"] = { 
-    nome: "Fome", 
+estados[Estados.Fome] = { 
+    nome: Estados.Fome, 
     testes_afetados: [Testes.Forca, Testes.Sobrevivencia] 
 };
 
-estados["Frio"] = { 
-    nome: "Frio", 
+estados[Estados.Frio] = { 
+    nome: Estados.Frio, 
     testes_afetados: [Testes.Forca, Testes.Agilidade] 
 };
 
-estados["Calor"] = { 
-    nome: "Calor", 
+estados[Estados.Calor] = { 
+    nome: Estados.Calor, 
     testes_afetados: [Testes.Forca, Testes.Agilidade] 
 };
 
-estados["Humilhação"] = { 
-    nome: "Humilhação", 
+estados[Estados.Humilhacao] = { 
+    nome: Estados.Humilhacao, 
     testes_afetados: [Testes.ResMental, Testes.Criatividade, Testes.Manipulacao] 
 };
 
-estados["Trauma físico"] = { 
-    nome: "Trauma físico", 
+estados[Estados.TraumaFisico] = { 
+    nome: Estados.TraumaFisico, 
     testes_afetados: [Testes.Forca, Testes.ResFisica] 
 };
 
-estados["Trauma psicológico"] = { 
-    nome: "Trauma psicológico", 
+estados[Estados.TraumaPsicologico] = { 
+    nome: Estados.TraumaPsicologico, 
     testes_afetados: [Testes.ResMental, Testes.Criatividade, Testes.Competencia] 
 };
 
-estados["Mente controlada"] = { 
-    nome: "Mente controlada", 
+estados[Estados.MenteControlada] = { 
+    nome: Estados.MenteControlada, 
     testes_afetados: [Testes.ResMental, Testes.Criatividade, Testes.Competencia] 
 };
 
-estados["Estado crítico de saúde"] = { 
-    nome: "Estado crítico de saúde", 
+estados[Estados.EstadoCritico] = { 
+    nome: Estados.EstadoCritico, 
     testes_afetados: [
     Testes.Agilidade,
     Testes.Competencia,
