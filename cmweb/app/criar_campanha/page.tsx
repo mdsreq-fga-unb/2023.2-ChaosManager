@@ -1,16 +1,15 @@
 import Button from "@/app/Components/Button";
+import css from "@/app/criar_campanha/criar.module.css"
 
 export default function CriarCampanha({ params }: { params: { id: bigint } }) {
   return (
-    <div>
-      <h1>Criar Sala de campanha</h1>
-      <form action="">
-        <label htmlFor="">Nome</label>
-        <input type="text" />
-        <label htmlFor="">História</label>
-        <div className="container mx-auto px-4 text-black">
-          <div className="bg-slate-50" contentEditable="true"></div>
-        </div>
+    <div className={css.criar_campanha}>
+      <form className={css.criar_campanha_form} action="">
+        <h1>Criar Sala de campanha</h1>
+        <label htmlFor="nome">Nome</label>
+        <input className="text-black" type="text" />
+        <label htmlFor="historia">História</label>
+        <div className="rounded-[5px] border h-auto border-gray-300 text-black" contentEditable="true"></div>
 
         <Button classe="bg-green-600" valor="Criar" />
       </form>
