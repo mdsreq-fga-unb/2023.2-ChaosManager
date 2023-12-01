@@ -16,11 +16,8 @@ export class Campanha {
   }
 
   addFicha(ficha: Ficha) {
-    this.fichas.push(ficha);
-  }
-
-  addFichaNPC(ficha: Ficha) {
-    this.fichas_NPC.push(ficha);
+    if(ficha.NPC) this.fichas_NPC.push(ficha);
+    else this.fichas.push(ficha);
   }
 
   gerarSenha():number {
