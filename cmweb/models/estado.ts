@@ -17,7 +17,7 @@ export class Estado {
     
 }
 
-enum Estados {
+export enum Estados {
     Medo = 'Medo',
     Desespero = 'Desespero',
     Estresse = 'Estresse',

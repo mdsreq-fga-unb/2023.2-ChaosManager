@@ -1,5 +1,5 @@
 import { Magia, Item, Classes } from "@/models/item-magia";
-import { Estado } from "@/models/estado";
+import { Estado, Estados } from "@/models/estado";
 import { Arma, ArmasExistentes, armas } from "@/models/arma";
 import { Equipamento, EquipamentosExistentes, equipamentos } from "@/models/equipamento";
 import { Testes } from "@/models/teste";
@@ -93,7 +93,6 @@ export class Ficha {
     }
 
     penalidadeEstado(teste: Testes):number{
-        // testar !!!!
         let count = 0;
         this.estados.forEach(estado => {
             if(estado.afetaTeste(teste)) count += estado.valor;
@@ -102,7 +101,6 @@ export class Ficha {
     }
 
     penalidadeTraco(teste: Testes):number{
-        // testar !!!!
         let count = 0;
         this.tracosPositivos.forEach(traco => {
             if(traco.afetaTeste(teste)) count += traco.valor;
@@ -154,7 +152,6 @@ export class Ficha {
     }
 
     addTracoPositivo(traco: TracosPositivos, valor: number):number{
-        //precisa testar !!!!!!!
         if(this.tracosNegativos.length > 0 && this.tracosNegativos.find((element) => tracosPos[traco].id == tracosNeg[element.traco].id)) return -1; // verifica se na lista de negativos tem algum antagônic, se retornar sim retorna -1
         
         this.tracosPositivos.push(
@@ -164,7 +161,6 @@ export class Ficha {
     }
 
     addTracoNegativo(traco: TracosNegativos, valor: number):number{
-        //precisa testar !!!!!!!
         if(this.tracosPositivos.length > 0 && this.tracosPositivos.find((element) => tracosNeg[traco].id == tracosPos[element.traco].id)) return -1; // verifica se na lista de negativos tem algum antagônic, se retornar sim retorna -1
         
         this.tracosNegativos.push(
@@ -173,7 +169,7 @@ export class Ficha {
         return 0;
     }
 
-    addEstado(nome: string, valor: number):void{
+    addEstado(nome: Estados, valor: number):void{
         this.estados.push(
             new Estado(nome, valor)
         );
@@ -191,12 +187,14 @@ export class Ficha {
             armas[arma]
         );
     }
-    addArma(nome: string, mod_dano: number, teste: Testes, peso: number):void{    
-        // add verificação de o nome igual a algum já existente
+    addArma(nome: string, mod_dano: number, teste: Testes, peso: number):number{    
+        if ((<any>Object).values(ArmasExistentes).includes(nome)) return -1; // verifica se já existe uma arma com esse nome
+
         this.pesoCarregado += peso;
         this.armas.push(
             new Arma(nome, mod_dano, teste, peso)
         );
+        return 0;
     }
     
     addEquipamentoExistente(equipamento: EquipamentosExistentes):void{
@@ -206,12 +204,14 @@ export class Ficha {
         );
     }
 
-    addEquipamento(nome: string, PdA: number, peso: number):void{
-        // add verificação de o nome igual a algum já existente 
+    addEquipamento(nome: string, PdA: number, peso: number):number{
+        if ((<any>Object).values(EquipamentosExistentes).includes(nome)) return -1; // verifica se já existe um equipamento com esse nome
+
         this.pesoCarregado += peso;
         this.equipamentos.push(
             new Equipamento(nome, PdA, peso)
         );
+        return 0;
     }
 
     addItem(nome: string, peso: number):void{
@@ -222,11 +222,15 @@ export class Ficha {
     }
 
     alterarQtd(indice:number, qtd: number):void{ // pode ser por indice ou pelo nome do item, coloquei pelo indice por enquanto
-        const temp = this.itens[indice].peso;
-        this.itens[indice].Quantidade(qtd);
-        this.pesoCarregado += this.itens[indice].peso - temp;
+        if(qtd == 0) {
+            this.removeItem(indice);
+            return;
+        }
         
-        if(this.itens[indice].qtd >= 0) this.removeItem(indice);
+        const temp = this.itens[indice].pesoTotal;
+        this.itens[indice].Quantidade(qtd);
+        this.pesoCarregado += this.itens[indice].pesoTotal - temp;
+        
     }
 
     removeTracoPositivo(indice:number):void{
@@ -256,7 +260,7 @@ export class Ficha {
     }
 
     removeItem(indice:number):void{
-        this.pesoCarregado -= this.itens[indice].peso;
+        this.pesoCarregado -= this.itens[indice].pesoTotal;
         this.itens.splice(indice, 1);
     }
     

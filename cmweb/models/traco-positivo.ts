@@ -55,7 +55,7 @@ interface Tracos {
 export let tracosPos: { [id: string]: Tracos; } = {};
 
 tracosPos[TracosPositivos.SentidosAgucados] = {
-    id: 1,
+    id: 0,
     nome: TracosPositivos.SentidosAgucados,
     testes_afetados: [Testes.Competencia, Testes.Agilidade],
 };
@@ -67,157 +67,157 @@ tracosPos[TracosPositivos.SaudeDeFerro] = {
 };
 
 tracosPos[TracosPositivos.EmpatiaPura] = {
-    id: 1,
+    id: 2,
     nome: TracosPositivos.EmpatiaPura,
     testes_afetados: [Testes.Criatividade, Testes.Sorte],
 };
 
 tracosPos[TracosPositivos.Serenidade] = {
-    id: 1,
+    id: 3,
     nome: TracosPositivos.Serenidade,
     testes_afetados: [Testes.ResMental, Testes.Criatividade],
 };
 
 tracosPos[TracosPositivos.RegeneracaoRapida] = {
-    id: 2,
+    id: 4,
     nome: TracosPositivos.RegeneracaoRapida,
     testes_afetados: [Testes.ResFisica],
 };
 
 tracosPos[TracosPositivos.ResistenciaTemperaturaQuimica] = {
-    id: 2,
+    id: 5,
     nome: TracosPositivos.ResistenciaTemperaturaQuimica,
     testes_afetados: [Testes.Sobrevivencia],
 };
 
 tracosPos[TracosPositivos.ValentiaDesmedida] = {
-    id: 2,
+    id: 6,
     nome: TracosPositivos.ValentiaDesmedida,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosPos[TracosPositivos.Imunidade] = {
-    id: 2,
+    id: 7,
     nome: TracosPositivos.Imunidade,
     testes_afetados: [Testes.Sobrevivencia],
 };
 
 tracosPos[TracosPositivos.Perfeccionismo] = {
-    id: 3,
+    id: 8,
     nome: TracosPositivos.Perfeccionismo,
     testes_afetados: [Testes.Competencia],
 };
 
 tracosPos[TracosPositivos.Concentracao] = {
-    id: 3,
+    id: 9,
     nome: TracosPositivos.Concentracao,
     testes_afetados: [Testes.Destreza],
 };
 
 tracosPos[TracosPositivos.Sensatez] = {
-    id: 3,
+    id: 10,
     nome: TracosPositivos.Sensatez,
     testes_afetados: [Testes.Criatividade],
 };
 
 tracosPos[TracosPositivos.Moderacao] = {
-    id: 3,
+    id: 11,
     nome: TracosPositivos.Moderacao,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosPos[TracosPositivos.Diligencia] = {
-    id: 4,
+    id: 12,
     nome: TracosPositivos.Diligencia,
     testes_afetados: [Testes.Competencia],
 };
 
 tracosPos[TracosPositivos.Otimismo] = {
-    id: 4,
+    id: 13,
     nome: TracosPositivos.Otimismo,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosPos[TracosPositivos.Coragem] = {
-    id: 4,
+    id: 14,
     nome: TracosPositivos.Coragem,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosPos[TracosPositivos.Honradez] = {
-    id: 4,
+    id: 15,
     nome: TracosPositivos.Honradez,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosPos[TracosPositivos.Hipertrofia] = {
-    id: 5,
+    id: 16,
     nome: TracosPositivos.Hipertrofia,
     testes_afetados: [Testes.Forca],
 };
 
 tracosPos[TracosPositivos.Robustez] = {
-    id: 5,
+    id: 17,
     nome: TracosPositivos.Robustez,
     testes_afetados: [Testes.ResFisica],
 };
 
 tracosPos[TracosPositivos.Atraente] = {
-    id: 5,
+    id: 18,
     nome: TracosPositivos.Atraente,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosPos[TracosPositivos.ConhecidoComoJusto] = {
-    id: 5,
+    id: 19,
     nome: TracosPositivos.ConhecidoComoJusto,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosPos[TracosPositivos.Paciencia] = {
-    id: 6,
+    id: 20,
     nome: TracosPositivos.Paciencia,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosPos[TracosPositivos.BomHumor] = {
-    id: 6,
+    id: 21,
     nome: TracosPositivos.BomHumor,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosPos[TracosPositivos.Ceticismo] = {
-    id: 6,
+    id: 22,
     nome: TracosPositivos.Ceticismo,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosPos[TracosPositivos.Flexibilidade] = {
-    id: 6,
+    id: 23,
     nome: TracosPositivos.Flexibilidade,
     testes_afetados: [Testes.Criatividade],
 };
 
 tracosPos[TracosPositivos.Extroversao] = {
-    id: 7,
+    id: 24,
     nome: TracosPositivos.Extroversao,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosPos[TracosPositivos.Perspicacia] = {
-    id: 7,
+    id: 25,
     nome: TracosPositivos.Perspicacia,
     testes_afetados: [Testes.Criatividade, Testes.Agilidade],
 };
 
 tracosPos[TracosPositivos.Sagacidade] = {
-    id: 7,
+    id: 26,
     nome: TracosPositivos.Sagacidade,
     testes_afetados: [Testes.Criatividade, Testes.Agilidade],
 };
 
 tracosPos[TracosPositivos.Eloquencia] = {
-    id: 7,
+    id: 27,
     nome: TracosPositivos.Eloquencia,
     testes_afetados: [Testes.Manipulacao],
 };

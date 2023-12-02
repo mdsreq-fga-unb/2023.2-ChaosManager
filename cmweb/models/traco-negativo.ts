@@ -55,7 +55,7 @@ interface Tracos {
 export let tracosNeg: { [id: string]: Tracos; } = {};
 
 tracosNeg[TracosNegativos.LimitacaoFisicaSensorial] = {
-    id: 1,
+    id: 0,
     nome: TracosNegativos.LimitacaoFisicaSensorial,
     testes_afetados: [Testes.Forca, Testes.ResFisica, Testes.Competencia, Testes.ResMental],
 };
@@ -67,161 +67,157 @@ tracosNeg[TracosNegativos.DoencaDegenerativa] = {
 };
 
 tracosNeg[TracosNegativos.Psicopatia] = {
-    id: 1,
+    id: 2,
     nome: TracosNegativos.Psicopatia,
     testes_afetados: [Testes.Sorte, Testes.Criatividade],
 };
 
 tracosNeg[TracosNegativos.Autodestruicao] = {
-    id: 1,
+    id: 3,
     nome: TracosNegativos.Autodestruicao,
     testes_afetados: [Testes.ResMental, Testes.Criatividade],
 };
 
 tracosNeg[TracosNegativos.DoencaCronicaMental] = {
-    id: 2,
+    id: 4,
     nome: TracosNegativos.DoencaCronicaMental,
     testes_afetados: [Testes.Forca, Testes.ResFisica, Testes.Competencia, Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.VulneravelTempQuimica] = {
-    id: 2,
+    id: 5,
     nome: TracosNegativos.VulneravelTempQuimica,
     testes_afetados: [Testes.Sobrevivencia],
 };
 
 tracosNeg[TracosNegativos.FobiaIncontrolavel] = {
-    id: 2,
+    id: 6,
     nome: TracosNegativos.FobiaIncontrolavel,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.Alergia] = {
-    id: 2,
+    id: 7,
     nome: TracosNegativos.Alergia,
     testes_afetados: [Testes.Sobrevivencia],
 };
 
-// Adicione os outros traços seguindo o mesmo padrão...
-
 tracosNeg[TracosNegativos.Negligencia] = {
-    id: 3,
+    id: 8,
     nome: TracosNegativos.Negligencia,
     testes_afetados: [Testes.Competencia],
 };
 
 tracosNeg[TracosNegativos.Distracao] = {
-    id: 3,
+    id: 9,
     nome: TracosNegativos.Distracao,
     testes_afetados: [Testes.Destreza],
 };
 
 tracosNeg[TracosNegativos.Insensatez] = {
-    id: 3,
+    id: 10,
     nome: TracosNegativos.Insensatez,
     testes_afetados: [Testes.Criatividade],
 };
 
 tracosNeg[TracosNegativos.Compulsao] = {
-    id: 3,
+    id: 11,
     nome: TracosNegativos.Compulsao,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.Preguica] = {
-    id: 4,
+    id: 12,
     nome: TracosNegativos.Preguica,
     testes_afetados: [Testes.Competencia],
 };
 
 tracosNeg[TracosNegativos.Pessimismo] = {
-    id: 4,
+    id: 13,
     nome: TracosNegativos.Pessimismo,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.Covardia] = {
-    id: 4,
+    id: 14,
     nome: TracosNegativos.Covardia,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.Desonra] = {
-    id: 4,
+    id: 15,
     nome: TracosNegativos.Desonra,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosNeg[TracosNegativos.Desnutricao] = {
-    id: 5,
+    id: 16,
     nome: TracosNegativos.Desnutricao,
     testes_afetados: [Testes.Forca],
 };
 
 tracosNeg[TracosNegativos.BaixaEstatura] = {
-    id: 5,
+    id: 17,
     nome: TracosNegativos.BaixaEstatura,
     testes_afetados: [Testes.ResFisica],
 };
 
 tracosNeg[TracosNegativos.Repulsividade] = {
-    id: 5,
+    id: 18,
     nome: TracosNegativos.Repulsividade,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosNeg[TracosNegativos.ConhecidoComoInjusto] = {
-    id: 5,
+    id: 19,
     nome: TracosNegativos.ConhecidoComoInjusto,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosNeg[TracosNegativos.PavioCurto] = {
-    id: 6,
+    id: 20,
     nome: TracosNegativos.PavioCurto,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosNeg[TracosNegativos.Depressao] = {
-    id: 6,
+    id: 21,
     nome: TracosNegativos.Depressao,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.Fanatismo] = {
-    id: 6,
+    id: 22,
     nome: TracosNegativos.Fanatismo,
     testes_afetados: [Testes.ResMental],
 };
 
 tracosNeg[TracosNegativos.Teimosia] = {
-    id: 6,
+    id: 23,
     nome: TracosNegativos.Teimosia,
     testes_afetados: [Testes.Criatividade],
 };
 
-// Adicione os outros traços seguindo o mesmo padrão...
-
 tracosNeg[TracosNegativos.Timidez] = {
-    id: 7,
+    id: 24,
     nome: TracosNegativos.Timidez,
     testes_afetados: [Testes.Manipulacao],
 };
 
 tracosNeg[TracosNegativos.Ingenuidade] = {
-    id: 7,
+    id: 25,
     nome: TracosNegativos.Ingenuidade,
     testes_afetados: [Testes.Criatividade],
 };
 
 tracosNeg[TracosNegativos.Monotonia] = {
-    id: 7,
+    id: 26,
     nome: TracosNegativos.Monotonia,
     testes_afetados: [Testes.Agilidade],
 };
 
 tracosNeg[TracosNegativos.DiccaoPrejudicada] = {
-    id: 7,
+    id: 27,
     nome: TracosNegativos.DiccaoPrejudicada,
     testes_afetados: [Testes.Manipulacao],
 };
