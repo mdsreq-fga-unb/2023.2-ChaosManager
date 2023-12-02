@@ -97,7 +97,7 @@ export class Ficha {
         this.estados.forEach(estado => {
             if(estado.afetaTeste(teste)) count += estado.valor;
         });
-        return count;
+        return count*(-1);
     }
 
     penalidadeTraco(teste: Testes):number{
