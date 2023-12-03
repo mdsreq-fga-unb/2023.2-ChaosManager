@@ -1,9 +1,10 @@
 import css from "@/app/acessar_campanha/acessar.module.css";
+import { acessarCampanha } from "@/controller/campanhaCtrl";
 
-export default function AcessarCampanha({ params }: { params: { id: bigint } }) {
+export default function AcessarCampanha() {
   return (
     <div className={css.acessar_campanha}>
-      <form className={css.acessar_campanha_form} action="">
+      <form className={css.acessar_campanha_form} action={acessarCampanha}>
         <h1>Acessar Sala de campanha</h1>
         <div>
           <div>
