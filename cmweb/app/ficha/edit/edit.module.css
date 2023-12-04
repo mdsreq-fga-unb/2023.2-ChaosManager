@@ -1,0 +1,16 @@
+.ficha_input,
+.ficha_textarea {
+  border: 1px solid #7e7e7e;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+.ficha_input::placeholder,
+.ficha_textarea::placeholder {
+  color: #505050;
+}
+.ficha_textarea {
+  height: 10rem;
+  padding: 1rem 1rem;
+}
