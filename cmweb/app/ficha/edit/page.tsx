@@ -1,9 +1,38 @@
+"use client";
+
+import { useFormik } from "formik";
 import s from "./edit.module.css";
 export default function EditFicha() {
+  const formik = useFormik({
+    initialValues: {
+      nomeUsuario: "",
+      nomeJogador: "",
+      raca: "",
+      profissao: "",
+      idade: "",
+      genero: "",
+      historia: "",
+      descricao: "",
+      notas: "",
+      dinheiro: "",
+      PdA: 0,
+      PV: 0,
+      PE: 0,
+      Exp: 0,
+    },
+    onSubmit: async (values) => {
+      try {
+        alert(JSON.stringify(values, null, 2));
+      } catch (error) {
+        return alert((error as Error)?.message);
+      } finally {
+      }
+    },
+  });
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
       <h1 className="text-2xl font-semibold text-center mb-4">Ficha de personagem</h1>
-      <form action="" className="space-y-4">
+      <form onSubmit={formik.handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="" htmlFor="username">
@@ -14,6 +43,9 @@ export default function EditFicha() {
               placeholder="Nome do usuário"
               type="text"
               id="username"
+              name="nomeUsuario"
+              value={formik.values.nomeUsuario}
+              onChange={formik.handleChange}
             />
           </div>
 
@@ -26,6 +58,9 @@ export default function EditFicha() {
               placeholder="Nome do personagem"
               type="text"
               id="nickname"
+              name="nomeJogador"
+              value={formik.values.nomeJogador}
+              onChange={formik.handleChange}
             />
           </div>
         </div>
@@ -34,7 +69,15 @@ export default function EditFicha() {
             <label className="" htmlFor="age">
               Idade
             </label>
-            <input className={s.ficha_input} placeholder="Idade" type="text" id="age" />
+            <input
+              className={s.ficha_input}
+              placeholder="Idade"
+              type="text"
+              id="age"
+              name="idade"
+              value={formik.values.idade}
+              onChange={formik.handleChange}
+            />
           </div>
 
           <div>
@@ -42,31 +85,61 @@ export default function EditFicha() {
               Genero
             </label>
 
-            <select defaultValue="M" className={s.ficha_input}>
+            <select
+              defaultValue="M"
+              className={s.ficha_input}
+              name="genero"
+              value={formik.values.genero}
+              onChange={formik.handleChange}
+            >
               <option value="M">Masculino</option>
               <option value="F">Feminino</option>
             </select>
           </div>
-        </div>{" "}
+        </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="" htmlFor="race">
               Raça
             </label>
-            <input className={s.ficha_input} placeholder="Raça" type="text" id="race" />
+            <input
+              className={s.ficha_input}
+              placeholder="Raça"
+              type="text"
+              id="race"
+              name="raca"
+              value={formik.values.raca}
+              onChange={formik.handleChange}
+            />
           </div>
 
           <div>
             <label className="" htmlFor="ocupation">
               Profissão
             </label>
-            <input className={s.ficha_input} placeholder="Profissão" type="text" id="ocupation" />
+            <input
+              className={s.ficha_input}
+              placeholder="Profissão"
+              type="text"
+              id="ocupation"
+              name="profissao"
+              value={formik.values.profissao}
+              onChange={formik.handleChange}
+            />
           </div>
           <div>
             <label className="" htmlFor="money">
               Dinheiro
             </label>
-            <input className={s.ficha_input} placeholder="Dinheiro" type="text" id="money" />
+            <input
+              className={s.ficha_input}
+              placeholder="Dinheiro"
+              type="text"
+              id="money"
+              name="dinheiro"
+              value={formik.values.dinheiro}
+              onChange={formik.handleChange}
+            />
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
@@ -76,7 +149,9 @@ export default function EditFicha() {
               className={s.ficha_input}
               placeholder="Pontos de vida"
               min={0}
-              defaultValue={0}
+              value={formik.values.PV}
+              onChange={formik.handleChange}
+              name="PV"
               type="number"
               id="PV"
             />
@@ -88,7 +163,9 @@ export default function EditFicha() {
               placeholder="Pontos de Armadura"
               type="number"
               min={0}
-              defaultValue={0}
+              value={formik.values.PdA}
+              onChange={formik.handleChange}
+              name="PdA"
               id="PdA"
             />
           </div>
@@ -99,7 +176,9 @@ export default function EditFicha() {
               placeholder="Pontos de energia"
               type="number"
               min={0}
-              defaultValue={0}
+              value={formik.values.PE}
+              onChange={formik.handleChange}
+              name="PE"
               id="PE"
             />
           </div>
@@ -110,7 +189,9 @@ export default function EditFicha() {
               placeholder="Pontos de Experiência"
               type="number"
               min={0}
-              defaultValue={0}
+              value={formik.values.Exp}
+              onChange={formik.handleChange}
+              name="Exp"
               id="Exp"
             />
           </div>
@@ -125,6 +206,9 @@ export default function EditFicha() {
               className={s.ficha_textarea}
               placeholder="História"
               rows={8}
+              value={formik.values.historia}
+              onChange={formik.handleChange}
+              name="historia"
               id="background"
             ></textarea>
           </div>
@@ -137,6 +221,9 @@ export default function EditFicha() {
               className={s.ficha_textarea}
               placeholder="Descrição Física"
               rows={8}
+              value={formik.values.descricao}
+              onChange={formik.handleChange}
+              name="descricao"
               id="description"
             ></textarea>
           </div>
@@ -149,6 +236,9 @@ export default function EditFicha() {
               className={s.ficha_textarea}
               placeholder="Notas"
               rows={8}
+              value={formik.values.notas}
+              onChange={formik.handleChange}
+              name="notas"
               id="notes"
             ></textarea>
           </div>
