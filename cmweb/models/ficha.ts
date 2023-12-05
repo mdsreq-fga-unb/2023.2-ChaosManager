@@ -151,22 +151,28 @@ export class Ficha {
         return this.atributos.Dominio + this.atributos.Percepcao;
     }
 
-    addTracoPositivo(traco: TracosPositivos, valor: number):number{
-        if(this.tracosNegativos.length > 0 && this.tracosNegativos.find((element) => tracosPos[traco].id == tracosNeg[element.traco].id)) return -1; // verifica se na lista de negativos tem algum antagônic, se retornar sim retorna -1
+    addTracoPositivo(traco: TracosPositivos, valor: number):string{
+        let antagonico = this.tracosNegativos.find((element) => tracosPos[traco].id == tracosNeg[element.traco].id);
+        
+        if((antagonico !== null && antagonico !== undefined) && this.tracosNegativos.length > 0) 
+            return "O Traço \""+ traco + "\" não pode ser adicionado pois é antagônico ao Traço \"" + antagonico.traco + "\" do personagem"; // verifica se na lista de negativos tem algum antagônic
         
         this.tracosPositivos.push(
             new TracoPositivo(traco, valor)
         );
-        return 0;
+        return "";
     }
 
-    addTracoNegativo(traco: TracosNegativos, valor: number):number{
-        if(this.tracosPositivos.length > 0 && this.tracosPositivos.find((element) => tracosNeg[traco].id == tracosPos[element.traco].id)) return -1; // verifica se na lista de negativos tem algum antagônic, se retornar sim retorna -1
+    addTracoNegativo(traco: TracosNegativos, valor: number):string{
+        let antagonico = this.tracosPositivos.find((element) => tracosNeg[traco].id == tracosPos[element.traco].id);
+
+        if((antagonico !== null && antagonico !== undefined) && this.tracosPositivos.length > 0) 
+            return "O Traço \""+ traco + "\" não pode ser adicionado pois é antagônico ao Traço \"" + antagonico.traco + "\" do personagem"; // verifica se na lista de negativos tem algum antagônic
         
         this.tracosNegativos.push(
             new TracoNegativo(traco, valor)
         );
-        return 0;
+        return "";
     }
 
     addEstado(nome: Estados, valor: number):void{
