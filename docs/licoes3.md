@@ -17,4 +17,8 @@ Descobrir os líderes sombrios dos Renegados não era o suficente, era necessár
 
 Apesar de ter uma fonte de inteligência e reconhecimento, era necessário saber como que realizaríamos os ataques nessas rotas, e por isso foi criado um mapa que analisasse as __Características__, __Escala de Organização__, __Barreiras Financeiras__ e __Colaboração e Comunicação__ para desenvolver os benefícios de cada movimento realizado em função ao objetivo final, uma emboscada segura e precisa.
  
+## Histórico de versão
 
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 23/10 |  1.0   | Lições aprendidas | Gustavo França |

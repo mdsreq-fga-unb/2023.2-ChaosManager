@@ -115,3 +115,9 @@ A facção Insurgentes Estelares declara o seguinte compromisso com o Comando Es
 <p style="text-align:justify; text-indent:20px;">
 Sempre focarmos no objetivo principal de acabar com os conglomerados e restaurar o equilíbrio da galáxia e seguiremos todas as ordens do comandante estelar que estejam de acordo com esse objetivo, e manter o comando estelar informado sobre nossas operações, desde que seja mantido o sigilo em relação as outras facções.
 </p>
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 27/09 |  1.0   | História da Facção | Pedro |
