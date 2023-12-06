@@ -1,6 +1,8 @@
 import { Ficha } from "@/models/ficha";
+import { number } from "yup";
 
 export class Campanha {
+  _id: number;
   nome: string;
   historia: string;
   senha_mestre: string;
@@ -8,11 +10,12 @@ export class Campanha {
   fichas: Ficha[] = [];
   fichas_NPC: Ficha[] = [];
 
-  constructor(nome: string, historia: string, senha_mestre: string) {
+  constructor(_id: number, nome: string, historia: string, senha_mestre: string) {
+    this._id = _id;
     this.nome = nome;
     this.historia = historia;
     this.senha_mestre = senha_mestre;
-    this.senha_jogador = String(this.gerarSenha());
+    this.senha_jogador = String(Campanha.gerarSenha());
   }
 
   addFicha(ficha: Ficha) {
@@ -20,11 +23,76 @@ export class Campanha {
     else this.fichas.push(ficha);
   }
 
-  gerarSenha():number {
+  static gerarSenha():number {
     const min = Math.ceil(100000);
     const max = Math.floor(999999);
     return Math.floor(Math.random() * (max - min) + min); 
   }
 
+  async saveData() {
+    const dataToSave = {
+      _id: this._id,
+      nome: this.nome,
+      historia: this.historia,
+      senha_mestre: this.senha_mestre,
+      senha_jogador: this.senha_jogador,
+      fichas: this.fichas,
+      fichas_NPC: this.fichas_NPC,
+    };
+  
+    try {
+      const response = await fetch('/api/campanhas/', {   
+        method: 'POST',     
+        headers: {
+          Accept: 'application/json',
+          method: 'POST'
+        },
+        body: JSON.stringify(dataToSave)
+      });
+      if (response)
+      {
+        return response;
+      }
+      else return {erro: "Error"};
+    } catch (error) {
+      throw error;
+    }
+  }
 
+  async updateData() {
+    const dataToUpdate = {
+      nome: this.nome,
+      historia: this.historia,
+      senha_mestre: this.senha_mestre,
+      senha_jogador: this.senha_jogador,
+      fichas: this.fichas,
+      fichas_NPC: this.fichas_NPC,
+    };
+  
+    try {
+      const response = await fetch(`/api/campanhas/${this._id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToUpdate),
+      });
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
+
+export class Find{
+  static async findData(_id: number) {
+    try {
+      const response = await fetch(`/api/campanhas/?_id=${_id}`);
+      return response;
+    } catch (error) {
+      throw error;
+    }
+  }
+}
+  
