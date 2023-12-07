@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Campanha no front
+
+### GET
+
+Para fazer um GET você precisa importar a classe `Campanha` para instanciar o componente e a classe `Find` para fazer a busca no banco, e funciona da seguinte maneira:
+
+```ts
+import { Campanha, Find } from '@/models/campanha';
+
+const query = await Find.findData(id);
+const data = await query.json();
+const {status, message, result} = data;
+
+// status: 'error' | 'success'
+// message: explica o status
+// result: todas as ocorrências encontradas do ID (em teoria só retorna 1 pois o ID é único)
+
+let campanha: Campanha = result[0];
+
+console.log(campanha.nome);
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
