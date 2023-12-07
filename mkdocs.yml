@@ -64,7 +64,7 @@ nav:
       - Lições aprendidas: licoes3.md
       - Vídeo de apresentação: entregas3.md
   - Casos de uso: casodeUso.md
-  - Iterações: 'iterações_total.md
+  - Iterações: iterações_total.md
 
 # Extensions
 markdown_extensions:
