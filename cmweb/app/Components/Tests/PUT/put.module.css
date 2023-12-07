@@ -1,0 +1,59 @@
+.put_db {
+    width: 100%;
+    height: 100vh;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .put_db_form {
+    width: 18rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
+    justify-content: space-evenly;
+  }
+  .put_db_form h1 {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .put_db_form button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .put_db_form button:hover {
+    background-color: #1e90ff;
+    opacity: 0.8;
+  }
+  .put_db_form label {
+    color: black;
+  }
+  .put_db_form input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  .put_db_form textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }

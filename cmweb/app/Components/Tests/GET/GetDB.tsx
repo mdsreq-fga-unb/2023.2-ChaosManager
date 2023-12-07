@@ -34,10 +34,7 @@ function GetDB() {
           <div>
             <label htmlFor="id">ID:</label>
             <input type="number" value={id} onChange={(e) => setId(Number(e.target.value))} />
-          </div>
-          <br />
-          <button onClick={buscarCampanha}>Buscar Campanha</button>
-          <br />
+          </div>                  
           <div>
               {campanhaData && (
               <div>
@@ -62,6 +59,8 @@ function GetDB() {
               readOnly
             />
           </div>
+          <br />
+          <button onClick={buscarCampanha}>Buscar Campanha</button>
         </form>
     </div>
   );
