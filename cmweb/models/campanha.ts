@@ -39,11 +39,7 @@ export class Campanha {
         },
         body: JSON.stringify(this)
       });
-      if (response)
-      {
-        return response;
-      }
-      else return {erro: "Error"};
+      return response;
     } catch (error) {
       throw error;
     }

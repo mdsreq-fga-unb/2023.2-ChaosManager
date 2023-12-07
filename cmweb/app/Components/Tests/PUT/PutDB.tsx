@@ -23,17 +23,9 @@ function PutDB( { socket }: any ) {
 
     const camp = new Campanha(id, novoNome, novaHistoria, novaSenhaMestre);
     const response = await camp.updateData();
-
-    if ('ok' in response) {
-      if (response.ok) {
-        const responseData = await response.json();
-        setResultadoAtualizacao("status: " + responseData.status + '\n\n' + responseData.message);
-      } else {
-        setResultadoAtualizacao("Erro ao atualizar campanha");
-      }
-    } else {
-      setResultadoAtualizacao("Erro ao atualizar campanha");
-    }
+    const data = await response.json();
+    const {status, message} = data;
+    setResultadoAtualizacao("status: " + status + '\n\n' + message);
   };
 
   return (
