@@ -24,14 +24,14 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ### GET
 
-Para fazer um GET você precisa importar a classe `Campanha` para instanciar o componente e a classe `Find` para fazer a busca no banco, e funciona da seguinte maneira:
+Para fazer um `GET` você precisa importar a classe `Campanha` para instanciar o componente e a classe `Find` para fazer a busca no banco, e funciona da seguinte maneira:
 
 ```ts
 import { Campanha, Find } from '@/models/campanha';
 
 const query = await Find.findData(id);
 const data = await query.json();
-const {status, message, result} = data;
+const { status, message, result } = data;
 
 // status: 'error' | 'success'
 // message: explica o status
@@ -41,6 +41,44 @@ let campanha: Campanha = result[0];
 
 console.log(campanha.nome);
 ```
+
+Mais exemplos em `app/Components/Tests/GET/GetDB.tsx`
+
+### POST
+
+Para fazer um `POST` você precisa importar a classe `Campanha` para criar uma instancia e salva-la no banco:
+
+```ts
+import { Campanha } from '@/models/campanha';
+
+const camp = new Campanha(id, nome, historia, senhaMestre);
+const response = await camp.saveData();
+const data = await response.json();
+const { status, message } = data;
+
+// status: 'error' | 'success'
+// message: explica o status
+```
+
+Mais exemplos em `app/Components/Tests/POST/PostDB.tsx`
+
+### PUT
+
+Para fazer um `PUT` você precisa importar a classe `Campanha` para criar uma instancia e salva-la no banco:
+
+```ts
+import { Campanha } from '@/models/campanha';
+
+const camp = new Campanha(id, novoNome, novaHistoria, novaSenhaMestre);
+const response = await camp.updateData();
+const data = await response.json();
+const { status, message } = data;
+
+// status: 'error' | 'success'
+// message: explica o status
+```
+
+Mais exemplos em `app/Components/Tests/PUT/PutDB.tsx`
 
 ## Learn More
 
