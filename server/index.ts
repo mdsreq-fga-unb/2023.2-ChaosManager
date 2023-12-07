@@ -17,6 +17,11 @@ io.on('connection', (socket) => {
     console.log('find-data');
     socket.broadcast.emit('find-data', {id, status, message, result})
   })
+
+  socket.on('save-data', ({id, status, message}: any) => {
+    console.log('save-data');
+    socket.broadcast.emit('save-data', {id, status, message})
+  })
 })
 
 server.listen(3001, () => {

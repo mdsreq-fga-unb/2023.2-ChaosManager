@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Campanha } from '@/models/campanha';
 import style from './post.module.css';
 
@@ -14,6 +14,13 @@ function PostDB( { socket }: any ) {
     return senhaMestre.length >= 5;
   };
 
+  useEffect(() => {
+    socket.on('save-data', ({id, status, message}: any) => {
+      setId(id);
+      setResultadoSalvamento("status: " + status + '\n\n' + message);
+    })
+  }, [socket])
+
   const salvarCampanhaNoDB = async (e: any) => {
     e.preventDefault();
 
@@ -21,19 +28,18 @@ function PostDB( { socket }: any ) {
       setResultadoSalvamento("A senha deve ter pelo menos 5 caracteres");
       return;
     }
+    try{
+      const camp = new Campanha(id, nome, historia, senhaMestre);
+      const response = await camp.saveData();
+      const data = await response.json();
+      const { status, message } = data;
 
-    const camp = new Campanha(id, nome, historia, senhaMestre);
-    const response = await camp.saveData();
+      socket.emit('save-data', ({id, status, message}));
 
-    if ('ok' in response) {
-      if (response.ok) {
-        const responseData = await response.json();
-        setResultadoSalvamento("status: " + responseData.status + '\n\n' + responseData.message);
-      } else {
-        setResultadoSalvamento("Erro ao salvar campanha");
-      }
-    } else {
-      setResultadoSalvamento("Erro ao salvar campanha");
+      setResultadoSalvamento("status: " + status + '\n\n' + message);
+    }
+    catch{
+      setResultadoSalvamento("status: error  \n\n Erro desconhecido");
     }
   };
 
