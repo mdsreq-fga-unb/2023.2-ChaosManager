@@ -2,6 +2,9 @@
 
 import { useFormik } from "formik";
 import s from "./edit.module.css";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import axios from "axios";
 export default function EditFicha() {
   const formik = useFormik({
     initialValues: {
@@ -22,13 +25,18 @@ export default function EditFicha() {
     },
     onSubmit: async (values) => {
       try {
-        alert(JSON.stringify(values, null, 2));
+        const ficha = await axios.post("/api/campanhas/609587/ficha", {
+          body: values,
+        });
+        router.push(`/ficha/${ficha.data.body._id}`);
       } catch (error) {
         return alert((error as Error)?.message);
       } finally {
       }
     },
   });
+  const router = useRouter();
+
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
       <h1 className="text-2xl font-semibold text-center mb-4">Ficha de personagem</h1>
