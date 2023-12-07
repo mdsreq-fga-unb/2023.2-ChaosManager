@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Find } from '@/models/campanha';
+import { Campanha, Find } from '@/models/campanha';
 import style from './get.module.css'
 
 function GetDB( { socket }: any ) {
   const [id, setId] = useState(0);
   const [resultado, setResultado] = useState('');
   const [campanhaData, setCampanhaData] = useState(null);
+  let campanha: Campanha;
 
   useEffect(() => {
     socket.on('find-data', ({id, status, message, result}: any) => {
@@ -15,22 +16,20 @@ function GetDB( { socket }: any ) {
     })
   }, [socket])
 
+  function setResponse({status, message, result}:any){
+    campanha = result[0];
+    socket.emit('find-data', ({id, status, message, result}));
+
+    setCampanhaData(result[0]);
+    setResultado("status: " + status + '\n\n' + message);
+  }
   
   const buscarCampanha = async (e: any) => {    
     e.preventDefault();
     try {
       const query = await Find.findData(id);
       const data = await query.json();
-      const {status, message, result} = data;
-      socket.emit('find-data', ({id, status, message, result}));
-
-      if (status === 'success') {
-        setCampanhaData(result[0]);
-        setResultado("status: " + status + '\n\n' + message);
-      } else {
-        setResultado("status: " + status + '\n\n' + message);
-        setCampanhaData(null);
-      }
+      setResponse(data);
     } catch (error) {
       setResultado('Erro ao buscar os dados da campanha');
     }

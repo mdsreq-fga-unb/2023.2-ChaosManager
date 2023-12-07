@@ -29,17 +29,7 @@ export class Campanha {
     return Math.floor(Math.random() * (max - min) + min); 
   }
 
-  async saveData() {
-    const dataToSave = {
-      _id: this._id,
-      nome: this.nome,
-      historia: this.historia,
-      senha_mestre: this.senha_mestre,
-      senha_jogador: this.senha_jogador,
-      fichas: this.fichas,
-      fichas_NPC: this.fichas_NPC,
-    };
-  
+  async saveData() { 
     try {
       const response = await fetch('/api/campanhas/', {   
         method: 'POST',     
@@ -47,7 +37,7 @@ export class Campanha {
           Accept: 'application/json',
           method: 'POST'
         },
-        body: JSON.stringify(dataToSave)
+        body: JSON.stringify(this)
       });
       if (response)
       {
@@ -59,17 +49,7 @@ export class Campanha {
     }
   }
 
-  async updateData() {
-    const dataToUpdate = {
-      _id: this._id,
-      nome: this.nome,
-      historia: this.historia,
-      senha_mestre: this.senha_mestre,
-      senha_jogador: this.senha_jogador,
-      fichas: this.fichas,
-      fichas_NPC: this.fichas_NPC,
-    };
-  
+  async updateData() {  
     try {
       const response = await fetch(`/api/campanhas/`, {
         method: 'PUT',     
@@ -77,7 +57,7 @@ export class Campanha {
           Accept: 'application/json',
           method: 'PUT'
         },
-        body: JSON.stringify(dataToUpdate),
+        body: JSON.stringify(this)
       });
       return response;
     } catch (error) {
