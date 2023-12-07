@@ -8,16 +8,13 @@ function GetDB( { socket }: any ) {
   const [campanhaData, setCampanhaData] = useState(null);
 
   useEffect(() => {
-    socket.on('find-data', ({_id, status, message, result}: any) => {
-      setId(_id);
+    socket.on('find-data', ({id, status, message, result}: any) => {
+      setId(id);
       setCampanhaData(result[0]);
       setResultado("status: " + status + '\n\n' + message);
     })
   }, [socket])
 
-  const handleIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setId(Number(e.target.value));
-  };
   
   const buscarCampanha = async (e: any) => {    
     e.preventDefault();
@@ -48,9 +45,9 @@ function GetDB( { socket }: any ) {
             <input
               type="number"
               value={id}
-              onChange={handleIdChange}
+              onChange={(e) => setId(Number(e.target.value))}
             />
-          </div>                  
+          </div>
           <div>
               {campanhaData && (
               <div>

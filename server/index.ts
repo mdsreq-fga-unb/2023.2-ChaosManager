@@ -13,9 +13,9 @@ const io = new Server(server, {
 io.on('connection', (socket) => {
   console.log("connection");
 
-  socket.on('find-data', ({_id, status, message, result}: any) => {
+  socket.on('find-data', ({id, status, message, result}: any) => {
     console.log('find-data');
-    socket.broadcast.emit('find-data', {_id, status, message, result})
+    socket.broadcast.emit('find-data', {id, status, message, result})
   })
 })
 
