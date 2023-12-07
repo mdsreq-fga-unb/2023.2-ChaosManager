@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Campanha } from '@/models/campanha';
 import style from './post.module.css';
 
-function PostDB() {
+function PostDB( { socket }: any ) {
   const [resultadoSalvamento, setResultadoSalvamento] = useState('');
   const [id, setId] = useState(0);
   const [nome, setNome] = useState('');

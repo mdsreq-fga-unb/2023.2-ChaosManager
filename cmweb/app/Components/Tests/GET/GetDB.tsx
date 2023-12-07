@@ -1,19 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Find } from '@/models/campanha';
 import style from './get.module.css'
 
-function GetDB() {
+function GetDB( { socket }: any ) {
   const [id, setId] = useState(0);
   const [resultado, setResultado] = useState('');
   const [campanhaData, setCampanhaData] = useState(null);
 
-  const buscarCampanha = async (e: any) => {
+  useEffect(() => {
+    socket.on('find-data', ({_id, status, message, result}: any) => {
+      setId(_id);
+      setCampanhaData(result[0]);
+      setResultado("status: " + status + '\n\n' + message);
+    })
+  }, [socket])
+
+  const handleIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setId(Number(e.target.value));
+  };
+  
+  const buscarCampanha = async (e: any) => {    
     e.preventDefault();
     try {
       const query = await Find.findData(id);
       const data = await query.json();
-      console.log(data);
       const {status, message, result} = data;
+      socket.emit('find-data', ({id, status, message, result}));
 
       if (status === 'success') {
         setCampanhaData(result[0]);
@@ -33,7 +45,11 @@ function GetDB() {
         <h1>GET</h1>        
           <div>
             <label htmlFor="id">ID:</label>
-            <input type="number" value={id} onChange={(e) => setId(Number(e.target.value))} />
+            <input
+              type="number"
+              value={id}
+              onChange={handleIdChange}
+            />
           </div>                  
           <div>
               {campanhaData && (

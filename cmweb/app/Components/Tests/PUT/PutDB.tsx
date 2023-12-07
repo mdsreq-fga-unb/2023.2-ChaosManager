@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Campanha } from '@/models/campanha';
 import style from './put.module.css';
 
-function PutDB() {
+function PutDB( { socket }: any ) {
   const [resultadoAtualizacao, setResultadoAtualizacao] = useState('');
   const [id, setId] = useState(0);
   const [novoNome, setNovoNome] = useState('');
