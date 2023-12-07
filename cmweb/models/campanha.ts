@@ -61,6 +61,7 @@ export class Campanha {
 
   async updateData() {
     const dataToUpdate = {
+      _id: this._id,
       nome: this.nome,
       historia: this.historia,
       senha_mestre: this.senha_mestre,
@@ -70,15 +71,15 @@ export class Campanha {
     };
   
     try {
-      const response = await fetch(`/api/campanhas/${this._id}`, {
-        method: 'PUT',
+      const response = await fetch(`/api/campanhas/`, {
+        method: 'PUT',     
         headers: {
-          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          method: 'PUT'
         },
         body: JSON.stringify(dataToUpdate),
       });
-      const data = await response.json();
-      return data;
+      return response;
     } catch (error) {
       throw error;
     }
