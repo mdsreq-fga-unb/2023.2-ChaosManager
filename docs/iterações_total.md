@@ -83,7 +83,10 @@
   </iframe>
 </div>
 
+<center>
 
-# Aplicação do DoR
+## Aplicação do DoR
+
+</center>
 
 <img src="../assets/dor.jpeg" alt="dor">
