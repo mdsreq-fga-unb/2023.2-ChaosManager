@@ -83,8 +83,7 @@
   </iframe>
 </div>
 
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <img src="../docs/assets/dor.jpeg" alt="dor">
-</div>
+
+# Aplicação do DoR
+
+<img src="../assets/dor.jpeg" alt="dor">
