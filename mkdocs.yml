@@ -64,12 +64,7 @@ nav:
       - Lições aprendidas: licoes3.md
       - Vídeo de apresentação: entregas3.md
   - Casos de uso: casodeUso.md
-  - Iterações:
-      - Iteração 1: iterações1.md
-      - Iteração 2: iterações2.md
-      - Iteração 3: iterações3.md
-      - Iteração 4: iterações4.md
-      - Iteração 5: iterações5.md
+  - Iterações: iteracoes.md
 
 # Extensions
 markdown_extensions:
