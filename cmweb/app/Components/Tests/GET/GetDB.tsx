@@ -52,7 +52,7 @@ function GetDB( { socket }: any ) {
               <div>
                 <br />
                 {Object.entries(campanhaData).map(([key, value]) => (
-                <div>
+                <div key={key}>
                   <label htmlFor="text">{key}</label>
                   <input
                     value={value !== null && value !== undefined ? value.toString() : ''}
