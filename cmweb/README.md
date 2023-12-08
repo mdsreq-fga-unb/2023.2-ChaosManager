@@ -1,3 +1,30 @@
+## Como rodar a aplicação 
+
+Se for a primeira vez rodando o projeto, ou sempre que houver modificações dentro do arquivo `package.json` precisa rodar os comando:
+
+Dentro de `2023.2-ChaosManager/cmweb/` e `2023.2-ChaosManager/server/`
+
+```bash
+npm install
+```
+
+Feito isso no `cmweb` e no `server`, basta iniciar com os comandos:
+
+Para o `2023.2-ChaosManager/cmweb/`:
+
+```bash
+npm run dev
+```
+
+Para o `2023.2-ChaosManager/server/`:
+
+```bash
+npm run server
+```
+
+Agora sua aplicação Nextjs e seu servidor estão rodando!
+
+
 ## MongoDB (Como utilizar no front para `Campanha`)
 
 ### GET
