@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Campanha } from '@/models/campanha';
 import style from './put.module.css';
 
-function PutDB() {
+function PutDB( { socket }: any ) {
   const [resultadoAtualizacao, setResultadoAtualizacao] = useState('');
   const [id, setId] = useState(0);
   const [novoNome, setNovoNome] = useState('');
@@ -23,17 +23,9 @@ function PutDB() {
 
     const camp = new Campanha(id, novoNome, novaHistoria, novaSenhaMestre);
     const response = await camp.updateData();
-
-    if ('ok' in response) {
-      if (response.ok) {
-        const responseData = await response.json();
-        setResultadoAtualizacao("status: " + responseData.status + '\n\n' + responseData.message);
-      } else {
-        setResultadoAtualizacao("Erro ao atualizar campanha");
-      }
-    } else {
-      setResultadoAtualizacao("Erro ao atualizar campanha");
-    }
+    const data = await response.json();
+    const {status, message} = data;
+    setResultadoAtualizacao("status: " + status + '\n\n' + message);
   };
 
   return (
