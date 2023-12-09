@@ -16,3 +16,9 @@ hide:
 - Retrospective Meeting
 
   ![Planning1!](assets/iteracoes/retro1.png "Planning1")
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 21/10 |  1.0   | Iteração 1 | Emerson Teles |

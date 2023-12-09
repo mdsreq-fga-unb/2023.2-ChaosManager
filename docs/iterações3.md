@@ -16,3 +16,9 @@ hide:
 - Retrospective Meeting
 
   ![retro3!](assets/iteracoes/retro3.png "retro3")
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 21/10 |  1.0   | Iteração 3 | Emerson Teles |
