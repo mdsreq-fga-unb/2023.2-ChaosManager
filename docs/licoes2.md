@@ -14,3 +14,9 @@ hide:
   <li>Realizar uma validação cuidadosa de requisitos</li>
   <li>Saber como especificar Casos de Uso com precisão</li>
 </ul>
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 25/10 |  1.0   | Lições aprendidas | Luciano |

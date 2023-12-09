@@ -13,3 +13,9 @@ hide:
   <li>Também utilizamos uma metodologia gamificada para entender e comparar as diferenças entre as abordagens dirigidas a plano e as abordagens ágeis.</li>
   <li>Os conhecimentos adquiridos pela equipe nos ajudaram a ter uma visão mais clara e eficaz do produto de software.</li>
 </ul>
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 27/09 |  1.0   | Lições aprendidas | Luciano |
