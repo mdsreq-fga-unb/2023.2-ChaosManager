@@ -125,8 +125,8 @@ async function atualizarDados(db: any, req: any) {
   let status = "error";
 
   try {
-    const { _id } = req;
-    const response = await db.collection("campanha").updateOne({ _id: _id }, { $set: req });
+    const { _id } = req.body;
+    const response = await db.collection("campanha").updateOne({ _id: _id }, { $set: req.body });
     if ("matchedCount" in response) {
       const { matchedCount } = response;
 

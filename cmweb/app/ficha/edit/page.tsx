@@ -2,9 +2,11 @@
 
 import { useFormik } from "formik";
 import s from "./edit.module.css";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import { TracosPositivos } from "../../../models/traco-positivo";
+import { TracosNegativos } from "../../../models/traco-negativo";
+import { Campanha, Find } from "@/models/campanha";
+import { Ficha } from "@/models/ficha";
 export default function EditFicha() {
   const formik = useFormik({
     initialValues: {
@@ -22,25 +24,57 @@ export default function EditFicha() {
       PV: 0,
       PE: 0,
       Exp: 0,
+      vigor: 0,
+      habilidade: 0,
+      perception: 0,
+      qi: 0,
+      dominio: 0,
     },
     onSubmit: async (values) => {
       try {
-        const ficha = await axios.post("/api/campanhas/609587/ficha", {
-          body: values,
-        });
-        router.push(`/ficha/${ficha.data.body._id}`);
+        const query = await Find.findData(55);
+        const data = await query.json();
+        const { status, message, result } = data;
+        const campanha: Campanha = result[0];
+
+        const dados = [
+          values.nomeUsuario,
+          values.nomeJogador,
+          values.raca,
+          values.profissao,
+          values.idade,
+          values.genero,
+          values.historia,
+          values.descricao,
+        ];
+        const recursos = [
+          Number(values.PV),
+          Number(values.PdA),
+          Number(values.PE),
+          Number(values.Exp),
+          Number(values.dinheiro),
+        ];
+        const atributos = [
+          values.vigor,
+          values.habilidade,
+          values.perception,
+          values.qi,
+          values.dominio,
+        ];
+        const ficha = new Ficha(false, dados, [values.notas], recursos, atributos);
+        campanha.addFicha(ficha);
+        await campanha.updateData();
       } catch (error) {
         return alert((error as Error)?.message);
       } finally {
       }
     },
   });
-  const router = useRouter();
 
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
       <h1 className="text-2xl font-semibold text-center mb-4">Ficha de personagem</h1>
-      <form onSubmit={formik.handleSubmit} className="space-y-4">
+      <form onSubmit={formik.handleSubmit} className="">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="" htmlFor="username">
@@ -72,7 +106,7 @@ export default function EditFicha() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="" htmlFor="age">
               Idade
@@ -105,7 +139,7 @@ export default function EditFicha() {
             </select>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mt-4 mb-4  grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="" htmlFor="race">
               Raça
@@ -150,7 +184,10 @@ export default function EditFicha() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
+        <div className={s.ficha_separador}>
+          <h1>Pontos de personagem:</h1>
+        </div>
+        <div className="grid mt-2 mb-4 grid-cols-1 gap-4 sm:grid-cols-4">
           <div>
             <label htmlFor="PV">Pontos de vida</label>
             <input
@@ -204,7 +241,84 @@ export default function EditFicha() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className={s.ficha_separador}>
+          <h1>Pontos de personagem:</h1>
+        </div>
+        <div className="grid mt-2 mb-4 grid-cols-1 gap-4 sm:grid-cols-5">
+          <div>
+            <label htmlFor="Exp">Vigor</label>
+            <input
+              className={s.ficha_input}
+              placeholder="Vigor"
+              type="number"
+              min={0}
+              value={formik.values.vigor}
+              onChange={formik.handleChange}
+              name="vigor"
+              id="vigor"
+            />
+          </div>
+          <div>
+            <label htmlFor="Exp">Habilidade</label>
+            <input
+              className={s.ficha_input}
+              placeholder="Habilidade"
+              type="number"
+              min={0}
+              value={formik.values.habilidade}
+              onChange={formik.handleChange}
+              name="habilidade"
+              id="habilidade"
+            />
+          </div>
+          <div>
+            <label htmlFor="Exp">Percepção</label>
+            <input
+              className={s.ficha_input}
+              placeholder="Percepção"
+              type="number"
+              min={0}
+              value={formik.values.perception}
+              onChange={formik.handleChange}
+              name="perception"
+              id="perception"
+            />
+          </div>
+          <div>
+            <label htmlFor="Exp">Inteligência</label>
+            <input
+              className={s.ficha_input}
+              placeholder="Inteligência"
+              type="number"
+              min={0}
+              value={formik.values.qi}
+              onChange={formik.handleChange}
+              name="qi"
+              id="qi"
+            />
+          </div>
+          <div>
+            <label htmlFor="Exp">Domínio</label>
+            <input
+              className={s.ficha_input}
+              placeholder="Domínio"
+              type="number"
+              min={0}
+              value={formik.values.dominio}
+              onChange={formik.handleChange}
+              name="dominio"
+              id="dominio"
+            />
+          </div>
+        </div>
+        <div className={s.ficha_separador}>
+          <h1>Traços de personagem:</h1>
+        </div>
+        <div className="grid mt-2 mb-4 grid-cols-1 gap-4 sm:grid-cols-2">
+          <TraitsForm isPositiveTrait={true} />
+          <TraitsForm isPositiveTrait={false} />
+        </div>
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
             <label className="" htmlFor="background">
               História
@@ -254,7 +368,7 @@ export default function EditFicha() {
         <div className="mt-4">
           <button
             type="submit"
-            className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+            className="inline-block w-full h-4xl rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-full hover:bg-gray-700"
           >
             Salvar Ficha
           </button>
@@ -263,3 +377,78 @@ export default function EditFicha() {
     </div>
   );
 }
+const TraitsForm = ({ isPositiveTrait }: { isPositiveTrait: boolean }) => {
+  let title = "Traços Negativos";
+  if (isPositiveTrait) {
+    title = "Traços Positivos";
+  }
+  type Trait = { label: string; title: string; value: number };
+  const [traits, setTraits] = useState<Trait[]>([]);
+  const [traitsOptions, setTraitsOptions] = useState<Trait[]>([]);
+  const [selected, setSelected] = useState<string>("");
+
+  function enumToKeyValueArray(e: any): Trait[] {
+    return Object.keys(e).map((label) => ({ label, title: e[label], value: 0 }));
+  }
+  function addLabelToTraits() {
+    const trait = traitsOptions.find((trait) => trait.label === selected);
+    const hasTrait = traits.find((trait) => trait.label === selected);
+    if (trait && !hasTrait) {
+      setTraits([...traits, trait]);
+    }
+  }
+  function updateTraitValue(label: string, value: number) {
+    const trait = traits.find((trait) => trait.label === label);
+    if (trait) {
+      trait.value = value;
+    }
+    setTraits([...traits]);
+    console.log(traits);
+  }
+  function removeTrait(label: string) {
+    setTraits(traits.filter((trait) => trait.label !== label));
+  }
+  useEffect(() => {
+    if (isPositiveTrait) {
+      setTraitsOptions(enumToKeyValueArray(TracosPositivos));
+    } else {
+      setTraitsOptions(enumToKeyValueArray(TracosNegativos));
+    }
+  }, [isPositiveTrait]);
+
+  return (
+    <div className={s.ficha_traits}>
+      <label>{title}:</label>
+      <select
+        id={`ficha_${isPositiveTrait}`}
+        className={s.ficha_input}
+        value={selected}
+        onChange={(e) => setSelected(e.target.value)}
+      >
+        {traitsOptions.map((trait, id) => (
+          <option key={id} value={trait.label}>
+            {trait.title}
+          </option>
+        ))}
+      </select>
+      <button onClick={addLabelToTraits} type="button">
+        Adicionar
+      </button>
+      <ul>
+        {traits.map((trait, id) => (
+          <li key={id}>
+            <h1>{trait.title}</h1>{" "}
+            <input
+              type="number"
+              value={trait.value}
+              onChange={(e) => updateTraitValue(trait.label, e.target.valueAsNumber)}
+            ></input>
+            <button type="button" onClick={() => removeTrait(trait.label)}>
+              Remover
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
