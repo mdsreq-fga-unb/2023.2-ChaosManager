@@ -158,5 +158,5 @@ Podemos concluir como a forma de cada membro se comportar diante das situações
 | Data  | Versão | Descrição                   | Autor         |
 | :---: | :----: | --------------------------- | ------------- |
 | 06/09 |  1.0   | Criação do artefato         | Pedro Eduardo |
-| 15/11 |  1.1   | atualização do planejamento | Pedro Eduardo |
+| 15/11 |  1.1   | Atualização do planejamento | Pedro Eduardo |
 | 22/11 |  1.2   | Aspectos humanos | Pedro Eduardo |

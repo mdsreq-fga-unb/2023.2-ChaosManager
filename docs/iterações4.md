@@ -16,3 +16,9 @@ hide:
 - Retrospective Meeting
 
   ![retro4!](assets/iteracoes/retro4.png "retro4")
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 21/10 |  1.0   | Iteração 4 | Emerson Teles |

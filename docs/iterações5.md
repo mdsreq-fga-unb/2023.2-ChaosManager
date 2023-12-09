@@ -38,3 +38,9 @@ hide:
 - Retrospective Meeting
 
   ![retro5!](assets/iteracoes/retro5.png "retro5")
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 21/10 |  1.0   | Iteração 5 | Emerson Teles |
