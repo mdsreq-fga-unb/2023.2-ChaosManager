@@ -7,6 +7,7 @@ import { TracoPositivo, TracosPositivos, tracosPos } from "@/models/traco-positi
 import { TracoNegativo, TracosNegativos, tracosNeg } from "@/models/traco-negativo";
 
 export class Ficha {
+    _id:number = 0;
     NPC:boolean;
     pesoCarregado: number = 0;
     PV: number = 0;
