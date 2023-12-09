@@ -2,7 +2,6 @@ import { Ficha } from "@/models/ficha";
 import { number } from "yup";
 
 export class Campanha {
-  _id: number;
   nome: string;
   historia: string;
   senha_mestre: string;
@@ -10,8 +9,7 @@ export class Campanha {
   fichas: Ficha[] = [];
   fichas_NPC: Ficha[] = [];
 
-  constructor(_id: number, nome: string, historia: string, senha_mestre: string) {
-    this._id = _id;
+  constructor(nome: string, historia: string, senha_mestre: string) {
     this.nome = nome;
     this.historia = historia;
     this.senha_mestre = senha_mestre;
