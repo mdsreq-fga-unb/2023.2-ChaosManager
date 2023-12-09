@@ -9,6 +9,11 @@ import { TracoNegativo, TracosNegativos, tracosNeg } from "@/models/traco-negati
 export class Ficha {
     NPC:boolean;
     pesoCarregado: number = 0;
+    PV: number = 0;
+    PdA: number = 0;
+    PE: number = 0;
+    Exp: number = 0;
+    Dinheiro: number = 0;
 
     tracosPositivos: TracoPositivo[] = [];
     tracosNegativos: TracoNegativo[] = [];
@@ -17,6 +22,7 @@ export class Ficha {
     armas: Arma[] = [];
     equipamentos: Equipamento[] = [];
     itens: Item[] = [];
+    registroAcoes: string[] = [];
 
     dados: Dados = {
         nomeUsuario: "", 
@@ -28,14 +34,6 @@ export class Ficha {
         historia: "", 
         descricao: "", 
         notas: [""]
-    };
-
-    recursos: Recursos= {
-        PV: 0,
-        PdA: 0,
-        PE: 0,
-        Exp: 0,
-        Dinheiro: 0,
     };
 
     atributos: Atributos= {
@@ -63,16 +61,6 @@ export class Ficha {
             notas: notas,
         }
     }
-
-    Recursos(recursos: number[]):void{
-        this.recursos = {
-            PV: recursos[0],
-            PdA: recursos[1],
-            PE: recursos[2],
-            Exp: recursos[3],
-            Dinheiro: recursos[4],
-        }
-    }
     
     Atributos(atributos: number[]):void{
         this.atributos = {
@@ -82,6 +70,13 @@ export class Ficha {
             Inteligencia: atributos[3],
             Dominio: atributos[4],
         }
+    }
+
+    PV_max(): number{ 
+        return 2*this.atributos.Vigor + this.atributos.Dominio;
+    }
+    PE_max(): number{
+        return this.atributos.Inteligencia + this.atributos.Percepcao + this.atributos.Dominio;
     }
 
     Capacidade():number{
@@ -284,12 +279,4 @@ interface Atributos {
     Percepcao: number;
     Inteligencia: number;
     Dominio: number;
-}
-
-interface Recursos {
-    PV: number;
-    PdA: number;
-    PE: number;
-    Exp: number;
-    Dinheiro: number;
 }
