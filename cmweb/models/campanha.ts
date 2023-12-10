@@ -1,7 +1,7 @@
 import { Ficha } from "@/models/ficha";
-import { number } from "yup";
 
 export class Campanha {
+  _id: string = '';
   nome: string;
   historia: string;
   senha_mestre: string;
@@ -30,13 +30,14 @@ export class Campanha {
   async saveData() { 
     try {
       const response = await fetch('/api/campanhas/', {   
-        method: 'POST',     
+        method: 'POST',
         headers: {
           Accept: 'application/json',
           method: 'POST'
         },
         body: JSON.stringify(this)
       });
+      
       return response;
     } catch (error) {
       throw error;
@@ -61,9 +62,9 @@ export class Campanha {
 }
 
 export class Find{
-  static async findData(_id: number) {
+  static async findData(nome: string) {
     try {
-      const response = await fetch(`/api/campanhas/?_id=${_id}`);
+      const response = await fetch(`/api/campanhas/?nome=${nome}`);
       return response;
     } catch (error) {
       throw error;
