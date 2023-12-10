@@ -109,12 +109,16 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
 
 <table>
     <tr>
+      <th>Campo</th>
+      <th>Valor</th>
+    </tr>
+    <tr>
       <td>Nome do caso de uso</td>
-      <td>Pesquisar informações do destino escolhido</td>
+      <td>Pesquisar Informações do Destino Escolhido</td>
     </tr>
     <tr>
       <td>Autor</td>
-      <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+      <td>Gustavo França, Larissa Gomes, Oscar de Brito</td>
     </tr>
     <tr>
       <td>1. Atores</td>
@@ -122,24 +126,32 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
     </tr>
     <tr>
       <td>2. Breve Descrição</td>
-      <td>O usuário pode pesquisar informações detalhadas sobre o local, incluindo os melhores períodos para visitar, atrações culturais, culinária local, e dicas de viagem. Também podem filtrar acomodações por preço, localização, tipo (hotel, aluguel de temporada, pousada), e avaliações de outros viajantes.</td>
+      <td>O usuário pode pesquisar informações detalhadas sobre o local, incluindo os melhores períodos para visitar, atrações culturais, culinária local e dicas de viagem. Também podem filtrar acomodações por preço, localização, tipo (hotel, aluguel de temporada, pousada) e avaliações de outros viajantes.</td>
     </tr>
     <tr>
-      <td>3. Fluxo básico de eventos</td>
+      <td>3. Fluxo Básico de Eventos</td>
       <td>
         <p>3.1. O viajante digita o destino que deseja pesquisar</p>
         <p>3.2. O sistema apresenta as seguintes opções:</p>
         <ul>
-          <li>Pesquisar informações de destino</li>
-          <li>Filtrar acomodações (FA01)</li>
+          <li>- Pesquisar informações de destino</li>
+          <li>- Filtrar acomodações (FA01)</li>
         </ul>
-        <p>3.3. O viajante seleciona "Pesquisar informações de destino" (FE01)</p>
-        <p>3.4. O sistema retorna informações sobre o local:</p>
+        <p>3.3. O viajante seleciona "Pesquisar informações de destino" (FE01) (FA01)</p>
+        <p>3.4. O sistema apresenta uma lista de acomodações a partir dos desejos do viajante</p>
+        <p>3.5. O viajante seleciona uma acomodação que deseja</p>
+        <p>3.6 . O Sistema apresenta as seguintes opções:</p>
         <ul>
-          <li>Melhores períodos para visitar;</li>
-          <li>Atrações culturais;</li>
-          <li>Culinária local;</li>
-          <li>Dicas de viagem.</li>
+          <li>- Detalhes da acomodação</li>
+          <li>- Informações da região</li>
+        </ul>
+        <p>3.7 . O viajante seleciona a opção "informações da região" (FA02)</p>
+        <p>3.8. O sistema retorna informações sobre o local:</p>
+        <ul>
+          <li>- Melhores períodos para visitar;</li>
+          <li>- Atrações culturais;</li>
+          <li>- Culinária local;</li>
+          <li>- Dicas de viagem.</li>
         </ul>
       </td>
     </tr>
@@ -147,53 +159,81 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
       <td>4. Fluxo Alternativos</td>
       <td>
         <p>4.1. FA01 - Filtrar acomodações</p>
-        <p>4.1.1. O viajante seleciona a opção "Filtrar acomodações"</p>
-        <p>4.1.2. O sistema apresenta as seguintes opções de filtro:</p>
         <ul>
-          <li>Preço</li>
-          <li>Localização</li>
-          <li>Tipo (hotel, aluguel de temporada, pousada)</li>
-          <li>Avaliações de outros viajantes</li>
+          <li>4.1.1. O viajante seleciona a opção "Filtrar acomodações"</li>
+          <li>4.1.2. O sistema apresenta as seguintes opções de filtro:</li>
+          <ul>
+            <li>- Preço</li>
+            <li>- Localização</li>
+            <li>- Tipo (hotel, aluguel de temporada, pousada)</li>
+            <li>- Avaliações de outros viajantes</li>
+          </ul>
+          <li>4.1.3. O viajante informa os filtros que deseja aplicar (FE01)</li>
+          <li>4.1.4. O sistema retorna as acomodações mais compatíveis de acordo com os filtros selecionados (FA02) (RN01)</li>
         </ul>
-        <p>4.1.3. O viajante informa os filtros que deseja aplicar (FE01)</p>
-        <p>4.1.4. O sistema retorna as acomodações mais compatíveis de acordo com os filtros selecionados (FA02)</p>
         <p>4.2. FA02 - Visualizar acomodação</p>
-        <p>4.2.1. O viajante selecionou a acomodação que deseja</p>
-        <p>4.2.2. O sistema apresenta as informações sobre ela:</p>
         <ul>
-          <li>Fotos;</li>
-          <li>Descrições detalhadas;</li>
-          <li>Disponibilidade</li>
+          <li>4.2.1. O viajante selecionou a opção "detalhes da acomodação"</li>
+          <li>4.2.2. O sistema apresenta as informações sobre a acomodação: (RN02)</li>
+          <ul>
+            <li>- Fotos;</li>
+            <li>- Descrições detalhadas;</li>
+            <li>- Disponibilidade</li>
+          </ul>
+          <li>4.2.3. O viajante seleciona a opção "Disponibilidade"</li>
+          <li>4.2.4. O sistema apresenta as opções:</li>
+          <ul>
+            <li>- Pesquisar informações de destino (o fluxo alternativo é encerrado e volta para o item 3.4 do FB)</li>
+            <li>- Reservar acomodação (o fluxo alternativo é encerrado e vai para o item 3.1 do FB do caso de uso "Reservar acomodação")</li>
+          </ul>
         </ul>
       </td>
     </tr>
     <tr>
-      <td>5. Fluxos de exceção</td>
-      <td>FE01 - Destino inválidoNo passo 3.3 do FB e 4.1.3, caso o destino digitado não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Destino inválido, digite novamente”. E, o caso de uso retorna ao 3.1 do FB.</td>
+      <td>5. Fluxos de Exceção</td>
+      <td>
+        <p>5.1. FE01 - Destino inválido</p>
+        <p>No passo 3.3 do FB e 4.1.3, caso o destino digitado não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Destino inválido, digite novamente”. E, o caso de uso retorna ao 3.1 do FB.</p>
+      </td>
     </tr>
     <tr>
       <td>6. Pré-condições</td>
-      <td>O viajante deve estar logado na sua conta</td>
+      <td>
+        <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+        <p>6.2. O viajante deve estar logado na sua conta</p>
+      </td>
     </tr>
     <tr>
       <td>7. Pós-condições</td>
-      <td>Acomodações filtradas como desejado</td>
+      <td>
+        <p>7.1. Informações do destino desejado</p>
+        <p>7.2. Acomodações filtradas conforme desejado</p>
+      </td>
     </tr>
     <tr>
-      <td>8. Pontos de extensão</td>
-      <td>Não há.</td>
+      <td>8. Pontos de Extensão</td>
+      <td>
+        <p>8.1. PE01 - Visualizar acomodação é um ponto de extensão do caso de uso Pesquisar informações do destino escolhido, no FA02 - Visualizar acomodação</p>
+      </td>
     </tr>
     <tr>
-      <td>9. Requisitos especiais</td>
-      <td>Não há.</td>
+      <td>9. Requisitos Especiais</td>
+      <td>
+        <p>9.1. RN01 - Quantidade de locais: o sistema deve retornar os destinos em ordem das melhores avaliações</p>
+        <p>9.2. RN02 - Quantidade de fotos: o sistema deve apresentar até 15 fotos da acomodação</p>
+      </td>
     </tr>
     <tr>
-      <td>10. Regras de negócio</td>
-      <td>Não há.</td>
+      <td>10. Regras de Negócio</td>
+      <td>
+        <p>10.1. Não há.</p>
+      </td>
     </tr>
     <tr>
-      <td>11. Informações adicionais</td>
-      <td>Não há.</td>
+      <td>11. Informações Adicionais</td>
+      <td>
+        <p>11.1. Não há.</p>
+      </td>
     </tr>
   </table>
 
@@ -203,33 +243,37 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
 
  <table>
     <tr>
-      <td>Nome do caso de uso</td>
-      <td>Reservar acomodação</td>
+      <th>Item</th>
+      <th>Descrição</th>
     </tr>
     <tr>
-      <td>Autor</td>
+      <td>Nome do caso de uso</td>
+      <td>Reservar Acomodação</td>
+    </tr>
+    <tr>
+      <td>1. Autor</td>
       <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
     </tr>
     <tr>
-      <td>1. Atores</td>
+      <td>2. Atores</td>
       <td>Viajante e o Provedor de serviços</td>
     </tr>
     <tr>
-      <td>2. Breve Descrição</td>
+      <td>4. Breve Descrição</td>
       <td>O viajante pode escolher a acomodação, visualizar fotos, ler descrições detalhadas, verificar a disponibilidade e realizar a reserva diretamente pelo aplicativo.</td>
     </tr>
     <tr>
-      <td>3. Fluxo básico de eventos</td>
+      <td>3. Fluxo Básico de Eventos</td>
       <td>
-        <p>3.1. O viajante seleciona o período de reserva (FE01)</p>
+        <p>3.1. O viajante seleciona o período de reserva (FE01) (PE01)</p>
         <p>3.2. O viajante informa a quantidade de hóspedes</p>
         <p>3.3. O viajante informa os dados dos hóspedes</p>
         <p>3.4. O viajante seleciona a opção "Reservar acomodação"</p>
-        <p>3.5. O sistema valida as informações</p>
+        <p>3.5. O sistema valida as informações (RN01)</p>
         <p>3.6. O sistema informa o valor final e solicita o pagamento (PE02)</p>
         <p>3.7. O sistema envia a solicitação de reserva para o provedor de serviços</p>
         <p>3.8. O provedor de serviços analisa a reserva (FE02)</p>
-        <p>3.9. O sistema envia uma confirmação da reserva para o viajante e adiciona às reservas realizadas</p>
+        <p>3.9. O sistema envia uma confirmação da reserva para o viajante e adiciona às reservas realizadas (RN02)</p>
       </td>
     </tr>
     <tr>
@@ -237,10 +281,10 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
       <td>Não há.</td>
     </tr>
     <tr>
-      <td>5. Fluxos de exceção</td>
+      <td>5. Fluxos de Exceção</td>
       <td>
-        <p>5.1. FE01 - Período inválidoNo passo 3.1 do FB, caso o período de reserva selecionado não esteja disponível, o sistema deve emitir a mensagem: “Esta data não está disponível”. E, o caso de uso retorna ao 3.1 do FB.</p>
-        <p>5.2. FE02 - Reserva rejeitadaNo passo 3.8 do FB, caso o provedor de serviços rejeite a solicitação de reserva, o sistema deve enviar um aviso ao viajante: “Sua solicitação de reserva foi recusada”. E, o caso de uso finaliza.</p>
+        <p>5.1. FE01 - Período inválido: No passo 3.1 do FB, caso o período de reserva selecionado não esteja disponível, o sistema deve emitir a mensagem: “Esta data não está disponível”. E, o caso de uso retorna ao 3.1 do FB.</p>
+        <p>5.2. FE02 - Reserva rejeitada: No passo 3.8 do FB, caso o provedor de serviços rejeite a solicitação de reserva, o sistema deve enviar um aviso ao viajante: “Sua solicitação de reserva foi recusada”. E, o caso de uso finaliza.</p>
       </td>
     </tr>
     <tr>
@@ -253,22 +297,55 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
     </tr>
     <tr>
       <td>7. Pós-condições</td>
-      <td>Reserva de acomodação concluída</td>
+      <td>7.1. Reserva de acomodação concluída</td>
     </tr>
     <tr>
-      <td>8. Pontos de extensão</td>
+      <td>8. Pontos de Extensão</td>
       <td>
         <p>8.1. PE01 - Reservar acomodação é um ponto de extensão do caso de uso Pesquisar informações do destino escolhido, no FA02 - Visualizar acomodação</p>
         <p>8.2. PE02 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
       </td>
     </tr>
     <tr>
-      <td>9. Requisitos especiais</td>
+      <td>9. Requisitos Especiais</td>
       <td>Não há.</td>
     </tr>
     <tr>
       <td>10. Regras de negócio</td>
-      <td>Não há.</td>
+      <td> RN01 - Validação de informações
+            <table>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Tipo</th>
+                    <th>Obrigatoriedade</th>
+                    <th>Observação</th>
+                </tr>
+                <tr>
+                    <td>Nome</td>
+                    <td>String</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>CPF</td>
+                    <td>String</td>
+                    <td>False</td>
+                    <td>O sistema deve validar se os CPFs
+existem</td>
+                </tr>
+                <tr>
+                    <td>Quantidade de Hóspedes</td>
+                    <td>Int</td>
+                    <td>True</td>
+                    <td>Precisa ter no mínimo 1 hóspede</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>O sistema deve conrifmar o email </td>
+                </tr>
+            </table>
+      </td>
     </tr>
     <tr>
       <td>11. Informações adicionais</td>
@@ -301,7 +378,8 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
         <p>3.1. O sistema apresenta as seguintes opções:</p>
         <p>    - Efetuar pagamento</p>
         <p>    - Adicionar novo cartão (FA01)</p>
-        <p>3.2. O viajante seleciona a opção "Efetuar pagamento"</p>
+        <p>3.2. O viajante seleciona a opção "Efetuar pagamento"         
+</p>
         <p>3.3. O sistema apresenta as seguintes opções:</p>
         <p>    - Cartão de crédito</p>
         <p>    - Cartão de débito</p>
@@ -315,7 +393,17 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
     </tr>
     <tr>
       <td>4. Fluxo Alternativos</td>
-      <td>Não há.</td>
+      <td>
+      <p>4.1. FA01 - Adicionar novo cartão</p>
+<p>4.1.1. O viajante seleciona a opção "Adicionar novo cartão"</p>
+<p>4.1.2. O viajante informa o número do cartão</p>
+<p>4.1.3. O viajante informa a data de vencimento</p>
+<p>4.1.4. O viajante informa o CVV do cartão</p>
+<p>4.1.5. O viajante informa o País de emissão do cartão</p>
+<p>4.1.6. O viajante pode informar um apelido para o cartão</p>
+<p>4.1.7. O viajante seleciona a opção do cartão que deseja utilizar (crédito ou débito)</p>
+<p>4.1.8. O sistema adiciona um novo cartão à carteira do viajante, o fluxo alternativo retorna ao item 3.1 do FB</p>
+      </td>
     </tr>
     <tr>
       <td>5. Fluxos de exceção</td>
@@ -364,4 +452,4 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
 
 | Data  | Versão | Descrição                            | Autor                          |
 | :---: | :----: | ------------------------------------ | ------------------------------ |
-| 09/12 |  1.0   | Criação do artefato | Gustavo França
+| 09/12 |  1.0   | Criação do artefato | Gustavo França e Oscar de Brito
