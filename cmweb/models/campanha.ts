@@ -37,8 +37,11 @@ export class Campanha {
         },
         body: JSON.stringify(this)
       });
-      
-      return response;
+      const data = await response.json();
+      const {status, message, newId} = data;
+      this._id = newId;
+      const _ = await this.updateData();
+      return {status, message};
     } catch (error) {
       throw error;
     }
@@ -80,6 +83,7 @@ export class Find{
       const response = await fetch(`/api/campanhas/?nome=${nome}`);
       const data = await response.json();
       const {status, message, result} = data;
+      console.log(result[0]);
       const camp = Campanha.toObj(result[0]);
       return {status, message, result, camp};
     } catch (error) {
