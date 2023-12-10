@@ -59,16 +59,31 @@ export class Campanha {
       throw error;
     }
   }
+
+  static toObj(objeto: any): Campanha {
+    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC } = objeto;
+
+    const campanha = new Campanha(nome, historia, senha_mestre);
+    campanha._id = _id;
+    campanha.senha_jogador = senha_jogador;
+
+    campanha.fichas = fichas.map((ficha: any) => Ficha.toObj(ficha));
+    campanha.fichas_NPC = fichas_NPC.map((ficha: any) => Ficha.toObj(ficha));
+
+    return campanha;
+  }
 }
 
 export class Find{
   static async findData(nome: string) {
     try {
       const response = await fetch(`/api/campanhas/?nome=${nome}`);
-      return response;
+      const data = await response.json();
+      const {status, message, result} = data;
+      const camp = Campanha.toObj(result[0]);
+      return {status, message, result, camp};
     } catch (error) {
       throw error;
     }
   }
 }
-  
