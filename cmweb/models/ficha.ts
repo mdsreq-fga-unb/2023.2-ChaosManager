@@ -48,6 +48,31 @@ export class Ficha {
     constructor(NPC:boolean) {
         this.NPC = NPC;
     }
+
+    static toObj(objeto: any): Ficha {
+      const ficha = new Ficha(objeto.NPC);
+
+      ficha._id = objeto._id;
+      ficha.pesoCarregado = objeto.pesoCarregado;
+      ficha.PV = objeto.PV;
+      ficha.PdA = objeto.PdA;
+      ficha.PE = objeto.PE;
+      ficha.Exp = objeto.Exp;
+      ficha.Dinheiro = objeto.Dinheiro;
+      
+      ficha.tracosPositivos = objeto.tracosPositivos.map((traco: any) => TracoPositivo.toObj(traco));
+      ficha.tracosNegativos = objeto.tracosNegativos.map((traco: any) => TracoNegativo.toObj(traco));
+      ficha.estados = objeto.estados.map((estado: any) => Estado.toObj(estado));
+      ficha.magias = objeto.magias.map((magia: any) => Magia.toObj(magia));
+      ficha.armas = objeto.armas.map((arma: any) => Arma.toObj(arma));
+      ficha.equipamentos = objeto.equipamentos.map((equipamento: any) => Equipamento.toObj(equipamento));
+      ficha.itens = objeto.itens.map((item: any) => Item.toObj(item));
+      
+      ficha.dados = objeto.dados;
+      ficha.atributos = objeto.atributos;
+
+      return ficha;
+    }
     
     Dados(dados: string[], notas: string[]): void{ //passei como array os parametros senão ficaria mto grande
         this.dados = {
@@ -265,7 +290,6 @@ export class Ficha {
         this.pesoCarregado -= this.itens[indice].pesoTotal;
         this.itens.splice(indice, 1);
     }
-    
 }
 
 interface Dados {
