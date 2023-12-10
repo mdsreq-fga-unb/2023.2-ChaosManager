@@ -64,7 +64,8 @@ nav:
       - Lições aprendidas: licoes3.md
       - Vídeo de apresentação: entregas3.md
   - Missão 4:
-      - Casos de uso: casosdeUsoVX.md
+      - Verificação e validação - Tanás: verEvalTanas.md
+      - Casos de uso - VoyageX: casosdeUsoVX.md
   - Casos de uso: casodeUso.md
   - Iterações: iterações_total.md
 
