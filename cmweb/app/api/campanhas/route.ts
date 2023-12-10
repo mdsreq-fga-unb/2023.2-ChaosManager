@@ -1,5 +1,6 @@
 import connection from "@/database/database";
 import { NextResponse } from "next/server";
+const { ObjectId } = require('mongodb');
 
 // ------------ GET ------------
 
@@ -28,25 +29,24 @@ export async function GET(req: Request) {
       result,
     });
   } catch (error) {
-    console.error("Erro ao consultar dados:", error);
     return NextResponse.json({
-      status: "error",
+      status: 500,
       message: "Erro ao consultar dados",
     });
   }
 }
 
 async function consultarDados(db: any, searchParams: any) {
-  let status = "error";
+  let status = 500;
   let message = "";
   let result: [] = [];
-  try{
+  try {
     result = await db.collection('campanha').find(searchParams).toArray();
     if (result.length == 0){
       message = `Campanha não encontrada`;
     }
     else{
-      status = "success";
+      status = 200;
       message = "Campanha encontrada com sucesso";
     }
   }
@@ -63,17 +63,35 @@ export async function POST(req: Request) {
   try {
     const data = await req.json();
     const db = await connection();
-    const {status, message} = await enviarDados(db, data);
 
-    return NextResponse.json({
-      status: status,
-      message: message,
-      data,
-    });
+    const { nome } = data;
+    const searchParams = { nome: nome };
+    const {status} = await consultarDados(db, searchParams);
+
+    if (status == 200){
+      return NextResponse.json({
+        status: 500,
+        message: "Nome ja cadastrado",
+        data,
+      });
+    }
+    else{
+      if ('_id' in data) {
+        delete data._id;
+      }      
+
+      const {status, message, newId} = await enviarDados(db, data);
+
+      return NextResponse.json({
+        status: status,
+        message: message,
+        newId,
+        data,
+      });
+    }
   } catch (error) {
-    console.error("Erro ao enviar dados:", error);
     return NextResponse.json({
-      status: "error",
+      status: 500,
       message: "Erro ao enviar os dados",
     });
   }
@@ -81,14 +99,16 @@ export async function POST(req: Request) {
 
 async function enviarDados(db: any, req: Request) {
   let message = "";
-  let status = "error";
+  let status = 500;
+  let newId = -1;
 
   try{
     const response = await db.collection('campanha').insertOne(req);
     if ('insertedId' in response){
       const { insertedId } = response;
-      status = "success";
+      status = 200;
       message = `ID '${insertedId}' cadastrado com sucesso`;
+      newId = insertedId;
     }
   }
   catch(error: any){
@@ -100,7 +120,7 @@ async function enviarDados(db: any, req: Request) {
     }
   }
 
-  return {"status": status, "message": message};
+  return {"status": status, "message": message, newId};
 }
 
 // ------------ PUT ------------
@@ -118,7 +138,7 @@ export async function PUT(req: Request) {
     });
   } catch (error) {
     return NextResponse.json({
-      status: "error",
+      status: 500,
       message: "Erro ao enviar os dados",
     });
   }
@@ -126,11 +146,17 @@ export async function PUT(req: Request) {
 
 async function atualizarDados(db: any, req: any) {
   let message = "";
-  let status = "error";
+  let status = 500;
 
   try{
-    const { _id } = req; 
-    const response = await db.collection('campanha').updateOne({ _id: _id}, { $set: req });
+    let { _id } = req;
+    const objectId = new ObjectId(_id);
+
+    if ('_id' in req) {
+      delete req._id;
+    }
+
+    const response = await db.collection('campanha').updateOne({ _id: objectId}, { $set: req });
     if ('matchedCount' in response){
       const { matchedCount } = response;
       
@@ -139,7 +165,7 @@ async function atualizarDados(db: any, req: any) {
       }
       else{
         message = `ID '${_id}' atualizado com sucesso`;
-        status = "success";
+        status = 200;
       }
     }
     else{
@@ -167,7 +193,7 @@ export async function DELETE(req: Request) {
     });
   } catch (error) {
     return NextResponse.json({
-      status: "error",
+      status: 500,
       message: "Erro ao excluir dados",
     });
   }
@@ -175,7 +201,7 @@ export async function DELETE(req: Request) {
 
 async function deletarDados(db: any, req: Request) {
   let message = "";
-  let status = "error";
+  let status = 500;
 
   if ('_id' in req){
     const { _id } = req;
@@ -188,7 +214,7 @@ async function deletarDados(db: any, req: Request) {
         if (deletedCount == 0)
           message = `ID '${_id}' não encontrado`;
         else{
-          status = "success";
+          status = 200;
           message = `ID '${_id}' apagado com sucesso!`;
         }
       }
