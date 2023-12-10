@@ -259,6 +259,10 @@ export class Ficha {
         this.pesoCarregado -= this.itens[indice].pesoTotal;
         this.itens.splice(indice, 1);
     }
+
+    toString():any{
+        return this.dados.nomeJogador;
+    }
     
 }
 

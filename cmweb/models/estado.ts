@@ -44,7 +44,7 @@ interface estado {
     testes_afetados: Testes[];
 }
 
-var estados: { [id: string] : estado; } = {};
+let estados: { [id: string] : estado; } = {};
 
 estados[Estados.Medo] = { 
     nome: Estados.Medo, 

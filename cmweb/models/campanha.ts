@@ -8,6 +8,7 @@ export class Campanha {
   senha_jogador: string;
   fichas: Ficha[] = [];
   fichas_NPC: Ficha[] = [];
+  registroAcoes: string[] = [];
 
   constructor(nome: string, historia: string, senha_mestre: string) {
     this.nome = nome;
