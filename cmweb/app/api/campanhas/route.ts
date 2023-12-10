@@ -129,7 +129,6 @@ export async function PUT(req: Request) {
   try {
     const data = await req.json();
     const db = await connection();
-    console.log(data);
     const {status, message} = await atualizarDados(db, data);
 
     return NextResponse.json({
@@ -175,7 +174,6 @@ async function atualizarDados(db: any, req: any) {
   }
   catch (error: any){
     message = "Erro desconhecido";
-    console.log(error);
   }
   return {"status": status, "message": message};
 }
