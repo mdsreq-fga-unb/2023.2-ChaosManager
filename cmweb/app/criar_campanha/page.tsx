@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import { Campanha } from '@/models/campanha';
+import { Campanha, Find } from '@/models/campanha';
 import css from "@/app/criar_campanha/criar.module.css"
 import { useRouter } from 'next/navigation'
 
@@ -14,11 +14,24 @@ export default function CriarCampanha() {
   const router = useRouter()
 
 
+  function setResponse({status, message}:any){
+    setResultadoSalvamento("status: " + status + '\n\n' + message);
+  }
+
   const validarSenha = () => {
     return senhaMestre.length >= 5;
   };
 
-  
+  const campanhaExiste = async (nome: any) => {
+    try {
+      const data = await Find.findData(nome);
+      setResponse(data);
+      return true;
+    } catch (error) {
+      setResultadoSalvamento('Erro ao buscar os dados da campanha');
+    }
+  };
+
   const salvarCampanhaNoDB = async () => {
 
     if (!validarSenha()) {
@@ -26,11 +39,17 @@ export default function CriarCampanha() {
       setAlert({show: true, message: "A senha deve ter pelo menos 5 caracteres", type: 'error'});
       return;
     }
+
+    
     try{
       const camp = new Campanha(nome, historia, senhaMestre);
+      if (await campanhaExiste(nome)){
+        setResultadoSalvamento("Campanha ja existe");
+        setAlert({show: true, message: "Campanha ja existe", type: 'error'});
+        return;
+      }
       const response = await camp.saveData();
-      const data = await response.json();
-      const { status, message} = data;
+      const { status, message} = response;
 
       setResultadoSalvamento("status: " + status + '\n\n' + message);
       setAlert({show: true, message: "status: " + status + '\n\n' + message, type: 'success'});
