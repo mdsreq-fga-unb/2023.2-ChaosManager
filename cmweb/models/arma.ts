@@ -13,10 +13,6 @@ export class Arma {
     this.mod_dano = mod_dano;
   }
   
-  static toObj(objeto: any): Arma {
-    return new Arma(objeto.nome, objeto.mod_dano, objeto.teste, objeto.peso);
-  }
-
 }
 
 export enum ArmasExistentes {

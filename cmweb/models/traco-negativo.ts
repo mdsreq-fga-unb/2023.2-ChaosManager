@@ -12,10 +12,6 @@ export class TracoNegativo {
     afetaTeste(teste: Testes):boolean{
       return tracosNeg[this.traco].testes_afetados.includes(teste);
     }
-
-    static toObj(objeto:any): TracoNegativo{
-        return new TracoNegativo(objeto.traco, objeto.valor);
-    }
     
 }
 

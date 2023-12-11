@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react';
 import { Campanha } from '@/models/campanha';
 import style from './post.module.css';
-import { Ficha } from '@/models/ficha';
 
 function PostDB( { socket }: any ) {
   const [resultadoSalvamento, setResultadoSalvamento] = useState('');
+  const [id, setId] = useState(0);
   const [nome, setNome] = useState('');
   const [historia, setHistoria] = useState('');
   const [senhaMestre, setSenhaMestre] = useState('');
@@ -15,7 +15,8 @@ function PostDB( { socket }: any ) {
   };
 
   useEffect(() => {
-    socket.on('save-data', ({status, message}: any) => {
+    socket.on('save-data', ({id, status, message}: any) => {
+      setId(id);
       setResultadoSalvamento("status: " + status + '\n\n' + message);
     })
   }, [socket])
@@ -28,16 +29,17 @@ function PostDB( { socket }: any ) {
       return;
     }
     try{
-      const camp = new Campanha(nome, historia, senhaMestre);
+      const camp = new Campanha(id, nome, historia, senhaMestre);
       const response = await camp.saveData();
-      const {status, message} = response;
+      const data = await response.json();
+      const { status, message } = data;
 
-      socket.emit('save-data', ({ status, message }));
+      socket.emit('save-data', ({id, status, message}));
 
       setResultadoSalvamento("status: " + status + '\n\n' + message);
     }
-    catch (error){
-      setResultadoSalvamento("status: error  \n\n Erro desconhecido \n\n" + error);
+    catch{
+      setResultadoSalvamento("status: error  \n\n Erro desconhecido");
     }
   };
 
@@ -45,6 +47,10 @@ function PostDB( { socket }: any ) {
     <div className={style.post_db}>
       <form className={style.post_db_form}>
         <h1>POST</h1>
+        <div>
+          <label htmlFor="id">ID:</label>
+          <input className="text-black" type="number" value={id} onChange={(e) => setId(Number(e.target.value))} />
+        </div>
         <div>
           <label htmlFor="name">Nome da campanha</label>
           <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />

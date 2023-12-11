@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Campanha } from '@/models/campanha';
-import { Find } from '@/models/campanha';
 import style from './put.module.css';
 
 function PutDB( { socket }: any ) {
   const [resultadoAtualizacao, setResultadoAtualizacao] = useState('');
-  const [nome, setnome] = useState('');
+  const [id, setId] = useState(0);
+  const [novoNome, setNovoNome] = useState('');
   const [novaHistoria, setNovaHistoria] = useState('');
   const [novaSenhaMestre, setNovaSenhaMestre] = useState('');
 
@@ -20,19 +20,12 @@ function PutDB( { socket }: any ) {
       setResultadoAtualizacao("A senha deve ter pelo menos 5 caracteres");
       return;
     }
-    const query = await Find.findData(nome);
-    const {status, message, camp, result} = query;
 
-    if (status == 500){
-      setResultadoAtualizacao("status: " + status + '\n\n' + message);
-    }
-    else{
-      let campanha = camp;
-      const response = await campanha.updateData();
-      const dataUpdate = await response.json();
-      const { status, message, data } = dataUpdate;
-      setResultadoAtualizacao("status: " + status + '\n\n' + message + '\n');
-    }
+    const camp = new Campanha(id, novoNome, novaHistoria, novaSenhaMestre);
+    const response = await camp.updateData();
+    const data = await response.json();
+    const {status, message} = data;
+    setResultadoAtualizacao("status: " + status + '\n\n' + message);
   };
 
   return (
@@ -40,8 +33,12 @@ function PutDB( { socket }: any ) {
       <form className={style.put_db_form}>
         <h1>PUT</h1>
         <div>
-          <label htmlFor="name">Nome da campanha</label>
-          <input type="text" value={nome} onChange={(e) => setnome(e.target.value)} />
+          <label htmlFor="id">ID:</label>
+          <input className="text-black" type="number" value={id} onChange={(e) => setId(Number(e.target.value))} />
+        </div>
+        <div>
+          <label htmlFor="name">Novo nome da campanha</label>
+          <input type="text" value={novoNome} onChange={(e) => setNovoNome(e.target.value)} />
         </div>
         <div>
           <label htmlFor="name">Nova história da campanha</label>

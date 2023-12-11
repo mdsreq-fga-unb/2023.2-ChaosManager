@@ -13,9 +13,6 @@ export class TracoPositivo {
         return tracosPos[this.traco].testes_afetados.includes(teste);
     }
     
-    static toObj(objeto: any): TracoPositivo {
-        return new TracoPositivo(objeto.traco, objeto.valor);
-    }
 }
 
 export enum TracosPositivos {

@@ -11,27 +11,21 @@ export default function TabelaArmas(props: TabelaArmasProps) {
     const { armas } = props;
 
     return (
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" className="px-6 py-3"> Arma</th>
-                        <th scope="col" className="px-6 py-3"> Teste necessário</th>
-                        <th scope="col" className="px-6 py-3"> Modificador de dano</th>
-                        <th scope="col" className="px-6 py-3"> Peso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {armas.map((arma, index) => (
-                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" key={index}>
-                            <td className="w-4 p-4">{arma.nome}</td>
-                            <td className="w-4 p-4">{arma.teste}</td>
-                            <td className="w-4 p-4">{arma.mod_dano}x</td>
-                            <td className="w-4 p-4">{arma.peso}kg</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4 gap-4">
+            {armas.map((arma, index) => (<div className="flex items-start p-4 rounded-xl shadow-lg bg-white" key={index}>
+                <div className="flex items-center justify-center bg-blue-50 h-12 w-12 rounded-full border border-blue-100">
+                </div>
+
+                <div className="ml-4">
+                    <h2 className="font-semibold">{arma.nome}</h2>
+                    <p className="mt-2 text-sm text-gray-500">Faça um teste de {arma.teste}</p>
+                    <p className="mt-2 text-sm text-gray-500"><span className="font-semibold">Mod. de dano: </span>{arma.mod_dano}x</p>
+                    <p className="mt-2 text-sm text-gray-500"><span className="font-semibold">Peso: </span>{arma.peso}kg</p>
+                </div>
+            </div>))}
         </div>
     );
 };
+
+
+

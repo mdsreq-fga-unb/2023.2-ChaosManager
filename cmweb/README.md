@@ -34,16 +34,17 @@ Para fazer um `GET` você precisa importar a classe `Campanha` para instanciar o
 ```ts
 import { Campanha, Find } from '@/models/campanha';
 
-const query = await Find.findData(nome);
+const query = await Find.findData(id);
 const data = await query.json();
-const { status, message, camp, result } = data;
+const { status, message, result } = data;
 
-// status: 500 | 200
+// status: 'error' | 'success'
 // message: explica o status
-// camp: A instancia da classe campanha
-// result: todas as ocorrências encontradas do Nome (Em teoria único)
+// result: todas as ocorrências encontradas do ID (em teoria só retorna 1 pois o ID é único)
 
-let campanha: Campanha = camp as Campanha;
+let campanha: Campanha = result[0];
+
+console.log(campanha.nome);
 ```
 
 Mais exemplos em `app/Components/Tests/GET/GetDB.tsx`
@@ -55,11 +56,12 @@ Para fazer um `POST` você precisa importar a classe `Campanha` para criar uma i
 ```ts
 import { Campanha } from '@/models/campanha';
 
-const camp = new Campanha(nome, historia, senhaMestre);
+const camp = new Campanha(id, nome, historia, senhaMestre);
 const response = await camp.saveData();
-const {status, message} = response;
+const data = await response.json();
+const { status, message } = data;
 
-// status: 500 | 200
+// status: 'error' | 'success'
 // message: explica o status
 ```
 
@@ -72,14 +74,13 @@ Para fazer um `PUT` você precisa importar a classe `Campanha` para criar uma in
 ```ts
 import { Campanha } from '@/models/campanha';
 
-let campanha = camp;
-const response = await campanha.updateData();
-const dataUpdate = await response.json();
-const { status, message, data } = dataUpdate;
+const camp = new Campanha(id, novoNome, novaHistoria, novaSenhaMestre);
+const response = await camp.updateData();
+const data = await response.json();
+const { status, message } = data;
 
-// status: 500 | 200
+// status: 'error' | 'success'
 // message: explica o status
-// data: atributos salvos no banco
 ```
 
 Mais exemplos em `app/Components/Tests/PUT/PutDB.tsx`
