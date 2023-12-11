@@ -1,14 +1,10 @@
 import { Ficha } from "@/models/ficha";
 import { Testes, rolarDados, realizarTeste } from "@/models/teste";
-import { Reacao, realizarReacao } from "@/models/combate";
+import { Reacao, realizarReacao } from "@/models/combate"; // Todo: realizarReacao nao ta sendo exportada
 import { useState } from "react";
 
-interface ModalTestesProps {
-    ficha: Ficha;
-}
 
-export default function ModalTestes(props: ModalTestesProps) {
-    const { ficha } = props;
+export default function ModalTestes({ ficha }: { ficha: Ficha }) {
 
     const [d20, setD20] = useState<number | null>(0);
     const [pe, setPe] = useState<number>(0);
@@ -41,9 +37,9 @@ export default function ModalTestes(props: ModalTestesProps) {
                 <button className="text-gray-600 text-sm font-semibold mr-4" onClick={rollD20}>
                     Rolar dados
                 </button>
-                <label className="py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400">{d20}</label>
+                <label className="py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400">{d20}</label>
             </div>
-            <hr className="my-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+            <hr className="my-2 h-0.5 border-t-0 bg-neutral-100 opacity-100 opacity-50" />
             {d20 != 0 && (<>
 
                 <div className="mr-8  flex items-center">
