@@ -294,6 +294,7 @@ export class Ficha {
     toString():any{
         return this.dados.nomeJogador;
     }
+    
 }
 
 interface Dados {
