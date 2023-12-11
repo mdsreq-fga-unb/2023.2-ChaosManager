@@ -19,9 +19,9 @@ export default function AcessarCampanhaPage() {
       const { status, message, camp, result } = data;
 
       if (camp.senha_jogador === senha){
-        router.push(`/campanha/${camp._id}/jogador`);
+        router.push(`/campanha/${camp.nome}/jogador`);
       } else if (camp.senha_mestre === senha) {
-        router.push(`/campanha/${camp._id}`);
+        router.push(`/campanha/${camp.nome}`);
       } else {
         setResultado('Senha inválida, digite novamente!');
       }
