@@ -17,8 +17,9 @@ import { Estados } from "@/models/estado";
 import TabelaTracos from "../Components/TabelaTracos";
 import { TracosNegativos } from "@/models/traco-negativo";
 import { TracoPositivo, TracosPositivos } from "@/models/traco-positivo";
-import { Campanha, Find } from '@/models/campanha';
+// import { Campanha, Find } from '@/models/campanha';
 import ModalTestes from "../Components/ModalTestes";
+
 
 // Crie uma Ficha
 const ficha = new Ficha(false);

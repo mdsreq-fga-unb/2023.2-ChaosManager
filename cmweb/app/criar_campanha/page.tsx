@@ -53,11 +53,9 @@ export default function CriarCampanha() {
 
       setResultadoSalvamento("status: " + status + '\n\n' + message);
       setAlert({show: true, message: "status: " + status + '\n\n' + message, type: 'success'});
-      const objectIdMatch = message.match(/'([^']+)'/);
-      const objectId = objectIdMatch ? objectIdMatch[1] : null;
 
       console.log("status: " + status + '\n\n' + message);
-      router.push(`/campanha/${objectId}`);
+      router.push(`/campanha/${nome}`);
     }
     catch{
       setResultadoSalvamento("status: error  \n\n Erro desconhecido");

@@ -38,12 +38,10 @@ console.log(listaDeCampanhas[0]);
 console.log("\n----------Teste Ficha----------");
 
 ficha.Dados(["aaa","bbb","string","string","string","string","string","string"], ["string"]);
-ficha.Recursos([3,1,10,1,1]);
 ficha.Atributos([5,1,1,1,1]);
 
 console.log("\n----------Dados----------");
 console.log(ficha.dados);
-console.log(ficha.recursos);
 console.log(ficha.atributos);
 console.log("Capacidade de combate: " + ficha.CapacidadeCombate());
 
@@ -161,16 +159,16 @@ console.log("\n----------Teste Realizar teste----------");
 let d20 = rolarDados();
 console.log(d20);
 console.log(realizarTeste(ficha, Testes.Competencia, 5, d20));
-console.log(ficha.recursos.PE);
+console.log(ficha.PE);
 d20 = rolarDados();
 console.log(d20);
 console.log(realizarTeste(ficha, Testes.Destreza, 5, d20));
-console.log(ficha.recursos.PE);
+console.log(ficha.PE);
 d20 = rolarDados();
 console.log(d20);
 console.log(realizarTeste(ficha, Testes.ResMental, 5, d20));
-console.log(ficha.recursos.PE);
+console.log(ficha.PE);
 d20 = rolarDados();
 console.log(d20);
 console.log(realizarTeste(ficha, Testes.Competencia, 6, d20));
-console.log(ficha.recursos.PE);
+console.log(ficha.PE);
