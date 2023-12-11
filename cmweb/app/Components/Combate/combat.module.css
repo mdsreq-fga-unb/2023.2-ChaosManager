@@ -29,7 +29,6 @@
   width: 100%;
   justify-content: center;
   margin: 20px; 
-  justify-content: flex-start;
 }
 
 .combat select{
@@ -39,6 +38,13 @@
   border-radius: 5px;
   padding: 0 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
+  color: #1e90ff;
+  background-color: white;  
+}
+
+.combat option{
+  color: #1e90ff;
 }
 
 .combat header{

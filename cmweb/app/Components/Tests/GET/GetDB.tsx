@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Campanha, Find } from '@/models/campanha';
 import style from './get.module.css';
 import Combat from '../../Combate/Combat';
+import { Ficha } from '@/models/ficha';
+import FichaPagina from '../../../ficha/page'
 
 function GetDB({ socket }: any) {
   const [nome, setName] = useState('');
@@ -9,6 +11,7 @@ function GetDB({ socket }: any) {
   const [campanhaData, setCampanhaData] = useState(null);
   const [haveCamp, setHaveCamp] = useState(false);
   const [campanha, setCampanha] = useState<Campanha | null>(null);
+  const [ficha, setFicha] = useState<Ficha | null>(null);
 
   useEffect(() => {
     socket.on('find-data', ({ nome, status, message, result }: any) => {
@@ -20,6 +23,7 @@ function GetDB({ socket }: any) {
 
   function setResponse({ status, message, result, camp }: any) {
     setCampanha(camp);
+    setFicha(camp.fichas[0]);
     socket.emit('find-data', ({ nome, status, message, camp }));
     setCampanhaData(result[0]);
     setResultado("status: " + status + '\n\n' + message);
@@ -78,11 +82,17 @@ function GetDB({ socket }: any) {
         <button onClick={buscarCampanha}>Buscar Campanha</button>
       </form>      
     </div>
-    {haveCamp && campanha && (
+    {haveCamp && campanha && ficha &&(
+      <>
         <Combat socket={socket} campanha={campanha} />
+      </>
       )}
     </>
   );
 }
 
 export default GetDB;
+
+// <div className="position: absolute">
+//   <FichaPagina ficha={ficha} />
+// </div>

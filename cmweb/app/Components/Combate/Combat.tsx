@@ -17,8 +17,8 @@ const Combat = ({socket, campanha}:typeCombat) => {
 
   function getFichas(){
     if (campanha === undefined) return [];
-
-    return [...campanha.fichas, ...campanha.fichas_NPC];
+    const newfichas = [...campanha.fichas, ...campanha.fichas_NPC];
+    return newfichas;
   }
 
   const handleOpen = ()=> setIsOpen(true);
@@ -51,9 +51,9 @@ const Combat = ({socket, campanha}:typeCombat) => {
               <div className={styles.combat_cotaniner_sections}>
                 <div className={styles.combat_cotaniner_sections_content}>
                   <label htmlFor="name">Ficha que realiza</label>
+                  <br/>
                   <select
-                    id="name"
-                    value={selectedFichaRealiza?._id || ''}
+                    id="name"                    
                     onChange={(e) => {
                       const selectedId = parseInt(e.target.value, 10);
                       const selectedFichaRealiza = getFichas().find((ficha) => ficha._id === selectedId) || null;
@@ -61,15 +61,31 @@ const Combat = ({socket, campanha}:typeCombat) => {
                     }}
                   >
                     <option value="">Selecione uma ficha</option>
-                    {getFichas().map((ficha) => (
+                    {getFichas().map((ficha, index) => (
                       <option key={ficha._id} value={ficha._id}>
-                        {ficha.dados.nomeJogador}
+                        {`${index + 1}. ${ficha.dados.nomeJogador}`}
                       </option>
                     ))}
                   </select>
                 </div>
                 <div className={styles.combat_cotaniner_sections_content}>
                   <label htmlFor="name">Ficha que recebe</label>
+                  <br/>
+                  <select
+                    id="name"                    
+                    onChange={(e) => {
+                      const selectedId = parseInt(e.target.value, 10);
+                      const selectedFichaRecebe = getFichas().find((ficha) => ficha._id === selectedId) || null;
+                      setSelectedFichaRecebe(selectedFichaRecebe);
+                    }}
+                  >
+                    <option value="">Selecione uma ficha</option>
+                    {getFichas().map((ficha, index) => (
+                      <option key={ficha._id} value={ficha._id}>
+                        {`${index + 1}. ${ficha.dados.nomeJogador}`}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
@@ -94,7 +110,6 @@ const Combat = ({socket, campanha}:typeCombat) => {
             </motion.div>
           )}
         </AnimatePresence>
-        
       </div>
    </div>
   )
