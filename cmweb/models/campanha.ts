@@ -1,4 +1,5 @@
 import { Ficha } from "@/models/ficha";
+import { Combate } from "@/models/combate";
 
 export class Campanha {
   _id: string = '';
@@ -9,6 +10,8 @@ export class Campanha {
   fichas: Ficha[] = [];
   fichas_NPC: Ficha[] = [];
   registroAcoes: string[] = [];
+  combate: Combate = new Combate(this);
+
 
   constructor(nome: string, historia: string, senha_mestre: string) {
     this.nome = nome;
@@ -66,7 +69,6 @@ export class Campanha {
 
   static toObj(objeto: any): Campanha {
     const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC } = objeto;
-
     const campanha = new Campanha(nome, historia, senha_mestre);
     campanha._id = _id;
     campanha.senha_jogador = senha_jogador;

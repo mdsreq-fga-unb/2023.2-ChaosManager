@@ -68,8 +68,8 @@ export class Ficha {
       ficha.equipamentos = objeto.equipamentos.map((equipamento: any) => Equipamento.toObj(equipamento));
       ficha.itens = objeto.itens.map((item: any) => Item.toObj(item));
       
-      ficha.dados = objeto.dados;
-      ficha.atributos = objeto.atributos;
+      ficha.dados = convertToDados(objeto.dados);
+      ficha.atributos = convertToAtributos(objeto.atributos);
 
       return ficha;
     }
@@ -96,9 +96,9 @@ export class Ficha {
             Inteligencia: atributos[3],
             Dominio: atributos[4],
         }
-    }
+    }   
 
-    PV_max(): number{ 
+    PV_max(): number{
         return 2*this.atributos.Vigor + this.atributos.Dominio;
     }
     PE_max(): number{
@@ -316,3 +316,27 @@ interface Atributos {
     Inteligencia: number;
     Dominio: number;
 }
+
+function convertToDados(dados: any): Dados {
+    return {
+      nomeUsuario: dados.nomeUsuario || '',
+      nomeJogador: dados.nomeJogador || '',
+      raca: dados.raca || '',
+      profissao: dados.profissao || '',
+      idade: dados.idade || '',
+      genero: dados.genero || '',
+      historia: dados.historia || '',
+      descricao: dados.descricao || '',
+      notas: dados.notas || ['']
+    };
+  }
+  
+function convertToAtributos(atributos: any): Atributos {
+    return {
+      Vigor: atributos.Vigor || 0,
+      Habilidade: atributos.Habilidade || 0,
+      Percepcao: atributos.Percepcao || 0,
+      Inteligencia: atributos.Inteligencia || 0,
+      Dominio: atributos.Dominio || 0,
+    };
+  }

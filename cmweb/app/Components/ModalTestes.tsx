@@ -1,6 +1,6 @@
 import { Ficha } from "@/models/ficha";
 import { Testes, rolarDados, realizarTeste } from "@/models/teste";
-import { Reacao, realizarReacao } from "@/models/combate"; // Todo: realizarReacao nao ta sendo exportada
+import { Reacao, Combate } from "@/models/combate"; // Todo: realizarReacao nao ta sendo exportada
 import { useState } from "react";
 
 
