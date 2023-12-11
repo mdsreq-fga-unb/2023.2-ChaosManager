@@ -1,5 +1,5 @@
 'use client'
-import Combat from '../Components/Combate/Combate';
+import Combat from '../Components/Combate/Combat';
 import GetDB from '../Components/Tests/GET/GetDB';
 import PostDB from '../Components/Tests/POST/PostDB';
 import PutDB from '../Components/Tests/PUT/PutDB';
@@ -10,11 +10,12 @@ const socket = io("http://localhost:3001");
 
 export default function GetAndPostDBPage() {
   return (
-    <div className={styles.container}>
-      <GetDB socket={socket} />
-      <PostDB socket={socket} />
-      <PutDB socket={socket} />
-      <Combat socket={socket} />
-    </div>
+    <>
+      <div className={styles.container}>
+        <GetDB socket={socket} />
+        <PostDB socket={socket} />
+        <PutDB socket={socket} />        
+      </div>     
+    </>
   );
 }
