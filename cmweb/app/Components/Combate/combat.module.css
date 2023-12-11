@@ -1,26 +1,72 @@
+/* combat.module.css */
+
 .combat {
-  background-color: #eaeaea;
+  position: absolute;
+}
+
+.combat aside{
+  background-color: #66CCCC;
+  height: 100vh;
+  width: 100vh;
+  box-shadow: 0 0px 40px rgba(0, 0, 0, 0.7); 
+}
+
+.combat_container {
+  display: flex;
+}
+
+.combat_container_content{
+  display: grid;
+}
+
+.combat_cotaniner_sections {
+  justify-content: center;
+  margin: 20px;
+  display: flex;
+}
+
+.combat_cotaniner_sections_content {
+  width: 100%;
+  justify-content: center;
+  margin: 20px; 
+}
+
+.combat select{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #1e90ff;
+  background-color: white;  
+}
+
+.combat option{
+  color: #1e90ff;
+}
+
+.combat header{
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
+  width: 100%;
 }
-.combat_section {
-  width: 40rem;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.7);
-}
-.combat_section h1 {
-  color: black;
+
+.combat h1 {
+  margin-top: 5px;
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+  margin-right: 50%;
+  color: white;
   font-size: 1.2rem;
   font-weight: 500;
-  text-align: center;
   margin-bottom: 1rem;
+  text-align: center;
+  align-self: center;
 }
-.combat_section button {
+
+.combat button {
   width: 100%;
   height: 40px;
   border: none;
@@ -30,45 +76,31 @@
   font-weight: 500;
   cursor: pointer;
 }
-.combat_section button:hover {
-  background-color: #1e90ff;
-  opacity: 0.8;
-}
-.combat_section label {
-  color: black;
-}
-.combat_section input{
+
+.combat label {
   width: 100%;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 10px;
-}
-.combat_section textarea{
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 10px;
-}
-.combat_section select{
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-bottom: 10px;
+  color: white;
 }
 
-.combat_section hr {
-  height: 100%;
-  margin: 1rem 0;
-  border: none;
-  border-top: 1px solid #ccc;
+.combat_icon{
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
-.fichaContainer {
-  width: 45%;
-  margin-bottom: 1rem;
+.combat_icon_exit{
+  margin-left: 125px !important;
+  margin-top: 5px;
+}
+
+.horizontal_line {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 98%;
+  border-top: 1px solid #ffffff;
+}
+
+.vertical_line {
+  border-left: 1px solid #000;
 }

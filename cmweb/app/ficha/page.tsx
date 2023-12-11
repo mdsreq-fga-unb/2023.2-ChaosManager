@@ -13,8 +13,12 @@ import TabelaEstados from "../Components/TabelaEstados";
 import TabelaTracos from "../Components/TabelaTracos";
 import ModalTestes from "../Components/ModalTestes";
 
-export default function FichaPagina({ ficha }: { ficha: Ficha }) {
+interface typeFicha{
+    ficha: Ficha;
+  }
 
+const FichaPagina = ({ficha}: typeFicha) => {
+    console.log(ficha);
     return (
         <div className="bg-gray-100 p-4 bg-gray-800">
             <div className="grid grid-cols-3 gap-4">
@@ -27,12 +31,11 @@ export default function FichaPagina({ ficha }: { ficha: Ficha }) {
                             <p className="w-full text-sm text-gray-400"><span className="font-semibold text-xs uppercase text-gray-400">Peso: </span>{ficha.pesoCarregado}Kg </p>
                             <p className="w-full text-sm text-gray-400"><span className="font-semibold text-xs uppercase text-gray-400">Armadura: </span>{ficha.PdA} </p>
                         </div>
-
                     </div>
                     <ModalTestes ficha={ficha} />
                     <div className="mt-4">
-                        <BarrasVidaEnergiaArmadura vida={ficha.PV} vida_max={ficha.PV_max} />
-                        <BarrasVidaEnergiaArmadura vida={ficha.PE} vida_max={ficha.PE_max} />
+                        <BarrasVidaEnergiaArmadura vida={ficha.PV} vida_max={ficha.PV_max()} />
+                        <BarrasVidaEnergiaArmadura vida={ficha.PE} vida_max={ficha.PE_max()} />
                     </div>
 
                     <div className="max-w-md mx-auto mt-8">
@@ -156,7 +159,9 @@ export default function FichaPagina({ ficha }: { ficha: Ficha }) {
             </div>
         </div >
     );
-}
+};
+
+export default FichaPagina;
 
 
 
