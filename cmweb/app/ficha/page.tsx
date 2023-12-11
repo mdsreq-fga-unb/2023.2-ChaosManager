@@ -1,124 +1,98 @@
-import Image from "next/image";
+"use client"
+
+import { Ficha } from "@/models/ficha";
+
 import BarrasVidaEnergiaArmadura from "../Components/BarrasVidaEnergiaArmadura";
 import Atributo from "../Components/Atributo";
 import ValorTesteAtributo from "../Components/ValorTesteAtributo";
 import TabelaMagias from "../Components/TabelaMagias";
-import { Ficha } from "@/models/ficha";
-import { Classes } from "@/models/item-magia";
 import TabelaArmas from "../Components/TabelaArmas";
-import { ArmasExistentes } from "@/models/arma";
 import TabelaItens from "../Components/TabelaItens";
-import { EquipamentosExistentes } from "@/models/equipamento";
 import TabelaEquipamentos from "../Components/TabelaEquipamentos";
 import TabelaEstados from "../Components/TabelaEstados";
-import { Estados } from "@/models/estado";
 import TabelaTracos from "../Components/TabelaTracos";
-import { TracosNegativos } from "@/models/traco-negativo";
-import { TracoPositivo, TracosPositivos } from "@/models/traco-positivo";
+import ModalTestes from "../Components/ModalTestes";
 
-// Crie uma Ficha
-const ficha = new Ficha(false);
-ficha.Dados(["l-ricardo", "Echolon", "Alteriano", "Mercenario", "580", "M", "muito triste", "sim"], ["Nota1", "Nota2"]);
-// ficha.Recursos([100, 50, 30, 0, 1000]);
-ficha.Atributos([10, 15, 12, 18, 20]);
-ficha.addEquipamento("Poção de Cura", 20, 6);
-ficha.addItem("Chave", 1);
-ficha.alterarQtd(0, 10); // ToDo: Sobrecarga do contrutor pra adicionar ja uma certa quntidade de items de uma vez
-ficha.addMagia('Magia Poderosa', Classes.Abjuracao); // TODO: Esse metodo aqui nn ta muito bom nao (ainda pensando)
-ficha.addMagia('Magia Doida', Classes.Abjuracao);
-ficha.addArmaExistente(ArmasExistentes.Espada);
-ficha.addArmaExistente(ArmasExistentes.Besta);
-ficha.addArmaExistente(ArmasExistentes.Chicote);
-ficha.addEquipamentoExistente(EquipamentosExistentes.ArmCavaleiro);
-ficha.addEstado(Estados.Calor, 4)
-ficha.addTracoNegativo(TracosNegativos.Covardia, 4)
-ficha.addTracoPositivo(TracosPositivos.BomHumor, 4)
+export default function FichaPagina({ ficha }: { ficha: Ficha }) {
 
-
-
-
-
-
-
-export default function FichaPagina() {
     return (
-        <div className="bg-gray-100 p-4 dark:bg-gray-800">
+        <div className="bg-gray-100 p-4 bg-gray-800">
             <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1">
-                    <div className="flex items-center justify-center">
-                        {/* TODO: Foto ainda nn funciona */}
-                        <Image
-                            className="w-128 h-128 rounded-full object-cover"
-                            src="/provisorioFoto.jpg"
-                            alt="Foto de Perfil"
-                            width={128}
-                            height={128}
-                        />
+                    <div className="flex space-between">
                         <div className="ml-4">
-                            <p className="font-bold text-xl dark:text-gray-400">{ficha.dados.nomeJogador}</p>
-                            <p className="font-bold text-xs dark:text-gray-400"> {ficha.dados.nomeUsuario}</p>
-                            <p className="w-full text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold text-xs text-gray-700 uppercase dark:text-gray-400">Dinheiro: </span>R${ficha.Dinheiro},00</p>
-                            <p className="w-full text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold text-xs text-gray-700 uppercase dark:text-gray-400">Peso: </span>{ficha.pesoCarregado}Kg </p>
-                            <p className="w-full text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold text-xs text-gray-700 uppercase dark:text-gray-400">Armadura: </span>{ficha.PdA} </p>
+                            <p className="font-bold text-xl text-gray-400">{ficha.dados.nomeJogador}</p>
+                            <p className="font-bold text-xs text-gray-400"> {ficha.dados.nomeUsuario}</p>
+                            <p className="w-full text-sm text-gray-400"><span className="font-semibold text-xs uppercase text-gray-400">Dinheiro: </span>R${ficha.Dinheiro},00</p>
+                            <p className="w-full text-sm text-gray-400"><span className="font-semibold text-xs uppercase text-gray-400">Peso: </span>{ficha.pesoCarregado}Kg </p>
+                            <p className="w-full text-sm text-gray-400"><span className="font-semibold text-xs uppercase text-gray-400">Armadura: </span>{ficha.PdA} </p>
                         </div>
+
                     </div>
+                    <ModalTestes ficha={ficha} />
                     <div className="mt-4">
-                        {/* <BarrasVidaEnergiaArmadura vida={ficha.PV} vida_max={ficha.PV_max} /> */}
-                        {/* <BarrasVidaEnergiaArmadura vida={ficha.PE} vida_max={ficha.PE_max} /> */}
+                        <BarrasVidaEnergiaArmadura vida={ficha.PV} vida_max={ficha.PV_max} />
+                        <BarrasVidaEnergiaArmadura vida={ficha.PE} vida_max={ficha.PE_max} />
                     </div>
 
                     <div className="max-w-md mx-auto mt-8">
                         <div className="mb-4 flex items-center">
-                            <label className="text-gray-600 text-sm font-semibold mr-4">Cap.:</label>
-                            <input
-                                type="text"
-                                className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
-                                value={ficha.Capacidade()} />
+                            <div>
+                                <label className="text-gray-600 text-sm font-semibold mr-4">Capacidade:</label>
+                                <input
+                                    type="text"
+                                    className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                                    value={ficha.Capacidade()} />
 
-                            <label className="text-gray-600 text-sm font-semibold ml-4">Cap. em combate:</label>
-                            <input
-                                type="text"
-                                className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
-                                value={ficha.CapacidadeCombate()} />
+                            </div>
+                            <div>
+                                <label className="text-gray-600 text-sm font-semibold ml-4">Capacidade em combate:</label>
+                                <input
+                                    type="text"
+                                    className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                                    value={ficha.CapacidadeCombate()} />
+                            </div>
                         </div>
 
-                        <div className="mb-4 flex items-center">
+                        <div className="mb-4">
                             <label className="text-gray-600 text-sm font-semibold mr-4">Raça:</label>
                             <input
                                 type="text"
-                                className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
+                                className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
                                 value={ficha.dados.raca}
                             />
                         </div>
 
-                        <div className="mb-4 flex items-center">
+                        <div className="mb-4">
                             <label className="text-gray-600 text-sm font-semibold mr-4">Profissão:</label>
                             <input
                                 type="text"
-                                className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
+                                className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
                                 value={ficha.dados.profissao}
                             />
                         </div>
-
                         <div className="mb-4 flex items-center">
-                            <label className="text-gray-600 text-sm font-semibold mr-4">Idade:</label>
-                            <input
-                                type="text"
-                                className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
-                                value={ficha.dados.idade} />
-
-                            <label className="text-gray-600 text-sm font-semibold ml-4">Gênero:</label>
-                            <input
-                                type="text"
-                                className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
-                                value={ficha.dados.genero} />
+                            <div>
+                                <label className="text-gray-600 text-sm font-semibold mr-4">Idade:</label>
+                                <input
+                                    type="text"
+                                    className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                                    value={ficha.dados.idade} />
+                            </div>
+                            <div>
+                                <label className="text-gray-600 text-sm font-semibold ml-4">Gênero:</label>
+                                <input
+                                    type="text"
+                                    className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                                    value={ficha.dados.genero} />
+                            </div>
                         </div>
                     </div>
 
                     <div className="mb-4">
                         <label className="text-gray-600 text-sm font-semibold mb-2">Descrição:</label>
                         <textarea
-                            className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
+                            className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
                             value={ficha.dados.descricao}
                             rows={9}
                         />
@@ -126,16 +100,21 @@ export default function FichaPagina() {
                     <div className="mb-4">
                         <label className="text-gray-600 text-sm font-semibold mb-2">História:</label>
                         <textarea
-                            className="w-full py-2 px-3 dark:bg-gray-700 rounded-lg p-2 dark:text-gray-400 pointer-events-none"
+                            className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
                             value={ficha.dados.historia}
+                            rows={9}
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label className="text-gray-600 text-sm font-semibold mb-2">Notas:</label>
+                        <textarea
+                            className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                            value={ficha.dados.notas}
                             rows={9}
                         />
                     </div>
 
                 </div>
-
-
-
 
                 <div className="col-span-2">
 
@@ -165,10 +144,9 @@ export default function FichaPagina() {
                     <TabelaItens itens={ficha.itens} />
                     <TabelaEstados estados={ficha.estados} />
                     <TabelaTracos tracosNegativos={ficha.tracosNegativos} tracosPositivos={ficha.tracosPositivos} />
-
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
