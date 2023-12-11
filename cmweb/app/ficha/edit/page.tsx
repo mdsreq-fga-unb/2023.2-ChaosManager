@@ -3,8 +3,9 @@
 import { Field, useFormik } from "formik";
 import s from "./edit.module.css";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { TracosPositivos } from "../../../models/traco-positivo";
-import { TracosNegativos } from "../../../models/traco-negativo";
+import { useSearchParams } from "next/navigation";
+import { TracoPositivo, TracosPositivos } from "../../../models/traco-positivo";
+import { TracoNegativo, TracosNegativos } from "../../../models/traco-negativo";
 import { Campanha, Find } from "@/models/campanha";
 import { Ficha } from "@/models/ficha";
 type Trait = { label: string; title: string; value: number };
@@ -12,7 +13,49 @@ export default function EditFicha() {
   const [traitPositives, setTraitsPositives] = useState<Trait[]>([]);
   const [traitNegatives, setTraitsNegatives] = useState<Trait[]>([]);
   const [genderField, setGenderField] = useState<string>("Masculino");
-  const [playerType, setPlayerType] = useState<string>("NPC");
+  const [playerType, setPlayerType] = useState<"NPC" | "Jogador">("Jogador");
+  const [editMode, setEditMode] = useState<"Criar" | "Editar">("Criar");
+  const [ficha, setFicha] = useState<Ficha | null>(null);
+  const searchParams = useSearchParams();
+  const fichaId = searchParams.get("fichaId");
+  useEffect(() => {
+    if (fichaId) {
+      setEditMode("Editar");
+      LoadFicha();
+    } else {
+    }
+  });
+  const LoadFicha = async () => {
+    const campanha_name = "nome legal";
+    const query = await Find.findData(campanha_name);
+    const { camp } = query;
+    let campanha: Campanha = camp as Campanha;
+    const fichaFound = campanha.fichas.find((ficha) => ficha._id == Number(fichaId));
+    if (fichaFound) {
+      setFicha(fichaFound);
+      setGenderField(fichaFound.dados.genero);
+      setPlayerType(fichaFound.NPC ? "NPC" : "Jogador");
+      formik.setValues({
+        nomeUsuario: fichaFound.dados.nomeUsuario,
+        nomeJogador: fichaFound.dados.nomeJogador,
+        raca: fichaFound.dados.raca,
+        profissao: fichaFound.dados.profissao,
+        idade: fichaFound.dados.idade,
+        genero: fichaFound.dados.genero,
+        historia: fichaFound.dados.historia,
+        descricao: fichaFound.dados.descricao,
+        notas: fichaFound.dados.notas[0],
+        dinheiro: String(fichaFound.Dinheiro),
+        vigor: fichaFound.atributos.Vigor,
+        habilidade: fichaFound.atributos.Habilidade,
+        perception: fichaFound.atributos.Percepcao,
+        qi: fichaFound.atributos.Inteligencia,
+        dominio: fichaFound.atributos.Dominio,
+      });
+    } else {
+      alert("Ficha não encontrada");
+    }
+  };
   const formik = useFormik({
     initialValues: {
       nomeUsuario: "",
@@ -30,10 +73,9 @@ export default function EditFicha() {
       perception: 0,
       qi: 0,
       dominio: 0,
-      editMode: "Criar",
     },
     onSubmit: async (values) => {
-      if (values.editMode == "Criar") {
+      if (editMode) {
         await createFicha(values);
       } else {
         await editFicha(values);
@@ -91,7 +133,7 @@ export default function EditFicha() {
         values.qi,
         values.dominio,
       ];
-      const ficha = new Ficha(playerType == "JOGADOR");
+      const ficha = new Ficha(playerType == "Jogador");
       ficha.Dados(dados, [values.notas]);
       ficha.Atributos(atributos);
       ficha.Dinheiro = Number(values.dinheiro);
@@ -128,18 +170,20 @@ export default function EditFicha() {
   }
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-      <h1 className="text-2xl font-semibold text-center mb-4">Ficha de personagem</h1>
+      <h1 className="text-2xl font-semibold text-center mb-4">
+        {editMode ? "Criar " : "Editar "}ficha de personagem
+      </h1>
       <form onSubmit={formik.handleSubmit} className="">
         <div className="flex flex-col align-center justify-start mb-2">
           <h1>Escolha o tipo de ficha:</h1>
-          <div className="flex align-center justify-center gap-4">
+          <div className="flex align-center justify-start gap-4">
             <div>
               <input
                 type="radio"
                 id="jogador"
                 name="playerType"
-                checked={playerType == "jogador"}
-                onChange={() => setPlayerType("jogador")}
+                checked={playerType == "Jogador"}
+                onChange={() => setPlayerType("Jogador")}
                 className="mr-2"
               />
               <label htmlFor="jogador">Ficha de JOGADOR</label>
@@ -211,7 +255,6 @@ export default function EditFicha() {
             </label>
 
             <select
-              defaultValue="M"
               className={s.ficha_input}
               name="genero"
               value={genderField}
@@ -343,13 +386,15 @@ export default function EditFicha() {
         <div className="grid mt-2 mb-4 grid-cols-1 gap-4 sm:grid-cols-2">
           <TraitsForm
             isPositiveTrait={true}
-            traits={traitPositives}
-            setTraits={setTraitsPositives}
+            traitsSelected={traitPositives}
+            setTraitsSelected={setTraitsPositives}
+            traitsDefault={ficha ? ficha.tracosPositivos : []}
           />
           <TraitsForm
             isPositiveTrait={false}
-            traits={traitNegatives}
-            setTraits={setTraitsNegatives}
+            traitsSelected={traitNegatives}
+            setTraitsSelected={setTraitsNegatives}
+            traitsDefault={ficha ? ficha.tracosNegativos : []}
           />
         </div>
         <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -404,7 +449,7 @@ export default function EditFicha() {
             type="submit"
             className="inline-block w-full h-4xl rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-full hover:bg-gray-700"
           >
-            Salvar Ficha
+            {editMode ? "Criar " : "Editar "} Ficha
           </button>
         </div>
       </form>
@@ -413,12 +458,14 @@ export default function EditFicha() {
 }
 const TraitsForm = ({
   isPositiveTrait,
-  traits,
-  setTraits,
+  traitsSelected,
+  setTraitsSelected,
+  traitsDefault = [],
 }: {
   isPositiveTrait: boolean;
-  traits: Trait[];
-  setTraits: Dispatch<SetStateAction<Trait[]>>;
+  traitsSelected: Trait[];
+  setTraitsSelected: Dispatch<SetStateAction<Trait[]>>;
+  traitsDefault: TracoPositivo[] | TracoNegativo[];
 }) => {
   let title = "Traços Negativos";
   if (isPositiveTrait) {
@@ -430,31 +477,42 @@ const TraitsForm = ({
   function enumToKeyValueArray(e: any): Trait[] {
     return Object.keys(e).map((label) => ({ label, title: e[label], value: 1 }));
   }
-  function addLabelToTraits() {
-    const trait = traitsOptions.find((trait) => trait.label === selected);
-    const hasTrait = traits.find((trait) => trait.label === selected);
-    if (trait && !hasTrait) {
-      setTraits([...traits, trait]);
+
+  function addTrait(value = 1) {
+    const trait = traitsOptions.find((trait) => trait.title === selected);
+    const isRepeated = traitsSelected.find((trait) => trait.title === selected);
+    if (trait && !isRepeated) {
+      setTraitsSelected([
+        ...traitsSelected,
+        { label: trait.label, title: trait.title, value: value },
+      ]);
     }
   }
+
   function updateTraitValue(label: string, value: number) {
-    const trait = traits.find((trait) => trait.label === label);
+    const trait = traitsSelected.find((trait) => trait.label === label);
     if (trait) {
       trait.value = value;
     }
-    setTraits([...traits]);
-    console.log(traits);
+    setTraitsSelected([...traitsSelected]);
+    console.log(traitsSelected);
   }
+
   function removeTrait(label: string) {
-    setTraits(traits.filter((trait) => trait.label !== label));
+    setTraitsSelected(traitsSelected.filter((trait) => trait.label !== label));
   }
+
   useEffect(() => {
     if (isPositiveTrait) {
       setTraitsOptions(enumToKeyValueArray(TracosPositivos));
     } else {
       setTraitsOptions(enumToKeyValueArray(TracosNegativos));
     }
-  }, [isPositiveTrait]);
+    traitsDefault.forEach((trait: any) => {
+      setSelected(trait.traco);
+      addTrait(trait.valor);
+    });
+  }, [isPositiveTrait, traitsDefault]);
 
   return (
     <div className={s.ficha_traits}>
@@ -466,16 +524,16 @@ const TraitsForm = ({
         onChange={(e) => setSelected(e.target.value)}
       >
         {traitsOptions.map((trait, id) => (
-          <option key={id} value={trait.label}>
+          <option key={id} value={trait.title}>
             {trait.title}
           </option>
         ))}
       </select>
-      <button onClick={addLabelToTraits} type="button">
+      <button onClick={() => addTrait()} type="button">
         Adicionar
       </button>
       <ul>
-        {traits.map((trait, id) => (
+        {traitsSelected.map((trait, id) => (
           <li key={id}>
             <h1>{trait.title}</h1>{" "}
             <input
