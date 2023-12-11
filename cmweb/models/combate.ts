@@ -80,17 +80,17 @@ export class Combate{
             this.campanha.registroAcoes.push(fichas[0].toString() + " obteve um acerto crítico, " + fichas[1].toString() + " recebeu " + dano + " de dano, descontado totalmente dos Pontos de Vida!");
         } else if(d20[0] == 1) {
 
-            if(dano < fichas[0].PdA/2) {
+            if(dano < Math.floor(fichas[0].PdA/2)) {
                 fichas[0].PdA -= dano;
     
                 fichas[0].registroAcoes.push(fichas[0].toString() + " obteve uma falha crítica, recebeu " + dano + " de dano, descontado totalmente dos Pontos de Armadura!");
                 fichas[1].registroAcoes.push(fichas[0].toString() + " obteve uma falha crítica, recebeu " + dano + " de dano, descontado totalmente dos Pontos de Armadura!");
                 this.campanha.registroAcoes.push(fichas[0].toString() + " obteve uma falha crítica, recebeu " + dano + " de dano, descontado totalmente dos Pontos de Armadura!");
             } else {
-                let danoPV = dano/2;
-                fichas[0].PV -= dano/2;
+                let danoPV = Math.floor(dano/2);
+                fichas[0].PV -= Math.floor(dano/2);
     
-                dano -= dano/2;
+                dano -= Math.floor(dano/2);
                 let danoPdA = dano;
     
                 fichas[0].PdA -= dano;
@@ -112,17 +112,17 @@ export class Combate{
 
             return;
         
-        }else if(dano < fichas[1].PdA/2) {
+        }else if(dano < Math.floor(fichas[1].PdA/2)) {
             fichas[1].PdA -= dano;
 
             fichas[0].registroAcoes.push(fichas[1].toString() + " recebeu " + dano + " de dano, descontado totalmente dos Pontos de Armadura!");
             fichas[1].registroAcoes.push(fichas[1].toString() + " recebeu " + dano + " de dano, descontado totalmente dos Pontos de Armadura!");
             this.campanha.registroAcoes.push(fichas[1].toString() + " recebeu " + dano + " de dano, descontado totalmente dos Pontos de Armadura!");
         } else {
-            let danoPV = dano/2;
-            fichas[1].PV -= dano/2;
+            let danoPV = Math.floor(dano/2);
+            fichas[1].PV -= Math.floor(dano/2);
 
-            dano -= dano/2;
+            dano -= Math.floor(dano/2);
             let danoPdA = dano;
 
             fichas[1].PdA -= dano;
@@ -179,9 +179,16 @@ export class Combate{
 
     }
 
-    realizarAcao(fichaAcao:Ficha, ficha:Ficha, teste:Testes):void{
-        fichaAcao.registroAcoes.push("Realize um teste de " + teste + "!");
-        ficha.registroAcoes.push("Escolha um tipo de reação: Defender, Esquivar ou Não Reagir. Em seguida, role os dados e realize a reação!");
+    realizarAcao(op:number, fichaAcao:Ficha, ficha:Ficha, teste:Testes):void{
+        // op - 1 acao, op - 2 retaliacao
+        if(op == 1) {
+            fichaAcao.registroAcoes.push("Realize um teste de " + teste + "!");
+            ficha.registroAcoes.push("Você está sofrendo uma Ação. Escolha um tipo de reação: Defender, Esquivar ou Não Reagir. Em seguida, role os dados e realize a reação!");
+        } else {
+            fichaAcao.registroAcoes.push("Realize um teste de " + teste + "!");
+            ficha.registroAcoes.push("Você está sofrendo uma Retaliação, role os dados!");
+        }
+        
     }
 
     realizarReacao(ficha:Ficha, escolhaReacao:Reacao, d20:number):number{
