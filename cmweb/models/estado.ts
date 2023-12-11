@@ -35,8 +35,7 @@ export enum Estados {
     Fratura = 'Fratura óssea',
     Envenenamento = 'Envenenamento',
     Fome = 'Fome',
-    Frio = 'Frio',
-    Calor = 'Calor',
+    FrioCalor = 'Frio/Calor',
     Humilhacao = 'Humilhação',
     TraumaFisico = 'Trauma físico',
     TraumaPsicologico = 'Trauma psicológico',
@@ -111,13 +110,8 @@ estados[Estados.Fome] = {
     testes_afetados: [Testes.Forca, Testes.Sobrevivencia] 
 };
 
-estados[Estados.Frio] = { 
-    nome: Estados.Frio, 
-    testes_afetados: [Testes.Forca, Testes.Agilidade] 
-};
-
-estados[Estados.Calor] = { 
-    nome: Estados.Calor, 
+estados[Estados.FrioCalor] = { 
+    nome: Estados.FrioCalor, 
     testes_afetados: [Testes.Forca, Testes.Agilidade] 
 };
 

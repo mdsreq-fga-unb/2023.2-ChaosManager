@@ -1,4 +1,5 @@
 'use client'
+import Combat from '../Components/Combate/Combate';
 import GetDB from '../Components/Tests/GET/GetDB';
 import PostDB from '../Components/Tests/POST/PostDB';
 import PutDB from '../Components/Tests/PUT/PutDB';
@@ -13,6 +14,7 @@ export default function GetAndPostDBPage() {
       <GetDB socket={socket} />
       <PostDB socket={socket} />
       <PutDB socket={socket} />
+      <Combat socket={socket} />
     </div>
   );
 }
