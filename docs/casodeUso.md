@@ -189,7 +189,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Emerson Teles e Larissa Gomes</td>
+        <td>Emerson Teles,Larissa Gomes, Oscar de Brito e Gustavo França</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -210,7 +210,7 @@
             <p>3.5. O sistema faz a validação das informações. (FE01) (FE02) (RN01)</p>
             <p>3.6. O sistema cria a sala de campanha.</p>
             <p>3.7. O sistema gera um código de acesso para que os jogadores possam acessar a sala de campanha. (RN02)</p>
-            <p>3.8. O sistema informa ao mestre as instruções de acesso e o código de acesso dos jogadores.</p>
+            <p>3.8. O sistema informa ao mestre as instruções de acesso e o código de acesso dos jogadores.(RN03)</p>
         </td>
     </tr>
     <tr>
@@ -271,26 +271,14 @@
                 </tr>
             </table>
             <br>
-            RN02 - Validação de informações
-            <table>
-                <tr>
-                    <th>Atributo</th>
-                    <th>Tipo</th>
-                    <th>Obrigatoriedade</th>
-                    <th>Observação</th>
-                </tr>
-                <tr>
-                    <td>Código de acesso</td>
-                    <td>Int</td>
-                    <td>True</td>
-                    <td>O código de acesso dos jogadores deve ter 6 dígitos, sendo gerado entre 100.000 e 999.999</td>
-                </tr>
-                <tr>
-                    <td>Instruções de acesso</td>
-                    <td>String</td>
-                    <td>True</td>
-                </tr>
-            </table>
+            <p>
+            RN02 - O código de acesso dos jogadores deve ter 6 dígitos, sendo gerado entre 100.000 e 999.999
+            </p>
+             <p>
+            RN03 - As instruções de acesso devem conter o nome da campanha,  a senha de acesso do mestre e o código de acesso dos jogadores
+            <P>
+            </p>
+        </td>
         </td>
     </tr>
 </table>
@@ -309,7 +297,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Emerson Teles e Larissa Gomes</td>
+        <td>Emerson Teles,Larissa Gomes,Oscar de Brito e Gustavo França</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -402,7 +390,7 @@
 </tr>
 <tr>
     <td>Autor</td>
-    <td>Larissa Gomes</td>
+    <td>Larissa Gomes,Oscar de Brito e Gustavo França</td>
 </tr>
 <tr>
     <td>1. Atores</td>
@@ -517,7 +505,7 @@
     </tr>
     <tr>
         <th>Autores</th>
-        <td>Gustavo França, Larissa Gomes e Pedro Eduardo</td>
+        <td>Gustavo França, Larissa Gomes, Pedro Eduardo e Oscar de Brito</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -537,18 +525,18 @@
             <p>-  Lista de Fichas de Personagens (FA01)</p>
             <p>3.3. O usuário seleciona a opção “Criar ficha”</p>
             <p>3.4. O usuário fornece informações sobre o personagem:</p>
+            <P>- Npc</p>
             <p>- Nome do usuário e do personagem</p>
-            <p>- Raça e profissão (RN016)</p>
+            <p>- Raça e profissão (RN017)</p>
             <p>- Idade e gênero</p>
             <p>- Dinheiro</p>
-            <p>- Traços (RN01) (RN02)</p>
-            <p>- Experiência</p>
+            <p>- Traços (RN01) (RN02) (RN03)</p>
             <p>- História, notas e descrição física.</p>
             <p>3.5. O usuário seleciona os traços do personagem.</p>
             <p>3.6. O usuário atribui os valores dos atributos do personagem.</p>
             <p>3.7. O usuário seleciona a opção “Criar ficha”.</p>
             <p>3.8. O sistema valida as informações. (RN016) (RN017)
-            <p>3.9. O sistema cria uma ficha de personagem com os dados informados. (RN03) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015)</p>
+            <p>3.9. O sistema cria uma ficha de personagem com os dados informados. (RN04) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015)</p>
             <p>3.10. O sistema adiciona a ficha criada a lista de fichas de personagens.</p>
         </td>
     </tr>
@@ -569,13 +557,12 @@
             <p>- Idade e gênero</p>
             <p>- Dinheiro</p>
             <p>- Traços (RN01) (RN02)</p>
-            <p>- Experiência</p>
             <p>- História, notas e descrição física.</p>
             <p>4.1.7. O usuário seleciona o campo da informação que deseja alterar.</p>
             <p>4.1.8. O usuário fornece os novos dados nos campos exibidos.</p>
             <p>4.1.9. O usuário seleciona a opção de “Confirmar”.</p>
-            <p>4.1.10. O sistema valida as informações. (FE01) (RN017)</p>
-            <p>4.1.11. O sistema atualiza os dados da ficha. (RN03) (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015). E, o caso de uso retorna ao 3.2 do FB.</p>
+            <p>4.1.10. O sistema valida as informações. (FE017) (RN018)</p>
+            <p>4.1.11. O sistema atualiza os dados da ficha. (RN04) (RN05) (RN06) (RN07) (RN08) (RN09) (RN010) (RN011) (RN012) (RN013) (RN014) (RN015) (RN016). E, o caso de uso retorna ao 3.2 do FB.</p>
         </td>
     </tr>
     <tr>
@@ -617,28 +604,175 @@
         <td>
             <p>RN:</p>
             <p>(RN01) Se um jogador escolher um traço positivo, deverá escolher também um traço negativo </p>
-            <p>(RN02) Se um jogador escolher um traço, não poderá escolher um traço antagônico</p>
-            <p>(RN03) O valor da força é igual o atributo vigor + habilidade</p>
-            <p>(RN04) O valor da resistência física é igual o atributo vigor + percepção</p>
-            <p>(RN05) O valor da resistência mental é igual o atributo vigor + inteligência</p>
-            <p>(RN06) O valor da sobrevivência é igual o atributo vigor + domínio</p>
-            <p>(RN07) O valor da agilidade é igual o atributo habilidade + percepção</p>
-            <p>(RN08) O valor da destreza é igual o atributo habilidade e domínio</p>
-            <p>(RN09) O valor da competência é igual o atributo inteligência + habilidade</p>
-            <p>(RN010) O valor da criatividade é igual o atributo vigor + habilidade</p>
-            <p>(RN011) O valor da manipulação é igual o atributo inteligência + domínio</p>
-            <p>(RN012) O valor da sorte é igual o atributo domínio + percepção</p>
-            <p>(RN013) O valor do peso é igual à soma dos pesos dos itens, armas e equipamentos</p>
-            <p>(RN014) A capacidade é igual ao valor da Força do personagem</p>
-            <p>(RN015) O valor da capacidade em combate é igual ao atributo Vigor do personagem</p>
-            <p>(RN016) Se o jogador escolher uma profissão com objeto, esse objeto deve ser adicionado a sua ficha.</p>
-            (RN017) - Validação de informações
+            <p>(RN02) Se um jogador escolher um traço, não poderá escolher outro com o mesmo id, pois é um traço antagônico.</p>
+            (RN03) - Validação de informações
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Traço Positivo</th>
+                    <th>Traço Negativo</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Sentidos aguçados</td>
+                    <td>Limitação física/sensorial</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Saúde de ferro</td>
+                    <td>Doença degenerativa</td>
+                </tr>
+                 <tr>
+                    <td>3</td>
+                    <td>Empatia pura</td>
+                    <td>Psicopatia</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Serenidade</td>
+                    <td>Autodestruição</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Regeneração rápida</td>
+                    <td>Doença crônica/mental</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Res. à temperatura/química</td>
+                    <td>Vulnerável à temperatura/química</td>
+                </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Valentia desmedida à</td>
+                    <td>Fobia incontrolável à</td>
+                </tr>
+                 <tr>
+                    <td>8</td>
+                    <td>Imunidade à</td>
+                    <td>Alergia à</td>
+                </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Perfeccionismo</td>
+                    <td>Negligência</td>
+                </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Concentração</td>
+                    <td>Distração</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Sensatez</td>
+                    <td>Insensatez</td>
+                </tr>
+                 <tr>
+                    <td>12</td>
+                    <td>Moderação</td>
+                    <td>Compulsão</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Diligência</td>
+                    <td>Preguiça</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Otimismo</td>
+                    <td>Pessimismo</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Coragem</td>
+                    <td>Covardia</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Honradez</td>
+                    <td>Desonra</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Hipertrofia</td>
+                    <td>Desnutrição</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Robustez</td>
+                    <td>Baixa estatura</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Atraente</td>
+                    <td>Repulsividade</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Conhecido como justo</td>
+                    <td>Conhecido como injusto</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Paciência</td>
+                    <td>Pavio curto</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Bom humor</td>
+                    <td>Depressão</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Ceticismo</td>
+                    <td>Fanatismo</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Flexibilidade</td>
+                    <td>Teimosia</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Extroversão</td>
+                    <td>Timidez</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Perspicácia</td>
+                    <td>Ingenuidade</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Sagacidade</td>
+                    <td>Monotonia</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Eloquência</td>
+                    <td>Dicção prejudicada</td>
+                </tr>
+            </table>
+            <p>(RN04) O valor da força é igual o atributo vigor + habilidade</p>
+            <p>(RN05) O valor da resistência física é igual o atributo vigor + percepção</p>
+            <p>(RN06) O valor da resistência mental é igual o atributo vigor + inteligência</p>
+            <p>(RN07) O valor da sobrevivência é igual o atributo vigor + domínio</p>
+            <p>(RN08) O valor da agilidade é igual o atributo habilidade + percepção</p>
+            <p>(RN09) O valor da destreza é igual o atributo habilidade e domínio</p>
+            <p>(RN10) O valor da competência é igual o atributo inteligência + habilidade</p>
+            <p>(RN011) O valor da criatividade é igual o atributo vigor + habilidade</p>
+            <p>(RN012) O valor da manipulação é igual o atributo inteligência + domínio</p>
+            <p>(RN013) O valor da sorte é igual o atributo domínio + percepção</p>
+            <p>(RN014) O valor do peso é igual à soma dos pesos dos itens, armas e equipamentos</p>
+            <p>(RN015) A capacidade é igual ao valor da Força do personagem</p>
+            <p>(RN016) O valor da capacidade em combate é igual ao atributo Vigor do personagem</p>
+            <p>(RN017) Se o jogador escolher uma profissão com objeto, esse objeto deve ser adicionado a sua ficha.</p>
+            (RN018) - Validação de informações
             <table>
                 <tr>
                     <th>Atributo</th>
                     <th>Tipo</th>
                     <th>Obrigatoriedade</th>
-                    <th>Observação</th>
                 </tr>
                 <tr>
                     <td>Nome do Usuário</td>
@@ -650,10 +784,15 @@
                     <td>String</td>
                     <td>True</td>
                 </tr>
+                 <tr>
+                    <td>NPC</td>
+                    <td>Boolean</td>
+                    <td>True</td>
+                </tr>
                 <tr>
                     <td>História</td>
                     <td>String</td>
-                    <td>True</td>
+                    <td>False</td>
                 </tr>
                 <tr>
                     <td>Notas</td>
@@ -663,6 +802,36 @@
                 <tr>
                     <td>Descrição Física</td>
                     <td>String</td>
+                    <td>False</td>
+                </tr>
+                  <tr>
+                    <td>Idade </td>
+                    <td>Int</td>
+                    <td>False</td>
+                </tr>
+                 <tr>
+                    <td>Gênero </td>
+                    <td>String</td>
+                    <td>False</td>
+                </tr>
+                  <tr>
+                    <td>Raça </td>
+                    <td>Raca/String</td>
+                    <td>False</td>
+                </tr>
+                  <tr>
+                    <td>Profissão</td>
+                    <td>Profissao/String</td>
+                    <td>False</td>
+                </tr>
+                <tr>
+                    <td>Dinheiro</td>
+                    <td>Int</td>
+                    <td>False</td>
+                </tr>
+                 <tr>
+                    <td>Traços</td>
+                    <td>TracoPositivo/TracoNegativo</td>
                     <td>False</td>
                 </tr>
             </table>
@@ -682,10 +851,10 @@
 
 |**Nome do caso de uso** |Excluir ficha de personagem|
 | - | - |
-|**Autores**|Gustavo França, Larissa Gomes e Pedro Eduardo|
+|**Autores**|Gustavo França, Larissa Gomes, Pedro Eduardo e Oscar de Brito|
 |**1. Atores**|Mestre|
 |**2. Breve Descrição**|Este caso de uso é utilizado pelo mestre para excluir uma ficha de personagem quando não mais necessária.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre seleciona a opção “Ficha de personagem”.</p><p>3\.2. O mestre seleciona a opção “Lista de Fichas de Personagens"</p><p>3\.3. O sistema apresenta todas as Fichas de Personagens</p><p>3\.4. O mestre seleciona uma Ficha de Personagem </p><p>3\.5. O sistema apresenta as seguintes opções:</p><p>- Editar (IA01)</p><p>- Excluir <br>3\.6. O mestre seleciona a opção “Excluir”</p><p>3\.7. O mestre seleciona a opção “Confirmar”</p><p>3\.8. O sistema exclui a ficha da “Lista de Fichas de Personagens"</p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre seleciona uma Ficha de Personagem </p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>- Editar (IA01)</p><p>- Excluir <br>3\.3. O mestre seleciona a opção “Excluir”</p><p>3\.4. O mestre seleciona a opção “Confirmar”</p><p>3\.5. O sistema exclui a ficha da “Lista de Fichas de Personagens"</p>|
 |**4. Fluxo Alternativos**|Não há|
 |**5. Fluxos de exceção**|Não há|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado na sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada.</p>|
@@ -706,14 +875,14 @@
 |**Autores**|Gustavo França, Pedro Eduardo e Larissa Gomes|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. Serão referenciados como usuário.|
 |**2. Breve Descrição**|Este caso de uso protagoniza momentos em que os Jogadores e os personagens do Mestre precisam realizar ações que demandem alguma dificuldade, onde é possível realizar 10 testes diferentes.|
-|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário abre o campo de teste</p><p>3\.2. O sistema apresenta as seguintes opções:</p><p>- Força</p><p>- Resistência Física</p><p>- Resistência Mental</p><p>- Sobrevivência</p><p>- Agilidade</p><p>- Destreza</p><p>- Competência (FA01)</p><p>- Criatividade</p><p>- Manipulação</p><p>- Sorte</p><p>3\.2. O usuário seleciona o teste que irá realizar</p><p>3\.3. O usuário seleciona “rolar dados”</p><p>3\.4. O sistema mostra o resultado do teste no registro de ações. (FE01) (FE02) (RN01) (RN02)</p>|
-|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Teste de Competência</p><p>4.1.1. O usuário seleciona o teste de competência.</p><p>4.1.2. O usuário informa quanto pontos de energia deseja utilizar.</p><p>4.1.3. O usuário seleciona “rolar dados”.</p><p>4.1.4. O sistema deduz os pontos de energia utilizados da ficha do personagem.</p><p>O caso de uso retorna ao 3.4 do FB.</p><p></p>|
-|**5. Fluxos de exceção**|<p>5\.1. FE01 - Falha crítica</p><p>No passo 3.4 do FB e 4.1.5 do FA01, se valor do dado for 1, o sistema deve emitir a mensagem: “Falha crítica” no Registro de Ações. E, o caso de uso retorna ao 3.4 do FB.</p><p>5\.2. FE02 - Acerto crítico</p><p>No passo 3.4 do FB e 4.1.5 do FA01, se o valor do dado for 20, o sistema deve emitir a mensagem: “Acerto crítico” no Registro de Ações. E, o caso de uso retorna ao 3.4 do FB.</p><p></p>|
+|**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O usuário seleciona uma das seguintes opções:</p><p>- Força</p><p>- Resistência Física</p><p>- Resistência Mental</p><p>- Sobrevivência</p><p>- Agilidade</p><p>- Destreza</p><p>- Competência (FA01)</p><p>- Criatividade</p><p>- Manipulação</p><p>- Sorte</p><p>3\.2. O usuário seleciona o teste que irá realizar</p><p>3\.3. O usuário seleciona “Rolar Dados”(RN01)</p><p>3\.4. O usuário seleciona "Realizar Teste"</p><p>3\.5. O sistema mostra o resultado do teste no registro de ações. (FE01) (FE02) (RN02)</p>|
+|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Teste de Competência</p><p>4.1.1. O usuário seleciona o teste de competência.</p><p>4.1.2. O usuário informa quanto pontos de energia deseja utilizar.</p><p>O caso de uso retorna ao 3.4 do FB.</p><p></p>|
+|**5. Fluxos de exceção**|<p>5\.1. FE01 - Falha crítica</p><p>No passo 3.4 do FB, se valor do dado for 1, o sistema deve emitir a mensagem: “Falha crítica” no Registro de Ações. E, o caso de uso retorna ao 3.4 do FB.</p><p>5\.2. FE02 - Acerto crítico</p><p>No passo 3.4 do FB, se o valor do dado for 20, o sistema deve emitir a mensagem: “Acerto crítico” no Registro de Ações. E, o caso de uso retorna ao 3.4 do FB.</p><p><p>5\.2. FE03 - Não rolou dados</p><p>No passo 3.4 do FB, se o usuário selecionar para realizar teste sem ter rodado os dados, o sistema deve emitir a mensagem: “Por favor, role os dados” no Registro de Ações. E, o caso de uso retorna ao 3.3 do FB.</p></p>|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado na sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada.</p>|
 |**7. Pós-condições**|7\.1. É retornado o resultado do teste|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Regras de negócio**|<p>RN:</p><p>(RN01) O resultado do teste deve obedecer ao cálculo do teste sendo um inteiro randomizado de 1 a 20 somado ao valor do teste e somado ao valor dos pontos de energia em caso de teste de competência</p><p>(RN02) Um registro de ações deve ser apresentado somente ao Mestre e a quem realizou a ação </p><p></p>|
+|**10. Regras de negócio**|<p>(RN01) Um registro de ações deve ser apresentado somente ao Mestre e a quem realizou a ação </p><p>(RN02) O resultado do teste deve obedecer ao cálculo do teste sendo um inteiro randomizado de 1 a 20 somado ao valor do teste e somado ao valor dos pontos de energia em caso de teste de competência</p><p>(RN03) O resultado do valor do dado (d20) deve ser um inteiro randomizado de 1 a 20</p>|
 <div align="center" style="text-align: center">
 <p><b>Tabela 8:</b> Especificação Caso de Uso 06. </p>
 </div>
@@ -722,7 +891,7 @@
 
 |**Nome do caso de uso** |Gerenciar combate|
 | - | - |
-|**Autor**|Pedro Eduardo e Larissa Gomes|
+|**Autor**|Pedro Eduardo, Larissa Gomes, Oscar de Brito e Gustavo França|
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. Em caso que ambos são elegíveis para o passo, serão referenciados como usuário.|
 |**2. Breve Descrição**|Este caso de uso será utilizado pelo mestre para gerenciar o combate e pelo jogador para reagir as ações do mestre no combate. Para tanto, o mestre pode indicar quem participa do combate e em que ordem, indicar quem participa do turno atacando e sendo atacado e por fim executando o efeito desse combate.|
 |**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre abre o “Gerenciador de combate”.</p><p>3\.2. O mestre seleciona a opção “Adicionar ordem do combate”.</p><p>3\.3. O mestre adiciona as fichas dos personagens que participarão do combate na ordem que será realizado.</p><p>3\.4. O mestre seleciona as fichas de personagem de quem vai realizar e sofrer a ação.</p><p>3\.5. O mestre determina um teste para ser realizado (PI01)</p><p>3\.6. O mestre determina o valor mínimo para passar no teste </p><p>3\.7. O usuário realizando a ação executa o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>3\.8. O usuário sofrendo a ação realiza o teste indicado pelo mestre de acordo com a ação de reação desejada. (PI01) (FA01) </p><p>3\.9. O mestre adiciona o valor da ação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>3\.10. O mestre adiciona o valor da reação (RN05) (RN06) (RN07) </p><p>3\.11. O mestre adiciona pontos de energia (RN010) </p><p>3\.12. O mestre executa o efeito do combate. (RN01) (RN02) (RN03) (RN04) (RN011) (RN012) (RN013)</p><p></p>|
@@ -742,19 +911,119 @@
 
 #### CdU-08 - Gerenciar estados
 
-|**Nome do caso de uso** |Gerenciar estados|
-| - | - |
-|**Autor**|Larissa Gomes|
-|**1. Atores**|Mestre e Jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário.|
-|**2. Breve Descrição**|Este caso de uso é utilizado pelos jogadores e mestre para gerenciar os estados que utilizarão durante a campanha de RPG, bem como adicioná-las e retirá-las de suas fichas de personagem.|
-|**3. Fluxo básico de eventos**|<p>FB.</p><p>3\.1. O usuário acessa a ficha (FA01)</p><p>3\.2. O usuário seleciona um campo vazio na seção de estados da ficha.</p><p>3\.3. O sistema apresenta as seguintes opções de estados:</p><p>- Medo</p><p>- Desespero</p><p>- Estresse</p><p>- Descontrole</p><p>- Inconsciente/coma</p><p>- Tontura</p><p>- Embriaguez</p><p>- Náusea</p><p>- Hemorragia</p><p>- Fratura óssea</p><p>- Envenenamento</p><p>- Fome</p><p>- Frio/Calor</p><p>- Humilhação</p><p>- Trauma físico</p><p>- Trauma psicológico</p><p>- Mente controlada</p><p>- Estado crítico de saúde</p><p>3\.4. O usuário seleciona o estado desejado das opções</p><p>3\.5. O usuário seleciona a opção de “confirmar”.</p><p>3\.6. O sistema valida o estado. (FE01)</p><p>3\.7. O sistema adiciona o estado na ficha.</p><p>3\.8. O sistema aplica as penalidades do estado na ficha do personagem.</p>|
-|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Retirar Estado</p><p>4.1.1. O usuário seleciona o campo do estado que deseja retirar na seção de Traços&Estados da ficha.</p><p>4.1.2. O usuário seleciona a opção “retirar estado”.</p><p>4.1.3. O sistema retira o estado da ficha do personagem.</p><p>4.1.4. O sistema remove as penalidades do estado aplicadas na ficha do personagem. E, o caso de uso retorna ao 3.1 do FB.</p><p></p>|
-|**5. Fluxos de exceção**|<p>FE01 – Estado já aplicado</p><p>No passo 3.6 do FB, caso o usuário selecione um estado que já esteja aplicado, o sistema deve emitir a mensagem: “Estado já aplicado”. E, o caso de uso retorna ao 3.4 do FB.</p><p></p>|
-|**6. Pré-condições**|<p>6\.1. Sala de campanha criada. </p><p>6\.2. Estar acessado na sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada.</p>|
-|**7. Pós-condições**|<p>7\.1. É adicionado um estado na ficha </p><p>7\.2. Penalidades são aplicadas ao personagem de acordo com o estado</p><p>7\.3. É retirado uma arma na ficha removendo penalidades (fluxo alternativo)</p>|
-|**8. Pontos de extensão**|Não há|
-|**9. Requisitos especiais**|Não há|
-|**10. Regras de negócio**|Não há|
+<table>
+    <tr>
+        <th>Nome do caso de uso</th>
+        <td>Gerenciar estados</td>
+    </tr>
+    <tr>
+        <th>Autor</th>
+        <td>Larissa Gomes, Oscar de Brito e Gustavo França</td>
+    </tr>
+    <tr>
+        <th>1. Atores</th>
+        <td>Mestre e Jogador possuem essa mesma funcionalidade, nos fluxos serão referidos como usuário.</td>
+    </tr>
+    <tr>
+        <th>2. Breve Descrição</th>
+        <td>Este caso de uso é utilizado pelos jogadores e mestre para gerenciar os estados que utilizarão durante a campanha de RPG, bem como adicioná-las e retirá-las de suas fichas de personagem.</td>
+    </tr>
+    <tr>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>FB.</p>
+            <p>3.1. O usuário acessa a ficha (FA01)</p>
+            <p>3.2. O usuário seleciona um campo vazio na seção de estados da ficha.</p>
+            <p>3.3. O sistema apresenta as seguintes opções de estados:</p>
+            <p>   - Medo</p>
+            <p>   - Desespero</p>
+            <p>   - Estresse</p>
+            <p>   - Descontrole</p>
+            <p>   - Inconsciente/Coma</p>
+            <p>   - Tontura</p>
+            <p>   - Embriaguez</p>
+            <p>   - Náusea</p>
+            <p>   - Hemorragia</p>
+            <p>   - Fratura óssea</p>
+            <p>   - Envenenamento</p>
+            <p>   - Fome</p>
+            <p>   - Frio/Calor</p>
+            <p>   - Humilhação</p>
+            <p>   - Trauma físico</p>
+            <p>   - Trauma psicológico</p>
+            <p>   - Mente controlada</p>
+            <p>   - Estado crítico de saúde</p>
+            <p>3.4. O usuário seleciona o estado desejado das opções</p>
+            <p>3.5. O usuário seleciona a opção de “confirmar”.</p>
+            <p>3.6. O sistema valida as informações. (FE01) (RN01)</p>
+            <p>3.7. O sistema adiciona o estado na ficha.</p>
+            <p>3.8. O sistema aplica as penalidades do estado na ficha do personagem.</p>
+            <p>3.9. O sistema apresenta a ficha do personagem. </p>
+        </td>
+    </tr>
+    <tr>
+        <th>4. Fluxo Alternativos</th>
+        <td>
+            <p>4.1. FA01 – Retirar Estado</p>
+            <p>   4.1.1. O usuário seleciona o campo do estado que deseja retirar na seção de Traços & Estados da ficha.</p>
+            <p>   4.1.2. O usuário seleciona a opção “Retirar estado”.</p>
+            <p>   4.1.3. O sistema retira o estado da ficha do personagem.</p>
+            <p>   4.1.4. O sistema remove as penalidades do estado aplicadas na ficha do personagem.</p>
+            <p>   O caso de uso retorna ao 3.9 do FB.</p>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>FE01 – Estado já aplicado</p>
+            <p>No passo 3.6 do FB, caso o usuário selecione um estado que já esteja aplicado, o sistema deve emitir a mensagem: “Estado já aplicado”. E, o caso de uso retorna ao 3.4 do FB.</p>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. Sala de campanha criada. </p>
+            <p>6.2. Estar acessado na sala de campanha de RPG</p>
+            <p>6.3. Ficha de personagem criada.</p>
+        </td>
+    </tr>
+    <tr>
+        <th>7. Pós-condições</th>
+        <td>
+            <p>7.1. É adicionado um estado na ficha </p>
+            <p>7.2. Penalidades são aplicadas ao personagem de acordo com o estado</p>
+            <p>7.3. É retirado um estado da ficha removendo penalidades (fluxo alternativo)</p>
+        </td>
+    </tr>
+    <tr>
+        <th>8. Pontos de extensão</th>
+        <td>Não há</td>
+    </tr>
+    <tr>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
+    </tr>
+    <tr>
+        <th>10. Regras de negócio</th>
+        <td>(RN01) - Validação de informações
+            <table>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Tipo</th>
+                    <th>Obrigatoriedade</th>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td>enum.key</td>
+                    <td>True</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 10:</b> Especificação Caso de Uso 08. </p>
@@ -769,7 +1038,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Oscar Brito e Larissa Gomes</td>
+        <td>Oscar de Brito, Larissa Gomes, Gustavo França</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -796,8 +1065,9 @@
             <p>- Mentalização </p>
             <p>3.4. O usuário preenche o campo de nome. </p>
             <p>3.5. O usuário seleciona a opção de “Confirmar”.</p>
-            <p>3.6.  O sistema valida a magia. (FE01) (RN01). </p>
+            <p>3.6.  O sistema valida as informações. (FE01) (RN01). </p>
              <p>3.7. O sistema adiciona a magia na ficha. </p>
+            <p> 3.8. O sistema apresenta a ficha do personagem.</p>
         </td>
     </tr>
     <tr>
@@ -806,7 +1076,8 @@
             <p>4.1. FA01 – Retirar magia</p>
             <p>4.1.1. O usuário seleciona o campo da magia que deseja retirar na seção de magia da ficha.</p>
             <p>4.1.2. O usuário seleciona a opção “Retirar magia”.</p>
-            <p>4.1.3. O sistema retira a magia da ficha do personagem. O caso de uso retorna ao 3.1 do FB.</p>
+            <p>4.1.3. O sistema retira a magia da ficha do personagem.</p>
+            <p>O caso de uso retorna ao 3.8 do FB.</p>
             <p></p>
         </td>
     </tr>
@@ -848,11 +1119,10 @@
                     <th>Atributo</th>
                     <th>Tipo</th>
                     <th>Obrigatoriedade</th>
-                    <th>Observação</th>
                 </tr>
                 <tr>
-                    <td>Nome</td>
-                    <td>String</td>
+                    <td>Magia</td>
+                    <td>enum.key</td>
                     <td>True</td>
                 </tr>
             </table>
@@ -879,7 +1149,7 @@
   <tbody>
     <tr>
       <td>Autor</td>
-      <td>Larissa Gomes</td>
+      <td>Larissa Gomes, Oscar de Brito e Gustavo França</td>
     </tr>
     <tr>
       <td>1. Atores</td>
@@ -896,13 +1166,14 @@
         <p>3.1. O usuário acessa a ficha. (FA02)</p>
         <p>3.2. O usuário seleciona um campo vazio na seção de arma da ficha.</p>
         <p>3.3. O sistema verifica se o usuário seleciona opção “arma existente” (FA01)</p>
-        <p>3.4. O usuário preenche os campos de nome, teste usado e peso.</p>
+        <p>3.4. O usuário preenche os campos de nome, teste usado e peso.(RN02)</p>
         <p>3.5. O usuário seleciona o modificador de dano da arma.</p>
         <p>3.6. O usuário seleciona a opção de “confirmar”.</p>
-        <p>3.7. O sistema faz a validação da arma. (FE01) (RN01) (RN02)</p>
+        <p>3.7. O sistema faz a validação da arma. (FE01) (RN01)</p>
         <p>3.8. O sistema adiciona a arma na ficha.</p>
         <p>3.9. O sistema adiciona a arma à lista de armas existentes.</p>
         <p>3.10. O sistema adiciona o peso da arma ao peso carregado do personagem.</p>
+        <p>3.11. O sistema apresenta a ficha do personagem.</p>
       </td>
     </tr>
     <tr>
@@ -910,15 +1181,15 @@
       <td>
         <p>4.1. FA01 – Seleciona Arma Existente</p>
         <p>4.1.1. O usuário seleciona opção “arma existente”.</p>
-        <p>4.1.2. O usuário seleciona uma arma da lista.</p>
-        <p>O caso de uso retorna ao 3.6 do FB.</p>
+        <p>4.1.2. O usuário seleciona uma arma da lista.(RN03)</p>
+        <p>O caso de uso retorna ao 3.11 do FB.</p>
         <p></p>
         <p>4.2. FA02 – Retirar Arma</p>
         <p>4.2.1. O usuário seleciona o campo da arma que deseja retirar na seção de arma da ficha.</p>
         <p>4.2.2. O usuário seleciona a opção “retirar arma”.</p>
         <p>4.2.3. O sistema remove o peso da arma do peso carregado do personagem.</p>
         <p>4.2.4. O sistema retira a arma da ficha do personagem.</p> 
-        <p>O caso de uso retorna ao 3.1 do FB.</p>
+        <p>O caso de uso retorna ao 3.11 do FB.</p>
       </td>
     </tr>
     <tr>
@@ -989,8 +1260,82 @@
             <p>Criatividade</p>
             <p>Manipulação</p>
             <p>Sorte</p>
-            </td>
+            (RN03) - Armas disponíveis:
+            <table>
+                 <tr>
+                    <th>Armas</th>
+                </tr>
+                <tr>
+        <td>Faca/adaga</td>
     </tr>
+    <tr>
+        <td>Foice</td>
+    </tr>
+    <tr>
+        <td>Espada</td>
+    </tr>
+    <tr>
+        <td>Espada longa (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Katana (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Machadinho</td>
+    </tr>
+    <tr>
+        <td>Alabarda (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Marreta (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Porrete</td>
+    </tr>
+    <tr>
+        <td>Maça dentada</td>
+    </tr>
+    <tr>
+        <td>Chicote</td>
+    </tr>
+    <tr>
+        <td>Tridente (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Bastão (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Arco curto (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Arco longo (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Shuriken</td>
+    </tr>
+    <tr>
+        <td>Rifle de precisão</td>
+    </tr>
+    <tr>
+        <td>Besta</td>
+    </tr>
+    <tr>
+        <td>Revolver</td>
+    </tr>
+    <tr>
+        <td>Pistola semi-auto</td>
+    </tr>
+    <tr>
+        <td>Espingarda (2-mãos)</td>
+    </tr>
+    <tr>
+        <td>Submetralhadora</td>
+    </tr>
+    <tr>
+        <td>Rifle de assalto</td>
+    </tr>
+</table>
+            </table>
   </tbody>
 </table>
 
@@ -1004,7 +1349,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Larissa Gomes</td>
+        <td>Larissa Gomes, Oscar de Brito e Gustavo França</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -1027,6 +1372,7 @@
             <p>3.7. O sistema adiciona o equipamento na ficha.</p>
             <p>3.8. O sistema adiciona a arma a lista de equipamentos existentes.</p>
             <p>3.9. O sistema adiciona o peso do equipamento ao peso carregado do personagem.</p>
+            <p>3.10. O sistema apresenta a ficha do personagem.</p>
         </td>
     </tr>
     <tr>
@@ -1034,15 +1380,15 @@
         <td>
             <p>4.1. FA01 – Seleciona Equipamento Existente</p>
             <p>4.1.1. O usuário seleciona opção “equipamento existente”.</p>
-            <p>4.1.2. O usuário seleciona um equipamento da lista.</p>
-            <p>O caso de uso retorna ao 3.5 do FB.</p>
+            <p>4.1.2. O usuário seleciona um equipamento da lista.(RN02)</p>
+            <p>O caso de uso retorna ao 3.10 do FB.</p>
             <p></p>
             <p>4.2. FA02 – Retirar Equipamento</p>
             <p>4.2.1. O usuário seleciona o campo do equipamento que deseja retirar na seção de equipamento da ficha.</p>
             <p>4.2.2. O usuário seleciona a opção “retirar equipamento”.</p>
             <p>4.2.3. O sistema remove o peso do equipamento do peso carregado do personagem. </p>
             <p>4.2.4. O sistema retira o equipamento da ficha do personagem.</p>
-            <p> O caso de uso retorna ao passo 3.1 do FB
+            <p> O caso de uso retorna ao passo 3.10 do FB
         </td>
     </tr>
     <tr>
@@ -1103,8 +1449,82 @@
                     <td>True</td>
                 </tr>
             </table>
-        </td>
+            (RN02)
+            <table>
+                <tr>
+                        <th>Equipamentos</th>
+                    </tr>
+                <tr>
+        <td>Traje de peles</td>
     </tr>
+    <tr>
+        <td>Traje de couro</td>
+    </tr>
+    <tr>
+        <td>Cota de malha</td>
+    </tr>
+    <tr>
+        <td>Armadura de couro de crocodilo</td>
+    </tr>
+    <tr>
+        <td>Peitoral de ferro</td>
+    </tr>
+    <tr>
+        <td>Colete à prova de balas (leve)</td>
+    </tr>
+    <tr>
+        <td>Colete à prova de balas (médio)</td>
+    </tr>
+    <tr>
+        <td>Ō-yoroi/armadura samurai</td>
+    </tr>
+    <tr>
+        <td>Armadura de centurião</td>
+    </tr>
+    <tr>
+        <td>Couraça de aço</td>
+    </tr>
+    <tr>
+        <td>Colete à prova de balas (pesado)</td>
+    </tr>
+    <tr>
+        <td>Armadura de cavaleiro</td>
+    </tr>
+    <tr>
+        <td>Escudo de madeira</td>
+    </tr>
+    <tr>
+        <td>Scutum (escudo romano)</td>
+    </tr>
+    <tr>
+        <td>Broquel (escudo pequeno)</td>
+    </tr>
+    <tr>
+        <td>Escudo de ferro</td>
+    </tr>
+    <tr>
+        <td>Escudo de aço</td>
+    </tr>
+    <tr>
+        <td>Escudo eletrônico</td>
+    </tr>
+    <tr>
+        <td>Capacete de couro</td>
+    </tr>
+    <tr>
+        <td>Capacete de obras</td>
+    </tr>
+    <tr>
+        <td>Capacete militar moderno</td>
+    </tr>
+    <tr>
+        <td>Elmo viking</td>
+    </tr>
+    <tr>
+        <td>Elmo de cavaleiro</td>
+    </tr>
+        </tr>
+                </table>
 </table>
 
 
@@ -1125,7 +1545,7 @@
   <tbody>
     <tr>
       <td>Autor</td>
-      <td>Larissa Gomes</td>
+      <td>Larissa Gomes, Oscar de Brito e Gustavo França</td>
     </tr>
     <tr>
       <td>1. Atores</td>
@@ -1146,6 +1566,7 @@
         <p>3.5. O sistema valida as informações (RN02).</p>
         <p>3.6. O sistema adiciona uma unidade do item na ficha.</p>
         <p>3.7. O sistema adiciona o peso do item ao peso carregado do personagem.</p>
+        <p>3.8. O sistema apresenta a ficha do personagem.</p>
       </td>
     </tr>
     <tr>
@@ -1158,13 +1579,13 @@
         <p>4.1.4. O usuário seleciona a opção de “confirmar”.</p>
         <p>4.1.5. O sistema valida a nova quantidade. (FE01) (FE02)</p>
         <p>4.1.6. O sistema atualiza o peso carregado do personagem. (RN01)</p>
-        <p>4.1.7. O sistema atualiza a nova quantidade do item na ficha, O Fluxo alternativo retorna para o item 3.1 do FB.</p>
+        <p>4.1.7. O sistema atualiza a nova quantidade do item na ficha, O Fluxo alternativo retorna para o item 3.8 do FB.</p>
         <p></p>
         <p>4.2. FA02 – Retirar Item</p>
         <p>4.2.1. O usuário seleciona o campo do item que deseja retirar na seção de item da ficha.</p>
         <p>4.2.2. O usuário seleciona a opção “retirar item”.</p>
         <p>4.2.3. O sistema remove o peso do item do peso carregado do personagem.</p>
-        <p>4.2.4. O sistema retira o item da ficha do personagem, O Fluxo alternativo retorna para o item 3.1 do FB.</p>
+        <p>4.2.4. O sistema retira o item da ficha do personagem, O Fluxo alternativo retorna para o item 3.8 do FB.</p>
       </td>
     </tr>
     <tr>
@@ -1244,7 +1665,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Oscar</td>
+        <td>Oscar de Brito e Gustavo França</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -1264,9 +1685,9 @@
             <p>- Editar Raça (FA01)</p>
             <p>- Excluir Raças (FA02)</p>
             <p>3.3. O mestre seleciona a opção de “Criar raça”</p>
-            <p>3.4. O mestre preenche os campos de:</p>
+            <p>3.4. O mestre preenche os campos de: (RN02)</p>
             <p>- Nome</p>
-            <p>- Detalhamento</p>
+            <p>- Descrição </p>
             <p>- Atributos</p>
             <p>- Tabela de idades com seus testes afetados.</p>
             <p>3.5. O mestre seleciona a opção de “confirmar”.</p>
@@ -1283,7 +1704,7 @@
             <p>4.1.2. O mestre seleciona a raça desejada da lista de raças existentes.</p>
             <p>4.1.3. O mestre edita as informações desejadas da raça:</p>
              <p>- Nome </p>
-             <p>- Detalhamento </p>
+             <p>- Descrição </p>
              <p>- Atributo </p>
              <p>- Tabela de Idades </p>
             <p>4.1.4. O mestre seleciona a opção de “confirmar”.</p>
@@ -1342,7 +1763,6 @@
                     <th>Atributo</th>
                     <th>Tipo</th>
                     <th>Obrigatoriedade</th>
-                    <th>Observação</th>
                 </tr>
                 <tr>
                     <td>Nome</td>
@@ -1350,16 +1770,12 @@
                     <td>True</td>
                 </tr>
                 <tr>
-                    <td>Detalhamento</td>
+                    <td>Descrição</td>
                     <td>String</td>
-                    <td>True</td>
-                </tr>
-                 <tr>
-                    <td>Atributos</td>
-                    <td>Int</td>
-                    <td>True</td>
+                    <td>False</td>
                 </tr>
             </table>
+        (RN02) - Em "Atributos" o mestre deve adicionar todos os atributos que a raça escolhida afeta e em quanto são afetados.
         </td>
     </tr>
 </table>
@@ -1378,7 +1794,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Oscar Brito e Larissa Gomes</td>
+        <td>Oscar de Brito, Larissa Gomes, Gustavo França</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -1392,11 +1808,11 @@
         <th>3. Fluxo básico de eventos</th>
         <td>
             <p>FB.</p>
-            <p>3.1. O usuário acessa a área da lista de raças.</p>
+            <p>3.1. O usuário acessa a área da lista de raças. (RN01)</p>
             <p>3.2. O usuário seleciona a raça que deseja visualizar.</p>
             <p>3.3. O sistema mostra as informações de:</p>
             <p>- Nome</p>
-            <p>- Detalhamento</p>
+            <p>- Descrição</p>
             <p>- Atributos</p>
             <p>- Tabela de idades com seus testes afetados.</p>
             <p></p>
@@ -1431,7 +1847,7 @@
     </tr>
     <tr>
         <th>10. Regras de negócio</th>
-        <td>Não há</td>
+        <td>(RN01) - Deve ser possível acessar a lista de raças somente se existir ao menos 1 raça criada </td>
     </tr>
 </table>
 
@@ -1449,7 +1865,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Gustavo França e Larissa Gomes</td>
+        <td>Gustavo França, Larissa Gomes, Oscar de Brito</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -1543,12 +1959,16 @@
                     <th>Atributo</th>
                     <th>Tipo</th>
                     <th>Obrigatoriedade</th>
-                    <th>Observação</th>
                 </tr>
                 <tr>
                     <td>Nome</td>
                     <td>String</td>
                     <td>True</td>
+                </tr>
+                <tr>
+                    <td>Descrição</td>
+                    <td>String</td>
+                    <td>False</td>
                 </tr>
                 <tr>
                     <td>Objeto</td>
@@ -1575,7 +1995,7 @@
     </tr>
     <tr>
         <th>Autor</th>
-        <td>Gustavo França e Larissa Gomes</td>
+        <td>Gustavo França, Larissa Gomes, Oscar de Brito</td>
     </tr>
     <tr>
         <th>1. Atores</th>
@@ -1589,7 +2009,7 @@
         <th>3. Fluxo básico de eventos</th>
         <td>
             <p>FB.</p>
-            <p>3.1. O usuário acessa a área da lista de profissões.</p>
+            <p>3.1. O usuário acessa a área da lista de profissões. (RN01)</p>
             <p>3.2. O usuário seleciona a profissão que deseja visualizar.</p>
             <p>3.3. O sistema mostra as informações de:</p>
             <p>- Nome</p>
@@ -1628,7 +2048,7 @@
     </tr>
     <tr>
         <th>10. Regras de negócio</th>
-        <td>Não há.</td>
+        <td>(RN01) - Deve ser possível acessar a lista de raças somente se existir ao menos 1 profissão criada</td>
     </tr>
 </table>
 
@@ -1690,9 +2110,10 @@
 | :---: | :----: | ------------------------------------ | ------------------------------ |
 | 25/10 |  1.0   | Criação documento de casos de uso | Larissa Gomes e Oscar de Brito |
 | 25/10 |  1.1   | Adição das especificações | Emerson Teles, Gustavo França, Larissa Gomes, Oscar de Brito e Pedro Eduardo|
-| 01/10 |  2.0   | Atualização descrições de caso de uso e correção de especificações | Larissa Gomes |
-| 01/10 |  2.1   | Adicionando DOR e DOD | Larissa Gomes, Emerson Teles e Luciano |
-| 15/10 |  3.0   | Correção das especificações | Larissa Gomes |
-| 20/10 |  4.0   | Correção das especificações e Regras de Negócio | Larissa Gomes, Gustavo França, Oscar Brito e Pedro Eduardo |
-| 22/10 |  4.1   | Correção diagrama e adição diagrama do MVP | Larissa Gomes |
-| 09/12 |  4.2   | Correção das Regras de Negócio | Gustavo França e Oscar de Brito |
+| 01/11 |  2.0   | Atualização descrições de caso de uso e correção de especificações | Larissa Gomes |
+| 01/11 |  2.1   | Adicionando DOR e DOD | Larissa Gomes, Emerson Teles e Luciano |
+| 15/11 |  3.0   | Correção das especificações | Larissa Gomes |
+| 20/11 |  4.0   | Correção das especificações e Regras de Negócio | Larissa Gomes, Gustavo França, Oscar Brito e Pedro Eduardo |
+| 22/11 |  4.1   | Correção diagrama e adição diagrama do MVP | Larissa Gomes |
+| 09/12 |  4.2   | Correção das Regras de Negócio | Gustavo França, Oscar de Brito e Larissa Gomes |
+| 11/12 |  4.3   | Correção das Regras de Negócio | Gustavo França, Oscar de Brito e Larissa Gomes |

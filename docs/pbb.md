@@ -31,7 +31,7 @@ A Figura 1 mostra os problemas indentificados.
 
 ![Problemas](../assets/pbb/problemas.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ## Expectativas
 
@@ -43,7 +43,7 @@ A Figura 2 mostra as expectativas indentificadas.
 
 ![Expectativas](../assets/pbb/expectativas.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ## Personas
 
@@ -55,7 +55,7 @@ A Figura 3 mostra as personas indentificadas.
 
 ![Personas](../assets/pbb/personas.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 
 ## Funcionalidades
@@ -68,7 +68,7 @@ A Figura 4 mostra as funcionalidades indentificadas.
 
 ![Funcionalidades](../assets/pbb/funcionalidades.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 
 ## PBI
@@ -81,7 +81,7 @@ A Figura 5 mostra os itens de backlog do produto já priorizados no canvas.
 
 ![PBI](../assets/pbb/pbi.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 <p style="text-align:justify; text-indent:20px;">
 Para isso foram usados os critérios Frequência de Uso e Valor de Negócio onde os valores númericos são representados na Tabelas 1 e 2.
@@ -101,7 +101,7 @@ Para isso foram usados os critérios Frequência de Uso e Valor de Negócio onde
 
 </center>
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 <font size="2"><p style="text-align: center">Tabela 2: Criterios de Valor de Negócio</p></font>
 
@@ -117,7 +117,7 @@ Para isso foram usados os critérios Frequência de Uso e Valor de Negócio onde
 
 </center>
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 
 <p style="text-align:justify; text-indent:20px;">
@@ -130,7 +130,7 @@ A seguir serão apresentados as tabelas de priorização dos itens, onde valor d
 
 ![Recepcionista](../assets/pbb/recepcionista_priorizacao.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Médico
 
@@ -138,7 +138,7 @@ A seguir serão apresentados as tabelas de priorização dos itens, onde valor d
 
 ![Médico](../assets/pbb/medico_priorizacao.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Farmacêutica
 
@@ -146,7 +146,7 @@ A seguir serão apresentados as tabelas de priorização dos itens, onde valor d
 
 ![Farmacêutica](../assets/pbb/farmaceutica_priorizacao.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Coordenador de Agendamento
 
@@ -154,7 +154,7 @@ A seguir serão apresentados as tabelas de priorização dos itens, onde valor d
 
 ![oordenador](../assets/pbb/coordenador_priorizacao.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Paciente
 
@@ -162,7 +162,7 @@ A seguir serão apresentados as tabelas de priorização dos itens, onde valor d
 
 ![Paciente](../assets/pbb/paciente_priorizacao.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Diretor
 
@@ -170,7 +170,7 @@ A seguir serão apresentados as tabelas de priorização dos itens, onde valor d
 
 ![Diretor](../assets/pbb/diretor_priorizacao.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 
 
@@ -187,7 +187,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 ![Recepcionista](../assets/pbb/recepcionista_us.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Médico
 
@@ -195,7 +195,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 ![Médico](../assets/pbb/medico_us.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Farmacêutica
 
@@ -203,7 +203,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 ![Farmacêutica](../assets/pbb/farmaceutica_us.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Coordenador de Agendamento
 
@@ -211,7 +211,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 ![coordenador](../assets/pbb/coordenador_us.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Paciente
 
@@ -219,7 +219,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 ![Paciente](../assets/pbb/paciente_us.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 ##### Diretor
 
@@ -227,7 +227,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 ![Diretor](../assets/pbb/diretor_us.png)
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
+<font size="2"><p style="text-align: center">Fonte: Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo (2023)</p></font>
 
 
 
@@ -235,7 +235,7 @@ A seguir serão apresentados as histórias de usuario e os seus respectivos crit
 
 | Data  | Versão | Descrição               | Autor           |
 | :---: | :----: | ----------------------- | --------------- |
-| 20/11 |  1.0   | Criação do artefato pbb | Luciano Ricardo |
+| 20/11 |  1.0   | Criação do artefato pbb | Emerson Teles, Gustavo França, Larissa Gomes, Luciano Ricardo, Oscar de Brito, Pedro Eduardo |
 
 
 
