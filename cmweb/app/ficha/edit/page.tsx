@@ -22,11 +22,12 @@ export default function EditFicha() {
 
   const LoadFicha = async () => {
     try {
-      const campanha_name = "nome legal";
+      const campanha_name = "Nome interessante";
       const query = await Find.findData(campanha_name);
       const { camp } = query;
       SetCampanha(camp as Campanha);
       const fichaFound = camp?.fichas.find((ficha) => ficha._id == Number(fichaId));
+
       if (fichaFound) {
         setFicha(fichaFound);
         setGenderField(fichaFound.dados.genero);
@@ -157,7 +158,7 @@ export default function EditFicha() {
 
   async function createFicha(values: any) {
     try {
-      const campanha_name = "nome legal";
+      const campanha_name = "Nome interessante";
       const query = await Find.findData(campanha_name);
       const { status, message, camp, result } = await query;
 
@@ -179,7 +180,7 @@ export default function EditFicha() {
         values.qi,
         values.dominio,
       ];
-      const novaFicha = new Ficha(playerType == "Jogador");
+      const novaFicha = new Ficha(playerType == "NPC");
       novaFicha.Dados(dados, [values.notas]);
       novaFicha.Atributos(atributos);
       novaFicha.Dinheiro = Number(values.dinheiro);
@@ -540,7 +541,6 @@ const TraitsForm = ({
       trait.value = value;
     }
     setTraitsSelected([...traitsSelected]);
-    console.log(traitsSelected);
   }
 
   function removeTrait(label: string) {
