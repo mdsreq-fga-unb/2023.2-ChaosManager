@@ -1,7 +1,7 @@
 import { Ficha } from "@/models/ficha";
 
 export class Campanha {
-  _id: string = '';
+  _id: string = "";
   nome: string;
   historia: string;
   senha_mestre: string;
@@ -17,45 +17,46 @@ export class Campanha {
   }
 
   addFicha(ficha: Ficha) {
-    if(ficha.NPC) this.fichas_NPC.push(ficha);
+    ficha._id = this.fichas.length + 1;
+    if (ficha.NPC) this.fichas_NPC.push(ficha);
     else this.fichas.push(ficha);
   }
 
-  static gerarSenha():number {
+  static gerarSenha(): number {
     const min = Math.ceil(100000);
     const max = Math.floor(999999);
-    return Math.floor(Math.random() * (max - min) + min); 
+    return Math.floor(Math.random() * (max - min) + min);
   }
 
-  async saveData() { 
+  async saveData() {
     try {
-      const response = await fetch('/api/campanhas/', {   
-        method: 'POST',
+      const response = await fetch("/api/campanhas/", {
+        method: "POST",
         headers: {
-          Accept: 'application/json',
-          method: 'POST'
+          Accept: "application/json",
+          method: "POST",
         },
-        body: JSON.stringify(this)
+        body: JSON.stringify(this),
       });
       const data = await response.json();
-      const {status, message, newId} = data;
+      const { status, message, newId } = data;
       this._id = newId;
       const _ = await this.updateData();
-      return {status, message};
+      return { status, message };
     } catch (error) {
       throw error;
     }
   }
 
-  async updateData() {  
+  async updateData() {
     try {
       const response = await fetch(`/api/campanhas/`, {
-        method: 'PUT',     
+        method: "PUT",
         headers: {
-          Accept: 'application/json',
-          method: 'PUT'
+          Accept: "application/json",
+          method: "PUT",
         },
-        body: JSON.stringify(this)
+        body: JSON.stringify(this),
       });
       return response;
     } catch (error) {
@@ -77,15 +78,15 @@ export class Campanha {
   }
 }
 
-export class Find{
+export class Find {
   static async findData(nome: string) {
     try {
       const response = await fetch(`/api/campanhas/?nome=${nome}`);
       const data = await response.json();
-      const {status, message, result} = data;
+      const { status, message, result } = data;
       console.log(result[0]);
       const camp = Campanha.toObj(result[0]);
-      return {status, message, result, camp};
+      return { status, message, result, camp };
     } catch (error) {
       throw error;
     }
