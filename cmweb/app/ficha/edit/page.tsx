@@ -16,46 +16,54 @@ export default function EditFicha() {
   const [playerType, setPlayerType] = useState<"NPC" | "Jogador">("Jogador");
   const [editMode, setEditMode] = useState<"Criar" | "Editar">("Criar");
   const [ficha, setFicha] = useState<Ficha | null>(null);
+  const [campanha, SetCampanha] = useState<Campanha | null>(null);
   const searchParams = useSearchParams();
   const fichaId = searchParams.get("fichaId");
+
+  const LoadFicha = async () => {
+    try {
+      const campanha_name = "nome legal";
+      const query = await Find.findData(campanha_name);
+      const { camp } = query;
+      SetCampanha(camp as Campanha);
+      const fichaFound = camp?.fichas.find((ficha) => ficha._id == Number(fichaId));
+      if (fichaFound) {
+        setFicha(fichaFound);
+        setGenderField(fichaFound.dados.genero);
+        setPlayerType(fichaFound.NPC ? "NPC" : "Jogador");
+        if (formik.values.nomeJogador == "") {
+          formik.setValues({
+            nomeUsuario: fichaFound.dados.nomeUsuario,
+            nomeJogador: fichaFound.dados.nomeJogador,
+            raca: fichaFound.dados.raca,
+            profissao: fichaFound.dados.profissao,
+            idade: fichaFound.dados.idade,
+            genero: fichaFound.dados.genero,
+            historia: fichaFound.dados.historia,
+            descricao: fichaFound.dados.descricao,
+            notas: fichaFound.dados.notas[0],
+            dinheiro: String(fichaFound.Dinheiro),
+            vigor: fichaFound.atributos.Vigor,
+            habilidade: fichaFound.atributos.Habilidade,
+            perception: fichaFound.atributos.Percepcao,
+            qi: fichaFound.atributos.Inteligencia,
+            dominio: fichaFound.atributos.Dominio,
+          });
+        }
+      } else {
+        alert("Ficha não encontrada");
+      }
+    } catch (error) {
+      alert((error as Error)?.message);
+    }
+  };
+
   useEffect(() => {
     if (fichaId) {
       setEditMode("Editar");
-      LoadFicha();
-    } else {
+      LoadFicha(); // Use await se LoadFicha for assíncrona
     }
-  });
-  const LoadFicha = async () => {
-    const campanha_name = "nome legal";
-    const query = await Find.findData(campanha_name);
-    const { camp } = query;
-    let campanha: Campanha = camp as Campanha;
-    const fichaFound = campanha.fichas.find((ficha) => ficha._id == Number(fichaId));
-    if (fichaFound) {
-      setFicha(fichaFound);
-      setGenderField(fichaFound.dados.genero);
-      setPlayerType(fichaFound.NPC ? "NPC" : "Jogador");
-      formik.setValues({
-        nomeUsuario: fichaFound.dados.nomeUsuario,
-        nomeJogador: fichaFound.dados.nomeJogador,
-        raca: fichaFound.dados.raca,
-        profissao: fichaFound.dados.profissao,
-        idade: fichaFound.dados.idade,
-        genero: fichaFound.dados.genero,
-        historia: fichaFound.dados.historia,
-        descricao: fichaFound.dados.descricao,
-        notas: fichaFound.dados.notas[0],
-        dinheiro: String(fichaFound.Dinheiro),
-        vigor: fichaFound.atributos.Vigor,
-        habilidade: fichaFound.atributos.Habilidade,
-        perception: fichaFound.atributos.Percepcao,
-        qi: fichaFound.atributos.Inteligencia,
-        dominio: fichaFound.atributos.Dominio,
-      });
-    } else {
-      alert("Ficha não encontrada");
-    }
-  };
+  }, [fichaId]);
   const formik = useFormik({
     initialValues: {
       nomeUsuario: "",
@@ -75,7 +83,7 @@ export default function EditFicha() {
       dominio: 0,
     },
     onSubmit: async (values) => {
-      if (editMode) {
+      if (editMode == "Criar") {
         await createFicha(values);
       } else {
         await editFicha(values);
@@ -84,11 +92,6 @@ export default function EditFicha() {
   });
   async function editFicha(values: any) {
     try {
-      const campanha_name = "nome legal";
-      const query = await Find.findData(campanha_name);
-      const { status, message, camp, result } = query;
-      let campanha: Campanha = camp as Campanha;
-
       const dados = [
         values.nomeUsuario,
         values.nomeJogador,
@@ -106,6 +109,48 @@ export default function EditFicha() {
         values.qi,
         values.dominio,
       ];
+      const campanhaToEdit = campanha as Campanha;
+      const fichaToEditId = campanhaToEdit?.fichas.findIndex(
+        (ficha) => ficha._id == Number(fichaId)
+      );
+      if (fichaToEditId == undefined || fichaToEditId == null)
+        return alert("Ficha não encontrada p/ edição" + fichaToEditId + "\nid:" + fichaId);
+      campanhaToEdit.fichas[fichaToEditId].Dados(dados, [values.notas]);
+      campanhaToEdit.fichas[fichaToEditId].Atributos(atributos);
+      campanhaToEdit.fichas[fichaToEditId].Dinheiro = Number(values.dinheiro);
+      let traitsError = false;
+
+      traitPositives.forEach((trait) => {
+        const response = campanhaToEdit.fichas[fichaToEditId].addTracoPositivo(
+          // @ts-ignore
+          TracosPositivos[trait.label],
+          trait.value
+        );
+        if (response != "") {
+          traitsError = true;
+          alert(response);
+        }
+      });
+      traitNegatives.forEach((trait) => {
+        const response = campanhaToEdit.fichas[fichaToEditId].addTracoNegativo(
+          // @ts-ignore
+          TracosNegativos[trait.label],
+          trait.value
+        );
+        if (response != "") {
+          traitsError = true;
+          alert(response);
+        }
+      });
+      if (traitsError) return;
+      if (
+        campanhaToEdit.fichas[fichaToEditId].tracosPositivos.length !=
+        campanhaToEdit.fichas[fichaToEditId].tracosNegativos.length
+      ) {
+        return alert("O personagem deve ter o mesmo número de traços positivos e negativos");
+      }
+      await campanhaToEdit.updateData();
+      alert("Ficha editada com sucesso");
     } catch (error) {}
   }
 
@@ -133,15 +178,15 @@ export default function EditFicha() {
         values.qi,
         values.dominio,
       ];
-      const ficha = new Ficha(playerType == "Jogador");
-      ficha.Dados(dados, [values.notas]);
-      ficha.Atributos(atributos);
-      ficha.Dinheiro = Number(values.dinheiro);
+      const novaFicha = new Ficha(playerType == "Jogador");
+      novaFicha.Dados(dados, [values.notas]);
+      novaFicha.Atributos(atributos);
+      novaFicha.Dinheiro = Number(values.dinheiro);
       let traitsError = false;
 
       traitPositives.forEach((trait) => {
         // @ts-ignore
-        const response = ficha.addTracoPositivo(TracosPositivos[trait.label], trait.value);
+        const response = novaFicha.addTracoPositivo(TracosPositivos[trait.label], trait.value);
         if (response != "") {
           traitsError = true;
           alert(response);
@@ -149,18 +194,17 @@ export default function EditFicha() {
       });
       traitNegatives.forEach((trait) => {
         // @ts-ignore
-        const response = ficha.addTracoNegativo(TracosNegativos[trait.label], trait.value);
+        const response = novaFicha.addTracoNegativo(TracosNegativos[trait.label], trait.value);
         if (response != "") {
           traitsError = true;
           alert(response);
         }
       });
-      console.log(ficha);
       if (traitsError) return;
-      if (ficha.tracosPositivos.length != ficha.tracosNegativos.length) {
+      if (novaFicha.tracosPositivos.length != novaFicha.tracosNegativos.length) {
         return alert("O personagem deve ter o mesmo número de traços positivos e negativos");
       }
-      campanha.addFicha(ficha);
+      campanha.addFicha(novaFicha);
       await campanha.updateData();
       alert("Ficha criada com sucesso");
     } catch (error) {
@@ -171,7 +215,7 @@ export default function EditFicha() {
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
       <h1 className="text-2xl font-semibold text-center mb-4">
-        {editMode ? "Criar " : "Editar "}ficha de personagem
+        {editMode == "Criar" ? "Criar " : "Editar "}ficha de personagem
       </h1>
       <form onSubmit={formik.handleSubmit} className="">
         <div className="flex flex-col align-center justify-start mb-2">
@@ -449,7 +493,7 @@ export default function EditFicha() {
             type="submit"
             className="inline-block w-full h-4xl rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-full hover:bg-gray-700"
           >
-            {editMode ? "Criar " : "Editar "} Ficha
+            {editMode == "Criar" ? "Criar " : "Editar "} Ficha
           </button>
         </div>
       </form>
