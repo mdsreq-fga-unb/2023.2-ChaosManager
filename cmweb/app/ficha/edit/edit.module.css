@@ -14,3 +14,44 @@
   height: 10rem;
   padding: 1rem 1rem;
 }
+.ficha_separador {
+  padding: 0.5rem 1rem;
+  background-color: rgb(200, 200, 200);
+  font-weight: 600;
+  display: flex;
+  gap: 2rem;
+}
+.ficha_traits > button {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: #7e7e7e;
+}
+.ficha_traits > button:hover {
+  background-color: #505050;
+}
+.ficha_traits li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  align-items: center;
+  gap: 0.5rem;
+  width: -webkit-fill-available;
+}
+.ficha_traits li > h1 {
+  flex: 1;
+}
+.ficha_traits li > input {
+  flex: 1;
+  height: 2.5rem;
+  border: 1px solid #7e7e7e;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+.ficha_traits li > button {
+  background-color: rgb(255, 51, 0);
+  height: 2.5rem;
+  color: white;
+  padding: 0.5rem;
+}
