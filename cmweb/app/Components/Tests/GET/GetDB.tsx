@@ -3,22 +3,23 @@ import { Campanha, Find } from '@/models/campanha';
 import style from './get.module.css'
 
 function GetDB( { socket }: any ) {
-  const [id, setId] = useState(0);
+  const [nome, setName] = useState('');
   const [resultado, setResultado] = useState('');
   const [campanhaData, setCampanhaData] = useState(null);
   let campanha: Campanha;
 
   useEffect(() => {
-    socket.on('find-data', ({id, status, message, result}: any) => {
-      setId(id);
+    socket.on('find-data', ({nome, status, message, result}: any) => {
+      setName(nome);
       setCampanhaData(result[0]);
       setResultado("status: " + status + '\n\n' + message);
     })
   }, [socket])
 
-  function setResponse({status, message, result}:any){
-    campanha = result[0];
-    socket.emit('find-data', ({id, status, message, result}));
+  function setResponse({status, message, result, camp}:any){
+    campanha = camp;
+
+    socket.emit('find-data', ({nome, status, message, camp}));
 
     setCampanhaData(result[0]);
     setResultado("status: " + status + '\n\n' + message);
@@ -27,8 +28,7 @@ function GetDB( { socket }: any ) {
   const buscarCampanha = async (e: any) => {    
     e.preventDefault();
     try {
-      const query = await Find.findData(id);
-      const data = await query.json();
+      const data = await Find.findData(nome);
       setResponse(data);
     } catch (error) {
       setResultado('Erro ao buscar os dados da campanha');
@@ -40,11 +40,11 @@ function GetDB( { socket }: any ) {
       <form className={style.get_db_form}>
         <h1>GET</h1>        
           <div>
-            <label htmlFor="id">ID:</label>
+            <label htmlFor="name">Nome da campanha:</label>
             <input
-              type="number"
-              value={id}
-              onChange={(e) => setId(Number(e.target.value))}
+              type="name"
+              value={nome}
+              onChange={(e) => setName(String(e.target.value))}
             />
           </div>
           <div>

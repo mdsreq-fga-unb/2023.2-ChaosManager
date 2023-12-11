@@ -7,8 +7,14 @@ import { TracoPositivo, TracosPositivos, tracosPos } from "@/models/traco-positi
 import { TracoNegativo, TracosNegativos, tracosNeg } from "@/models/traco-negativo";
 
 export class Ficha {
+    _id:number = 0;
     NPC:boolean;
     pesoCarregado: number = 0;
+    PV: number = 0;
+    PdA: number = 0;
+    PE: number = 0;
+    Exp: number = 0;
+    Dinheiro: number = 0;
 
     tracosPositivos: TracoPositivo[] = [];
     tracosNegativos: TracoNegativo[] = [];
@@ -17,6 +23,7 @@ export class Ficha {
     armas: Arma[] = [];
     equipamentos: Equipamento[] = [];
     itens: Item[] = [];
+    registroAcoes: string[] = [];
 
     dados: Dados = {
         nomeUsuario: "", 
@@ -30,14 +37,6 @@ export class Ficha {
         notas: [""]
     };
 
-    recursos: Recursos= {
-        PV: 0,
-        PdA: 0,
-        PE: 0,
-        Exp: 0,
-        Dinheiro: 0,
-    };
-
     atributos: Atributos= {
         Vigor: 0,
         Habilidade: 0,
@@ -48,6 +47,31 @@ export class Ficha {
   
     constructor(NPC:boolean) {
         this.NPC = NPC;
+    }
+
+    static toObj(objeto: any): Ficha {
+      const ficha = new Ficha(objeto.NPC);
+
+      ficha._id = objeto._id;
+      ficha.pesoCarregado = objeto.pesoCarregado;
+      ficha.PV = objeto.PV;
+      ficha.PdA = objeto.PdA;
+      ficha.PE = objeto.PE;
+      ficha.Exp = objeto.Exp;
+      ficha.Dinheiro = objeto.Dinheiro;
+      
+      ficha.tracosPositivos = objeto.tracosPositivos.map((traco: any) => TracoPositivo.toObj(traco));
+      ficha.tracosNegativos = objeto.tracosNegativos.map((traco: any) => TracoNegativo.toObj(traco));
+      ficha.estados = objeto.estados.map((estado: any) => Estado.toObj(estado));
+      ficha.magias = objeto.magias.map((magia: any) => Magia.toObj(magia));
+      ficha.armas = objeto.armas.map((arma: any) => Arma.toObj(arma));
+      ficha.equipamentos = objeto.equipamentos.map((equipamento: any) => Equipamento.toObj(equipamento));
+      ficha.itens = objeto.itens.map((item: any) => Item.toObj(item));
+      
+      ficha.dados = objeto.dados;
+      ficha.atributos = objeto.atributos;
+
+      return ficha;
     }
     
     Dados(dados: string[], notas: string[]): void{ //passei como array os parametros senão ficaria mto grande
@@ -63,16 +87,6 @@ export class Ficha {
             notas: notas,
         }
     }
-
-    Recursos(recursos: number[]):void{
-        this.recursos = {
-            PV: recursos[0],
-            PdA: recursos[1],
-            PE: recursos[2],
-            Exp: recursos[3],
-            Dinheiro: recursos[4],
-        }
-    }
     
     Atributos(atributos: number[]):void{
         this.atributos = {
@@ -82,6 +96,13 @@ export class Ficha {
             Inteligencia: atributos[3],
             Dominio: atributos[4],
         }
+    }
+
+    PV_max(): number{ 
+        return 2*this.atributos.Vigor + this.atributos.Dominio;
+    }
+    PE_max(): number{
+        return this.atributos.Inteligencia + this.atributos.Percepcao + this.atributos.Dominio;
     }
 
     Capacidade():number{
@@ -269,7 +290,6 @@ export class Ficha {
         this.pesoCarregado -= this.itens[indice].pesoTotal;
         this.itens.splice(indice, 1);
     }
-    
 }
 
 interface Dados {
@@ -290,12 +310,4 @@ interface Atributos {
     Percepcao: number;
     Inteligencia: number;
     Dominio: number;
-}
-
-interface Recursos {
-    PV: number;
-    PdA: number;
-    PE: number;
-    Exp: number;
-    Dinheiro: number;
 }

@@ -1,7 +1,7 @@
 import { Ficha } from "@/models/ficha";
-import { number } from "yup";
 
 export class Campanha {
+  _id: string = '';
   nome: string;
   historia: string;
   senha_mestre: string;
@@ -30,14 +30,18 @@ export class Campanha {
   async saveData() { 
     try {
       const response = await fetch('/api/campanhas/', {   
-        method: 'POST',     
+        method: 'POST',
         headers: {
           Accept: 'application/json',
           method: 'POST'
         },
         body: JSON.stringify(this)
       });
-      return response;
+      const data = await response.json();
+      const {status, message, newId} = data;
+      this._id = newId;
+      const _ = await this.updateData();
+      return {status, message};
     } catch (error) {
       throw error;
     }
@@ -58,16 +62,32 @@ export class Campanha {
       throw error;
     }
   }
+
+  static toObj(objeto: any): Campanha {
+    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC } = objeto;
+
+    const campanha = new Campanha(nome, historia, senha_mestre);
+    campanha._id = _id;
+    campanha.senha_jogador = senha_jogador;
+
+    campanha.fichas = fichas.map((ficha: any) => Ficha.toObj(ficha));
+    campanha.fichas_NPC = fichas_NPC.map((ficha: any) => Ficha.toObj(ficha));
+
+    return campanha;
+  }
 }
 
 export class Find{
-  static async findData(_id: number) {
+  static async findData(nome: string) {
     try {
-      const response = await fetch(`/api/campanhas/?_id=${_id}`);
-      return response;
+      const response = await fetch(`/api/campanhas/?nome=${nome}`);
+      const data = await response.json();
+      const {status, message, result} = data;
+      console.log(result[0]);
+      const camp = Campanha.toObj(result[0]);
+      return {status, message, result, camp};
     } catch (error) {
       throw error;
     }
   }
 }
-  
