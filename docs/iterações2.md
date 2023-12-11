@@ -16,3 +16,9 @@ hide:
 - Retrospective Meeting
 
   ![retro2!](assets/iteracoes/retro2.png "retro2")
+
+## Histórico de versão
+
+| Data  | Versão | Descrição        | Autor |
+| :---: | :----: | ---------------- | ----- |
+| 21/10 |  1.0   | Iteração 2 | Emerson Teles |

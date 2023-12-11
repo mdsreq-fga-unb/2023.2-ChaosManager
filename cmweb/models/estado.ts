@@ -1,20 +1,25 @@
 import { Testes } from "@/models/teste";
 
 export class Estado {
-    nome: string;
-    testes_afetados: Testes[] = [];
-    valor: number;
+  nome: string;
+  testes_afetados: Testes[] = [];
+  valor: number;
+
+  constructor(nome: string, valor: number) {
+    this.nome = nome;
+    this.valor = valor;
+    this.testes_afetados = estados[nome].testes_afetados;
+  }
   
-    constructor(nome: string, valor: number) {
-      this.nome = nome;
-      this.valor = valor;
-      this.testes_afetados = estados[nome].testes_afetados;
-    }
-    
-    afetaTeste(teste: Testes):boolean{
-      return this.testes_afetados.includes(teste);
-    }
-    
+  afetaTeste(teste: Testes):boolean{
+    return this.testes_afetados.includes(teste);
+  }
+  
+  static toObj(objeto: any): Estado {
+    const estado = new Estado(objeto.nome, objeto.valor);
+    estado.testes_afetados = objeto.testes_afetados;
+    return estado;
+  }
 }
 
 export enum Estados {

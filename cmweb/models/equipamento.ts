@@ -9,7 +9,10 @@ export class Equipamento {
     this.peso = peso;
     this.PdA = PdA;
   }
-  
+
+  static toObj(objeto: any): Equipamento {
+    return new Equipamento(objeto.nome, objeto.PdA, objeto.peso);
+  }
 }
 
 export enum EquipamentosExistentes{

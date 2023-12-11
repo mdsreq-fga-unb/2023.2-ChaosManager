@@ -21,7 +21,6 @@ Para atingir uma máxima no compreendimento na matéria com a união de diferent
 
 </center>
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
 
 ## Verificação - Checklist DoD
 
@@ -33,7 +32,6 @@ Para atingir uma máxima no compreendimento na matéria com a união de diferent
 
 </center>
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
 
 ## Verificação - Checklist PBB
 
@@ -45,15 +43,12 @@ Para atingir uma máxima no compreendimento na matéria com a união de diferent
 
 </center>
 
-<font size="2"><p style="text-align: center">Fonte: Luciano Ricardo (2023)</p></font>
-
-
 
 ## Histórico de versão
 
 | Data  | Versão | Descrição               | Autor           |
 | :---: | :----: | ----------------------- | --------------- |
-| 20/11 |  1.0   | Criação do artefato pbb | Luciano Ricardo |
+| 20/11 |  1.0   | Criação do artefato de verificação e validação dos Moonwalkers | Luciano Ricardo |
 
 
 
