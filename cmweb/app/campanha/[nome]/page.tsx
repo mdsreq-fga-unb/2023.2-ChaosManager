@@ -66,29 +66,31 @@ export default function CampanhaPage({ params }: { params: { nome: string; id: s
             {fichasJogador
               .filter((ficha) => ficha.NPC === false)
               .map((item, index) => (
-                <li key={index} className="flex gap-2 mt-2 align-center justify-start">
+                <li key={index} className="flex gap-2 mt-2 align-center justify-between">
                   {item._id} - {item.dados.nomeJogador}
-                  <div>
-                    <button
-                      onClick={() => {
-                        router.push(
-                          `/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`
-                        );
-                      }}
-                      className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      Editar Ficha
-                    </button>
-                  </div>
-                  <div>
-                    <button
-                      onClick={() => {
-                        router.push(`/campanha/${params.nome}/ficha/${item._id}?type=jogador`);
-                      }}
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      Acessar Ficha
-                    </button>
+                  <div className="flex gap-2">
+                    <div>
+                      <button
+                        onClick={() => {
+                          router.push(
+                            `/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`
+                          );
+                        }}
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Editar Ficha
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => {
+                          router.push(`/campanha/${params.nome}/ficha/${item._id}?type=jogador`);
+                        }}
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Acessar Ficha
+                      </button>
+                    </div>
                   </div>
                 </li>
               ))}
@@ -96,34 +98,37 @@ export default function CampanhaPage({ params }: { params: { nome: string; id: s
         </div>
 
         <div className="flex flex-col align-center justify-center px-4 py-4 rounded-lg h-fit bg-slate-300">
-          <h2>NPC</h2>
+          <h2 className="text-center text-bold text-xl">NPC</h2>
+
           <ul>
             {fichasNpc
               .filter((ficha) => ficha.NPC === true)
               .map((item, index) => (
-                <li key={index} className="flex gap-2 mt-2 align-center justify-start">
+                <li key={index} className="flex gap-2 mt-2 align-centerjustify-between">
                   {item._id} - {item.dados.nomeJogador}
-                  <div>
-                    <button
-                      onClick={() => {
-                        router.push(
-                          `/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`
-                        );
-                      }}
-                      className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      Editar Ficha
-                    </button>
-                  </div>
-                  <div>
-                    <button
-                      onClick={() => {
-                        router.push(`/campanha/${params.nome}/ficha/${item._id}?type=npc`);
-                      }}
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      Acessar Ficha
-                    </button>
+                  <div className="flex gap-2">
+                    <div>
+                      <button
+                        onClick={() => {
+                          router.push(
+                            `/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`
+                          );
+                        }}
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Editar Ficha
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => {
+                          router.push(`/campanha/${params.nome}/ficha/${item._id}?type=npc`);
+                        }}
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        Acessar Ficha
+                      </button>
+                    </div>
                   </div>
                 </li>
               ))}
