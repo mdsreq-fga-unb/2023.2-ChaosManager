@@ -10,6 +10,21 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
         setNovoEquipamentoExistente(event.target.value as EquipamentosExistentes);
     };
 
+    const adicionarMagia = () => {
+        if (novoEquipamentoExistente) {
+            ficha.addEquipamentoExistente(novoEquipamentoExistente);
+            setNovoEquipamentoExistente(EquipamentosExistentes.ArmCavaleiro);
+        }
+    };
+
+
+export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
+    const [novoEquipamentoExistente, setNovoEquipamentoExistente] = useState<EquipamentosExistentes>(EquipamentosExistentes.ArmCavaleiro);
+
+    const handleEquipamentoExistenteChange = (event: ChangeEvent<HTMLSelectElement>) => {
+        setNovoEquipamentoExistente(event.target.value as EquipamentosExistentes);
+    };
+
     const adicionarEquipamentoExistente = () => {
         if (novoEquipamentoExistente) {
             ficha.addEquipamentoExistente(novoEquipamentoExistente);
@@ -80,7 +95,7 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
                             </option>
                         ))}
                     </select>
-                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarEquipamentoExistente}>
+                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarMagia}>
                         Adicionar
                     </button>
                 </div>
@@ -89,32 +104,6 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
 
 
 
-            <div className="bg-gray-800 border-gray-700 hover:bg-gray-600">
-                <div className="w-full flex flex-row px-4 py-2">
-                    <input
-                        value={novoEquipamentoNome}
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        placeholder="Nome do equipamento..."
-                        onChange={handleNomeChange}
-                    />
-
-                    <input
-                        value={novoEquipamentoPeso}
-                        type="number"
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        onChange={handlePesoChange}
-                    />
-                    <input
-                        value={novoEquipamentoPdA}
-                        type="number"
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        onChange={handlePdAChange}
-                    />
-                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarEquipamento}>
-                        Adicionar
-                    </button>
-                </div>
-            </div>
         </div>
 
 
