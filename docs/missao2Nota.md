@@ -166,7 +166,12 @@ Nessa técnica de priorização específica, é criada uma tabela que engloba os
 Apenas as features com prioridade maior que 0,25 foram consideradas viáveis para o MVP, então passamos para priorizar as User Stories.
 </p>
 
+<p style="text-align:justify; text-indent:20px;"> Como o processo utilizado foi o Processo Unificado, não houveram mudanças no Backlog do produto e na priorização do MVP.
+A declaração e MVP do produto Chaos Manager foi realizada por meio de caso de uso.
+</p>
+
 <div align="center" style="text-align: center">
 <img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/priorizacaoMVP/moscow.png">
 <p><b>Figura 2:</b> Priorização das US pelo MoSCoW.</p>
 </div>
+
