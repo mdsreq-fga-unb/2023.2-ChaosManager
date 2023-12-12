@@ -4,12 +4,14 @@ import { useFormik } from "formik";
 import s from "./edit.module.css";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { TracoPositivo, TracosPositivos } from "../../../models/traco-positivo";
-import { TracoNegativo, TracosNegativos } from "../../../models/traco-negativo";
+import { TracoPositivo, TracosPositivos } from "@/models/traco-positivo";
+import { TracoNegativo, TracosNegativos } from "@/models/traco-negativo";
 import { Campanha, Find } from "@/models/campanha";
 import { Ficha } from "@/models/ficha";
+import { useRouter } from "next/navigation";
+
 type Trait = { label: string; title: string; value: number };
-export default function EditFicha() {
+export default function EditFicha({ params }: { params: { nome: string } }) {
   const [traitPositives, setTraitsPositives] = useState<Trait[]>([]);
   const [traitNegatives, setTraitsNegatives] = useState<Trait[]>([]);
   const [genderField, setGenderField] = useState<string>("Masculino");
@@ -19,14 +21,10 @@ export default function EditFicha() {
   const [campanha, SetCampanha] = useState<Campanha | null>(null);
   const searchParams = useSearchParams();
   const fichaId = searchParams.get("fichaId");
-
+  const router = useRouter();
   const LoadFicha = async () => {
     try {
-      const campanha_name = "Nome interessante";
-      const query = await Find.findData(campanha_name);
-      const { camp } = query;
-      SetCampanha(camp as Campanha);
-      const fichaFound = camp?.fichas.find((ficha) => ficha._id == Number(fichaId));
+      const fichaFound = campanha?.fichas.find((ficha) => ficha._id == Number(fichaId));
 
       if (fichaFound) {
         setFicha(fichaFound);
@@ -60,11 +58,28 @@ export default function EditFicha() {
   };
 
   useEffect(() => {
+    if (!params.nome) {
+      alert("Essa Página não existe");
+      return router.push("/");
+    }
+    async function verifyCampanha() {
+      try {
+        const query = await Find.findData(params.nome);
+        const { camp } = query;
+        SetCampanha(camp as Campanha);
+        console.log("Campanha encontrada: ", camp);
+      } catch (error) {
+        alert("Campanha não encontrada");
+        return router.push("/");
+      }
+    }
+    verifyCampanha();
     if (fichaId) {
       setEditMode("Editar");
-      LoadFicha(); // Use await se LoadFicha for assíncrona
+      LoadFicha();
     }
-  }, [fichaId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fichaId, params.nome]);
 
   const formik = useFormik({
     initialValues: {
@@ -158,8 +173,7 @@ export default function EditFicha() {
 
   async function createFicha(values: any) {
     try {
-      const campanha_name = "Nome interessante";
-      const query = await Find.findData(campanha_name);
+      const query = await Find.findData(params.nome);
       const { status, message, camp, result } = await query;
 
       let campanha: Campanha = camp as Campanha;
