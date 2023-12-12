@@ -23,9 +23,39 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
   }, []);
 
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const typeParam = searchParams.get("type");
-  
+
+  const addItemJogador = (lista: Ficha[], item: Ficha) => {
+    setFichasJogador([...lista, item]);
+  };
+  /* 
+   const updateItemJogador = (lista: Ficha[], index: number, item: Ficha) => {
+    const newLista = [...lista];
+    newLista[index] = item;
+    setFichasJogador(newLista);
+  };
+   
+   const deleteItemJogador = (lista: Ficha[], index: number) => {
+    const newLista = [...lista];
+    newLista.splice(index, 1);
+    setFichasJogador(newLista);
+  };
+*/
+  const addItemNpc = (lista: Ficha[], item: Ficha) => {
+    setFichasNpc([...lista, item]);
+  };
+/*   
+   const updateItemNpc = (lista: Ficha[], index: number, item: Ficha) => {
+    const newLista = [...lista];
+    newLista[index] = item;
+    setFichasNpc(newLista);
+  };
+   
+   const deleteItemNpc = (lista: Ficha[], index: number) => {
+    const newLista = [...lista];
+    newLista.splice(index, 1);
+    setFichasNpc(newLista);
+  };
+  */
   const dadosCampanha = async () => {
     try {
       const data = await Find.findData(params.nome);
@@ -54,25 +84,26 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
           <li>Senha do jogador: {senhaJogador}</li>
         </ul>
 
-        <div>
-          <h2>Jogadores</h2>
-          <ul>
-          {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
-            <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>{item._id} - {item.dados.nomeJogador}</button></li>
-          ))}
-          </ul>
-        </div>
-        
-        <div>
-          <h2>NPC</h2>
-          <ul>
-          {fichasNpc.filter(ficha => ficha.NPC === true).map((item, index) => (
-            <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`)}}>{item._id} - {item.dados.nomeJogador}</button></li>
-          ))}
-          </ul>
-        </div>
-        <button onClick={() => router.push(`/campanha/${params.nome}/ficha/edit`)}>Criar Ficha</button>
-      </div>         
-    </>
+      <div>
+        <h2>Jogadores</h2>
+        <ul>
+        {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
+          <li key={index}><Link href={`/campanha/${params.nome}/ficha/${item._id}`}>{item.dados.nomeJogador}</Link></li>
+        ))}
+        </ul>
+      </div>
+      
+      <div>
+        <h2>NPC</h2>
+        <ul>
+        {fichasNpc.filter(ficha => ficha.NPC === true).map((item, index) => (
+          <li key={index}><Link href={`/campanha/${params.nome}/ficha/${item._id}`}>{item.dados.nomeJogador}</Link></li>
+        ))}
+        </ul>
+      </div>
+      <button onClick={() => router.push(`/campanha/${params.nome}/ficha/edit`)}>Criar Ficha</button>
+      
+
+    </div>
   );
 }
