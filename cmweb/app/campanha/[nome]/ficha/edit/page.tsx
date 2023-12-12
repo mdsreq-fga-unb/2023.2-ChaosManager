@@ -21,16 +21,10 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
   const [campanha, SetCampanha] = useState<Campanha | null>(null);
   const searchParams = useSearchParams();
   const fichaId = searchParams.get("fichaId");
-  const typeParam = searchParams.get("type");
   const router = useRouter();
   const LoadFicha = async () => {
     try {
-      let fichaFound = null;
-      if (typeParam == "npc") {
-        fichaFound = campanha?.fichas_NPC.find((ficha) => ficha._id == Number(fichaId));
-      } else {
-        fichaFound = campanha?.fichas.find((ficha) => ficha._id == Number(fichaId));
-      }
+      const fichaFound = campanha?.fichas.find((ficha) => ficha._id == Number(fichaId));
 
       if (fichaFound) {
         setFicha(fichaFound);
@@ -73,20 +67,19 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
         const query = await Find.findData(params.nome);
         const { camp } = query;
         SetCampanha(camp as Campanha);
+        console.log("Campanha encontrada: ", camp);
       } catch (error) {
         alert("Campanha não encontrada");
         return router.push("/");
       }
     }
-    if (!campanha) {
-      verifyCampanha();
-    }
-    if (fichaId && campanha) {
+    verifyCampanha();
+    if (fichaId) {
       setEditMode("Editar");
       LoadFicha();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fichaId, params.nome, campanha]);
+  }, [fichaId, params.nome]);
 
   const formik = useFormik({
     initialValues: {
