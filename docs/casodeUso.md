@@ -7,6 +7,7 @@
 <img src="../assets/casosUso/requisitos.png">
 <p><b>Figura 1:</b> Elicitação dos Requisitos. </p>
 </div>
+<center>
 
 <table>
     <thead>
@@ -122,6 +123,8 @@
         </tr>
     </tbody>
 </table>
+
+</center>
 
 <div align="center" style="text-align: center">
 <p><b>Tabela 1:</b> Requisitos Elicitados. </p>
@@ -1044,13 +1047,13 @@
 |**1. Atores**|Mestre e Jogador são os atores designados para utilizar essas funcionalidades. Em caso que ambos são elegíveis para o passo, serão referenciados como usuário.|
 |**2. Breve Descrição**|Este caso de uso será utilizado pelo mestre para gerenciar o combate e pelo jogador para reagir as ações do mestre no combate. Para tanto, o mestre pode indicar quem participa do combate e em que ordem, indicar quem participa do turno atacando e sendo atacado e por fim executando o efeito desse combate.|
 |**3. Fluxo básico de eventos**|<p>FB</p><p>3\.1. O mestre abre o “Gerenciador de combate”.</p><p>3\.2. O mestre seleciona a opção “Adicionar ordem do combate”.</p><p>3\.3. O mestre adiciona as fichas dos personagens que participarão do combate na ordem que será realizado.</p><p>3\.4. O mestre seleciona as fichas de personagem de quem vai realizar e sofrer a ação.</p><p>3\.5. O mestre determina um teste para ser realizado (PI01)</p><p>3\.6. O mestre determina o valor mínimo para passar no teste </p><p>3\.7. O usuário realizando a ação executa o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>3\.8. O usuário sofrendo a ação realiza o teste indicado pelo mestre de acordo com a ação de reação desejada. (PI01) (FA01) </p><p>3\.9. O mestre adiciona o valor da ação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>3\.10. O mestre adiciona o valor da reação (RN05) (RN06) (RN07) </p><p>3\.11. O mestre adiciona pontos de energia (RN010) </p><p>3\.12. O mestre executa o efeito do combate. (RN01) (RN02) (RN03) (RN04) (RN011) (RN012) (RN013)</p><p></p>|
-|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Escolheu receber o golpe</p><p>4.1.1. O usuário realizando a retaliação realiza o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>4.1.2. O usuário sofrendo a ação realiza o teste indicado pelo mestre de Resistência Física ou Mental (PI01)</p><p>4.1.3. O mestre adiciona o valor da retaliação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>O caso de uso retorna ao 3.11 do FB.</p><p></p>|
+|**4. Fluxo Alternativos**|<p>4\.1. FA01 – Escolheu receber o golpe</p><p>&emsp; 4.1.1. O usuário realizando a retaliação realiza o teste indicado pelo mestre de acordo com a ação desejada. (PI01)</p><p>&emsp;4.1.2. O usuário sofrendo a ação realiza o teste indicado pelo mestre de Resistência Física ou Mental (PI01)</p><p>&emsp;4.1.3. O mestre adiciona o valor da retaliação e o modificador de dano em caso de uso de arma (RN08) (RN09)</p><p>O caso de uso retorna ao 3.11 do FB.</p><p></p>|
 |**5. Fluxos de exceção**|Não há|
 |**6. Pré-condições**|<p>6\.1. Sala de campanha criada.</p><p>6\.2. Estar acessado na sala de campanha de RPG</p><p>6\.3. Ficha de personagem criada.</p><p>6\.4. Testes criados.</p>|
 |**7. Pós-condições**|7\.1. As fichas que sofreram danos devem ter os pontos de vida e de armadura atualizados|
 |**8. Pontos de extensão**|Não há|
 |**9. Requisitos especiais**|Não há|
-|**10. Regras de negócio**|<p>RN:</p><p>(RN01) O teste deve superar ou ser igual ao valor da dificuldade estipulada pelo mestre</p><p>(RN02) Se o teste não for maior ou igual ao valor estipulado pelo mestre e a consequência exigir um dano, então o jogador deverá realizar um teste de Resistência Física</p><p>(RN03) O dano recebido pela RN02 é igual ao dano estipulado pelo mestre – o valor do teste de Resistência Física</p><p>(RN04) Os Pontos de Armadura serão decrementados quando houver dano.</p><p>(RN05) O valor da reação de esquiva é o resultado de um teste de agilidade</p><p>(RN06) O valor da reação de defesa é o resultado de um teste de Resistência Física</p><p>(RN07) Se o jogador passar no teste da reação de esquivar, então não sofrerá dano</p><p>(RN08) O cálculo de dano sem uso de armas é igual ao valor obtido na Ação</p><p>(RN09) O cálculo de dano com o uso de armas é igual ao valor da ação + Modificador de dano</p><p>(RN010) O cálculo de dano causado por magia é igual ao valor da ação + Pontos de Energia usados</p><p>(RN011) O cálculo da absorção de dano da reação de defender OU situação sem chance de esquiva ou defesa é igual ao cálculo de dano – teste de Resistência Física</p><p>(RN012) O cálculo da absorção de dano da reação de esquivar (caso de falha) é igual ao cálculo de dano – o valor da Resistência Física do personagem</p><p>(RN013) O cálculo da absorção de dano da reação de não esquivar/defender é igual ao cálculo de dano – o valor da Resistência Física do personagem</p>|
+|**10. Regras de negócio**|<p>(RN01) O teste deve superar ou ser igual ao valor da dificuldade estipulada pelo mestre</p><p>(RN02) Se o teste não for maior ou igual ao valor estipulado pelo mestre e a consequência exigir um dano, então o jogador deverá realizar um teste de Resistência Física</p><p>(RN03) O dano recebido pela RN02 é igual ao dano estipulado pelo mestre – o valor do teste de Resistência Física</p><p>(RN04) Os Pontos de Armadura serão decrementados quando houver dano.</p><p>(RN05) O valor da reação de esquiva é o resultado de um teste de agilidade</p><p>(RN06) O valor da reação de defesa é o resultado de um teste de Resistência Física</p><p>(RN07) Se o jogador passar no teste da reação de esquivar, então não sofrerá dano</p><p>(RN08) O cálculo de dano sem uso de armas é igual ao valor obtido na Ação</p><p>(RN09) O cálculo de dano com o uso de armas é igual ao valor da ação + Modificador de dano</p><p>(RN010) O cálculo de dano causado por magia é igual ao valor da ação + Pontos de Energia usados</p><p>(RN011) O cálculo da absorção de dano da reação de defender OU situação sem chance de esquiva ou defesa é igual ao cálculo de dano – teste de Resistência Física</p><p>(RN012) O cálculo da absorção de dano da reação de esquivar (caso de falha) é igual ao cálculo de dano – o valor da Resistência Física do personagem</p><p>(RN013) O cálculo da absorção de dano da reação de não esquivar/defender é igual ao cálculo de dano – o valor da Resistência Física do personagem</p>|
 |**11. Informações adicionais**|Pontos de Inclusão: (PI01) [CdU-06 - Gerenciar teste](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/#2)|
 
 
