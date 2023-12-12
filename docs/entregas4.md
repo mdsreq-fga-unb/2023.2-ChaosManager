@@ -11,9 +11,9 @@ Este artefato contém a apresentação gravada sobre a missão 4
 
 ## Missão 4: Preservação da Galáxia
 
-A apresentação da entrega da Missão 4, pode ser vista no [Vídeo 1](https://youtu.be/2KpSVYyhBzI?si=n69sbEkjfYoIqRVb&t=8).
+A apresentação da entrega da Missão 4, pode ser vista no [Vídeo 1](https://www.youtube.com/watch?v=sEEQD9DXPdg&ab_channel=oscarbrito).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2KpSVYyhBzI?si=n69sbEkjfYoIqRVb&t=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sEEQD9DXPdg?si=iEhoKlhOszhgtycA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Bibliografia
 
