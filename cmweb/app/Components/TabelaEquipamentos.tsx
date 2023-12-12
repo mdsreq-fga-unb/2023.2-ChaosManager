@@ -86,12 +86,12 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
             <div className="bg-gray-800 border-gray-700 hover:bg-gray-600">
                 <div className="w-full flex flex-row px-4 py-2">
                     <select
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2 text-gray-400"
                         value={novoEquipamentoExistente}
                         onChange={handleEquipamentoExistenteChange}
                     >
                         {Object.values(EquipamentosExistentes).map((equipamentoExistente) => (
-                            <option key={equipamentoExistente} value={equipamentoExistente}>
+                            <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={equipamentoExistente} value={equipamentoExistente}>
                                 {equipamentoExistente}
                             </option>
                         ))}

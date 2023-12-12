@@ -63,16 +63,16 @@ export default function TabelaMagias({ ficha }: { ficha: Ficha }) {
           <input
             value={novaMagiaNome}
             className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-            placeholder="Entre com o nome da magia"
+            placeholder="Nome da magia..."
             onChange={handleNomeChange}
           />
           <select
-            className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+            className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2 text-gray-400"
             value={novaMagiaClasse}
             onChange={handleClasseChange}
           >
             {Object.values(Classes).map((classe) => (
-              <option key={classe} value={classe}>
+              <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={classe} value={classe}>
                 {classe}
               </option>
             ))}

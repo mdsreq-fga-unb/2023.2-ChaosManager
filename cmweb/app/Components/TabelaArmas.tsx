@@ -95,12 +95,12 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
             <div className="bg-gray-800 border-gray-700 hover:bg-gray-600">
                 <div className="w-full flex flex-row px-4 py-2">
                     <select
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2 text-gray-400"
                         value={novoArmaExistente}
                         onChange={handleArmaExistenteChange}
                     >
                         {Object.values(ArmasExistentes).map((armaExistente) => (
-                            <option key={armaExistente} value={armaExistente}>
+                            <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={armaExistente} value={armaExistente}>
                                 {armaExistente}
                             </option>
                         ))}
@@ -119,16 +119,16 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
                     <input
                         value={novoArmaNome}
                         className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        placeholder="Nome do arma..."
+                        placeholder="Nome da arma..."
                         onChange={handleNomeChange}
                     />
                     <select
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2 text-gray-400"
                         value={novaArmaTesteUsado}
                         onChange={handleTesteUsadoChange}
                     >
                         {Object.values(Testes).map((teste) => (
-                            <option key={teste} value={teste}>
+                            <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={teste} value={teste}>
                                 {teste}
                             </option>
                         ))}

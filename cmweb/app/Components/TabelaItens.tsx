@@ -64,7 +64,7 @@ export default function TabelaItens({ ficha }: { ficha: Ficha }) {
                     <input
                         value={novoItemNome}
                         className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        placeholder="Entre com o nome do item e o seu peso"
+                        placeholder="Nome do item..."
                         onChange={handleNomeChange}
                     />
 
