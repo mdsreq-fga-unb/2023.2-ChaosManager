@@ -1,9 +1,25 @@
-import { Equipamento } from "@/models/equipamento";
+import React, { useState, ChangeEvent } from "react";
+import { Ficha } from "@/models/ficha";
+import { EquipamentosExistentes } from "@/models/equipamento";
+
+
+export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
+    const [novoEquipamentoExistente, setNovoEquipamentoExistente] = useState<EquipamentosExistentes>(EquipamentosExistentes.ArmCavaleiro);
+
+    const handleEquipamentoExistenteChange = (event: ChangeEvent<HTMLSelectElement>) => {
+        setNovoEquipamentoExistente(event.target.value as EquipamentosExistentes);
+    };
+
+    const adicionarMagia = () => {
+        if (novoEquipamentoExistente) {
+            ficha.addEquipamentoExistente(novoEquipamentoExistente);
+            setNovoEquipamentoExistente(EquipamentosExistentes.ArmCavaleiro);
+        }
+    };
 
 
 
 
-export default function TabelaEquipamentos({ equipamentos }: { equipamentos: Equipamento[] }) {
 
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
@@ -16,7 +32,7 @@ export default function TabelaEquipamentos({ equipamentos }: { equipamentos: Equ
                     </tr>
                 </thead>
                 <tbody>
-                    {equipamentos.map((equipamento, index) => (
+                    {ficha.equipamentos.map((equipamento, index) => (
                         <tr className="bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
                             <td className="w-4 p-4">{equipamento.nome}</td>
                             <td className="w-4 p-4">{equipamento.PdA}</td>
@@ -25,6 +41,30 @@ export default function TabelaEquipamentos({ equipamentos }: { equipamentos: Equ
                     ))}
                 </tbody>
             </table>
+
+            <div className="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                <div className="w-full flex flex-row px-4 py-2">
+                    <select
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+                        value={novoEquipamentoExistente}
+                        onChange={handleEquipamentoExistenteChange}
+                    >
+                        {Object.values(EquipamentosExistentes).map((equipamentoExistente) => (
+                            <option key={equipamentoExistente} value={equipamentoExistente}>
+                                {equipamentoExistente}
+                            </option>
+                        ))}
+                    </select>
+                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarMagia}>
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
         </div>
     );
 };
