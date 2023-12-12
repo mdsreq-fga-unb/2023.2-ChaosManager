@@ -10,14 +10,39 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
         setNovoEquipamentoExistente(event.target.value as EquipamentosExistentes);
     };
 
-    const adicionarMagia = () => {
+    const adicionarEquipamentoExistente = () => {
         if (novoEquipamentoExistente) {
             ficha.addEquipamentoExistente(novoEquipamentoExistente);
             setNovoEquipamentoExistente(EquipamentosExistentes.ArmCavaleiro);
         }
     };
 
+    const [novoEquipamentoNome, setNovoEquipamentoNome] = useState<string>("");
+    const [novoEquipamentoPdA, setNovoEquipamentoPdA] = useState<number>(0);
+    const [novoEquipamentoPeso, setNovoEquipamentoPeso] = useState<number>(0);
 
+    const handleNomeChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setNovoEquipamentoNome(event.target.value);
+    };
+
+    const handlePesoChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const novoPeso = parseFloat(event.target.value);
+        setNovoEquipamentoPeso(isNaN(novoPeso) ? 0 : novoPeso);
+    };
+    const handlePdAChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const novoPdA = parseFloat(event.target.value);
+        setNovoEquipamentoPdA(isNaN(novoPdA) ? 0 : novoPdA);
+    };
+
+
+    const adicionarEquipamento = () => {
+        if (novoEquipamentoNome && novoEquipamentoPeso) {
+            ficha.addEquipamento(novoEquipamentoNome, novoEquipamentoPdA, novoEquipamentoPeso);
+            setNovoEquipamentoNome("");
+            setNovoEquipamentoPdA(0);
+            setNovoEquipamentoPeso(0);
+        }
+    };
 
 
 
@@ -55,7 +80,7 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
                             </option>
                         ))}
                     </select>
-                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarMagia}>
+                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarEquipamentoExistente}>
                         Adicionar
                     </button>
                 </div>
@@ -64,7 +89,35 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
 
 
 
+            <div className="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                <div className="w-full flex flex-row px-4 py-2">
+                    <input
+                        value={novoEquipamentoNome}
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
+                        placeholder="Nome do equipamento..."
+                        onChange={handleNomeChange}
+                    />
 
+                    <input
+                        value={novoEquipamentoPeso}
+                        type="number"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
+                        onChange={handlePesoChange}
+                    />
+                    <input
+                        value={novoEquipamentoPdA}
+                        type="number"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
+                        onChange={handlePdAChange}
+                    />
+                    <button className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2" onClick={adicionarEquipamento}>
+                        Adicionar
+                    </button>
+                </div>
+            </div>
         </div>
+
+
+
     );
 };
