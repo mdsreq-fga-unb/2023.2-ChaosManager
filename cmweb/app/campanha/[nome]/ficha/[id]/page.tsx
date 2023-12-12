@@ -207,7 +207,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
           <TabelaMagias ficha={ficha} />
           <TabelaArmas armas={ficha.armas} />
           <TabelaEquipamentos equipamentos={ficha.equipamentos} />
-          <TabelaItens itens={ficha.itens} />
+          <TabelaItens ficha={ficha} />
           <TabelaEstados estados={ficha.estados} />
           <TabelaTracos
             tracosNegativos={ficha.tracosNegativos}
