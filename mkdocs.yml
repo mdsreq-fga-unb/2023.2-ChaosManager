@@ -66,6 +66,10 @@ nav:
   - Missão 4:
       - Verificação e validação - Tanás: verEvalTanas.md
       - Casos de uso - VoyageX: casosdeUsoVX.md
+      - Missão 1: missao1Nota.md
+      - Missão 2: missao2Nota.md
+      - Missão 3: missao3Nota.md
+      
 
   - Casos de uso: casodeUso.md
   - Iterações: iterações_total.md
