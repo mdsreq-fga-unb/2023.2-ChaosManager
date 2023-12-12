@@ -18,11 +18,11 @@ export default function CampanhaPage({ params }: { params: { nome: string } }) {
   }, []);
 
   const router = useRouter();
-  /*
+
   const addItemJogador = (lista: Ficha[], item: Ficha) => {
     setFichasJogador([...lista, item]);
   };
-   
+  /* 
    const updateItemJogador = (lista: Ficha[], index: number, item: Ficha) => {
     const newLista = [...lista];
     newLista[index] = item;
@@ -34,11 +34,11 @@ export default function CampanhaPage({ params }: { params: { nome: string } }) {
     newLista.splice(index, 1);
     setFichasJogador(newLista);
   };
-
+*/
   const addItemNpc = (lista: Ficha[], item: Ficha) => {
     setFichasNpc([...lista, item]);
   };
-   
+/*   
    const updateItemNpc = (lista: Ficha[], index: number, item: Ficha) => {
     const newLista = [...lista];
     newLista[index] = item;
@@ -79,19 +79,25 @@ export default function CampanhaPage({ params }: { params: { nome: string } }) {
         <li>Senha do jogador: {senhaJogador}</li>
       </ul>
 
-      <h2>Jogadores</h2>
-      <ul>
-      {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
-        <li key={index}><Link href={`/campanha/${params.nome}/jogador`}>{item.dados.nomeJogador}</Link></li>
-      ))}
-      </ul>
+      <div>
+        <h2>Jogadores</h2>
+        <ul>
+        {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
+          <li key={index}><Link href={`/campanha/${params.nome}/ficha/${item._id}`}>{item.dados.nomeJogador}</Link></li>
+        ))}
+        </ul>
+      </div>
       
-      <h2>NPC</h2>
-      <ul>
-      {fichasNpc.filter(ficha => ficha.NPC === true).map((item, index) => (
-        <li key={index}><Link href={`/campanha/${params.nome}/jogador`}>{item.dados.nomeJogador}</Link></li>
-      ))}
-      </ul>
+      <div>
+        <h2>NPC</h2>
+        <ul>
+        {fichasNpc.filter(ficha => ficha.NPC === true).map((item, index) => (
+          <li key={index}><Link href={`/campanha/${params.nome}/ficha/${item._id}`}>{item.dados.nomeJogador}</Link></li>
+        ))}
+        </ul>
+      </div>
+      <button onClick={() => router.push(`/campanha/${params.nome}/ficha/edit`)}>Criar Ficha</button>
+      
 
     </div>
   );
