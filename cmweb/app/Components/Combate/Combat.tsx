@@ -8,6 +8,7 @@ import Image from 'next/image';
 import styles from './combat.module.css';
 import { Magia } from "@/models/item-magia";
 import { Key } from "lucide-react";
+import { Combate, Reacao } from "@/models/combate";
 
 interface typeCombat{
   socket: any,
@@ -26,6 +27,18 @@ const Combat = ({socket, campanha}:typeCombat) => {
   const [selectedTeste, setSelectedTeste] = useState<Testes | null>(null);
   const [iniciativas, setIniciativas] = useState<Ficha[]>([]);
 
+  const [resultadoAcao, setResultadoAcao] = useState<string>('');
+  const [resultadoReacao, setResultadoReacao] = useState<string>('');
+  const [resultadoPE, setResultadoPE] = useState<number>(0);
+  const [resultadoTipo, setResultadoTipo] = useState<Reacao | null>(null);
+  const [resultadoD20Acao, setResultadoD20Acao] = useState<number>(0);
+  const [resultadoD20Reacao, setResultadoD20Reacao] = useState<number>(0);
+  const [resultadoRetaliacao, setResultadoRetaliacao] = useState<boolean>(false);
+
+  
+
+  let combate:Combate = new Combate(campanha);
+  
   function getFichas(){
     if (campanha === undefined) return [];
     const newfichas = [...campanha.fichas, ...campanha.fichas_NPC];
@@ -54,16 +67,36 @@ const Combat = ({socket, campanha}:typeCombat) => {
     return null;
   }
 
-  function addFichaIniciativas(){
-    if (selectedFichaIniciativa){
+  function getTipo(nomeTipo: string): Reacao | null {
+    const valoresTipo = Object.values(Reacao);
+  
+    for (const valorTipo of valoresTipo) {
+      if (valorTipo === nomeTipo) {
+        return nomeTipo as Reacao;
+      }
+    }
+
+    return null;
+  }
+
+  function realizarAcao(){
+    if (selectedFichaIniciativa && !iniciativas.find((ficha) => ficha._id == selectedFichaIniciativa._id)){
+      setIniciativas([...iniciativas, selectedFichaIniciativa]);
+    }
+  }
+
+  function addFichaIniciativa(){
+    if (selectedFichaIniciativa && !iniciativas.find((ficha) => ficha._id == selectedFichaIniciativa._id)){
       setIniciativas([...iniciativas, selectedFichaIniciativa]);
     }
   }
 
   function addIniciativa(){
-    if (selectedFichaIniciativa){
-      setIniciativas([...iniciativas, selectedFichaIniciativa]);
-    }
+    if (iniciativas.length != 0) {
+      combate.addIniciativa(iniciativas);
+      console.log(combate.iniciativa);
+      campanha.registroAcoes.push("A iniciativa foi registrada com sucesso");
+    }else campanha.registroAcoes.push("A iniciativa está vazia, não foi possivel adicionar");
   }
 
   function removeIniciativas(index: number){
@@ -106,11 +139,18 @@ const Combat = ({socket, campanha}:typeCombat) => {
               <button onClick={() => setState(2)} className={state !== 2 ? styles.combat_disabled : ''}>
                 Resultados
               </button>
+              <button onClick={() => setState(3)} className={state !== 3 ? styles.combat_disabled : ''}>
+                Logs
+              </button>
             </div>
             <hr className={styles.horizontal_line} />
             <div className={styles.combat_container_content}>  
               {state === 0 && (
-                <>
+                <motion.div
+                initial={{height: 0, opacity: 0}}
+                animate={{height: 500, opacity: 1}}
+                exit={{height: 0, opacity: 0}}
+                >
                   <div className={styles.combat_cotaniner_sections}>                
                     <div className={styles.combat_cotaniner_sections_content}>
                       <select
@@ -131,8 +171,8 @@ const Combat = ({socket, campanha}:typeCombat) => {
                       </select>
                     </div>
                     <div className={styles.combat_cotaniner_sections_content}>
-                      <button
-                      onClick={() => addFichaIniciativas()}
+                      <button style={{marginTop: 6 + 'px'}}
+                      onClick={() => addFichaIniciativa()}
                       >
                         Add ficha
                       </button>
@@ -155,20 +195,27 @@ const Combat = ({socket, campanha}:typeCombat) => {
                   <div className={styles.combat_cotaniner_sections}>
                     <div className={styles.combat_cotaniner_sections_content}>
                       <button
-                      onClick={() => addFichaIniciativas()}
+                      onClick={() => addIniciativa()}
                       >
-                        Add ficha
+                        Adicionar Iniciativa
                       </button>
                     </div>   
                   </div>         
-                </>
+                </motion.div>
               )}
 
               {state === 1 && (
-                <>
+                <motion.div
+                initial={{height: 0, opacity: 0}}
+                animate={{height: 500, opacity: 1}}
+                exit={{height: 0, opacity: 0}}
+                >
                   <div className={styles.combat_cotaniner_sections}>                
                     <div className={styles.combat_cotaniner_sections_content}>
-                      <button>Pular ação</button>
+                      <button 
+                      onClick = {() => combate.pularAcao()}>
+                        Pular ação
+                      </button>
                     </div>
                   </div>              
                   <div className={styles.combat_cotaniner_sections}>                
@@ -304,18 +351,144 @@ const Combat = ({socket, campanha}:typeCombat) => {
                     <div className={styles.combat_cotaniner_sections_content}>
                     </div>
                   </div>
-                </>
+                  <div className={styles.combat_cotaniner_sections}>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                        <button 
+                        onClick = {() => realizarAcao()}>
+                          Realizar Ação
+                        </button>
+                    </div>
+                  </div>
+                </motion.div>
               )}
               {state === 2 && (
-                <>
+                <motion.div
+                initial={{height: 0, opacity: 0}}
+                animate={{height: 500, opacity: 1}}
+                exit={{height: 0, opacity: 0}}
+                >
                   <div className={styles.combat_cotaniner_sections}>
-                    
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <h2>Ação</h2>
+                    </div>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <h2>Reação</h2>
+                    </div>
                   </div>
-                </>
+                  <div className={styles.combat_cotaniner_sections}>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">Resultado teste</label>
+                      <input
+                        className={styles.combat_input}
+                        value={resultadoAcao}
+                        onChange={(e) => setResultadoAcao(String(e.target.value))}
+                      />
+                    </div>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">Resultado teste</label>
+                      <input
+                        className={styles.combat_input}
+                        value={resultadoReacao}
+                        onChange={(e) => setResultadoReacao(String(e.target.value))}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.combat_cotaniner_sections}>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">PE</label>
+                      <input
+                        className={styles.combat_input}
+                        type="number"
+                        value={resultadoPE}
+                        onChange={(e) => setResultadoPE(parseInt(e.target.value))}
+                      />
+                    </div>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">Tipo</label>
+                      <select
+                        id="name"
+                        value={resultadoTipo ? resultadoTipo : ''}
+                        onChange={(e) => {
+                          const resultadoTipo = e.target.value;
+                          const selectedTipo = getTipo(resultadoTipo);
+                          setResultadoTipo(selectedTipo);
+                        }}
+                      >
+                        <option value="">Selecione um tipo</option>
+                        {Object.values(Reacao).map((reacao, index) => (
+                          <option key={reacao} value={reacao}>
+                            {`${index + 1}. ${reacao}`}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div className={styles.combat_cotaniner_sections}>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">d20</label>
+                      <input
+                        className={styles.combat_input}
+                        type="number"
+                        value={resultadoD20Acao}
+                        onChange={(e) => setResultadoD20Acao(parseInt(e.target.value))}
+                      />
+                    </div>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">d20</label>
+                      <input
+                        className={styles.combat_input}
+                        type="number"
+                        value={resultadoD20Reacao}
+                        onChange={(e) => setResultadoD20Reacao(parseInt(e.target.value))}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.combat_cotaniner_sections}>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <label htmlFor="text">Retaliação</label>
+                      <input
+                        className={styles.combat_checkbox}
+                        type="checkbox"
+                        id="retaliacao"
+                        checked={resultadoRetaliacao}
+                        onChange={(e) => {
+                          const retaliacao = e.target.checked;
+                          setResultadoRetaliacao(retaliacao);
+                        }}
+                      />
+                    </div>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                    </div>
+                  </div>
+                  <div className={styles.combat_cotaniner_sections}>
+                    <button>Efeito combate</button>
+                  </div>
+                </motion.div>
+              )}
+
+              {state === 3 && (
+                <motion.div
+                initial={{height: 0, opacity: 0}}
+                animate={{height: 500, opacity: 1}}
+                exit={{height: 0, opacity: 0}}
+                >
+                  <div className={styles.combat_cotaniner_sections}>              
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <h2>Registro de ações</h2>
+                      <textarea
+                        className={styles.combat_textarea}
+                        rows={16}
+                        readOnly
+                        id="logs"
+                        value={campanha.registroAcoes.join('\n')}
+                      />
+                    </div>
+                  </div>
+                </motion.div>
               )}
             </div>
           </motion.aside>
-          )}
+          )}          
         </AnimatePresence>
         <AnimatePresence>
           {!isOpen && (
