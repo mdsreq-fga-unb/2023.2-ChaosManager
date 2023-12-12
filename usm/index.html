@@ -1,0 +1,1327 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação para do projeto Chaos Manager realizado na disciplina de Requisitos de Software na Universidade de Brasília">
+      
+      
+        <meta name="author" content="Insurgentes Estelares">
+      
+      
+      
+        <link rel="prev" href="../bdd/">
+      
+      
+        <link rel="next" href="../licoes3/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>USM - Chaos Manager</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#user-story-mapping" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Chaos Manager" class="md-header__button md-logo" aria-label="Chaos Manager" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chaos Manager
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              USM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2023.2-ChaosManager" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Chaos Manager
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Chaos Manager" class="md-nav__button md-logo" aria-label="Chaos Manager" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Chaos Manager
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2023.2-ChaosManager" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Chaos Manager
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insurgentes Estelares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão geral do produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_projeto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão geral do projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processo_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processo de desenvolvimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verEval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verificação e validação - Crystaleum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog SAFe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../priorizacaoMVPSafe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Priorização e MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verEvalMoonWalkers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verificação e validação - MoonWalkers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PBB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    USM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    USM
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-historias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de Histórias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priorização
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verEvalTanas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verificação e validação - Tanás
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casosdeUsoVX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de uso - VoyageX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../missao1Nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missão 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../missao2Nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missão 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../missao3Nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missão 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../valCliente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casodeUso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../itera%C3%A7%C3%B5es_total/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-de-historias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabela de Histórias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priorizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priorização
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="user-story-mapping">User Story Mapping</h1>
+<h2 id="introducao">Introdução</h2>
+<p align="justify">&emsp;&emsp; É proposto pelo professor George Marsicano a criação do User Story Mapping (USM) relacionado ao estudo de caso "ComunEventos" pela facção Insurgentes Estelares. </p>
+
+<h2 id="resumo">Resumo</h2>
+<p><img src="../assets/usm/usm.png"></p>
+<p><b>Figura 1:</b> Breve resumo do produto. </p>
+
+<h2 id="tabela-de-historias">Tabela de Histórias</h2>
+<p align="justify">&emsp;&emsp; Para facilitar a leitura do mapa, devido em imagem ser difícil visualizar, transformamos o User Story Mapping em na Tabela 1. </p>
+
+<table><tr><th><b>Usuário</b></th><th><b>Atividade</b></th><th><b>Jornada do Usuário</b></th><th><b>Título da Tarefa do Usuário</b></th><th><b>História do Usuário</b></th></tr>
+<tr><td rowspan="11"><b>Organizador e voluntário</b></td><td rowspan="7"><b>Gerenciar evento</b></td><td rowspan="2"><b>Criar ingresso</b></td><td><b>Definir as informações</b></td><td>Eu, como organizador, quero poder definir as informações do evento para que os participantes possam escolher as que mais se adequam aos seus interesses.</td></tr>
+<tr><td><b>Definir preço dos ingressos</b></td><td>Eu, como organizador, quero poder definir o preço dos ingressos para que os participantes saibam quanto custa cada evento</td></tr>
+<tr><td rowspan="3"><b>Organizar relatórios de feedback pós-evento</b></td><td><b>Criar formulário de feedback</b></td><td>Eu, como organizador, quero poder criar um formulário de feedback  para coletar as avaliações dos participantes</td></tr>
+<tr><td><b>Gerar gráficos de feedbacks</b></td><td>Eu, como organizador, que poder gerar feedbacks em gráficos para visualizar como foi a experiência dos participantes durante o evento</td></tr>
+<tr><td><b>Responder formulário de feedback</b></td><td>Eu, como organizador, quero poder preencher formulário com as respostas das sessões de feedback presenciais para documentar as experiências dos participantes</td></tr>
+<tr><td rowspan="2"><b>Ver feedbacks dos participantes</b></td><td><b>Visualizar gráficos de feedbacks</b></td><td>Eu, como organizador, quero poder visualizar os feedbacks em formato de gráficos para  analisar as avaliações dos participantes</td></tr>
+<tr><td><b>Gerar PDF dos gráficos</b></td><td>Eu, como organizador, quero poder gerar PDF dos feedbacks em gráficos para salvá-las em um formato fixo</td></tr>
+<tr><td rowspan="4"><b>Gerenciar Inscritos</b></td><td rowspan="2"><b>Realizar check-in do inscrito</b></td><td><b>Registrar presença de participante</b></td><td>Eu, como organizador, quero ser capaz de registrar presença de participante no evento para ter a relação de participantes</td></tr>
+<tr><td><b>Registrar coleta de pagamento</b></td><td>Eu, como organizador, quero ser capaz de registrar a coleta do pagamento dos inscritos para ter um controle do fluxo de caixa</td></tr>
+<tr><td rowspan="2"><b>Listar inscritos</b></td><td><b>Filtrar inscritos por presença</b></td><td>Eu, como organizador, quero ser capaz de filtrar inscritos por presença confirmada para ter uma visualização especifica dos inscritos</td></tr>
+<tr><td><b>Filtrar inscritos por pagamento</b></td><td>Eu, como organizador, quero poder filtrar inscritos por pagamento confirmado para que possa ter uma visualização tipos de inscritos</td></tr>
+<tr><td rowspan="18"><b>Organizador</b></td><td rowspan="4"><b>Gerenciar orçamento</b></td><td rowspan="2"><b>Registrar fluxo de caixa</b></td><td><b>Adicionar lucros do evento</b></td><td>Eu, como organizador, quero ser capaz de adicionar lucros do evento para ter o registro de caixa</td></tr>
+<tr><td><b>Adicionar despesas do evento</b></td><td>Eu, como organizador, quero ser capaz de adicionar despesas do evento para ter o registro de caixa</td></tr>
+<tr><td rowspan="2"><b>Registrar contratos</b></td><td><b>Registrar cotações</b></td><td>Eu, como organizador, quero ser capaz de registrar as cotações bem-sucedidas para ter relação das cotações</td></tr>
+<tr><td><b>Registrar os patrocínios</b></td><td>Eu, como organizador, quero ser capaz de registrar os patrocínios bem-sucedidos para manter registro dos patrocínios</td></tr>
+<tr><td rowspan="7"><b>Gerenciar Colaboradores</b></td><td rowspan="3"><b>Enviar proposta de patrocínio</b></td><td><b>Escrever email de proposta de patrocínio</b></td><td>Eu, como organizador, quero ser capaz de escrever email para descrever a proposta de patrocínio</td></tr>
+<tr><td><b>Enviar email de proposta de patrocínio</b></td><td>Eu, como organizador, quero ser capaz de enviar email para que um possível colaborador veja minha proposta</td></tr>
+<tr><td><b>Adicionar anexos</b></td><td>Eu, como organizador, quero ser capaz de adicionar anexos aos emails para agregar mais informações à proposta</td></tr>
+<tr><td rowspan="2"><b>Gerar relatório</b></td><td><b>Criar relatório</b></td><td>Eu. como organizador, quero ser capaz de criar relatórios para cumprir com meus compromissos com meu colaborador</td></tr>
+<tr><td><b>Adicionar imagens</b></td><td>Eu, como organizador, quero ser capaz de adicionar imagens para comprovar as declarações do relatório</td></tr>
+<tr><td rowspan="2"><b>Solicitar cotações</b></td><td><b>Enviar email de especificações de cotação</b></td><td>Eu, como organizador, quero enviar as especificações de cotação para que os fornecedores recebam as informações propostas</td></tr>
+<tr><td><b>Escrever email de especificações de cotação</b></td><td>Eu, como organizador, quero escrever especificações de cotação para informar aos fornecedores sobre os possíveis ganhos com o evento</td></tr>
+<tr><td rowspan="7"><b>Gerenciar voluntários</b></td><td rowspan="2"><b>Encontrar voluntários</b></td><td><b>Enviar solicitação de voluntariado</b></td><td>Eu, como organizador, quero enviar solicitação de voluntariado para ter voluntários disponíveis no evento</td></tr>
+<tr><td><b>Avaliar documentação do voluntário</b></td><td>Eu, como organizador, quero ser capaz de avaliar a documentação do voluntário para garantir a segurança de quem vai participar</td></tr>
+<tr><td rowspan="4"><b>Organizar sessão de treinamento para os voluntários</b></td><td><b>Disponibilizar arquivos de instrução</b></td><td>Eu, como organizador, quero ser capaz de disponibilizar arquivos em PDF para instruir voluntários para o evento</td></tr>
+<tr><td><b>Definir categorias de funções</b></td><td>Eu, como organizador, quero definir categorias de funções nos eventos para auxiliar o voluntário no seu treinamento</td></tr>
+<tr><td><b>Criar teste de conhecimento</b></td><td>Eu, como organizador, quero criar um teste de conhecimento para validar o voluntário</td></tr>
+<tr><td><b>Disponibilizar vídeos de treinamento</b></td><td>Eu, como organizador, quero ser capaz de disponibilizar vídeos para treinar os voluntários para o evento</td></tr>
+<tr><td><b>Agradecer aos voluntários</b></td><td><p><b>Criar certificado de voluntariado</b></p><p></p></td><td>Eu, como organizador, quero criar um certificado pós-evento para prestigiar o voluntário</td></tr>
+<tr><td rowspan="10"><b>Participante</b></td><td rowspan="10"><b>Participar de um evento</b></td><td rowspan="3"><b>Procurar um evento</b></td><td><b>Pesquisar eventos</b></td><td>Eu, como participante, quero pesquisar por eventos para encontrar o que desejo</td></tr>
+<tr><td><b>Visualizar eventos</b></td><td>Eu, como participante, quero visualizar os eventos para me manter informada de quais acontecerão</td></tr>
+<tr><td><b>Acessar detalhes de evento</b></td><td>Eu, como participante, quero acessar os detalhes do evento para saber do que se trata</td></tr>
+<tr><td rowspan="3"><b>Fazer inscrição em um evento</b></td><td><b>Escolher forma de inscrição</b></td><td>Eu, como participante, quero poder escolher forma de inscrição para caso queira ser voluntária ou participante</td></tr>
+<tr><td><b>Adquirir ingresso</b></td><td>Eu, como participante, quero poder adquirir um ingresso para poder participar de um evento</td></tr>
+<tr><td><b>Fazer download do ingresso</b></td><td>Eu, como participante, quero poder fazer download do ingresso para poder salvá-lo</td></tr>
+<tr><td rowspan="3"><b>Ver guia do evento</b></td><td><b>Ver mapa do local</b></td><td>Eu, como participante, quero poder ver mapa do local para conseguir me localizar durante o evento</td></tr>
+<tr><td><b>Ver instruções dos organizadores</b></td><td>Eu, como participante, quero poder ver as instruções dos organizadores para me orientar durante o evento</td></tr>
+<tr><td><b>Ver programação do evento</b></td><td>Eu, como participante, quero poder ver a programação do evento para me manter atualizado do que ocorrerá</td></tr>
+<tr><td><b>Enviar feedback de um evento</b></td><td><b>Avaliar evento</b></td><td>Eu, como participante, quero poder avaliar o evento para dar um feedback de como foi minha experiência</td></tr>
+<tr><td rowspan="7"><b>Voluntário</b></td><td rowspan="7"><b>Contribuir em um evento</b></td><td><b>Cadastrar como voluntário</b></td><td><b>Preencher perfil de voluntário</b></td><td>Eu, como voluntário, quero preencher um perfil de voluntário para poder ajudar a organizar um evento</td></tr>
+<tr><td rowspan="2"><b>Aceitar convocação de voluntariado</b></td><td><b>Assinar termo de voluntariado</b></td><td>Eu, como voluntário, quero assinar termo de voluntariado para formalizar minha colaboração no evento</td></tr>
+<tr><td><p><b>Enviar documentação</b></p><p></p></td><td>Eu, como voluntário, quero enviar documentação para formalizar minha colaboração no evento</td></tr>
+<tr><td rowspan="4"><b>Realizar treinamento</b></td><td><b>Confirmar presença no treinamento</b></td><td>Eu, como voluntário, quero confirmar presença no treinamento para ajudar o organizador a programar com relação a quantas pessoas realizarão o treinamento</td></tr>
+<tr><td><b>Acessar arquivo de instruções</b></td><td>Eu, como voluntário, quero acessar arquivo em PDF contendo instruções para o evento para poder estar preparado para ser voluntário</td></tr>
+<tr><td><b>Acessar teste de conhecimento</b></td><td>Eu, como voluntário, quero acessar teste de conhecimento para validar o voluntário para poder estar preparado para ser voluntário</td></tr>
+<tr><td><b>Acessar vídeo de instruções</b></td><td>Eu, como voluntário, quero acessar vídeo contendo instruções para o evento para poder estar preparado para ser voluntário</td></tr>
+<tr><td rowspan="4"><b>Organizador, voluntário e participante</b></td><td rowspan="4"><b>Gerenciar mensagens</b></td><td rowspan="2"><b>Enviar mensagens</b></td><td><b>Enviar mensagens de texto</b></td><td>Eu, como usuário, quero enviar mensagens de texto para poder me comunicar com colaboradores</td></tr>
+<tr><td><b>Incluir anexos</b></td><td>Eu, como usuário, quero ser capaz de incluir anexos para agregar mais valor para as minhas mensagens</td></tr>
+<tr><td rowspan="2"><b>Ler mensagens</b></td><td><b>Abrir anexos</b></td><td>Eu, como usuário, quero ser capaz de abrir anexos para visualizar as informações de forma mais agregada</td></tr>
+<tr><td><b>Ver mensagens</b></td><td>Eu, como usuário, quero ver as mensagens para me atualizar sobre o evento</td></tr>
+</table>
+
+<p><b>Tabela 1:</b> Tabela do mapa de histórias. </p>
+
+<h2 id="priorizacao">Priorização</h2>
+<p align="justify">&emsp;&emsp; Para organizar e atualizar o Backlog, realizamos a priorização das histórias de usuário do User Story Mapping utilizando a técnica MoSCoW para determinar a sua prioridade, os critérios utilizados para definir o que seria Must, Should, Could ou Would foram o <b>valor de negócio</b>, a <b>complexidade</b>e e a <b>viabilidade</b>, tendo um maior peso os que possuiam valor de negócio que ajudava a cumprir os objetivos e necessidades mais urgentes do cliente. A execução da técnica pode ser vista na Figura 2.</p>
+
+<p><img src="../assets/usm/usm-mvp.png"></p>
+<p><b>Figura 2:</b> USM completo. </p>
+
+<h1 id="mural">Mural</h1>
+<p>Segue abaixo o Mural que possui tudo o que foi apresentado:</p>
+<iframe src='https://app.mural.co/embed/c653020b-a547-4921-bb0e-192b39e67f41'
+  width='100%'
+  height='480px'
+  style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef'
+  sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'></iframe>
+
+<h2 id="historico-de-versao">Histórico de versão</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data  </th>
+<th style="text-align: center;">Versão</th>
+<th>Descrição                            </th>
+<th>Autor                          </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">19/11</td>
+<td style="text-align: center;"> 1.0  </td>
+<td>Criação do artefato USM</td>
+<td>Gustavo França</td>
+</tr>
+<tr>
+<td style="text-align: center;">22/11</td>
+<td style="text-align: center;"> 1.1  </td>
+<td>Atualização do artefato USM</td>
+<td>Gustavo França</td>
+</tr>
+<tr>
+<td style="text-align: center;">05/11</td>
+<td style="text-align: center;"> 2.0  </td>
+<td>Adição da tabela e correção do USM</td>
+<td>Larissa Gomes</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.section", "navigation.path", "navigation.top", "tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

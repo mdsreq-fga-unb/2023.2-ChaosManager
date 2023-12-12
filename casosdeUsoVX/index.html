@@ -1,0 +1,1735 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação para do projeto Chaos Manager realizado na disciplina de Requisitos de Software na Universidade de Brasília">
+      
+      
+        <meta name="author" content="Insurgentes Estelares">
+      
+      
+      
+        <link rel="prev" href="../verEvalTanas/">
+      
+      
+        <link rel="next" href="../missao1Nota/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+    
+    
+      
+        <title>Casos de uso - VoyageX - Chaos Manager</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estudo-de-caso-voyagex" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Chaos Manager" class="md-header__button md-logo" aria-label="Chaos Manager" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chaos Manager
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de uso - VoyageX
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2023.2-ChaosManager" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Chaos Manager
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Chaos Manager" class="md-nav__button md-logo" aria-label="Chaos Manager" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Chaos Manager
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2023.2-ChaosManager" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Chaos Manager
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Insurgentes Estelares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_produto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão geral do produto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao_projeto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visão geral do projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processo_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processo de desenvolvimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verEval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verificação e validação - Crystaleum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog SAFe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../priorizacaoMVPSafe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Priorização e MVP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verEvalMoonWalkers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verificação e validação - MoonWalkers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PBB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licoes3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lições aprendidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Missão 4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Missão 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verEvalTanas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verificação e validação - Tanás
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Casos de uso - VoyageX
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Casos de uso - VoyageX
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-identificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Identificados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificacao-dos-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação dos Casos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Especificação dos Casos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdu-07-pesquisar-informacoes-do-destino-escolhido" class="md-nav__link">
+    <span class="md-ellipsis">
+      CdU-07 - Pesquisar informações do destino escolhido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdu-08-reservar-acomodacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      CdU-08 - Reservar acomodação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdu-10-efetuar-pagamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      CdU-10 - Efetuar pagamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../missao1Nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missão 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../missao2Nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missão 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../missao3Nota/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missão 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregas4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vídeo de apresentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../valCliente/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Validação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casodeUso/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Casos de uso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../itera%C3%A7%C3%B5es_total/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-identificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Identificados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificacao-dos-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação dos Casos de Uso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Especificação dos Casos de Uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdu-07-pesquisar-informacoes-do-destino-escolhido" class="md-nav__link">
+    <span class="md-ellipsis">
+      CdU-07 - Pesquisar informações do destino escolhido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdu-08-reservar-acomodacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      CdU-08 - Reservar acomodação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdu-10-efetuar-pagamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      CdU-10 - Efetuar pagamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="estudo-de-caso-voyagex">Estudo de Caso - VoyageX</h1>
+<h2 id="introducao">Introdução</h2>
+<p>VoyageX foi contruído pelo professor George Marsicano (2023) como um Estudo de Caso almejando uma contribuição na matéria envolvendo o assunto "Casos de Uso". Neste artefato, é apresentado o que foi realizado pela facção Insurgentes Estelares, sintetizando os Atores, Casos de Uso identificado além das suas especificações com base no documento proposto.</p>
+<h2 id="casos-de-uso">Casos de Uso</h2>
+<h3 id="atores">Atores</h3>
+<p>Foram identificados 2 atores dos fluxos de eventos do nosso sistema, são eles:</p>
+<ul>
+<li>Viajante: Destinado a quem utiliza os serviços do aplicativo VoyageX</li>
+<li>Provedor de Serviços: Destinado a quem organiza os serviços que serão ofertados</li>
+<li>Usuário: Refere-se a ações compartilhadas em que os outros dois atores participam</li>
+</ul>
+<h2 id="casos-de-uso-identificados">Casos de Uso Identificados</h2>
+<p>É apresentado na Tabela 1 os Casos de Uso que foram encontrados:</p>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>NOME DO CASO DE USO</th>
+      <th>ATOR</th>
+      <th>RESULTADO</th>
+    </tr>
+    <tr>
+      <td>CdU-01</td>
+      <td>Realizar cadastro</td>
+      <td>Usuário</td>
+      <td>Cadastro realizado no aplicativo</td>
+    </tr>
+    <tr>
+      <td>CdU-02</td>
+      <td>Efetuar login</td>
+      <td>Usuário</td>
+      <td>Acesso autorizado ao "VoyageX"</td>
+    </tr>
+    <tr>
+      <td>CdU-03</td>
+      <td>Realizar feedbacks de serviços</td>
+      <td>Viajante</td>
+      <td>Os viajantes podem avaliar os serviços utilizados e os provedores de hospedagem podem avaliar o comportamento do contratante</td>
+    </tr>
+    <tr>
+      <td>CdU-04</td>
+      <td>Acessar informações de diversos destinos</td>
+      <td>Viajante</td>
+      <td>Visualizar conteúdos de destinos disponíveis</td>
+    </tr>
+    <tr>
+      <td>CdU-05</td>
+      <td>Gerenciar itinerário</td>
+      <td>Usuário</td>
+      <td>Manter viagem com calendário e o cronograma atualizado</td>
+    </tr>
+    <tr>
+      <td>CdU-06</td>
+      <td>Receber recomendações</td>
+      <td>Viajante</td>
+      <td>Obter sugestões de acomodações e atividades de acordo com preferências</td>
+    </tr>
+    <tr>
+      <td>CdU-07</td>
+      <td>Pesquisar informações do destino escolhido</td>
+      <td>Viajante</td>
+      <td>Pesquisar conteúdo do destino escolhido</td>
+    </tr>
+    <tr>
+      <td>CdU-08</td>
+      <td>Reservar acomodação</td>
+      <td>Viajante</td>
+      <td>Acomodação reservada</td>
+    </tr>
+    <tr>
+      <td>CdU-09</td>
+      <td>Reservar atividade</td>
+      <td>Viajante</td>
+      <td>Atividade reservada</td>
+    </tr>
+    <tr>
+      <td>CdU-10</td>
+      <td>Efetuar pagamento</td>
+      <td>Viajante</td>
+      <td>Acessar informações da atividade escolhida</td>
+    </tr>
+    <tr>
+      <td>CdU-11</td>
+      <td>Gerenciar reserva de atividades</td>
+      <td>Viajante</td>
+      <td>Reservar, atualizar e cancelar reserva de acomodação</td>
+    </tr>
+    <tr>
+      <td>CdU-12</td>
+      <td>Gerenciar reserva de acomodações</td>
+      <td>Provedor de Serviços</td>
+      <td>Cadastrar e remover serviços de hospedagem e atividades</td>
+    </tr>
+  </table>
+
+<p>Com os atores e casos de usos identificados, foi criado o diagrama de casos de uso para visualizar como e por quem as ações são realizadas dentro do sistema, assim como a ligação entre casos quando existiam. O diagrama está disponível na Figura 1.</p>
+<p><img src="../assets/casosUso/diagVX.png" alt="diagVX"></p>
+<h2 id="especificacao-dos-casos-de-uso">Especificação dos Casos de Uso</h2>
+<h3 id="cdu-07-pesquisar-informacoes-do-destino-escolhido">CdU-07 - Pesquisar informações do destino escolhido</h3>
+<table>
+    <tr>
+        <th>Nome do caso de uso</th>
+        <td>Pesquisar informações do destino escolhido</td>
+    </tr>
+    <tr>
+        <th>Autor</th>
+        <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+    </tr>
+    <tr>
+        <th>1. Atores</th>
+        <td>Viajante</td>
+    </tr>
+    <tr>
+        <th>2. Breve Descrição</th>
+        <td>O usuário pode pesquisar informações detalhadas sobre o local, incluindo os melhores períodos para visitar, atrações culturais, culinária local, e dicas de viagem. Também podem filtrar acomodações por preço, localização, tipo (hotel, aluguel de temporada, pousada), e avaliações de outros viajantes.</td>
+    </tr>
+    <tr>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>3.1. O viajante digita o destino que deseja pesquisar (FE01)</p>
+            <p>3.2. O sistema apresenta as seguintes opções: - Pesquisar informações de destino - Filtrar acomodações (FA01)</p>
+            <p>3.3. O viajante seleciona "Pesquisar informações de destino" (FE01)</p>
+            <p>3.4. O sistema retorna as informações requisitadas. (RN01) (RN02) (RN03) (FA02)</p>
+        </td>
+    </tr>
+    <tr>
+        <th>4. Fluxo Alternativos</th>
+        <td>
+            <p>4.1. FA01 - Filtrar acomodações 
+            <p>4.1.1. O viajante seleciona a opção "Filtrar acomodações"</p> 
+            <p>4.1.2. O sistema apresenta as seguintes opções de filtro: - Preço - Localização - Tipo (hotel, aluguel de temporada, pousada) - Avaliações de outros viajantes</p>
+            <p>4.1.3. O viajante informa os filtros que deseja aplicar</p> 
+            <p>4.1.4. O sistema valida as informações (FE01)</p> 
+            <p>O caso de uso retorna ao 3.4 do FB</p>
+            <p> 4.2. FA02 - Visualizar acomodação</p>
+            <p>4.2.1. O viajante seleciona uma acomodação.<p/> 
+            <p>O caso de uso retorna ao 3.4 do FB</p>
+        </td>
+    </tr>
+    <tr>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>5.1. FE01 - Destino inválido</p>
+            <p>No passo 3.3, caso o destino digitado não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Destino inválido, digite novamente”. E, o caso de uso retorna ao 3.1 do FB.</p> 
+            <p>5.1. FE01 - Localização inválida</p>
+            <p>No passo 4.1.4 do FA, caso a localização digitada não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Localização inválida, digite novamente”. E, o caso de uso retorna ao 4.1.3 do FA.</p>
+        </td>
+    </tr>
+    <tr>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+            <p>6.2. O viajante deve estar logado na sua conta</p>
+        </td>
+    </tr>
+    <tr>
+        <th>7. Pós-condições</th>
+        <td>
+            <p>7.1. Informações do destino desejado</p>
+            <p>7.2. Acomodações filtradas como desejado</p>
+        </td>
+    </tr>
+    <tr>
+        <th>8. Pontos de extensão</th>
+        <td>Não há.</td>
+    </tr>
+    <tr>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
+    </tr>
+    <tr>
+        <th>10. Regras de negócio</th>
+        <td>
+            <p>RN01 - Se a informação requisitada for de informações de destino, então ela deve apresentar no máximo os 2 melhores períodos para ser visitado. As atrações culturais com os seus períodos de funcionamento. A culinária local com as suas restrições alimentares. Nas dicas de viagem, devem ser listados as 5 melhores dicas baseado nas avaliações dos usuários</p>
+            <p>RN02 - Se a informação requisitada for de filtrar acomodações, então ela deve apresentar uma faixa entre o valor mínimo e o máximo, além de listar por uma ordenação por preço. Na localização, poderá ser definida por destinos mais próximos da localização atual do usuário. O tipo do destino deve apresentar 3 categorias diferentes. E nas avaliações de outros viajantes, deve apresentar de 1 a 5 estrelas.</p>
+            <p>RN03 - Se a informação requisitada for de visualizar acomodações, então ela deve apresentar até 15 fotos da acomodação. Nas descrições detalhadas, até 2500 caracteres e na disponibilidade, deve ser apresentado os períodos de reserva da acomodação</p>
+        </td>
+    </tr>
+    <tr>
+        <th>11. Informações adicionais</th>
+        <td>Não há</td>
+    </tr>
+</table>
+
+<h3 id="cdu-08-reservar-acomodacao">CdU-08 - Reservar acomodação</h3>
+<table>
+    <tr>
+        <th>Nome do caso de uso</th>
+        <td>Reservar acomodação</td>
+    </tr>
+    <tr>
+        <th>Autor</th>
+        <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+    </tr>
+    <tr>
+        <th>1. Atores</th>
+        <td>Viajante e o Provedor de serviços</td>
+    </tr>
+    <tr>
+        <th>2. Breve Descrição</th>
+        <td>O viajante pode escolher a acomodação, visualizar fotos, ler descrições detalhadas, verificar a disponibilidade e realizar a reserva diretamente pelo aplicativo.</td>
+    </tr>
+    <tr>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>3.1. O viajante seleciona o período de reserva (FE01)</p>
+            <p>3.2. O viajante informa a quantidade de hóspedes</p>
+            <p>3.3. O viajante informa os dados dos hóspedes</p>
+            <p>3.4. O viajante seleciona a opção "Reservar acomodação"</p>
+            <p>3.5. O sistema valida as informações (RN01)</p>
+            <p>3.6. O sistema informa o valor final e solicita o pagamento (PE02)</p>
+            <p>3.7. O sistema envia a solicitação de reserva para o provedor de serviços</p>
+            <p>3.8. O provedor de serviços analisa a reserva (FE02)</p>
+            <p>3.9. O sistema envia um email do status da reserva para o viajante (RN02)</p>
+        </td>
+    </tr>
+    <tr>
+        <th>4. Fluxo Alternativos</th>
+        <td>Não há.</td>
+    </tr>
+    <tr>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>5.1. FE01 - Período inválido No passo 3.1 do FB, caso o período de reserva selecionado não esteja disponível, o sistema deve emitir a mensagem: “Esta data não está disponível”. E, o caso de uso retorna ao 3.1 do FB.</p>
+            <p>5.2. FE02 - Reserva rejeitada No passo 3.8 do FB, caso o provedor de serviços rejeite a solicitação de reserva, o sistema deve enviar um aviso ao viajante: “Sua solicitação de reserva foi recusada”. E, o caso de uso retorna ao 3.9 do FB.</p>
+        </td>
+    </tr>
+    <tr>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+            <p>6.2. O viajante deve estar logado na sua conta</p>
+            <p>6.3. O viajante selecionou uma acomodação</p>
+        </td>
+    </tr>
+    <tr>
+        <th>7. Pós-condições</th>
+        <td>7.1. Reserva de acomodação concluída</td>
+    </tr>
+    <tr>
+        <th>8. Pontos de extensão</th>
+        <td>
+            <p>8.1. PE01 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
+            <p>8.2. Reservar acomodação é um ponto de extensão do caso de uso Pesquisar informações do destino escolhido</p>
+        </td>
+    </tr>
+    <tr>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
+    </tr>
+    <tr>
+        <th>10. Regras de negócio</th>
+        <td>
+            (RN01) - Validação de informações
+            <table>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Tipo</th>
+                    <th>Obrigatoriedade</th>
+                    <th>Observação</th>
+                </tr>
+                <tr>
+                    <td>Nome</td>
+                    <td>String</td>
+                    <td>True</td>
+                </tr>
+                <tr>
+                    <td>CPF</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>O sistrema deve validar se os CPFs
+existem</td>
+                </tr>
+                <tr>
+                    <td>Quantidade de Hóspedes</td>
+                    <td>Int</td>
+                    <td>True</td>
+                    <td>Precisa ter no mínimo 1 hóspede</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>String</td>
+                    <td>True</td>
+                    <td>O sistema deve conrifmar o email </td>
+                </tr>
+            </table>
+    </tr>
+    <tr>
+        <th>11. Informações adicionais</th>
+        <td>Não há</td>
+    </tr>
+</table>
+
+<h3 id="cdu-10-efetuar-pagamento">CdU-10 - Efetuar pagamento</h3>
+<table>
+    <tr>
+        <th>Nome do caso de uso</th>
+        <td>Efetuar pagamento</td>
+    </tr>
+    <tr>
+        <th>Autor</th>
+        <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+    </tr>
+    <tr>
+        <th>1. Atores</th>
+        <td>Viajante</td>
+    </tr>
+    <tr>
+        <th>2. Breve Descrição</th>
+        <td>O viajante deve pagar os débitos pendentes</td>
+    </tr>
+    <tr>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>3.1. O sistema apresenta as seguintes opções:</p>
+            <p>- Efetuar pagamento</p>
+            <p>- Adicionar novo cartão (FA01)</p>
+            <p>3.2. O viajante seleciona a opção "Efetuar pagamento"</p>
+            <p>3.3. O sistema apresenta as seguintes opções:</p>
+            <ul>
+        <li>Cartão de crédito</li>
+        <li>Cartão de débito</li>
+        <li>PIX</li>
+        <li>Boleto</li>
+    </ul>
+            <p>3.4. O viajante seleciona uma forma de pagamento (RN01)</p>
+            <p>3.5. O viajante confirma o pagamento (RN02) (RN03) (RN04)</p>
+            <p>3.6. O sistema verifica se o pagamento foi efetuado (FE01)</p>
+            <p>3.7. O sistema emite um comprovante de pagamento e confirma o pagamento da reserva</p>
+        </td>
+    </tr>
+    <tr>
+        <th>4. Fluxo Alternativos</th>
+        <td>
+            <p>4.1. FA01 - Adicionar novo cartão</p>
+            <p>4.1.1. O viajante seleciona a opção "Adicionar novo cartão"</p>
+            <p>4.1.2. O viajante informa o número do cartão</p>
+            <p>4.1.3. O viajante informa a data de vencimento</p>
+            <p>4.1.4. O viajante informa o CVV do cartão</p>
+            <p>4.1.5. O viajante informa o País de emissão do cartão</p>
+            <p>4.1.6. O viajante pode informar um apelido para o cartão</p>
+            <p>4.1.7. O viajante seleciona a opção do cartão que deseja utilizar (crédito ou débito)</p>
+            <p>4.1.8. O sistema adiciona um novo cartão a carteira do viajante</p>
+            <p>O caso de uso retorna ao item 3.1 do FB</p>
+        </td>
+    </tr>
+    <tr>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>5.1. FE01 - Pagamento não identificado No passo 3.6 do FB, caso o sistema não identifique nenhum pagamento efetuado, o sistema deve emitir a mensagem: “O pagamento não foi finalizado”. E, o caso de uso retorna ao 3.1 do FB.</p>
+        </td>
+    </tr>
+    <tr>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+            <p>6.2. O viajante deve estar logado na sua conta</p>
+            <p>6.3. O viajante realizou uma reserva</p>
+            <p>6.4. O viajante possui o pagamento de uma reserva pendente</p>
+        </td>
+    </tr>
+    <tr>
+        <th>7. Pós-condições</th>
+        <td>7.1. Pagamento da reserva confirmado</td>
+    </tr>
+    <tr>
+        <th>8. Pontos de extensão</th>
+        <td>
+            <p>8.1. PE01 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
+        </td>
+    </tr>
+    <tr>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
+    </tr>
+    <tr>
+        <th>10. Regras de negócio</th>
+        <td>
+            <p>RN01 - Se a forma de pagamento escolhida for cartão de crédito ou débito, então o viajante deverá selecionar um dos cartões da carteira.</p>
+            <p>RN02 - Quando a forma de pagamento escolhida for Boleto e PIX, então o pagamento deve ser realizado dentro de 30 minutos.</p>
+            <p>RN03 - Quando a forma de pagamento escolhida for cartão de crédito, então o cartão selecionado deve possuir limite para ser debitado.</p>
+            <p>RN04 - Quando a forma de pagamento escolhida for cartão de crédito, então o cartão selecionado deve possuir saldo para ser debitado.</p>
+        </td>
+    </tr>
+    <tr>
+        <th>11. Informações adicionais</th>
+        <td>Não há.</td>
+    </tr>
+</table>
+
+<h2 id="historico-de-versoes">Histórico de versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Data  </th>
+<th style="text-align: center;">Versão</th>
+<th>Descrição                            </th>
+<th>Autor                          </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">09/12</td>
+<td style="text-align: center;"> 1.0  </td>
+<td>Criação do artefato</td>
+<td>Gustavo França e Oscar de Brito</td>
+</tr>
+<tr>
+<td style="text-align: center;">12/12</td>
+<td style="text-align: center;"> 1.  </td>
+<td>Correção das especificações do artefato</td>
+<td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.section", "navigation.path", "navigation.top", "tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
