@@ -127,7 +127,7 @@ servirá como alicerce para a sua construção.</p>
 
 ### Transição
 
-<p>&emsp; O sistema é entregue ao cliente para o
+<p>&emsp; O sistema é entregue ao cliente para
 uso em produção.
 Testes são realizados e um ou mais
 incrementos do sistema são
