@@ -20,9 +20,8 @@ export class Campanha {
 
   addFicha(ficha: Ficha) {
     ficha._id = this.fichas.length + 1;
-    if (ficha.NPC) this.fichas_NPC.push(ficha);
+    if(ficha.NPC) this.fichas_NPC.push(ficha);
     else this.fichas.push(ficha);
-    return ficha._id;
   }
 
   static gerarSenha(): number {
@@ -68,14 +67,15 @@ export class Campanha {
   }
 
   static toObj(objeto: any): Campanha {
-    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC, combate } =
-      objeto;
+    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC, registroAcoes } = objeto;
     const campanha = new Campanha(nome, historia, senha_mestre);
     campanha._id = _id;
     campanha.senha_jogador = senha_jogador;
 
     campanha.fichas = fichas.map((ficha: any) => Ficha.toObj(ficha));
     campanha.fichas_NPC = fichas_NPC.map((ficha: any) => Ficha.toObj(ficha));
+
+    campanha.registroAcoes = registroAcoes;
 
     return campanha;
   }
