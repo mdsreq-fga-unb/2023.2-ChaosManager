@@ -51,7 +51,14 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
         <h2>Jogadores</h2>
         <ul>
         {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
-          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>{item._id} - {item.dados.nomeJogador}</button></li>
+          <li key={index}>{item._id} - {item.dados.nomeJogador}
+            <div>
+              <button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>Editar Ficha</button>
+            </div>
+            <div>
+              <button onClick={() => {router.push(`/campanha/${params.nome}/ficha/${item._id}?type=jogador`)}}>Acessar Ficha</button>
+            </div>
+          </li>
         ))}
         </ul>
       </div>
@@ -60,7 +67,14 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
         <h2>NPC</h2>
         <ul>
         {fichasNpc.filter(ficha => ficha.NPC === true).map((item, index) => (
-          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`)}}>{item._id} - {item.dados.nomeJogador}</button></li>
+          <li key={index}>{item._id} - {item.dados.nomeJogador}
+            <div>
+              <button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`)}}>Editar Ficha</button>
+            </div>
+            <div>
+              <button onClick={() => {router.push(`/campanha/${params.nome}/ficha/${item._id}?type=npc`)}}>Acessar Ficha</button>
+            </div>
+          </li>
         ))}
         </ul>
       </div>
