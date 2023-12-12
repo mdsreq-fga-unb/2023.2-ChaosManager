@@ -2,10 +2,29 @@ import { Ficha } from "@/models/ficha";
 import { Testes, rolarDados, realizarTeste } from "@/models/teste";
 import { Reacao, realizarReacao } from "@/models/combate";
 import { Campanha } from "@/models/campanha";
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent, useEffect } from "react";
 
+export default function ModalTestes({ ficha, campanha, socket }: { ficha: Ficha, campanha: Campanha, socket: any}) {
 
-export default function ModalTestes({ ficha, campanha }: { ficha: Ficha, campanha: Campanha }) {
+    const [canAction, setCanAction] = useState<boolean>(false);
+    const [canReaction, setCanReaction] = useState<boolean>(false);
+
+    useEffect(() => {
+        socket.on('realize-action', (data: any) => {
+          if (data == ficha._id){
+            setCanAction(true);
+            alert("Realize um Teste!");
+          }
+            
+        });
+    
+        socket.on('recipe-action', (data:any) => {
+            if (data == ficha._id){
+                setCanReaction(true);
+                alert("Realize uma Reação!");
+            }
+        })
+      }, [socket]);
 
     const [d20, setD20] = useState<number>(0);
     const [pe, setPe] = useState<number>(0);
@@ -25,6 +44,28 @@ export default function ModalTestes({ ficha, campanha }: { ficha: Ficha, campanh
     const handleReacaoChange = (event: ChangeEvent<HTMLSelectElement>) => {
         setReacaoSelecionada(event.target.value as Reacao);
     };
+
+    function activeReacao(){
+        console.log(reacaoSelecionada);
+        const resultado = realizarReacao(ficha, reacaoSelecionada, d20, campanha);
+        const fichaId = ficha._id;
+        if (canReaction){
+            socket.emit('result-reaction', ({fichaId, resultado, reacaoSelecionada, d20}));
+            alert("Reação enviada para o mestre!");
+            setCanReaction(false);
+        }
+    }
+
+    function activeAcao(){
+        const resultado = realizarTeste(ficha, testeSelecionado, pe, d20);
+        const fichaId = ficha._id;
+
+        if (canAction){
+            socket.emit('result-action', ({fichaId, resultado, pe, d20}));
+            alert("Ação enviada para o mestre!");
+            setCanAction(false);
+        }
+    }
 
     return (
         <div className="flex flex-col">
@@ -60,7 +101,7 @@ export default function ModalTestes({ ficha, campanha }: { ficha: Ficha, campanh
                         />
                     </div>
 
-                    <button className="text-gray-600 text-sm font-semibold mr-4" onClick={() => { realizarTeste(ficha, testeSelecionado, pe, d20), setD20(0) }}>
+                    <button className="text-gray-600 text-sm font-semibold mr-4" onClick={() => { activeAcao(), setD20(0) }}>
                         Realizar Teste
                     </button>
                 </div>
@@ -73,14 +114,14 @@ export default function ModalTestes({ ficha, campanha }: { ficha: Ficha, campanh
                         value={reacaoSelecionada}
                         onChange={handleReacaoChange}
                     >
-                        {Object.values(Testes).map((reacao) => (
+                        {Object.values(Reacao).map((reacao) => (
                             <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={reacao} value={reacao}>
                                 {reacao}
                             </option>
                         ))}
                     </select>
 
-                    <button className="text-gray-600 text-sm font-semibold mr-4" onClick={() => { realizarReacao(ficha, reacaoSelecionada, d20, campanha), setD20(0) }}>
+                    <button className="text-gray-600 text-sm font-semibold mr-4" onClick={() => { activeReacao(), setD20(0) }}>
                         Realizar Reação
                     </button>
                 </div>

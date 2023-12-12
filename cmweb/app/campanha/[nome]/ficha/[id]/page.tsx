@@ -1,7 +1,6 @@
 "use client";
 
 import { Ficha } from "@/models/ficha";
-
 import Atributo from "@/app/Components/Atributo";
 import ValorTesteAtributo from "@/app/Components/ValorTesteAtributo";
 import TabelaMagias from "@/app/Components/TabelaMagias";
@@ -13,8 +12,9 @@ import TabelaTracos from "@/app/Components/TabelaTracos";
 import ModalTestes from "@/app/Components/ModalTestes";
 import { useEffect, useState } from "react";
 import { Campanha, Find } from "@/models/campanha";
-
 import { useRouter, useSearchParams } from "next/navigation";
+import {io} from 'socket.io-client';
+const socket = io("http://164.41.98.22:8080");
 
 const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
   const [ficha, setFicha] = useState<Ficha>();
@@ -22,6 +22,32 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const typeParam = searchParams.get("type");
+
+  const saveData = async (e:any) => {
+    if (ficha){
+      const response = await campanha.updateData();
+      const {status, message} = await response.json();
+      if (status == 200){
+        alert("Ficha salva com sucesso!");
+        socket.emit("update", (campanha));
+      }
+      else{
+        alert("Erro ao salvar a ficha!" + message);
+      }
+    }    
+  }
+
+  useEffect(() => {
+    socket.on('update', ({campanha}:any) => {
+      SetCampanha(campanha);
+    });
+  }, [socket]);
+
+  function returnCampanha(){
+    const {nome} = params; 
+    router.push(`/campanha/${nome}`);
+  }
+
   useEffect(() => {
     if (!params.nome || !params.id) {
       alert("Essa Página não existe");
@@ -58,10 +84,13 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
       </div>
     );
   return (
+    <>
     <div className="bg-gray-100 p-4 bg-gray-800">
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-1">
+          <button className="text-gray-600 font-semibold mr-4" onClick={returnCampanha}>Página Principal</button>
           <div className="flex space-between">
+            
             <div className="ml-4">
               <p className="font-bold text-xl text-gray-400">{ficha.dados.nomeJogador}</p>
               <p className="font-bold text-xs text-gray-400"> {ficha.dados.nomeUsuario}</p>
@@ -92,7 +121,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
             </div>
           </div>
 
-          <ModalTestes ficha={ficha} campanha={campanha} />
+          <ModalTestes ficha={ficha} campanha={campanha} socket={socket} />
 
           <div className="max-w-md mx-auto mt-8">
             <div className="mb-4 flex items-center">
@@ -100,7 +129,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
                 <label className="text-gray-600 text-sm font-semibold mr-4">Capacidade:</label>
                 <input
                   type="text"
-                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
                   value={ficha.Capacidade()}
                 />
               </div>
@@ -110,7 +139,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
                 </label>
                 <input
                   type="text"
-                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
                   value={ficha.CapacidadeCombate()}
                 />
               </div>
@@ -120,7 +149,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
               <label className="text-gray-600 text-sm font-semibold mr-4">Raça:</label>
               <input
                 type="text"
-                className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
                 value={ficha.dados.raca}
               />
             </div>
@@ -129,7 +158,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
               <label className="text-gray-600 text-sm font-semibold mr-4">Profissão:</label>
               <input
                 type="text"
-                className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
                 value={ficha.dados.profissao}
               />
             </div>
@@ -138,7 +167,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
                 <label className="text-gray-600 text-sm font-semibold mr-4">Idade:</label>
                 <input
                   type="text"
-                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
                   value={ficha.dados.idade}
                 />
               </div>
@@ -146,7 +175,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
                 <label className="text-gray-600 text-sm font-semibold ml-4">Gênero:</label>
                 <input
                   type="text"
-                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                  className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
                   value={ficha.dados.genero}
                 />
               </div>
@@ -157,16 +186,17 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
           <div className="mb-4">
             <label className="text-gray-600 text-sm font-semibold mb-2">Registro de ações:</label>
             <textarea
-              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
-              value={ficha.registroAcoes}
+              readOnly
+              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
+              value={ficha.registroAcoes.join('\n')}
               rows={9}
             />
           </div>
-
           <div className="mb-4">
             <label className="text-gray-600 text-sm font-semibold mb-2">Descrição:</label>
             <textarea
-              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+              readOnly
+              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
               value={ficha.dados.descricao}
               rows={9}
             />
@@ -174,7 +204,8 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
           <div className="mb-4">
             <label className="text-gray-600 text-sm font-semibold mb-2">História:</label>
             <textarea
-              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+              readOnly
+              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
               value={ficha.dados.historia}
               rows={9}
             />
@@ -182,7 +213,8 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
           <div className="mb-4">
             <label className="text-gray-600 text-sm font-semibold mb-2">Notas:</label>
             <textarea
-              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+              readOnly
+              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400"
               value={ficha.dados.notas}
               rows={9}
             />
@@ -211,7 +243,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
             <ValorTesteAtributo value={ficha.Sorte()} label="Sorte " />
           </div>
 
-          <TabelaMagias ficha={ficha} />
+          <TabelaMagias ficha={ficha}/>
           <TabelaArmas ficha={ficha} />
           <TabelaEquipamentos ficha={ficha} />
           <TabelaItens ficha={ficha} />
@@ -219,10 +251,14 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
           <TabelaTracos
             tracosNegativos={ficha.tracosNegativos}
             tracosPositivos={ficha.tracosPositivos}
-          />
+          />          
         </div>
       </div>
-    </div>
+      <button className="text-gray-600 text-sm font-semibold mr-4" onClick={saveData}>
+          Salvar Ficha
+      </button>
+    </div>    
+    </>
   );
 };
 

@@ -34,20 +34,20 @@ export class Combate{
             count++;
         });
         
-        this.campanha.registroAcoes.push("A ordem de iniciativa é: " + fichas.toString());
+        this.campanha.registroAcoes.push("A ordem de iniciativa é: " + fichas.toString() + "\n");
 
         fichas.forEach(element => {
-            element.registroAcoes.push("A ordem de iniciativa é: " + fichas.toString());
+            element.registroAcoes.push("A ordem de iniciativa é: " + fichas.toString() + "\n");
         });
 
     }
 
-    calculoDano(arma:Arma, magia:boolean, PE:number, acao:number):number{
+    calculoDano(arma:Arma, magia:Magia, PE:number, acao:number):number{
         let result = 0;
 
         if (arma !== null && arma !== undefined){
             result = acao + arma.mod_dano;
-        } else if (magia == true) {
+        } else if (magia !== null && magia !== undefined) {
             result = acao + PE;
         } else{
             result = acao;
@@ -146,16 +146,19 @@ export class Combate{
 
     }
 
-    efeitoCombate(combate:number, fichas:Ficha[], resultados:number[], d20:number[], escolhaReacao:Reacao, arma:Arma, magia:boolean, PE:number):void{
-        // combate - acao 1, retaliacao 2
+    efeitoCombate(combate:boolean, fichas:Ficha[], resultados:number[], d20:number[], escolhaReacao:Reacao, arma:Arma, magia:Magia, PE:number):void{
+        // combate - acao true, retaliacao false
         // personagem executando acao - ficha[0], personagem executando reacao - ficha[1]
         // resultado do teste da acao - resultados[0], resultado do teste da reacao - resultados[1]
         // d20 da acao - d20[0], d20 da reacao - d20[1]
 
+        if (resultados[1] == null || resultados[1] == undefined) resultados[1] = 0;
+        if (PE == null || resultados[1] == undefined) PE = 0;
+
         let dano = this.calculoDano(arma, magia, PE, resultados[0]);
 
         switch(combate){
-            case 1:
+            case true:
                 if (resultados[1] >= resultados[0] && escolhaReacao == Reacao.Esquivar) {
                     fichas[0].registroAcoes.push(fichas[1].toString() + " esquivou com sucesso do ataque de " + fichas[0].toString() + "!");
                     fichas[1].registroAcoes.push(fichas[1].toString() + " esquivou com sucesso do ataque de " + fichas[0].toString() + "!");
@@ -172,7 +175,7 @@ export class Combate{
 
                 break;
 
-            case 2:
+            case false:
                 if (d20[0] == 1) this.calculoAbsorcao(3, dano, d20, fichas);                   // falha crítica
                 else this.calculoAbsorcao(1, dano, d20, fichas);
 
@@ -190,7 +193,6 @@ export class Combate{
             fichaAcao.registroAcoes.push("Realize um teste de " + teste + "!");
             ficha.registroAcoes.push("Você está sofrendo uma Retaliação, role os dados!");
         }
-        
     }
 
     pularAcao():void{ // da para utilizar essa funcao no botao de Proxima Acao

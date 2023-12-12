@@ -9,6 +9,9 @@ import { TracoNegativo, TracosNegativos } from "@/models/traco-negativo";
 import { Campanha, Find } from "@/models/campanha";
 import { Ficha } from "@/models/ficha";
 import { useRouter } from "next/navigation";
+import {io} from 'socket.io-client';
+import { number } from "yup";
+const socket = io("http://164.41.98.22:8080");
 
 type Trait = { label: string; title: string; value: number };
 export default function EditFicha({ params }: { params: { nome: string } }) {
@@ -20,7 +23,7 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
   const [ficha, setFicha] = useState<Ficha | null>(null);
   const [campanha, SetCampanha] = useState<Campanha | null>(null);
   const searchParams = useSearchParams();
-  const fichaId = searchParams.get("fichaId");
+  let fichaId:any = searchParams.get("fichaId") || 0;
   const typeParam = searchParams.get("type");
   const router = useRouter();
   const LoadFicha = async () => {
@@ -56,12 +59,24 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
           });
         }
       } else {
-        alert("Ficha não encontrada");
+        returnCampanha();
+        return;
       }
     } catch (error) {
       alert((error as Error)?.message);
     }
   };
+
+  function returnCampanha(){
+    const {nome} = params; 
+    router.push(`/campanha/${nome}`);
+  }
+
+  useEffect(() => {
+    socket.on('update', ({campanha}:any) => {
+      SetCampanha(campanha);
+    });
+  }, [socket]);
 
   useEffect(() => {
     if (!params.nome) {
@@ -78,11 +93,12 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
         return router.push("/");
       }
     }
-    if (!campanha) {
+
+    if (!campanha)
       verifyCampanha();
-    }
+    
     if (fichaId && campanha) {
-      setEditMode("Editar");
+      setEditMode("Editar");      
       LoadFicha();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -174,6 +190,7 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
         return alert("O personagem deve ter o mesmo número de traços positivos e negativos");
       }
       await campanhaToEdit.updateData();
+      socket.emit("update", (campanhaToEdit));
       alert("Ficha editada com sucesso");
       router.push(`/campanha/${params.nome}/ficha/${campanhaToEdit.fichas[fichaToEditId]._id}`);
     } catch (error) {}
@@ -231,7 +248,9 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
         return alert("O personagem deve ter o mesmo número de traços positivos e negativos");
       }
       const newFichaId = campanha.addFicha(novaFicha);
+      fichaId = newFichaId;
       await campanha.updateData();
+      socket.emit("update", (campanha));
       router.push(`/campanha/${params.nome}/ficha/${newFichaId}`);
     } catch (error) {
       return alert((error as Error)?.message);
