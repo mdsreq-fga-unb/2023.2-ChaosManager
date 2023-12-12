@@ -4,6 +4,9 @@ import { Ficha } from "@/models/ficha";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Combat from "@/app/Components/Combate/Combat";
+import {io} from 'socket.io-client';
+const socket = io("http://164.41.98.22:8080");
 
 export default function CampanhaPage({ params }: { params: { nome: string; id: string } }) {
   const [senhaMestre, setSenhaMestre] = useState("");
@@ -15,21 +18,28 @@ export default function CampanhaPage({ params }: { params: { nome: string; id: s
 
   useEffect(() => {
     dadosCampanha();
-  }, []);
+    socket.on('update', campanha => {
+      updateCamp(campanha);
+    });
+  }, [socket]); 
 
   const router = useRouter();
   const searchParams = useSearchParams();
   const typeParam = searchParams.get("type");
 
+  function updateCamp(camp:Campanha){
+    SetCampanha(camp as Campanha);
+    setSenhaMestre(camp.senha_mestre);
+    setSenhaJogador(camp.senha_jogador);
+    setFichasJogador(camp.fichas);
+    setFichasNpc(camp.fichas_NPC);
+  }
+
   const dadosCampanha = async () => {
     try {
       const data = await Find.findData(params.nome);
       const { status, message, camp, result } = data;
-      SetCampanha(camp as Campanha);
-      setSenhaMestre(camp.senha_mestre);
-      setSenhaJogador(camp.senha_jogador);
-      setFichasJogador(camp.fichas);
-      setFichasNpc(camp.fichas_NPC);
+      updateCamp(camp);
     } catch (error) {
       console.log(error);
     }
@@ -41,6 +51,12 @@ export default function CampanhaPage({ params }: { params: { nome: string; id: s
       </div>
     );
   return (
+    <>
+    {campanha && (
+      <>
+        <Combat campanha={campanha} socket={socket} />
+      </>
+    )}
     <div className="flex min-h-screen flex-col items-center justify-center">
       <label className="mb-0">Sala de campanha:</label>
       <h1 className="text-4xl">{campanha.nome}</h1>
@@ -136,5 +152,6 @@ export default function CampanhaPage({ params }: { params: { nome: string; id: s
         </div>
       </div>
     </div>
+    </>
   );
 }

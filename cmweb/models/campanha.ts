@@ -19,7 +19,7 @@ export class Campanha {
   }
 
   addFicha(ficha: Ficha) {
-    ficha._id = this.fichas.length + 1;
+    ficha._id = this.fichas.length;
     if(ficha.NPC) this.fichas_NPC.push(ficha);
     else this.fichas.push(ficha);
   }

@@ -3,7 +3,6 @@ import { Campanha, Find } from '@/models/campanha';
 import style from './get.module.css';
 import Combat from '../../Combate/Combat';
 import { Ficha } from '@/models/ficha';
-import FichaPagina from '../../../ficha/page'
 
 function GetDB({ socket }: any) {
   const [nome, setName] = useState('');

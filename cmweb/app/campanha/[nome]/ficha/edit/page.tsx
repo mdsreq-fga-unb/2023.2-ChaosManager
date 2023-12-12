@@ -9,6 +9,8 @@ import { TracoNegativo, TracosNegativos } from "@/models/traco-negativo";
 import { Campanha, Find } from "@/models/campanha";
 import { Ficha } from "@/models/ficha";
 import { useRouter } from "next/navigation";
+import {io} from 'socket.io-client';
+const socket = io("http://164.41.98.22:8080");
 
 type Trait = { label: string; title: string; value: number };
 export default function EditFicha({ params }: { params: { nome: string } }) {
@@ -62,6 +64,12 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
       alert((error as Error)?.message);
     }
   };
+
+  useEffect(() => {
+    socket.on('update', ({campanha}:any) => {
+      SetCampanha(campanha);
+    });
+  }, [socket]);
 
   useEffect(() => {
     if (!params.nome) {
@@ -174,6 +182,7 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
         return alert("O personagem deve ter o mesmo número de traços positivos e negativos");
       }
       await campanhaToEdit.updateData();
+      socket.emit("update", (campanhaToEdit));
       alert("Ficha editada com sucesso");
       router.push(`/campanha/${params.nome}/ficha/${campanhaToEdit.fichas[fichaToEditId]._id}`);
     } catch (error) {}
@@ -232,6 +241,7 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
       }
       const newFichaId = campanha.addFicha(novaFicha);
       await campanha.updateData();
+      socket.emit("update", (campanha));
       router.push(`/campanha/${params.nome}/ficha/${newFichaId}`);
     } catch (error) {
       return alert((error as Error)?.message);

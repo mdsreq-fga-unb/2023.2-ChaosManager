@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Ficha } from "@/models/ficha";
 import { Campanha } from "@/models/campanha";
 import { Arma } from "@/models/arma";
@@ -23,21 +23,134 @@ const Combat = ({socket, campanha}:typeCombat) => {
   const [selectedFichaIniciativa, setSelectedFichaIniciativa] = useState<Ficha | null>(null);
   const [selectedArma, setSelectedArma] = useState<Arma | null>(null);
   const [selectedMagia, setSelectedMagia] = useState<Magia | null>(null);
-  const [podeReagir, setPodeReagir] = useState<boolean>(false);
+  const [naoPodeReagir, setNaoPodeReagir] = useState<boolean>(false);
   const [selectedTeste, setSelectedTeste] = useState<Testes | null>(null);
   const [iniciativas, setIniciativas] = useState<Ficha[]>([]);
+  
+  function realizarAcao(podeReagir: boolean, selectedFichaRealiza: any, selectedFichaRecebe: any, selectedTeste: any, selectedArma: any, selectedMagia: any){
+    
+    if (!selectedFichaRealiza || !selectedFichaRecebe){
+      alert("Por favor, selecione ambas as fichas de ação e reação!");
+      return;
+    }
 
-  const [resultadoAcao, setResultadoAcao] = useState<string>('');
-  const [resultadoReacao, setResultadoReacao] = useState<string>('');
+    /*if (selectedArma && selectedMagia){
+      alert("Não é possível selecionas dois tipos de ataque!\nPor favor, selecione apenas uma arma ou magia!");
+      return;
+    }   */ 
+    
+    if (!selectedTeste){
+      alert("Por favor, informe o teste a ser realizado para executar a ação!");
+      return;
+    }
+    
+    let fichas:Ficha[] = [];
+    fichas.push(selectedFichaRealiza);
+    fichas.push(selectedFichaRecebe);
+
+    let teste:Testes = selectedTeste;
+
+    combate.realizarAcao(podeReagir, fichas[0], fichas[1], teste);
+    
+    if (selectedFichaIniciativa && !iniciativas.find((ficha) => ficha._id == selectedFichaIniciativa._id)){
+      setIniciativas([...iniciativas, selectedFichaIniciativa]);
+    }
+
+    alert("Ações enviadas aos jogadores!");
+    socket.emit("realize-action", (selectedFichaRealiza._id));
+    socket.emit("recipe-action", (selectedFichaRecebe._id));
+  }
+
+  function efeitoCombate(
+    podeReagir:boolean, resultadoRetaliacao:boolean, 
+    selectedFichaRealiza: any, selectedFichaRecebe: any, 
+    resultadoAcao: any, resultadoReacao: any, 
+    resultadoD20Acao: any, resultadoD20Reacao: any, 
+    escolhaReacao:any, resultadoPE:number,
+    selectedArma: any, selectedMagia: any){
+
+      if (!selectedFichaRealiza || !selectedFichaRecebe){
+        alert("Por favor, selecione ambas as fichas de ação e reação na Aba Combate!");
+        return;
+      }
+  
+      /*if (selectedArma && selectedMagia){
+        alert("Não é possível selecionar dois tipos de ataque!\nPor favor, selecione apenas uma arma ou magia!");
+        return;
+      }   */ 
+
+      if (!resultadoAcao || (!resultadoReacao && !podeReagir)){
+        alert("Por favor, informe o resultado do teste da ação e da reação!");
+        return;
+      } 
+
+      if (!resultadoD20Acao || !resultadoD20Reacao ){
+        alert("Por favor, informe o valor dos dados d20 da ação e da reação!");
+        return;
+      } 
+
+      if (!escolhaReacao){
+        alert("Por favor, preencha o campo da reação realizada!");
+        return;
+      }
+
+      let fichas:Ficha[] = [];
+      let resultados:number[] = [];
+      let d20:number[] = [];
+
+      fichas.push(selectedFichaRealiza);
+      fichas.push(selectedFichaRecebe);
+
+      resultados.push(resultadoAcao);
+      resultados.push(resultadoReacao);
+
+      d20.push(resultadoD20Acao);
+      d20.push(resultadoD20Reacao);
+
+      combate.efeitoCombate(podeReagir, fichas, resultados, d20, escolhaReacao, selectedArma, selectedMagia, resultadoPE);
+      
+      alert("Efeito de combate realizado com sucesso, veja o resultado nos Logs!");   
+  }
+  const [resultadoAcao, setResultadoAcao] = useState<number>(0);
+  const [resultadoReacao, setResultadoReacao] = useState<number>(0);
   const [resultadoPE, setResultadoPE] = useState<number>(0);
   const [resultadoTipo, setResultadoTipo] = useState<Reacao | null>(null);
   const [resultadoD20Acao, setResultadoD20Acao] = useState<number>(0);
   const [resultadoD20Reacao, setResultadoD20Reacao] = useState<number>(0);
-  const [resultadoRetaliacao, setResultadoRetaliacao] = useState<boolean>(false);
-
-  
+  const [resultadoRetaliacao, setResultadoRetaliacao] = useState<boolean>(false);  
 
   let combate:Combate = new Combate(campanha);
+
+  useEffect(() => {
+    socket.on('result-action', (data: any) => {
+      const {resultado, pe, d20 } = data;
+      setAction({resultado, pe, d20});
+    });
+
+    socket.on('result-reaction', (data:any) => {
+      const {resultado, reacaoSelecionada, d20 } = data;
+      setReaction({resultado, reacaoSelecionada, d20});      
+    })
+  }, [socket]);
+
+  function setAction({resultado, pe, d20}:any){
+    setResultadoAcao(resultado);
+    setResultadoPE(pe);
+    setResultadoD20Acao(d20);
+  }
+
+  function setReaction({resultado, reacaoSelecionada, d20}:any){
+    if (!naoPodeReagir){
+      setResultadoReacao(resultado);
+      setResultadoTipo(reacaoSelecionada);
+    }
+    else{
+      setResultadoReacao(0);
+      setResultadoTipo(Reacao.NaoReagir);
+    }
+    
+    setResultadoD20Reacao(d20);
+  }
   
   function getFichas(){
     if (campanha === undefined) return [];
@@ -47,12 +160,12 @@ const Combat = ({socket, campanha}:typeCombat) => {
 
   function getArmas(){
     if (selectedFichaRealiza === null) return [];
-    return selectedFichaRealiza.armas;
+      return selectedFichaRealiza.armas;
   }
 
   function getMagias(){
     if (selectedFichaRealiza === null) return [];
-    return selectedFichaRealiza.magias;
+      return selectedFichaRealiza.magias;
   }
 
   function getTeste(nomeTeste: string): Testes | null {
@@ -79,24 +192,17 @@ const Combat = ({socket, campanha}:typeCombat) => {
     return null;
   }
 
-  function realizarAcao(){
-    if (selectedFichaIniciativa && !iniciativas.find((ficha) => ficha._id == selectedFichaIniciativa._id)){
-      setIniciativas([...iniciativas, selectedFichaIniciativa]);
-    }
-  }
-
   function addFichaIniciativa(){
     if (selectedFichaIniciativa && !iniciativas.find((ficha) => ficha._id == selectedFichaIniciativa._id)){
       setIniciativas([...iniciativas, selectedFichaIniciativa]);
     }
   }
-
   function addIniciativa(){
     if (iniciativas.length != 0) {
       combate.addIniciativa(iniciativas);
       console.log(combate.iniciativa);
-      campanha.registroAcoes.push("A iniciativa foi registrada com sucesso");
-    }else campanha.registroAcoes.push("A iniciativa está vazia, não foi possivel adicionar");
+      alert("A iniciativa foi registrada com sucesso, veja a ordem na Aba Logs!");
+    }else alert("A iniciativa está vazia, não foi possivel adicionar");
   }
 
   function removeIniciativas(index: number){
@@ -296,10 +402,10 @@ const Combat = ({socket, campanha}:typeCombat) => {
                         className={styles.combat_checkbox}
                         type="checkbox"
                         id="naoPodeReagir"
-                        checked={podeReagir}
+                        checked={naoPodeReagir}
                         onChange={(e) => {
                           const podeReagir = e.target.checked;
-                          setPodeReagir(podeReagir);
+                          setNaoPodeReagir(podeReagir);
                         }}
                       />
                     </div>
@@ -354,7 +460,7 @@ const Combat = ({socket, campanha}:typeCombat) => {
                   <div className={styles.combat_cotaniner_sections}>
                     <div className={styles.combat_cotaniner_sections_content}>
                         <button 
-                        onClick = {() => realizarAcao()}>
+                        onClick = {() => realizarAcao(naoPodeReagir, selectedFichaRealiza, selectedFichaRecebe, selectedTeste, selectedArma, selectedMagia)}>
                           Realizar Ação
                         </button>
                     </div>
@@ -379,17 +485,19 @@ const Combat = ({socket, campanha}:typeCombat) => {
                     <div className={styles.combat_cotaniner_sections_content}>
                       <label htmlFor="text">Resultado teste</label>
                       <input
+                        type="number"
                         className={styles.combat_input}
                         value={resultadoAcao}
-                        onChange={(e) => setResultadoAcao(String(e.target.value))}
+                        onChange={(e) => setResultadoAcao(parseInt(e.target.value))}
                       />
                     </div>
                     <div className={styles.combat_cotaniner_sections_content}>
-                      <label htmlFor="text">Resultado teste</label>
+                      <label htmlFor="text">Resultado reação</label>
                       <input
+                        type="number"
                         className={styles.combat_input}
                         value={resultadoReacao}
-                        onChange={(e) => setResultadoReacao(String(e.target.value))}
+                        onChange={(e) => setResultadoReacao(parseInt(e.target.value))}
                       />
                     </div>
                   </div>
@@ -461,7 +569,15 @@ const Combat = ({socket, campanha}:typeCombat) => {
                     </div>
                   </div>
                   <div className={styles.combat_cotaniner_sections}>
-                    <button>Efeito combate</button>
+                    <button onClick={() => efeitoCombate(
+                        naoPodeReagir, resultadoRetaliacao, 
+                        selectedFichaRealiza, selectedFichaRecebe, 
+                        resultadoAcao, resultadoReacao, 
+                        resultadoD20Acao, resultadoD20Reacao, 
+                        resultadoTipo, resultadoPE,
+                        selectedArma, selectedMagia)}>
+                      Efeito combate
+                    </button>
                   </div>
                 </motion.div>
               )}
