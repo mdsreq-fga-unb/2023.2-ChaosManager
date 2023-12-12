@@ -78,13 +78,22 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
                 <span className="font-semibold text-xs uppercase text-gray-400">Armadura: </span>
                 {ficha.PdA}
               </p>
+              <p className="w-full text-sm text-gray-400">
+                <span className="font-semibold text-xs uppercase text-gray-400">Vida: </span>
+                {ficha.PV}/{ficha.PV_max()}
+              </p>
+              <p className="w-full text-sm text-gray-400">
+                <span className="font-semibold text-xs uppercase text-gray-400">Energia: </span>
+                {ficha.PE}/{ficha.PE_max()}
+              </p>
+              <p className="w-full text-sm text-gray-400">
+                <span className="font-semibold text-xs uppercase text-gray-400">Experiência: </span>
+                {ficha.Exp}
+              </p>
             </div>
           </div>
+
           <ModalTestes ficha={ficha} campanha={campanha} />
-          <div className="mt-4">
-            <BarrasVidaEnergiaArmadura vida={ficha.PV} vida_max={ficha.PV_max()} />
-            <BarrasVidaEnergiaArmadura vida={ficha.PE} vida_max={ficha.PE_max()} />
-          </div>
 
           <div className="max-w-md mx-auto mt-8">
             <div className="mb-4 flex items-center">
