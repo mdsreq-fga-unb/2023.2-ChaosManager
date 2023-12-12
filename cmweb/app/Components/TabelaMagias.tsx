@@ -1,26 +1,42 @@
-import { Magia } from "@/models/item-magia";
+import React, { useState, ChangeEvent } from "react";
+import { Ficha } from "@/models/ficha";
+import { Classes } from "@/models/item-magia";
 
+export default function TabelaMagias({ ficha }: { ficha: Ficha }) {
+  const [novaMagiaNome, setNovaMagiaNome] = useState<string>("");
+  const [novaMagiaClasse, setNovaMagiaClasse] = useState<Classes>(Classes.Alquimia);
 
-export default function TabelaMagias({ magias }: { magias: Magia[] }) {
+  const handleNomeChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setNovaMagiaNome(event.target.value);
+  };
 
-    return (
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-400">
-                <thead className="text-xs 0 uppercase bg-gray-700 text-gray-400">
-                    <tr>
-                        <th scope="col" className="px-6 py-3"> Magia</th>
-                        <th scope="col" className="px-6 py-3"> Classe</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {magias.map((magia, index) => (
-                        <tr className="bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
-                            <td className="w-4 p-4">{magia.nome}</td>
-                            <td className="w-4 p-4">{magia.classe}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
-};
+  const handleClasseChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setNovaMagiaClasse(event.target.value as Classes);
+  };
+
+  const adicionarMagia = () => {
+    if (novaMagiaNome && novaMagiaClasse) {
+      ficha.addMagia(novaMagiaNome, novaMagiaClasse);
+      setNovaMagiaNome("");
+      setNovaMagiaClasse(Classes.Alquimia);
+    }
+  };
+
+  return (
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-400">
+        <tbody>
+          <tr className="bg-gray-800 border-gray-700 hover:bg-gray-600">
+            <td className="w-4 p-4">
+              <input value={novaMagiaNome} onChange={handleNomeChange} />
+            </td>
+            <td className="w-4 p-4">
+              <input value={novaMagiaClasse} onChange={handleClasseChange} />
+              <button onClick={adicionarMagia}>ok</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}
