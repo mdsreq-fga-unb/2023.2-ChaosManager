@@ -101,7 +101,7 @@ Foram identificados 2 atores dos fluxos de eventos do nosso sistema, são eles:
 
 Com os atores e casos de usos identificados, foi criado o diagrama de casos de uso para visualizar como e por quem as ações são realizadas dentro do sistema, assim como a ligação entre casos quando existiam. O diagrama está disponível na Figura 1.
 
-<img src="../assets/casosUso/diagVX" alt="diagVX">
+<img src="../assets/casosUso/diagVX.png" alt="diagVX">
 
 ## Especificação dos Casos de Uso
 
@@ -139,10 +139,10 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
             <p>4.1. FA01 - Filtrar acomodações 
             <p>4.1.1. O viajante seleciona a opção "Filtrar acomodações"</p> 
             <p>4.1.2. O sistema apresenta as seguintes opções de filtro: - Preço - Localização - Tipo (hotel, aluguel de temporada, pousada) - Avaliações de outros viajantes</p>
-            <p>4.1.3. O viajante informa os filtros que deseja aplicar 4.1.4.</p> 
-            <p>O sistema valida as informações (FE01)</p> 
-            <p>O caso de uso retorna ao 3.4 do FB 4.2.</p>
-            <p>FA02 - Visualizar acomodação</p>
+            <p>4.1.3. O viajante informa os filtros que deseja aplicar</p> 
+            <p>4.1.4. O sistema valida as informações (FE01)</p> 
+            <p>O caso de uso retorna ao 3.4 do FB</p>
+            <p> 4.2. FA02 - Visualizar acomodação</p>
             <p>4.2.1. O viajante seleciona uma acomodação.<p/> 
             <p>O caso de uso retorna ao 3.4 do FB</p>
         </td>
@@ -326,15 +326,17 @@ existem</td>
     <tr>
         <th>3. Fluxo básico de eventos</th>
         <td>
-            <p>FB 3.1. O sistema apresenta as seguintes opções:</p>
+            <p>3.1. O sistema apresenta as seguintes opções:</p>
             <p>- Efetuar pagamento</p>
             <p>- Adicionar novo cartão (FA01)</p>
             <p>3.2. O viajante seleciona a opção "Efetuar pagamento"</p>
             <p>3.3. O sistema apresenta as seguintes opções:</p>
-            <p>- Cartão de crédito</p>
-            <p>- Cartão de débito</p>
-            <p>- PIX</p>
-            <p>- Boleto</p>
+            <ul>
+        <li>Cartão de crédito</li>
+        <li>Cartão de débito</li>
+        <li>PIX</li>
+        <li>Boleto</li>
+    </ul>
             <p>3.4. O viajante seleciona uma forma de pagamento (RN01)</p>
             <p>3.5. O viajante confirma o pagamento (RN02) (RN03) (RN04)</p>
             <p>3.6. O sistema verifica se o pagamento foi efetuado (FE01)</p>

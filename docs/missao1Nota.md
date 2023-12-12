@@ -44,13 +44,7 @@ Tabela 1 - Iterações do projeto
 
 ## Processo de desenvolvimento
 
-Para atingir uma máxima no desenvolvimento, foi utilizado os critérios Sommerville para definir o escopo do produto, categorizando-se como um sistema grande e complexo. Além disso, para escolher uma abordagem que esteja em harmonia com o software, foi definido que a faceta ideal ao nosso produto seria o **Contratual** baseado nos seguintes critérios:
-
-- Customer-specific: o produto foi encomendado por um cliente específico, onde o cliente é a principal fonte de requisitos.
-- Linear para Iterativo: devido ser um produto grande e complexo, dividí-lo em pequenas iterações se torna uma forma de gerenciar e minimizar os riscos.
-- Prescritivo: a equipe possui conhecimento de diversas funcionalidades, e há um cliente e outros produtos similares para ajudar a elicitar e priorizar os requisitos.
-
-Devido a complexidade do Chaos Manager, decidimos utilizar uma abordagem Dirigido a Plano, onde o Processo Unificado se mostrou um eficiente processo de software para realizar a construção do produto.
+Para atingir uma máxima no desenvolvimento, foi utilizado os critérios Sommerville para definir o escopo do produto, categorizando-se como um sistema grande e complexo. Além disso, para escolher uma abordagem que estivesse em harmonia com o software, foi definido o Dirigido a Plano, onde o Processo Unificado se mostrou um eficiente processo de software para realizar a construção do produto.
 
 <p style="text-align:center;"> 
 Figura 2 - Processo Unificado
@@ -61,6 +55,12 @@ Figura 2 - Processo Unificado
 <img src="../assets/processo/UP-Ciclo.png" alt="UP">
 
 </center>
+
+A faceta ideal ao nosso produto se mostrou como **Contratual** baseado nos seguintes critérios:
+
+- Customer-specific: o produto foi encomendado por um cliente específico, onde o cliente é a principal fonte de requisitos.
+- Linear para Iterativo: devido ser um produto grande e complexo, dividí-lo em pequenas iterações se torna uma forma de gerenciar e minimizar os riscos.
+- Prescritivo: a equipe possui conhecimento de diversas funcionalidades, e há um cliente e outros produtos similares para ajudar a elicitar e priorizar os requisitos.
 
 
 ## Timeline
@@ -86,26 +86,26 @@ servirá como alicerce para a sua construção.</p>
 
 #### Artefatos
 
-- [Visão Geral do Projeto](../docs/visao_projeto.md)
+- [Visão Geral do Projeto](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/visao_projeto/)
 
-- [Visão Geral do Produto](../docs/visao_produto.md)
+- [Visão Geral do Produto](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/visao_produto/)
 
 - Capacitação da Equipe
 
-- [Elicitação de Requisitos](../docs/backlog.md)
+- [Elicitação de Requisitos](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/backlog/)
 
-- [Definição e Priorização do MVP](../docs/priorizacaoMVPSafe.md)
+- [Definição e Priorização do MVP](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/priorizacaoMVPSafe/)
 
 ### Elaboração
 &emsp; Visão refinada do sistema.
 
 #### Artefatos
 
-- [Diagrama de Classes](https://github.com/mdsreq-fga-unb/2023.2-ChaosManager/blob/main/docs/assets/diagClasses.jpeg)
+- [Diagrama de Classes](https://github.com/mdsreq-fga-unb/2023.2-ChaosManager/blob/main/docs/assets/diagClasses.jpg)
 
-- Casos de Uso - [Diagrama](../docs/casodeUso.md)
+- Casos de Uso - [Diagrama](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/)
 
-- Casos de Uso - [Especificações](../docs/casodeUso.md)
+- Casos de Uso - [Especificações](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/)
 
 
 ### Construção
@@ -114,14 +114,14 @@ servirá como alicerce para a sua construção.</p>
 
 #### Artefatos
 
-- Correção das [Especificações](../docs/casodeUso.md) dos Casos de Uso
+- Correção das [Especificações](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/) dos Casos de Uso
 
 - Projeto de Arquitetura
 
 - 13/11 - Criação do ambiente de desenvolvimento
     - O conteúdo da criação do ambiente pode ser acessado [aqui](https://github.com/mdsreq-fga-unb/2023.2-ChaosManager/commit/b8bbf826a49bd1f9e7cb7a5ba1c0e3e77c831fb1)
 
-- [Definição do Pronto (DoR)](../docs/casodeUso.md) 
+- [Definição do Pronto (DoR)](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/) 
 
 - [Desenvolvimento](https://github.com/mdsreq-fga-unb/2023.2-ChaosManager/tree/main/cmweb/models)
 
@@ -135,7 +135,7 @@ implantados.
 
 #### Artefatos
 
-- Correção das [Especificações](../docs/casodeUso.md) dos Casos de Uso
+- Correção das [Especificações](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/casodeUso/) dos Casos de Uso
 
 - [Testes Manuais](https://github.com/mdsreq-fga-unb/2023.2-ChaosManager/blob/main/cmweb/models/logtests.ts)
 
