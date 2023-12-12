@@ -205,6 +205,8 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
       const novaFicha = new Ficha(playerType == "NPC");
       novaFicha.Dados(dados, [values.notas]);
       novaFicha.Atributos(atributos);
+      novaFicha.PE = novaFicha.PE_max();
+      novaFicha.PV = novaFicha.PV_max();
       novaFicha.Dinheiro = Number(values.dinheiro);
       let traitsError = false;
 
