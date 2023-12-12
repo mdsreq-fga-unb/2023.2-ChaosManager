@@ -10,8 +10,6 @@ export class Campanha {
   fichas: Ficha[] = [];
   fichas_NPC: Ficha[] = [];
   registroAcoes: string[] = [];
-  combate: Combate = new Combate(this);
-
 
   constructor(nome: string, historia: string, senha_mestre: string) {
     this.nome = nome;
@@ -69,7 +67,7 @@ export class Campanha {
   }
 
   static toObj(objeto: any): Campanha {
-    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC } = objeto;
+    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC, combate } = objeto;
     const campanha = new Campanha(nome, historia, senha_mestre);
     campanha._id = _id;
     campanha.senha_jogador = senha_jogador;
@@ -87,7 +85,6 @@ export class Find {
       const response = await fetch(`/api/campanhas/?nome=${nome}`);
       const data = await response.json();
       const { status, message, result } = data;
-      console.log(result[0]);
       const camp = Campanha.toObj(result[0]);
       return { status, message, result, camp };
     } catch (error) {
