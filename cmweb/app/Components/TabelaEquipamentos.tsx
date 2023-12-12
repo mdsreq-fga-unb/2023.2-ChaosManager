@@ -36,7 +36,7 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
 
 
     const adicionarEquipamento = () => {
-        if (novoEquipamentoNome && novoEquipamentoPeso) {
+        if (novoEquipamentoNome && novoEquipamentoPdA && novoEquipamentoPeso) {
             ficha.addEquipamento(novoEquipamentoNome, novoEquipamentoPdA, novoEquipamentoPeso);
             setNovoEquipamentoNome("");
             setNovoEquipamentoPdA(0);
