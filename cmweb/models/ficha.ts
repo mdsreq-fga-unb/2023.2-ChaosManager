@@ -173,6 +173,10 @@ export class Ficha {
     }
 
     addTracoPositivo(traco: TracosPositivos, valor: number):string{
+        let isRepetido = this.tracosPositivos.find((element) => tracosPos[traco].id == tracosPos[element.traco].id);
+
+        if(isRepetido) return "";
+
         let antagonico = this.tracosNegativos.find((element) => tracosPos[traco].id == tracosNeg[element.traco].id);
         
         if((antagonico !== null && antagonico !== undefined) && this.tracosNegativos.length > 0) 
@@ -185,6 +189,10 @@ export class Ficha {
     }
 
     addTracoNegativo(traco: TracosNegativos, valor: number):string{
+        let isRepetido = this.tracosNegativos.find((element) => tracosNeg[traco].id == tracosNeg[element.traco].id);
+
+        if(isRepetido) return "";
+
         let antagonico = this.tracosPositivos.find((element) => tracosNeg[traco].id == tracosPos[element.traco].id);
 
         if((antagonico !== null && antagonico !== undefined) && this.tracosPositivos.length > 0) 

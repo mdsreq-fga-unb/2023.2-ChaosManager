@@ -181,9 +181,9 @@ export class Combate{
 
     }
 
-    realizarAcao(op:number, fichaAcao:Ficha, ficha:Ficha, teste:Testes):void{
+    realizarAcao(op:boolean, fichaAcao:Ficha, ficha:Ficha, teste:Testes):void{
         // op - 1 acao, op - 2 retaliacao
-        if(op == 1) {
+        if(op == false) {
             fichaAcao.registroAcoes.push("Realize um teste de " + teste + "!");
             ficha.registroAcoes.push("Você está sofrendo uma Ação. Escolha um tipo de reação: Defender, Esquivar ou Não Reagir. Em seguida, role os dados e realize a reação!");
         } else {
