@@ -19,7 +19,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
   const [ficha, setFicha] = useState<Ficha>();
-  const [campanha, SetCampanha] = useState<Campanha | null>(null);
+  const [campanha, SetCampanha] = useState<Campanha>(new Campanha("", "", ""));
   const router = useRouter();
   const searchParams = useSearchParams();
   const typeParam = searchParams.get("type");
@@ -80,7 +80,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
               </p>
             </div>
           </div>
-          <ModalTestes ficha={ficha} />
+          <ModalTestes ficha={ficha} campanha={campanha} />
           <div className="mt-4">
             <BarrasVidaEnergiaArmadura vida={ficha.PV} vida_max={ficha.PV_max()} />
             <BarrasVidaEnergiaArmadura vida={ficha.PE} vida_max={ficha.PE_max()} />
@@ -145,6 +145,16 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
             </div>
           </div>
 
+
+          <div className="mb-4">
+            <label className="text-gray-600 text-sm font-semibold mb-2">Registro de ações:</label>
+            <textarea
+              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+              value={ficha.registroAcoes}
+              rows={9}
+            />
+          </div>
+
           <div className="mb-4">
             <label className="text-gray-600 text-sm font-semibold mb-2">Descrição:</label>
             <textarea
@@ -169,14 +179,7 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
               rows={9}
             />
           </div>
-          <div className="mb-4">
-            <label className="text-gray-600 text-sm font-semibold mb-2">Registro de ações:</label>
-            <textarea
-              className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
-              value={ficha.registroAcoes}
-              rows={9}
-            />
-          </div>
+
         </div>
 
         <div className="col-span-2">
