@@ -54,11 +54,14 @@ A seguir estará presente uma lista de ferramentas e tecnologias que serão util
 - ChatGPT
 - Phind
 - Lucidchart
-- Miro
+- Mural
 - Figma
-- IDEs (VS Code preferencialmente)
+- IDEs (Visual Studio Code preferencialmente)
 - JavaScript e TypeScript
 - Node.js
+- MongoDB
+- React
+- Next.js
 
 
 
@@ -69,3 +72,4 @@ A seguir estará presente uma lista de ferramentas e tecnologias que serão util
 | 06/09 |  1.0   | Criação da visão do produto     | Pedro Eduardo |
 | 27/09 |  1.1   | Tecnologias da visão do produto | Pedro Eduardo |
 | 18/10 |  1.2   | Atualização da visão do produto | Pedro Eduardo |
+| 11/12 |  1.3   | Correção das ferramentas | Gustavo França e Larissa Gomes |
