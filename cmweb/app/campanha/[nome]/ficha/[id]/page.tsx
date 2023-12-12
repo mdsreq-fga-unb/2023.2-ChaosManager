@@ -2,7 +2,6 @@
 
 import { Ficha } from "@/models/ficha";
 
-import BarrasVidaEnergiaArmadura from "@/app/Components/BarrasVidaEnergiaArmadura";
 import Atributo from "@/app/Components/Atributo";
 import ValorTesteAtributo from "@/app/Components/ValorTesteAtributo";
 import TabelaMagias from "@/app/Components/TabelaMagias";
