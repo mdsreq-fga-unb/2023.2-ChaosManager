@@ -19,10 +19,7 @@ export default function Jogador({ params }: { params: { nome: string } }) {
     try {
       const data = await Find.findData(params.nome);
       const { status, message, camp, result } = data;
-      
-      if (result && Array.isArray(result.fichasJogador)) {
-        setFichasJogador(result.fichasJogador);
-      }
+      setFichasJogador(camp.fichas);
       
     } catch (error) {
       console.log(error)
@@ -36,7 +33,16 @@ export default function Jogador({ params }: { params: { nome: string } }) {
         <h2>Lista de fichas</h2>
         <ul>
         {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
-          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>{item.dados.nomeJogador}</button></li>
+          <li key={index}>
+            {item._id} - {item.dados.nomeJogador}
+            <div>
+              <button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>Editar Ficha</button>
+            </div>
+            <div>
+              <button onClick={() => {router.push(`/campanha/${params.nome}/ficha/${item._id}?type=jogador`)}}>Acessar Ficha</button>
+            </div>
+            
+          </li>
         ))}
         </ul>
       </div>

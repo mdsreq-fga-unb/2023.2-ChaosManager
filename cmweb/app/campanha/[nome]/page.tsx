@@ -29,13 +29,9 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
       const { status, message, camp, result } = data;
       setSenhaMestre(camp.senha_mestre);
       setSenhaJogador(camp.senha_jogador);
-      if (result && Array.isArray(result.fichasJogador)) {
-        setFichasJogador(result.fichasJogador);
-      }
-   
-      if (result && Array.isArray(result.fichasNpc)) {
-        setFichasNpc(result.fichasNpc);
-      }
+      setFichasJogador(camp.fichas);
+      setFichasNpc(camp.fichas_NPC);
+      
       
     } catch (error) {
       console.log(error)
@@ -55,7 +51,7 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
         <h2>Jogadores</h2>
         <ul>
         {fichasJogador.filter(ficha => ficha.NPC === false).map((item, index) => (
-          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>{item.dados.nomeJogador}</button></li>
+          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=jogador`)}}>{item._id} - {item.dados.nomeJogador}</button></li>
         ))}
         </ul>
       </div>
@@ -64,7 +60,7 @@ export default function CampanhaPage({ params }: { params: { nome: string, id: s
         <h2>NPC</h2>
         <ul>
         {fichasNpc.filter(ficha => ficha.NPC === true).map((item, index) => (
-          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`)}}>{item.dados.nomeJogador}</button></li>
+          <li key={index}><button onClick={() => {router.push(`/campanha/${params.nome}/ficha/edit?fichaId=${item._id}&type=npc`)}}>{item._id} - {item.dados.nomeJogador}</button></li>
         ))}
         </ul>
       </div>
