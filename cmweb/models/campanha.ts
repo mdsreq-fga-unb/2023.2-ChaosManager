@@ -22,6 +22,8 @@ export class Campanha {
     ficha._id = this.fichas.length;
     if(ficha.NPC) this.fichas_NPC.push(ficha);
     else this.fichas.push(ficha);
+
+    return ficha._id;
   }
 
   static gerarSenha(): number {
