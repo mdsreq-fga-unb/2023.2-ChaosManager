@@ -4,7 +4,15 @@
 
 ### Introdução
 
-Para a realização do artefato, foi utilizado o Estudo de Caso HealthNet disponibilizado pelo George Marsicano (2023):
+Para a realização do artefato, foi utilizado o Estudo de Caso HealthNet disponibilizado pelo George Marsicano (2023)
+
+Para a construção do PBB, foi definido os problemas atuais da HealthNet, como também as suas expectativas. Após isso, foi concebido todas as personas que atuam na clínica médica e os seus **O QUE FAZ?** e **O QUE ESPERA?**
+
+Então, foi construído as suas funcionalidades analisando os pontos levantados, destacando os seus **PORBLEMAS** e **BENEFÍCIOS**
+
+Com as Personas e as Funcionalidades estabelecidas, é possível construir os seus PBIs.
+
+Ao final, utilizamos a técnica COORG para a priorização do backlog do PBB.
 
 A seguir é apresentado o Mural do canvas PBB. 
 
@@ -26,6 +34,13 @@ A seguir é apresentado o Mural do canvas PBB.
 
 Para a realização do artefato, foi utilizado o Estudo de Caso HealthNet disponibilizado pelo George Marsicano (2023):
 
+Behavior Driven Development (BDD) é uma especificação
+executável para validar os critérios de aceite de uma história. Todos os itens que foram aplicados no BDD seguem a estrutura:
+
+- Dado que 
+- Quando
+- Então
+
 A seguir é apresentado o Mural que possui o BDD:
 
 <iframe src='https://app.mural.co/embed/c3826321-4735-444f-8d57-cc86c239e9e5'
@@ -43,6 +58,12 @@ A seguir é apresentado o Mural que possui o BDD:
 ### Introdução
 
 Para a realização do artefato, foi utilizado o Estudo de Caso ComunEventos disponibilizado pelo George Marsicano (2023):
+
+Ao User Story Mapping - USM, foi iniciado com o seu Backbone, que serve como espinha dorsal para toda a construção do mapa de histórias, destacando o Objetivo do Usuário e, logo em seguida, a Jornada do Usuário.
+
+Com essa estrutura pronta, foi possível definir as atividades que os usuários fariam, priorizando por MVP e suas próximas iterações.
+
+A seguir é apresentado o Mural que possui o USM:
 
 <iframe src='https://app.mural.co/embed/c653020b-a547-4921-bb0e-192b39e67f41'
   width='100%'

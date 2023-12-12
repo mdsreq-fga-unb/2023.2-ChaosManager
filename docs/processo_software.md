@@ -99,7 +99,7 @@ Após a análise das respostas chegamos ao resultado final de uma abordagem diri
 </p>
 
 <div align="center" style="text-align: center">
-<img src="https://raw.githubusercontent.com/mdsreq-fga-unb/2023.2-ChaosManager/main/docs/assets/processo/up.png">
+<img src="../assets/processo/UP-Ciclo.png" alt="up">
 <p><b>Figura 2:</b> Diagrama do Processo Unificado.</p>
 </div>
 

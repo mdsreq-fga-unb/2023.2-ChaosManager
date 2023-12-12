@@ -97,11 +97,11 @@ servirá como alicerce para a sua construção.</p>
 - [Definição e Priorização do MVP](../docs/priorizacaoMVPSafe.md)
 
 ### Elaboração
-<p>&emsp; Visão refinada do sistema.
+&emsp; Visão refinada do sistema.
 
 #### Artefatos
 
-- [Diagrama de Classes]()
+- [Diagrama de Classes](https://github.com/mdsreq-fga-unb/2023.2-ChaosManager/blob/main/docs/assets/diagClasses.jpeg)
 
 - Casos de Uso - [Diagrama](../docs/casodeUso.md)
 
@@ -110,7 +110,7 @@ servirá como alicerce para a sua construção.</p>
 
 ### Construção
 
-<p>&emsp; É iniciado a fase de desenvolvimento do sistema.
+&emsp; É iniciado a fase de desenvolvimento do sistema.
 
 #### Artefatos
 
@@ -127,7 +127,7 @@ servirá como alicerce para a sua construção.</p>
 
 ### Transição
 
-<p>&emsp; O sistema é entregue ao cliente para
+&emsp; O sistema é entregue ao cliente para
 uso em produção.
 Testes são realizados e um ou mais
 incrementos do sistema são
