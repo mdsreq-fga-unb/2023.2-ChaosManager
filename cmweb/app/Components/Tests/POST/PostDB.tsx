@@ -28,7 +28,8 @@ function PostDB( { socket }: any ) {
       return;
     }
     try{
-      const camp = new Campanha(nome, historia, senhaMestre);
+      const camp = new Campanha(nome, historia, senhaMestre);      
+
       const response = await camp.saveData();
       const {status, message} = response;
 

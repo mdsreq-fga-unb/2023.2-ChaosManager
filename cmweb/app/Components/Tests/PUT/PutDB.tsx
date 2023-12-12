@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Campanha } from '@/models/campanha';
 import { Find } from '@/models/campanha';
+import { Ficha } from '@/models/ficha';
 import style from './put.module.css';
 
 function PutDB( { socket }: any ) {
@@ -28,6 +29,7 @@ function PutDB( { socket }: any ) {
     }
     else{
       let campanha = camp;
+      campanha.addFicha(new Ficha(false));
       const response = await campanha.updateData();
       const dataUpdate = await response.json();
       const { status, message, data } = dataUpdate;
