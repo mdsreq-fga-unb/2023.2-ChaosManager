@@ -116,6 +116,14 @@ const FichaPagina = ({ficha}: typeFicha) => {
                             rows={9}
                         />
                     </div>
+                    <div className="mb-4">
+                        <label className="text-gray-600 text-sm font-semibold mb-2">Registro de ações:</label>
+                        <textarea
+                            className="w-full py-2 px-3 bg-gray-700 rounded-lg p-2 text-gray-400 pointer-events-none"
+                            value={ficha.registroAcoes}
+                            rows={9}
+                        />
+                    </div>
 
                 </div>
 
