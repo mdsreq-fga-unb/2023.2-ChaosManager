@@ -10,8 +10,7 @@ export class Campanha {
   fichas: Ficha[] = [];
   fichas_NPC: Ficha[] = [];
   registroAcoes: string[] = [];
-  combate: Combate = new Combate(this);
-
+  combate:Combate | null = null;
 
   constructor(nome: string, historia: string, senha_mestre: string) {
     this.nome = nome;
@@ -86,7 +85,6 @@ export class Find{
       const response = await fetch(`/api/campanhas/?nome=${nome}`);
       const data = await response.json();
       const {status, message, result} = data;
-      console.log(result[0]);
       const camp = Campanha.toObj(result[0]);
       return {status, message, result, camp};
     } catch (error) {
