@@ -8,6 +8,9 @@ Projeto criado por estudantes da disciplina Requisitos de Software, Engenharia d
 ## 📒 Documentação
 A documentação do projeto está disponivel nesse [link](https://mdsreq-fga-unb.github.io/2023.2-ChaosManager/).
 
+Aplicação
+[link](http://164.41.98.22:3000/)
+
 
 ## 👥 Colaboradores
 
