@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Ficha } from "@/models/ficha";
 import { EquipamentosExistentes } from "@/models/equipamento";
 
@@ -16,6 +16,13 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
             setNovoEquipamentoExistente(EquipamentosExistentes.ArmCavaleiro);
         }
     };
+    const [forceUpdate, setForceUpdate] = useState<number>(0);
+    const handleRemover = (index: number) => {
+        ficha.removeEquipamento(index);
+        setForceUpdate((prev) => prev + 1);
+
+    };
+    useEffect(() => { }, [forceUpdate]);
 
     const [novoEquipamentoNome, setNovoEquipamentoNome] = useState<string>("");
     const [novoEquipamentoPdA, setNovoEquipamentoPdA] = useState<number>(0);
@@ -54,6 +61,7 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
                         <th scope="col" className="px-6 py-3"> Equipamento</th>
                         <th scope="col" className="px-6 py-3"> Defesa</th>
                         <th scope="col" className="px-6 py-3"> Peso</th>
+                        <th scope="col" className="px-6 py-3"> Config</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,6 +70,14 @@ export default function TabelaEquipamentos({ ficha }: { ficha: Ficha }) {
                             <td className="w-4 p-4">{equipamento.nome}</td>
                             <td className="w-4 p-4">{equipamento.PdA}</td>
                             <td className="w-4 p-4">{equipamento.peso}kg</td>
+                            <td className="w-4 p-4">
+                                <button
+                                    className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2"
+                                    onClick={() => typeof index === 'number' && handleRemover(index)}
+                                >
+                                    Remover
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

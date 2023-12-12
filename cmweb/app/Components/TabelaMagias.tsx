@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Ficha } from "@/models/ficha";
 import { Classes } from "@/models/item-magia";
 
@@ -22,23 +22,38 @@ export default function TabelaMagias({ ficha }: { ficha: Ficha }) {
     }
   };
 
+  const [forceUpdate, setForceUpdate] = useState<number>(0);
+  const handleRemover = (index: number) => {
+    ficha.removeMagia(index);
+    setForceUpdate((prev) => prev + 1);
+
+  };
+  useEffect(() => { }, [forceUpdate]);
+
+
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
       <table className="w-full text-sm text-left rtl:text-right text-gray-400">
         <thead className="text-xs 0 uppercase bg-gray-700 text-gray-400">
           <tr>
-            <th scope="col" className="px-6 py-3">
-              Magia
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Classe
-            </th>
+            <th scope="col" className="px-6 py-3">Magia</th>
+            <th scope="col" className="px-6 py-3">Classe</th>
+            <th scope="col" className="px-6 py-3"> Config</th>
+
           </tr>
         </thead>
         {ficha.magias.map((magia, index) => (
           <tr className="bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
             <td className="w-4 p-4">{magia.nome}</td>
             <td className="w-4 p-4">{magia.classe}</td>
+            <td className="w-4 p-4">
+              <button
+                className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2"
+                onClick={() => typeof index === 'number' && handleRemover(index)}
+              >
+                Remover
+              </button>
+            </td>
           </tr>
         ))}
       </table>
@@ -68,7 +83,7 @@ export default function TabelaMagias({ ficha }: { ficha: Ficha }) {
         </div>
       </div>
 
-      
+
     </div>
   );
 }

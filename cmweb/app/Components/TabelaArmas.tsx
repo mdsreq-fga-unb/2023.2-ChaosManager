@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Ficha } from "@/models/ficha";
 import { ArmasExistentes } from "@/models/arma";
 import { Testes } from "@/models/teste";
@@ -51,6 +51,15 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
         }
     };
 
+    const [forceUpdate, setForceUpdate] = useState<number>(0);
+    const handleRemover = (index: number) => {
+        ficha.removeArma(index);
+        setForceUpdate((prev) => prev + 1);
+
+    };
+    useEffect(() => { }, [forceUpdate]);
+
+
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
             <table className="w-full text-sm text-left rtl:text-right text-gray-400">
@@ -60,15 +69,24 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
                         <th scope="col" className="px-6 py-3"> Teste necessário</th>
                         <th scope="col" className="px-6 py-3"> Modificador de dano</th>
                         <th scope="col" className="px-6 py-3"> Peso</th>
+                        <th scope="col" className="px-6 py-3"> Config</th>
                     </tr>
                 </thead>
                 <tbody>
                     {ficha.armas.map((arma, index) => (
-                        <tr className="bg-white border-b bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
+                        <tr className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
                             <td className="w-4 p-4">{arma.nome}</td>
                             <td className="w-4 p-4">{arma.teste}</td>
                             <td className="w-4 p-4">{arma.mod_dano}x</td>
                             <td className="w-4 p-4">{arma.peso}kg</td>
+                            <td className="w-4 p-4">
+                                <button
+                                    className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2"
+                                    onClick={() => typeof index === 'number' && handleRemover(index)}
+                                >
+                                    Remover
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
