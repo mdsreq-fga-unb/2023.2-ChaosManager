@@ -60,6 +60,12 @@ const Combat = ({socket, campanha}:typeCombat) => {
     }
   }
 
+  function addIniciativa(){
+    if (selectedFichaIniciativa){
+      setIniciativas([...iniciativas, selectedFichaIniciativa]);
+    }
+  }
+
   function removeIniciativas(index: number){
     const newIniciativas = [...iniciativas];
     newIniciativas.splice(index, 1);
@@ -130,7 +136,7 @@ const Combat = ({socket, campanha}:typeCombat) => {
                       >
                         Add ficha
                       </button>
-                  </div>
+                    </div>
                   </div>                  
                   {iniciativas.map((ficha, index) => (
                     <>
@@ -146,7 +152,15 @@ const Combat = ({socket, campanha}:typeCombat) => {
                     </div>
                     </>
                   ))}
-                            
+                  <div className={styles.combat_cotaniner_sections}>
+                    <div className={styles.combat_cotaniner_sections_content}>
+                      <button
+                      onClick={() => addFichaIniciativas()}
+                      >
+                        Add ficha
+                      </button>
+                    </div>   
+                  </div>         
                 </>
               )}
 
