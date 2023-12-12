@@ -17,10 +17,6 @@ import { Campanha, Find } from "@/models/campanha";
 
 import { useRouter, useSearchParams } from "next/navigation";
 
-interface typeFicha {
-  ficha: Ficha;
-}
-
 const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
   const [ficha, setFicha] = useState<Ficha>();
   const [campanha, SetCampanha] = useState<Campanha | null>(null);

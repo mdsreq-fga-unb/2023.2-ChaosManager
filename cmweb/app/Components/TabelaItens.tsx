@@ -1,5 +1,5 @@
 import { Ficha } from "@/models/ficha";
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 
 export default function TabelaItens({ ficha }: { ficha: Ficha }) {
     const [novoItemNome, setNovoItemNome] = useState<string>("");
@@ -22,6 +22,14 @@ export default function TabelaItens({ ficha }: { ficha: Ficha }) {
             setNovoItemPeso(0);
         }
     };
+    const [forceUpdate, setForceUpdate] = useState<number>(0);
+    const handleRemover = (index: number) => {
+        ficha.removeItem(index);
+        setForceUpdate((prev) => prev + 1);
+
+    };
+    useEffect(() => { }, [forceUpdate]);
+
 
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
@@ -30,6 +38,7 @@ export default function TabelaItens({ ficha }: { ficha: Ficha }) {
                     <tr>
                         <th scope="col" className="px-6 py-3"> Item</th>
                         <th scope="col" className="px-6 py-3"> Peso</th>
+                        <th scope="col" className="px-6 py-3"> Config</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +46,14 @@ export default function TabelaItens({ ficha }: { ficha: Ficha }) {
                         <tr className="bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
                             <td className="w-4 p-4">{item.qtd}x {item.nome}</td>
                             <td className="w-4 p-4">{item.pesoTotal}kg</td>
+                            <td className="w-4 p-4">
+                                <button
+                                    className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2"
+                                    onClick={() => typeof index === 'number' && handleRemover(index)}
+                                >
+                                    Remover
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -47,7 +64,7 @@ export default function TabelaItens({ ficha }: { ficha: Ficha }) {
                     <input
                         value={novoItemNome}
                         className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        placeholder="Entre com o nome do item e o seu peso"
+                        placeholder="Nome do item..."
                         onChange={handleNomeChange}
                     />
 

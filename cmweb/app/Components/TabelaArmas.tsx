@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Ficha } from "@/models/ficha";
 import { ArmasExistentes } from "@/models/arma";
 import { Testes } from "@/models/teste";
@@ -51,6 +51,15 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
         }
     };
 
+    const [forceUpdate, setForceUpdate] = useState<number>(0);
+    const handleRemover = (index: number) => {
+        ficha.removeArma(index);
+        setForceUpdate((prev) => prev + 1);
+
+    };
+    useEffect(() => { }, [forceUpdate]);
+
+
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
             <table className="w-full text-sm text-left rtl:text-right text-gray-400">
@@ -60,15 +69,24 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
                         <th scope="col" className="px-6 py-3"> Teste necessário</th>
                         <th scope="col" className="px-6 py-3"> Modificador de dano</th>
                         <th scope="col" className="px-6 py-3"> Peso</th>
+                        <th scope="col" className="px-6 py-3"> Config</th>
                     </tr>
                 </thead>
                 <tbody>
                     {ficha.armas.map((arma, index) => (
-                        <tr className="bg-white border-b bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
+                        <tr className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600" key={index}>
                             <td className="w-4 p-4">{arma.nome}</td>
                             <td className="w-4 p-4">{arma.teste}</td>
                             <td className="w-4 p-4">{arma.mod_dano}x</td>
                             <td className="w-4 p-4">{arma.peso}kg</td>
+                            <td className="w-4 p-4">
+                                <button
+                                    className="text-sm text-left rtl:text-right text-gray-400 px-4 py-2"
+                                    onClick={() => typeof index === 'number' && handleRemover(index)}
+                                >
+                                    Remover
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -77,12 +95,12 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
             <div className="bg-gray-800 border-gray-700 hover:bg-gray-600">
                 <div className="w-full flex flex-row px-4 py-2">
                     <select
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2 text-gray-400"
                         value={novoArmaExistente}
                         onChange={handleArmaExistenteChange}
                     >
                         {Object.values(ArmasExistentes).map((armaExistente) => (
-                            <option key={armaExistente} value={armaExistente}>
+                            <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={armaExistente} value={armaExistente}>
                                 {armaExistente}
                             </option>
                         ))}
@@ -101,16 +119,16 @@ export default function TabelaArmas({ ficha }: { ficha: Ficha }) {
                     <input
                         value={novoArmaNome}
                         className="bg-transparent border-b border-gray-500 focus:outline-none w-full py-2"
-                        placeholder="Nome do arma..."
+                        placeholder="Nome da arma..."
                         onChange={handleNomeChange}
                     />
                     <select
-                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2"
+                        className="bg-transparent border-b border-gray-500 focus:outline-none w-full max-w-m py-2 text-gray-400"
                         value={novaArmaTesteUsado}
                         onChange={handleTesteUsadoChange}
                     >
                         {Object.values(Testes).map((teste) => (
-                            <option key={teste} value={teste}>
+                            <option className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600 text-gray-400" key={teste} value={teste}>
                                 {teste}
                             </option>
                         ))}
