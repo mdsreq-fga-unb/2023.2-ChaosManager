@@ -175,6 +175,7 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
       }
       await campanhaToEdit.updateData();
       alert("Ficha editada com sucesso");
+      router.push(`/campanha/${params.nome}/ficha/${campanhaToEdit.fichas[fichaToEditId]._id}`);
     } catch (error) {}
   }
 
@@ -227,9 +228,9 @@ export default function EditFicha({ params }: { params: { nome: string } }) {
       if (novaFicha.tracosPositivos.length != novaFicha.tracosNegativos.length) {
         return alert("O personagem deve ter o mesmo número de traços positivos e negativos");
       }
-      campanha.addFicha(novaFicha);
+      const newFichaId = campanha.addFicha(novaFicha);
       await campanha.updateData();
-      alert("Ficha criada com sucesso");
+      router.push(`/campanha/${params.nome}/ficha/${newFichaId}`);
     } catch (error) {
       return alert((error as Error)?.message);
     } finally {

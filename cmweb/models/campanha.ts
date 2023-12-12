@@ -22,6 +22,7 @@ export class Campanha {
     ficha._id = this.fichas.length + 1;
     if (ficha.NPC) this.fichas_NPC.push(ficha);
     else this.fichas.push(ficha);
+    return ficha._id;
   }
 
   static gerarSenha(): number {
@@ -67,7 +68,8 @@ export class Campanha {
   }
 
   static toObj(objeto: any): Campanha {
-    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC, combate } = objeto;
+    const { _id, nome, historia, senha_mestre, senha_jogador, fichas, fichas_NPC, combate } =
+      objeto;
     const campanha = new Campanha(nome, historia, senha_mestre);
     campanha._id = _id;
     campanha.senha_jogador = senha_jogador;
