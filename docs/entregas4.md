@@ -13,7 +13,12 @@ Este artefato contém a apresentação gravada sobre a missão 4
 
 A apresentação da entrega da Missão 4, pode ser vista no [Vídeo 1](https://www.youtube.com/watch?v=sEEQD9DXPdg&ab_channel=oscarbrito).
 
+<div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sEEQD9DXPdg?si=iEhoKlhOszhgtycA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p> <b>Vídeo 1:</b> Entrega Missão 3 (Fonte: Insurgentes Estelares. 2023). </p>
+</div>
+
+
 
 ## Bibliografia
 
