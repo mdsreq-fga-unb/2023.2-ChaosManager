@@ -109,210 +109,162 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
 
 <table>
     <tr>
-      <th>Campo</th>
-      <th>Valor</th>
+        <th>Nome do caso de uso</th>
+        <td>Pesquisar informações do destino escolhido</td>
     </tr>
     <tr>
-      <td>Nome do caso de uso</td>
-      <td>Pesquisar Informações do Destino Escolhido</td>
+        <th>Autor</th>
+        <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
     </tr>
     <tr>
-      <td>Autor</td>
-      <td>Gustavo França, Larissa Gomes, Oscar de Brito</td>
+        <th>1. Atores</th>
+        <td>Viajante</td>
     </tr>
     <tr>
-      <td>1. Atores</td>
-      <td>Viajante</td>
+        <th>2. Breve Descrição</th>
+        <td>O usuário pode pesquisar informações detalhadas sobre o local, incluindo os melhores períodos para visitar, atrações culturais, culinária local, e dicas de viagem. Também podem filtrar acomodações por preço, localização, tipo (hotel, aluguel de temporada, pousada), e avaliações de outros viajantes.</td>
     </tr>
     <tr>
-      <td>2. Breve Descrição</td>
-      <td>O usuário pode pesquisar informações detalhadas sobre o local, incluindo os melhores períodos para visitar, atrações culturais, culinária local e dicas de viagem. Também podem filtrar acomodações por preço, localização, tipo (hotel, aluguel de temporada, pousada) e avaliações de outros viajantes.</td>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>3.1. O viajante digita o destino que deseja pesquisar (FE01)</p>
+            <p>3.2. O sistema apresenta as seguintes opções: - Pesquisar informações de destino - Filtrar acomodações (FA01)</p>
+            <p>3.3. O viajante seleciona "Pesquisar informações de destino" (FE01)</p>
+            <p>3.4. O sistema retorna as informações requisitadas. (RN01) (RN02) (RN03) (FA02)</p>
+        </td>
     </tr>
     <tr>
-      <td>3. Fluxo Básico de Eventos</td>
-      <td>
-        <p>3.1. O viajante digita o destino que deseja pesquisar</p>
-        <p>3.2. O sistema apresenta as seguintes opções:</p>
-        <ul>
-          <li>- Pesquisar informações de destino</li>
-          <li>- Filtrar acomodações (FA01)</li>
-        </ul>
-        <p>3.3. O viajante seleciona "Pesquisar informações de destino" (FE01) (FA01)</p>
-        <p>3.4. O sistema apresenta uma lista de acomodações a partir dos desejos do viajante</p>
-        <p>3.5. O viajante seleciona uma acomodação que deseja</p>
-        <p>3.6 . O Sistema apresenta as seguintes opções:</p>
-        <ul>
-          <li>- Detalhes da acomodação</li>
-          <li>- Informações da região</li>
-        </ul>
-        <p>3.7 . O viajante seleciona a opção "informações da região" (FA02)</p>
-        <p>3.8. O sistema retorna informações sobre o local:</p>
-        <ul>
-          <li>- Melhores períodos para visitar;</li>
-          <li>- Atrações culturais;</li>
-          <li>- Culinária local;</li>
-          <li>- Dicas de viagem.</li>
-        </ul>
-      </td>
+        <th>4. Fluxo Alternativos</th>
+        <td>
+            <p>4.1. FA01 - Filtrar acomodações 
+            <p>4.1.1. O viajante seleciona a opção "Filtrar acomodações"</p> 
+            <p>4.1.2. O sistema apresenta as seguintes opções de filtro: - Preço - Localização - Tipo (hotel, aluguel de temporada, pousada) - Avaliações de outros viajantes</p>
+            <p>4.1.3. O viajante informa os filtros que deseja aplicar 4.1.4.</p> 
+            <p>O sistema valida as informações (FE01)</p> 
+            <p>O caso de uso retorna ao 3.4 do FB 4.2.</p>
+            <p>FA02 - Visualizar acomodação</p>
+            <p>4.2.1. O viajante seleciona uma acomodação.<p/> 
+            <p>O caso de uso retorna ao 3.4 do FB</p>
+        </td>
     </tr>
     <tr>
-      <td>4. Fluxo Alternativos</td>
-      <td>
-        <p>4.1. FA01 - Filtrar acomodações</p>
-        <ul>
-          <li>4.1.1. O viajante seleciona a opção "Filtrar acomodações"</li>
-          <li>4.1.2. O sistema apresenta as seguintes opções de filtro:</li>
-          <ul>
-            <li>- Preço</li>
-            <li>- Localização</li>
-            <li>- Tipo (hotel, aluguel de temporada, pousada)</li>
-            <li>- Avaliações de outros viajantes</li>
-          </ul>
-          <li>4.1.3. O viajante informa os filtros que deseja aplicar (FE01)</li>
-          <li>4.1.4. O sistema retorna as acomodações mais compatíveis de acordo com os filtros selecionados (FA02) (RN01)</li>
-        </ul>
-        <p>4.2. FA02 - Visualizar acomodação</p>
-        <ul>
-          <li>4.2.1. O viajante selecionou a opção "detalhes da acomodação"</li>
-          <li>4.2.2. O sistema apresenta as informações sobre a acomodação: (RN02)</li>
-          <ul>
-            <li>- Fotos;</li>
-            <li>- Descrições detalhadas;</li>
-            <li>- Disponibilidade</li>
-          </ul>
-          <li>4.2.3. O viajante seleciona a opção "Disponibilidade"</li>
-          <li>4.2.4. O sistema apresenta as opções:</li>
-          <ul>
-            <li>- Pesquisar informações de destino (o fluxo alternativo é encerrado e volta para o item 3.4 do FB)</li>
-            <li>- Reservar acomodação (o fluxo alternativo é encerrado e vai para o item 3.1 do FB do caso de uso "Reservar acomodação")</li>
-          </ul>
-        </ul>
-      </td>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>5.1. FE01 - Destino inválido</p>
+            <p>No passo 3.3, caso o destino digitado não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Destino inválido, digite novamente”. E, o caso de uso retorna ao 3.1 do FB.</p> 
+            <p>5.1. FE01 - Localização inválida</p>
+            <p>No passo 4.1.4 do FA, caso a localização digitada não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Localização inválida, digite novamente”. E, o caso de uso retorna ao 4.1.3 do FA.</p>
+        </td>
     </tr>
     <tr>
-      <td>5. Fluxos de Exceção</td>
-      <td>
-        <p>5.1. FE01 - Destino inválido</p>
-        <p>No passo 3.3 do FB e 4.1.3, caso o destino digitado não corresponda a nenhum local válido, o sistema deve emitir a mensagem: “Destino inválido, digite novamente”. E, o caso de uso retorna ao 3.1 do FB.</p>
-      </td>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+            <p>6.2. O viajante deve estar logado na sua conta</p>
+        </td>
     </tr>
     <tr>
-      <td>6. Pré-condições</td>
-      <td>
-        <p>6.1. O viajante deve possuir uma conta na plataforma</p>
-        <p>6.2. O viajante deve estar logado na sua conta</p>
-      </td>
+        <th>7. Pós-condições</th>
+        <td>
+            <p>7.1. Informações do destino desejado</p>
+            <p>7.2. Acomodações filtradas como desejado</p>
+        </td>
     </tr>
     <tr>
-      <td>7. Pós-condições</td>
-      <td>
-        <p>7.1. Informações do destino desejado</p>
-        <p>7.2. Acomodações filtradas conforme desejado</p>
-      </td>
+        <th>8. Pontos de extensão</th>
+        <td>Não há.</td>
     </tr>
     <tr>
-      <td>8. Pontos de Extensão</td>
-      <td>
-        <p>8.1. PE01 - Visualizar acomodação é um ponto de extensão do caso de uso Pesquisar informações do destino escolhido, no FA02 - Visualizar acomodação</p>
-      </td>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
     </tr>
     <tr>
-      <td>9. Requisitos Especiais</td>
-      <td>
-        <p>9.1. RN01 - Quantidade de locais: o sistema deve retornar os destinos em ordem das melhores avaliações</p>
-        <p>9.2. RN02 - Quantidade de fotos: o sistema deve apresentar até 15 fotos da acomodação</p>
-      </td>
+        <th>10. Regras de negócio</th>
+        <td>
+            <p>RN01 - Se a informação requisitada for de informações de destino, então ela deve apresentar no máximo os 2 melhores períodos para ser visitado. As atrações culturais com os seus períodos de funcionamento. A culinária local com as suas restrições alimentares. Nas dicas de viagem, devem ser listados as 5 melhores dicas baseado nas avaliações dos usuários</p>
+            <p>RN02 - Se a informação requisitada for de filtrar acomodações, então ela deve apresentar uma faixa entre o valor mínimo e o máximo, além de listar por uma ordenação por preço. Na localização, poderá ser definida por destinos mais próximos da localização atual do usuário. O tipo do destino deve apresentar 3 categorias diferentes. E nas avaliações de outros viajantes, deve apresentar de 1 a 5 estrelas.</p>
+            <p>RN03 - Se a informação requisitada for de visualizar acomodações, então ela deve apresentar até 15 fotos da acomodação. Nas descrições detalhadas, até 2500 caracteres e na disponibilidade, deve ser apresentado os períodos de reserva da acomodação</p>
+        </td>
     </tr>
     <tr>
-      <td>10. Regras de Negócio</td>
-      <td>
-        <p>10.1. Não há.</p>
-      </td>
+        <th>11. Informações adicionais</th>
+        <td>Não há</td>
     </tr>
-    <tr>
-      <td>11. Informações Adicionais</td>
-      <td>
-        <p>11.1. Não há.</p>
-      </td>
-    </tr>
-  </table>
+</table>
 
 
 
 ### CdU-08 - Reservar acomodação
 
- <table>
+<table>
     <tr>
-      <th>Item</th>
-      <th>Descrição</th>
+        <th>Nome do caso de uso</th>
+        <td>Reservar acomodação</td>
     </tr>
     <tr>
-      <td>Nome do caso de uso</td>
-      <td>Reservar Acomodação</td>
+        <th>Autor</th>
+        <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
     </tr>
     <tr>
-      <td>1. Autor</td>
-      <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+        <th>1. Atores</th>
+        <td>Viajante e o Provedor de serviços</td>
     </tr>
     <tr>
-      <td>2. Atores</td>
-      <td>Viajante e o Provedor de serviços</td>
+        <th>2. Breve Descrição</th>
+        <td>O viajante pode escolher a acomodação, visualizar fotos, ler descrições detalhadas, verificar a disponibilidade e realizar a reserva diretamente pelo aplicativo.</td>
     </tr>
     <tr>
-      <td>4. Breve Descrição</td>
-      <td>O viajante pode escolher a acomodação, visualizar fotos, ler descrições detalhadas, verificar a disponibilidade e realizar a reserva diretamente pelo aplicativo.</td>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>3.1. O viajante seleciona o período de reserva (FE01)</p>
+            <p>3.2. O viajante informa a quantidade de hóspedes</p>
+            <p>3.3. O viajante informa os dados dos hóspedes</p>
+            <p>3.4. O viajante seleciona a opção "Reservar acomodação"</p>
+            <p>3.5. O sistema valida as informações (RN01)</p>
+            <p>3.6. O sistema informa o valor final e solicita o pagamento (PE02)</p>
+            <p>3.7. O sistema envia a solicitação de reserva para o provedor de serviços</p>
+            <p>3.8. O provedor de serviços analisa a reserva (FE02)</p>
+            <p>3.9. O sistema envia um email do status da reserva para o viajante (RN02)</p>
+        </td>
     </tr>
     <tr>
-      <td>3. Fluxo Básico de Eventos</td>
-      <td>
-        <p>3.1. O viajante seleciona o período de reserva (FE01) (PE01)</p>
-        <p>3.2. O viajante informa a quantidade de hóspedes</p>
-        <p>3.3. O viajante informa os dados dos hóspedes</p>
-        <p>3.4. O viajante seleciona a opção "Reservar acomodação"</p>
-        <p>3.5. O sistema valida as informações (RN01)</p>
-        <p>3.6. O sistema informa o valor final e solicita o pagamento (PE02)</p>
-        <p>3.7. O sistema envia a solicitação de reserva para o provedor de serviços</p>
-        <p>3.8. O provedor de serviços analisa a reserva (FE02)</p>
-        <p>3.9. O sistema envia uma confirmação da reserva para o viajante e adiciona às reservas realizadas (RN02)</p>
-      </td>
+        <th>4. Fluxo Alternativos</th>
+        <td>Não há.</td>
     </tr>
     <tr>
-      <td>4. Fluxo Alternativos</td>
-      <td>Não há.</td>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>5.1. FE01 - Período inválido No passo 3.1 do FB, caso o período de reserva selecionado não esteja disponível, o sistema deve emitir a mensagem: “Esta data não está disponível”. E, o caso de uso retorna ao 3.1 do FB.</p>
+            <p>5.2. FE02 - Reserva rejeitada No passo 3.8 do FB, caso o provedor de serviços rejeite a solicitação de reserva, o sistema deve enviar um aviso ao viajante: “Sua solicitação de reserva foi recusada”. E, o caso de uso retorna ao 3.9 do FB.</p>
+        </td>
     </tr>
     <tr>
-      <td>5. Fluxos de Exceção</td>
-      <td>
-        <p>5.1. FE01 - Período inválido: No passo 3.1 do FB, caso o período de reserva selecionado não esteja disponível, o sistema deve emitir a mensagem: “Esta data não está disponível”. E, o caso de uso retorna ao 3.1 do FB.</p>
-        <p>5.2. FE02 - Reserva rejeitada: No passo 3.8 do FB, caso o provedor de serviços rejeite a solicitação de reserva, o sistema deve enviar um aviso ao viajante: “Sua solicitação de reserva foi recusada”. E, o caso de uso finaliza.</p>
-      </td>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+            <p>6.2. O viajante deve estar logado na sua conta</p>
+            <p>6.3. O viajante selecionou uma acomodação</p>
+        </td>
     </tr>
     <tr>
-      <td>6. Pré-condições</td>
-      <td>
-        <p>6.1. O viajante deve possuir uma conta na plataforma</p>
-        <p>6.2. O viajante deve estar logado na sua conta</p>
-        <p>6.3. O viajante selecionou para visualizar a acomodação desejada</p>
-      </td>
+        <th>7. Pós-condições</th>
+        <td>7.1. Reserva de acomodação concluída</td>
     </tr>
     <tr>
-      <td>7. Pós-condições</td>
-      <td>7.1. Reserva de acomodação concluída</td>
+        <th>8. Pontos de extensão</th>
+        <td>
+            <p>8.1. PE01 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
+            <p>8.2. Reservar acomodação é um ponto de extensão do caso de uso Pesquisar informações do destino escolhido</p>
+        </td>
     </tr>
     <tr>
-      <td>8. Pontos de Extensão</td>
-      <td>
-        <p>8.1. PE01 - Reservar acomodação é um ponto de extensão do caso de uso Pesquisar informações do destino escolhido, no FA02 - Visualizar acomodação</p>
-        <p>8.2. PE02 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
-      </td>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
     </tr>
     <tr>
-      <td>9. Requisitos Especiais</td>
-      <td>Não há.</td>
-    </tr>
-    <tr>
-      <td>10. Regras de negócio</td>
-      <td> RN01 - Validação de informações
+        <th>10. Regras de negócio</th>
+        <td>
+            (RN01) - Validação de informações
             <table>
                 <tr>
                     <th>Atributo</th>
@@ -328,8 +280,8 @@ Com os atores e casos de usos identificados, foi criado o diagrama de casos de u
                 <tr>
                     <td>CPF</td>
                     <td>String</td>
-                    <td>False</td>
-                    <td>O sistema deve validar se os CPFs
+                    <td>True</td>
+                    <td>O sistrema deve validar se os CPFs
 existem</td>
                 </tr>
                 <tr>
@@ -342,114 +294,116 @@ existem</td>
                     <td>Email</td>
                     <td>String</td>
                     <td>True</td>
-                    <td>O sistema deve conrifmar o email </td>
+                    <td>O sistema deve conrifmar o email </td>
                 </tr>
             </table>
-      </td>
     </tr>
     <tr>
-      <td>11. Informações adicionais</td>
-      <td>Não há.</td>
+        <th>11. Informações adicionais</th>
+        <td>Não há</td>
     </tr>
-  </table>
+</table>
 
 ### CdU-10 - Efetuar pagamento
 
 <table>
     <tr>
-      <td>Nome do caso de uso</td>
-      <td>Efetuar Pagamento</td>
+        <th>Nome do caso de uso</th>
+        <td>Efetuar pagamento</td>
     </tr>
     <tr>
-      <td>Autor</td>
-      <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
+        <th>Autor</th>
+        <td>Gustavo França, Larissa Gomes e Oscar de Brito</td>
     </tr>
     <tr>
-      <td>1. Atores</td>
-      <td>Viajante</td>
+        <th>1. Atores</th>
+        <td>Viajante</td>
     </tr>
     <tr>
-      <td>2. Breve Descrição</td>
-      <td>O viajante deve pagar os débitos pendentes</td>
+        <th>2. Breve Descrição</th>
+        <td>O viajante deve pagar os débitos pendentes</td>
     </tr>
     <tr>
-      <td>3. Fluxo básico de eventos</td>
-      <td>
-        <p>3.1. O sistema apresenta as seguintes opções:</p>
-        <p>    - Efetuar pagamento</p>
-        <p>    - Adicionar novo cartão (FA01)</p>
-        <p>3.2. O viajante seleciona a opção "Efetuar pagamento"         
-</p>
-        <p>3.3. O sistema apresenta as seguintes opções:</p>
-        <p>    - Cartão de crédito</p>
-        <p>    - Cartão de débito</p>
-        <p>    - PIX</p>
-        <p>    - Boleto</p>
-        <p>3.4. O viajante seleciona uma forma de pagamento (RN01)</p>
-        <p>3.5. O viajante confirma o pagamento (RN02) (RN03) (RN04)</p>
-        <p>3.6. O sistema verifica se o pagamento foi efetuado (FE01)</p>
-        <p>3.7. O sistema emite um comprovante de pagamento e confirma o pagamento da reserva</p>
-      </td>
+        <th>3. Fluxo básico de eventos</th>
+        <td>
+            <p>FB 3.1. O sistema apresenta as seguintes opções:</p>
+            <p>- Efetuar pagamento</p>
+            <p>- Adicionar novo cartão (FA01)</p>
+            <p>3.2. O viajante seleciona a opção "Efetuar pagamento"</p>
+            <p>3.3. O sistema apresenta as seguintes opções:</p>
+            <p>- Cartão de crédito</p>
+            <p>- Cartão de débito</p>
+            <p>- PIX</p>
+            <p>- Boleto</p>
+            <p>3.4. O viajante seleciona uma forma de pagamento (RN01)</p>
+            <p>3.5. O viajante confirma o pagamento (RN02) (RN03) (RN04)</p>
+            <p>3.6. O sistema verifica se o pagamento foi efetuado (FE01)</p>
+            <p>3.7. O sistema emite um comprovante de pagamento e confirma o pagamento da reserva</p>
+        </td>
     </tr>
     <tr>
-      <td>4. Fluxo Alternativos</td>
-      <td>
-      <p>4.1. FA01 - Adicionar novo cartão</p>
-<p>4.1.1. O viajante seleciona a opção "Adicionar novo cartão"</p>
-<p>4.1.2. O viajante informa o número do cartão</p>
-<p>4.1.3. O viajante informa a data de vencimento</p>
-<p>4.1.4. O viajante informa o CVV do cartão</p>
-<p>4.1.5. O viajante informa o País de emissão do cartão</p>
-<p>4.1.6. O viajante pode informar um apelido para o cartão</p>
-<p>4.1.7. O viajante seleciona a opção do cartão que deseja utilizar (crédito ou débito)</p>
-<p>4.1.8. O sistema adiciona um novo cartão à carteira do viajante, o fluxo alternativo retorna ao item 3.1 do FB</p>
-      </td>
+        <th>4. Fluxo Alternativos</th>
+        <td>
+            <p>4.1. FA01 - Adicionar novo cartão</p>
+            <p>4.1.1. O viajante seleciona a opção "Adicionar novo cartão"</p>
+            <p>4.1.2. O viajante informa o número do cartão</p>
+            <p>4.1.3. O viajante informa a data de vencimento</p>
+            <p>4.1.4. O viajante informa o CVV do cartão</p>
+            <p>4.1.5. O viajante informa o País de emissão do cartão</p>
+            <p>4.1.6. O viajante pode informar um apelido para o cartão</p>
+            <p>4.1.7. O viajante seleciona a opção do cartão que deseja utilizar (crédito ou débito)</p>
+            <p>4.1.8. O sistema adiciona um novo cartão a carteira do viajante</p>
+            <p>O caso de uso retorna ao item 3.1 do FB</p>
+        </td>
     </tr>
     <tr>
-      <td>5. Fluxos de exceção</td>
-      <td>
-        <p>5.1. FE01 - Pagamento não identificadoNo passo 3.6 do FB, caso o sistema não identifique nenhum pagamento efetuado, o sistema deve emitir a mensagem: “O pagamento não foi finalizado”. E, o caso de uso retorna ao 3.1 do FB.</p>
-      </td>
+        <th>5. Fluxos de exceção</th>
+        <td>
+            <p>5.1. FE01 - Pagamento não identificado No passo 3.6 do FB, caso o sistema não identifique nenhum pagamento efetuado, o sistema deve emitir a mensagem: “O pagamento não foi finalizado”. E, o caso de uso retorna ao 3.1 do FB.</p>
+        </td>
     </tr>
     <tr>
-      <td>6. Pré-condições</td>
-      <td>
-        <p>6.1. O viajante deve possuir uma conta na plataforma</p>
-        <p>6.2. O viajante deve estar logado na sua conta</p>
-        <p>6.3. O viajante realizou uma reserva</p>
-        <p>6.4. O viajante possui o pagamento de uma reserva pendente</p>
-      </td>
+        <th>6. Pré-condições</th>
+        <td>
+            <p>6.1. O viajante deve possuir uma conta na plataforma</p>
+            <p>6.2. O viajante deve estar logado na sua conta</p>
+            <p>6.3. O viajante realizou uma reserva</p>
+            <p>6.4. O viajante possui o pagamento de uma reserva pendente</p>
+        </td>
     </tr>
     <tr>
-      <td>7. Pós-condições</td>
-      <td>Pagamento da reserva confirmado</td>
+        <th>7. Pós-condições</th>
+        <td>7.1. Pagamento da reserva confirmado</td>
     </tr>
     <tr>
-      <td>8. Pontos de extensão</td>
-      <td>
-        <p>8.1. PE01 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
-      </td>
+        <th>8. Pontos de extensão</th>
+        <td>
+            <p>8.1. PE01 - Efetuar pagamento é um ponto de extensão do caso de uso Reservar acomodação</p>
+        </td>
     </tr>
     <tr>
-      <td>9. Requisitos especiais</td>
-      <td>Não há.</td>
+        <th>9. Requisitos especiais</th>
+        <td>Não há</td>
     </tr>
     <tr>
-      <td>10. Regras de negócio</td>
-      <td>
-        <p>RN01 - Se a forma de pagamento escolhida for cartão de crédito ou débito, então o viajante deverá selecionar um dos cartões da carteira.</p>
-        <p>RN02 - Quando a forma de pagamento escolhida for Boleto e PIX, então o pagamento deve ser realizado dentro de 30 minutos.</p>
-        <p>RN03 - Quando a forma de pagamento escolhida for cartão de crédito, então o cartão selecionado deve possuir limite para ser debitado.</p>
-        <p>RN04 - Quando a forma de pagamento escolhida for cartão de crédito, então o cartão selecionado deve possuir saldo para ser debitado.</p>
-      </td>
+        <th>10. Regras de negócio</th>
+        <td>
+            <p>RN01 - Se a forma de pagamento escolhida for cartão de crédito ou débito, então o viajante deverá selecionar um dos cartões da carteira.</p>
+            <p>RN02 - Quando a forma de pagamento escolhida for Boleto e PIX, então o pagamento deve ser realizado dentro de 30 minutos.</p>
+            <p>RN03 - Quando a forma de pagamento escolhida for cartão de crédito, então o cartão selecionado deve possuir limite para ser debitado.</p>
+            <p>RN04 - Quando a forma de pagamento escolhida for cartão de crédito, então o cartão selecionado deve possuir saldo para ser debitado.</p>
+        </td>
     </tr>
     <tr>
-      <td>11. Informações adicionais</td>
-      <td>Não há.</td>
+        <th>11. Informações adicionais</th>
+        <td>Não há.</td>
     </tr>
-  </table>
+</table>
+
+## Histórico de versões
 
 
 | Data  | Versão | Descrição                            | Autor                          |
 | :---: | :----: | ------------------------------------ | ------------------------------ |
-| 09/12 |  1.0   | Criação do artefato | Gustavo França e Oscar de Brito
+| 09/12 |  1.0   | Criação do artefato | Gustavo França e Oscar de Brito |
+| 12/12 |  1.   | Correção das especificações do artefato | Gustavo França, Larissa Gomes e Oscar de Brito |
