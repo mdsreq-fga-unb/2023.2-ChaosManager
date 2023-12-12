@@ -15,7 +15,7 @@ import ModalTestes from "@/app/Components/ModalTestes";
 import { useEffect, useState } from "react";
 import { Campanha, Find } from "@/models/campanha";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface typeFicha {
   ficha: Ficha;
@@ -25,6 +25,8 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
   const [ficha, setFicha] = useState<Ficha>();
   const [campanha, SetCampanha] = useState<Campanha | null>(null);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const typeParam = searchParams.get("type");
   useEffect(() => {
     if (!params.nome || !params.id) {
       alert("Essa Página não existe");
@@ -35,7 +37,12 @@ const FichaPagina = ({ params }: { params: { nome: string; id: string } }) => {
         const query = await Find.findData(params.nome);
         const { camp } = query;
         SetCampanha(camp as Campanha);
-        const fichaFound = camp.fichas.find((ficha) => ficha._id === Number(params.id));
+        let fichaFound = null;
+        if (typeParam == "npc") {
+          fichaFound = camp?.fichas_NPC.find((ficha) => ficha._id == Number(params.id));
+        } else {
+          fichaFound = camp?.fichas.find((ficha) => ficha._id == Number(params.id));
+        }
         if (!fichaFound) {
           alert("Ficha não encontrada");
           return router.push("/");
