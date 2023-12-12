@@ -22,6 +22,8 @@ export class Combate{
         this.campanha = campanha;
     }
 
+    
+
     addIniciativa(fichas:Ficha[]):void{
         let count = 1;
         fichas.forEach(element => {
@@ -191,35 +193,6 @@ export class Combate{
         
     }
 
-    realizarReacao(ficha:Ficha, escolhaReacao:Reacao, d20:number):number{
-        let result:number = -1;
-        switch(escolhaReacao){
-            case Reacao.Defender:
-                result = realizarTeste(ficha, Testes.ResFisica, 0, d20);
-
-                this.campanha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Defender + ", o resultado do teste é " + result + "!");
-                ficha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Defender + ", o resultado do teste é " + result + "!");
-                break;
-            case Reacao.Esquivar:
-                result = realizarTeste(ficha, Testes.Agilidade, 0, d20);
-
-                this.campanha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Esquivar + ", o resultado do teste é " + result + "!");
-                ficha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Esquivar + ", o resultado do teste é " + result + "!");
-                break;
-            case Reacao.NaoReagir:
-                result = -1;
-
-                this.campanha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.NaoReagir + "!");
-                ficha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.NaoReagir + "!");
-                break;
-            default:
-                break;
-        }
-
-        return result;
-
-    }
-
     pularAcao():void{ // da para utilizar essa funcao no botao de Proxima Acao
         this.acaoAtual++;
     }
@@ -241,4 +214,33 @@ export enum Reacao{
     Defender = 'Defender',
     Esquivar = 'Esquivar',
     NaoReagir = 'Não Reagir',    
+}
+
+export function realizarReacao(ficha:Ficha, escolhaReacao:Reacao, d20:number, campanha:Campanha):number{
+    let result:number = -1;
+    switch(escolhaReacao){
+        case Reacao.Defender:
+            result = realizarTeste(ficha, Testes.ResFisica, 0, d20);
+
+            campanha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Defender + ", o resultado do teste é " + result + "!");
+            ficha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Defender + ", o resultado do teste é " + result + "!");
+            break;
+        case Reacao.Esquivar:
+            result = realizarTeste(ficha, Testes.Agilidade, 0, d20);
+
+            campanha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Esquivar + ", o resultado do teste é " + result + "!");
+            ficha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.Esquivar + ", o resultado do teste é " + result + "!");
+            break;
+        case Reacao.NaoReagir:
+            result = -1;
+
+            campanha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.NaoReagir + "!");
+            ficha.registroAcoes.push("A reação escolhida do personagem " + ficha.toString() + " foi de " + Reacao.NaoReagir + "!");
+            break;
+        default:
+            break;
+    }
+
+    return result;
+
 }
